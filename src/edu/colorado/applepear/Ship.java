@@ -7,6 +7,7 @@ public class Ship {
     // TODO: Understand encapsulation
     // TODO: Understand what these todo comments mean
 
+    //Team Apple, pair 2: Yvonne and Yubin are here.
     public  void show()     {     // dunno why this is here maybe it is just an example method
         System.out.println("IF you can't see this then something is severely wrong!!");
     }
