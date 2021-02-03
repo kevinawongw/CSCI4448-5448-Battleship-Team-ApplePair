@@ -9,7 +9,7 @@
 ### Teams:
   <li> Team ApplePear: Kevina Wong, Vienna Wong, Yubin Go, Yvonne Liu
   <li> Team Apple: Kevina Wong, Vienna Wong
-  <li> Team Pair: Yubin Go, Yvonne Liu
+  <li> Team Pear: Yubin Go, Yvonne Liu
     
 ### Requirements:
 <ol>
