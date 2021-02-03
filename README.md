@@ -14,6 +14,8 @@
 ### Team Meeting Times:
   <li> Tuesday: 9:20am - 10:20am  
   <li> Wednesday: 9:20 - 10:20am
+  <li> Friday: 9:20 - 10:20am
+
     
 ### Requirements for Milestone 1:
 <ol>
