@@ -1,5 +1,17 @@
 # CSCI4448-5448 Milestone1
-### Minimal Requirments
+### Member Names:
+
+  <li> Kevina Wong
+  <li> Vienna Wonf
+  <li> Yubin Go 
+  <li> Yvonne Liu
+    
+### Teams:
+  <li> Team ApplePear: Kevina Wong, Vienna Wong, Yubin Go, Yvonne Liu
+  <li> Team Apple: Kevina Wong, Vienna Wong
+  <li> Team Pair: Yubin Go, Yvonne Liu
+    
+### Requirements:
 <ol>
   <li> Kevina Wong, Vienna Wong, Yubin Go, Yvonne Liu </li>
   <li> An appropriate .gitignore</li>
