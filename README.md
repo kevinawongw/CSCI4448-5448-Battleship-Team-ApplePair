@@ -1,4 +1,4 @@
-# CSCI4448-5448 Milestone1
+# CSCI4448-5448 Milestone1 - Team ApplePear
 ### Member Names:
 
   <li> Kevina Wong
