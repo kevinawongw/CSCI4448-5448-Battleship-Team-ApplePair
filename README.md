@@ -8,8 +8,8 @@
     
 ### Teams:
   <li> Team ApplePear: Kevina Wong, Vienna Wong, Yubin Go, Yvonne Liu
-  <li> Team Pair 1: Kevina Wong, Vienna Wong
-  <li> Team Pair 2: Yubin Go, Yvonne Liu
+  <li> Pair 1: Kevina Wong, Vienna Wong
+  <li> Pair 2: Yubin Go, Yvonne Liu
     
 ### Team Meeting Times:
   <li> Tuesday: 9:20am - 10:20am  
