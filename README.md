@@ -11,7 +11,7 @@
   <li> Team Apple: Kevina Wong, Vienna Wong
   <li> Team Pear: Yubin Go, Yvonne Liu
     
-### Requirements:
+### Requirements for Milestone 1:
 <ol>
   <li> Kevina Wong, Vienna Wong, Yubin Go, Yvonne Liu </li>
   <li> An appropriate .gitignore</li>
