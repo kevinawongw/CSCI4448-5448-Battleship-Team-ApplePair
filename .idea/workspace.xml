@@ -19,9 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ecce50e7-60f1-4088-9580-0bcf29b1574e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/csci44485448/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/csci44485448/Ship.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/Ship.java" afterDir="false" />
+    <list default="true" id="ecce50e7-60f1-4088-9580-0bcf29b1574e" name="Default Changelist" comment="rename to team name">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/Ship.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/Ship.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,15 +50,40 @@
       <option name="presentableId" value="Default" />
       <updated>1612370581325</updated>
     </task>
+    <task id="LOCAL-00001" summary="rename to team name">
+      <created>1612371506505</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1612371506505</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="rename to team name" />
+    <option name="LAST_COMMIT_MESSAGE" value="rename to team name" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1612371392765">
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1612371965217">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1612371392765" />
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1612371965217" />
+    <state x="395" y="242" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1612371469634">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="395" y="242" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1280.680@0.0.1280.680" timestamp="1612371469634" />
   </component>
 </project>
