@@ -1,4 +1,4 @@
-# CSCI4448-5448 Milestone1
+# CSCI4448-5448 Milestone1 - Team ApplePear
 ### Member Names:
 
   <li> Kevina Wong
@@ -9,7 +9,7 @@
 ### Teams:
   <li> Team ApplePear: Kevina Wong, Vienna Wong, Yubin Go, Yvonne Liu
   <li> Team Apple: Kevina Wong, Vienna Wong
-  <li> Team Pair: Yubin Go, Yvonne Liu
+  <li> Team Pear: Yubin Go, Yvonne Liu
     
 ### Requirements:
 <ol>
