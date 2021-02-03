@@ -11,6 +11,10 @@
   <li> Team Pair 1: Kevina Wong, Vienna Wong
   <li> Team Pair 2: Yubin Go, Yvonne Liu
     
+### Team Meeting Times:
+  <li> Tuesday: 9:20am - 10:20am  
+  <li> Wednesday: 9:20 - 10:20
+    
 ### Requirements for Milestone 1:
 <ol>
   <li> Kevina Wong, Vienna Wong, Yubin Go, Yvonne Liu </li>
