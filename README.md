@@ -8,8 +8,8 @@
     
 ### Teams:
   <li> Team ApplePear: Kevina Wong, Vienna Wong, Yubin Go, Yvonne Liu
-  <li> Team Apple: Kevina Wong, Vienna Wong
-  <li> Team Pear: Yubin Go, Yvonne Liu
+  <li> Team Pair 1: Kevina Wong, Vienna Wong
+  <li> Team Pair 2: Yubin Go, Yvonne Liu
     
 ### Requirements for Milestone 1:
 <ol>
