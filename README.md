@@ -19,11 +19,8 @@
    <li>The pdf and code changes tagged with the tag "milestone1" </li>
  </ol>
  
- ## After you are done with all the tasks for this Milestone, add a tag to the master branch. Name this tag "milestone1".
    
-   
+ 
    
  ---
- 
- # GRADING
- See Canvas
+
