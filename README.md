@@ -1,4 +1,4 @@
-# CSCI4448-5448 Milestone1 - Team ApplePear
+# CSCI4448-5448 - Team ApplePear
 ### Member Names:
 
   <li> Kevina Wong
@@ -20,7 +20,6 @@
  </ol>
  
  ## After you are done with all the tasks for this Milestone, add a tag to the master branch. Name this tag "milestone1".
- ## This tag must be pushed by the deadline
    
    
    
