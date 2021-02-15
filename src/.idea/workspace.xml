@@ -1,13 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5e4f39a5-e2e1-4607-8fcf-96619b63a397" name="Default Changelist" comment="">
+    <list default="true" id="5e4f39a5-e2e1-4607-8fcf-96619b63a397" name="Default Changelist" comment="Team applepear pair 2: change the location of comment">
+      <change afterPath="$PROJECT_DIR$/edu/colorado/applepear/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Milestone1-csci4448-5448.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Milestone1-csci4448-5448.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edu/colorado/applepear/GameTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/edu/colorado/applepear/GameTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/edu/colorado/applepear/Ship.java" beforeDir="false" afterPath="$PROJECT_DIR$/edu/colorado/applepear/Ship.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -19,9 +30,38 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="edu.colorado.applepear" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="edu.colorado.applepear.Main" />
+      <module name="Milestone1-csci4448-5448" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.colorado.applepear.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -32,6 +72,33 @@
       <option name="presentableId" value="Default" />
       <updated>1612371256286</updated>
     </task>
+    <task id="LOCAL-00001" summary="Team applepear pair 2: Yubin push">
+      <created>1612371826678</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1612371826678</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Team applepear pair 2: Yubin push">
+      <created>1612371854475</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1612371854475</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Team applepear pair 2: Yubin push 2">
+      <created>1612371900078</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1612371900078</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Team applepear pair 2: Yubin push" />
+    <MESSAGE value="Team applepear pair 2: Yubin push 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Team applepear pair 2: Yubin push 2" />
   </component>
 </project>

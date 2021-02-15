@@ -1,5 +1,7 @@
+package edu.colorado.applepear;
+
 import static org.hamcrest.CoreMatchers.*;
-import static org.hamcrest.MatcherAsser.*;
+import static org.hamcrest.MatchersAsser.*;
 
 import org.junit.Before;
 import org.junit.Test;
