@@ -1,8 +1,14 @@
 package edu.colorado.applepear;
 //Yubin part
 public class Game {
+    public int hitCount, missCount;
+
     //1: keeps track of and displays the winner
     public void winner(){
+//
+//        if(/*player who gets higher score from Gameboard*/){
+//            System.out.println(/*player*/," Win the Game! Congratulations!");
+//        }
 
     }
     //2: determines which player's turn it is
@@ -14,15 +20,25 @@ public class Game {
 
     }
     //4: begin and end the game
-    public void startAndGameOver(){
-
+    public void beginGame(){
+//        display = new Display(this);
+        System.out.println("Start Game!");
+    }
+    public void isGameOver() //return true when game is over
+    {
+        System.out.println("=============GAME OVER==============");
+        System.exit(0);
     }
     //5: asks for inputs from the players
     public void playerInput(){
-        
+//        public Player getPlayer(){return player;}
     }
     //6: displays information to the players (like hit or miss)
     public void hitOrMiss(){
+        char hit = '+';
+        char miss = 'o';
+
+
 
     }
 
