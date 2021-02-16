@@ -35,7 +35,7 @@ public class Main {
              Scanner myInput = new Scanner(System.in);
              String myVal = myInput.nextLine();
              System.out.println(myVal);
-             if (myVal == "1"){
+             if (myVal.equals("1")){
                  System.out.println("OK");
 
                  System.out.println("What is the X coordinate for the space you want to attack?");
@@ -46,7 +46,7 @@ public class Main {
                  // Update Missiles if specialty missile was used
                  // Update user of hit or miss
              }
-             else if (myVal == "2"){
+             else if (myVal.equals("2")){
                  System.out.println("Player Map");
                  GameBoard.viewMap();
                  // Function incomplete
