@@ -16,28 +16,36 @@ public class GameBoard {
     public static int[][] map = new int [numX][numY];
 
 
+    // Function 1: Update Map:
+    // Param:
+    public void updateMap(String myX, String myY) {
+    }
+    
 
-
-    // Function 1: Check specific Coordinate
-    // Param: X and Y coordinates
-    // Returns: Int
-    // Checks X and Y coordinates against Map
-    // if [X][Y] is 0, print "unchecked"
-    // Return 0
-    // if [X][Y] is 1, print "checked, ship found"
-    // Return 1
-    // if [X][Y] is 2, print "checked, no ship found"
-    // Return 2
-
-    //Function 2: View Map
+    
+    // Function 2: View Map
+    // Param: None
+    // Returns: None
     // Prints Map with 0s, 1s, and 2s
     public static void viewMap() {
+        for (int i = 0; i < numX; i++){
+            for (int a = 0 ; a < 10 ; a++){
+                System.out.print("+———");
+            }
+            System.out.print("+");
+            System.out.print("\n");
+            System.out.print("| ");
 
+            for (int j = 0; j < numY; j++){
+                System.out.print(map[i][j] + " | ");
+            }
+            System.out.print("\n");
+        }
+        for (int a = 0 ; a < 10 ; a++){
+            System.out.print("+———");
+        }
+        System.out.print("+");
     }
-
-
-
-
 
 
 }

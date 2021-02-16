@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Main {
 
 
-    private static boolean run = true ;
+    private static boolean run = true;
 
     public static void displayMenu() {
         System.out.println("\n\n ========== Welcome to Battleship ========== \n");
@@ -24,8 +24,10 @@ public class Main {
          ship.show();
 
          GameBoard p1Map = new GameBoard();
-         GameBoard p2map = new GameBoard();
+         GameBoard p2Map = new GameBoard();
 
+         GameBoard curGame = p1Map;
+         GameBoard oppMap = p2Map;
          // Kevina was here
          // Menu Display & User Input
          // Refer to the displayMenu Print function for what each menu option will do
@@ -40,6 +42,7 @@ public class Main {
                  String myX = myInput.nextLine();
                  System.out.println("What is the Y coordinate for the space you want to attack?");
                  String myY = myInput.nextLine();
+                 curGame.updateMap(myX,myY);
                  //... INCOMPLETE -
                  // Update Player map of reflected attack and new accessed space
                  // Update Missiles if specialty missile was used
@@ -48,7 +51,6 @@ public class Main {
              else if (myVal.equals("2")){
                  System.out.println("Player Map");
                  GameBoard.viewMap();
-                 // Function incomplete
              }
              else if (myVal.equals("3")){
 
@@ -62,6 +64,16 @@ public class Main {
              }
              displayMenu();
 
+             // Depending on the player's turn, their map will be different
+             // Update maps and turns
+             if (curGame.equals(p1Map)){
+                 curGame = p2Map;
+                 oppMap = p1Map;
+             }
+             else if (curGame.equals(p2Map)){
+                 curGame = p1Map;
+                 oppMap = p2Map;
+             }
         }
 
     }
