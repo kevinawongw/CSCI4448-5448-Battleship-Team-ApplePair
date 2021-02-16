@@ -1,5 +1,5 @@
 package edu.colorado.applepear;
-//Vienna part
+//Vienna part: player class
 public class Player {
     // player class will hold the following
     private String name;
