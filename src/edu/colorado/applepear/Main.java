@@ -36,12 +36,11 @@ public class Main {
              String myVal = myInput.nextLine();
              System.out.println(myVal);
              if (myVal.equals("1")){
-                 System.out.println("OK");
-
                  System.out.println("What is the X coordinate for the space you want to attack?");
-                 System.out.println("What is the Y coordinate for the space you want to attach?");
+                 String myX = myInput.nextLine();
+                 System.out.println("What is the Y coordinate for the space you want to attack?");
+                 String myY = myInput.nextLine();
                  //... INCOMPLETE -
-                 // Take in player input
                  // Update Player map of reflected attack and new accessed space
                  // Update Missiles if specialty missile was used
                  // Update user of hit or miss
@@ -51,13 +50,13 @@ public class Main {
                  GameBoard.viewMap();
                  // Function incomplete
              }
-             else if (myVal == "3"){
+             else if (myVal.equals("3")){
 
              }
-             else if (myVal == "4"){
+             else if (myVal.equals("4")){
 
              }
-             else if (myVal == "5"){
+             else if (myVal.equals("5")){
                 run = false;
                 return;
              }
