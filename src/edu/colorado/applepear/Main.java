@@ -26,7 +26,7 @@ public class Main {
          GameBoard p1Map = new GameBoard();
          GameBoard p2Map = new GameBoard();
 
-         GameBoard curGame = p1Map;
+         GameBoard curMap = p1Map;
          GameBoard oppMap = p2Map;
 
 //         Player p1 = new Player();
@@ -46,7 +46,7 @@ public class Main {
                  String myX = myInput.nextLine();
                  System.out.println("What is the Y coordinate for the space you want to attack?");
                  String myY = myInput.nextLine();
-                 Game.updateMap(myX,myY);
+                 Game.updateMap(curMap, myX,myY);
                  //... INCOMPLETE -
                  // Update Player map of reflected attack and new accessed space
                  // Update Missiles if specialty missile was used
@@ -54,7 +54,7 @@ public class Main {
              }
              else if (myVal.equals("2")){
                  System.out.println("Player Map");
-                 curGame.viewMap();
+                 curMap.viewMap();
              }
              else if (myVal.equals("3")){
 
@@ -70,13 +70,13 @@ public class Main {
 
              // Depending on the player's turn, their map will be different
              // Update maps and turns
-             if (curGame.equals(p1Map)){
-                 curGame = p2Map;
+             if (curMap.equals(p1Map)){
+                 curMap = p2Map;
                  oppMap = p1Map;
 
              }
-             else if (curGame.equals(p2Map)){
-                 curGame = p1Map;
+             else if (curMap.equals(p2Map)){
+                 curMap = p1Map;
                  oppMap = p2Map;
              }
         }
