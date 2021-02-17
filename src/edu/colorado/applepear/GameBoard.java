@@ -13,14 +13,9 @@ public class GameBoard {
     // 0 - unchecked
     // 1 - checked, no ship
     // 2 - checked, ship found
+
     public static int[][] map = new int [numX][numY];
 
-
-    // Function 1: Update Map:
-    // Param:
-    public void updateMap(String myX, String myY) {
-    }
-    
 
     
     // Function 2: View Map

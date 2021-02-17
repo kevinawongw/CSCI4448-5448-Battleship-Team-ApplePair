@@ -3,6 +3,9 @@ package edu.colorado.applepear;
 public class Game {
     public int hitCount, missCount;
 
+    public static void updateMap(GameBoard playersMap,String myX, String myY) {
+    }
+
     //1: keeps track of and displays the winner
     public void winner(){
 //
