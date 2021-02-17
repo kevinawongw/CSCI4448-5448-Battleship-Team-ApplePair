@@ -28,6 +28,10 @@ public class Main {
 
          GameBoard curGame = p1Map;
          GameBoard oppMap = p2Map;
+
+//         Player p1 = new Player();
+//         Player p2 = new Player();
+
          // Kevina was here
          // Menu Display & User Input
          // Refer to the displayMenu Print function for what each menu option will do
@@ -42,7 +46,7 @@ public class Main {
                  String myX = myInput.nextLine();
                  System.out.println("What is the Y coordinate for the space you want to attack?");
                  String myY = myInput.nextLine();
-                 curGame.updateMap(myX,myY);
+                 Game.updateMap(myX,myY);
                  //... INCOMPLETE -
                  // Update Player map of reflected attack and new accessed space
                  // Update Missiles if specialty missile was used
@@ -50,7 +54,7 @@ public class Main {
              }
              else if (myVal.equals("2")){
                  System.out.println("Player Map");
-                 GameBoard.viewMap();
+                 curGame.viewMap();
              }
              else if (myVal.equals("3")){
 
@@ -69,6 +73,7 @@ public class Main {
              if (curGame.equals(p1Map)){
                  curGame = p2Map;
                  oppMap = p1Map;
+
              }
              else if (curGame.equals(p2Map)){
                  curGame = p1Map;

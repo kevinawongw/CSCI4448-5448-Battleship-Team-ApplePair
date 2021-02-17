@@ -19,9 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ecce50e7-60f1-4088-9580-0bcf29b1574e" name="Default Changelist" comment="Team ApplePair pair 1: Vienna push - Player">
+    <list default="true" id="ecce50e7-60f1-4088-9580-0bcf29b1574e" name="Default Changelist" comment="Team ApplePair pair 1: Kevina push - GameBoard and Main">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/GameBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/GameBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,13 +39,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GithubProjectSettings">
-    <option name="CREATE_PULL_REQUEST_DEFAULT_BRANCH" value="main" />
-    <option name="CREATE_PULL_REQUEST_DEFAULT_REPO_USER" value="kevinawongw" />
-    <option name="CREATE_PULL_REQUEST_DEFAULT_REPO_NAME" value="CSCI4448-5448-Battleship-Team-ApplePair" />
-  </component>
   <component name="ProjectId" id="1nymCa3Z6afdfwn8fylhElju0hB" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -55,7 +50,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
   </component>
   <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="edu.colorado.applepear.Main" />
       <module name="Milestone1-csci4448-5448" />
       <extension name="coverage">
@@ -68,6 +63,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -106,14 +106,7 @@
       <option name="project" value="LOCAL" />
       <updated>1613506021115</updated>
     </task>
-    <task id="LOCAL-00005" summary="Team ApplePair pair 1: Vienna push - Player">
-      <created>1613507937959</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1613507937959</updated>
-    </task>
-    <option name="localTasksCounter" value="6" />
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -131,18 +124,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="rename to team name" />
     <MESSAGE value="Team ApplePair pair 1: Kevina push - GameBoard and Main" />
-    <MESSAGE value="Team ApplePair pair 1: Vienna push - Player" />
-    <option name="LAST_COMMIT_MESSAGE" value="Team ApplePair pair 1: Vienna push - Player" />
+    <option name="LAST_COMMIT_MESSAGE" value="Team ApplePair pair 1: Kevina push - GameBoard and Main" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1613507866843">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1613507866843" />
-    <state x="371" y="130" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1613507866051">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="371" y="130" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1280.680@0.0.1280.680" timestamp="1613507866051" />
     <state x="500" y="180" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1613504096256">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -163,10 +147,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1493" height="224" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1613506808830" />
-    <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1613507872310">
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1612371965217">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1613507872310" />
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1612371965217" />
     <state x="588" y="347" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1613501459769">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
