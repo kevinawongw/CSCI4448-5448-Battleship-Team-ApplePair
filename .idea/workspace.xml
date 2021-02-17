@@ -21,6 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ecce50e7-60f1-4088-9580-0bcf29b1574e" name="Default Changelist" comment="Team ApplePair pair 1: Kevina push - GameBoard and Main">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/GameBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/GameBoard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/Main.java" afterDir="false" />
     </list>
@@ -106,7 +107,21 @@
       <option name="project" value="LOCAL" />
       <updated>1613506021115</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Team ApplePair pair 1: Kevina push - GameBoard and Main">
+      <created>1613522943352</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1613522943352</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Team ApplePair pair 1: Kevina push - GameBoard and Main">
+      <created>1613523122715</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1613523122715</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -127,30 +142,35 @@
     <option name="LAST_COMMIT_MESSAGE" value="Team ApplePair pair 1: Kevina push - GameBoard and Main" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="575" y="134" key="#com.intellij.ide.util.MemberChooser" timestamp="1613550207395">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="575" y="134" key="#com.intellij.ide.util.MemberChooser/0.0.1536.864@0.0.1536.864" timestamp="1613550207395" />
     <state x="500" y="180" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1613504096256">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="500" y="180" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.864@0.0.1536.864" timestamp="1613504096256" />
-    <state width="1493" height="224" key="GridCell.Tab.0.bottom" timestamp="1613506808830">
+    <state width="1493" height="547" key="GridCell.Tab.0.bottom" timestamp="1613551421886">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="224" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1613506808830" />
-    <state width="1493" height="224" key="GridCell.Tab.0.center" timestamp="1613506808830">
+    <state width="1493" height="547" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1613551421886" />
+    <state width="1493" height="547" key="GridCell.Tab.0.center" timestamp="1613551421883">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="224" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1613506808830" />
-    <state width="1493" height="224" key="GridCell.Tab.0.left" timestamp="1613506808830">
+    <state width="1493" height="547" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1613551421883" />
+    <state width="1493" height="547" key="GridCell.Tab.0.left" timestamp="1613551421882">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="224" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1613506808829" />
-    <state width="1493" height="224" key="GridCell.Tab.0.right" timestamp="1613506808830">
+    <state width="1493" height="547" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1613551421882" />
+    <state width="1493" height="547" key="GridCell.Tab.0.right" timestamp="1613551421884">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="224" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1613506808830" />
-    <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1612371965217">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1493" height="547" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1613551421884" />
+    <state x="280" y="93" key="Vcs.Push.Dialog.v2" timestamp="1613523171825">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1612371965217" />
+    <state x="280" y="93" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1613523171825" />
     <state x="588" y="347" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1613501459769">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -159,9 +179,9 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="395" y="242" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1280.680@0.0.1280.680" timestamp="1612371469634" />
-    <state x="431" y="182" width="672" height="678" key="search.everywhere.popup" timestamp="1613503142503">
+    <state x="431" y="182" width="672" height="678" key="search.everywhere.popup" timestamp="1613523481278">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="431" y="182" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1613503142503" />
+    <state x="431" y="182" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1613523481278" />
   </component>
 </project>
