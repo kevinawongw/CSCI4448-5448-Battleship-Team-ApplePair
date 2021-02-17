@@ -113,7 +113,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613507937959</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Team ApplePair pair 1: Vienna push - Player">
+      <created>1613507974039</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1613507974039</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -163,13 +170,14 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1493" height="224" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1613506808830" />
-    <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1613507872310">
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1613507983310">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1613507872310" />
-    <state x="588" y="347" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1613501459769">
-      <screen x="0" y="0" width="1536" height="864" />
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1613507983310" />
+    <state x="490" y="273" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1613522197895">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state x="490" y="273" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1613522197895" />
     <state x="588" y="347" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.864@0.0.1536.864" timestamp="1613501459769" />
     <state x="395" y="242" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1612371469634">
       <screen x="0" y="0" width="1280" height="680" />
