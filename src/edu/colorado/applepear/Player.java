@@ -1,4 +1,5 @@
 package edu.colorado.applepear;
+
 //Vienna part: player
 public class Player {
     // player class will hold the following
@@ -14,6 +15,25 @@ public class Player {
         this.plusMissile = plusMissile;
         this.numShips = numShips;
     }
+
+    //setters
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setPlusMissile(int plusMissile) {
+        this.plusMissile = plusMissile;
+    }
+
+    public void setRadarMissile(int radarMissile) {
+        this.radarMissile = radarMissile;
+    }
+
+    public void setNumShips(int numShips) {
+        this.numShips = numShips;
+    }
+
     //getters
     public String getName(){ return name; }
 
