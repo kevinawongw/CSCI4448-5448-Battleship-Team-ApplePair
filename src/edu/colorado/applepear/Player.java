@@ -43,11 +43,11 @@ public class Player {
 
     public int getNumShips() { return numShips; }
 
-    //check for losing state
+    //check for losing state 
 
     public boolean checkLose(){
-        int myships = getNumShips();
-        if (myships == 0) {
+        int myShips = getNumShips();
+        if (myShips == 0) {
             return true;
         }
         else {
