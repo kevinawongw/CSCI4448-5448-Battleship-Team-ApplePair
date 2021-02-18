@@ -2,7 +2,7 @@
 ### Member Names:
 
   <li> Kevina Wong
-  <li> Vienna Wonf
+  <li> Vienna Wong
   <li> Yubin Go 
   <li> Yvonne Liu
     
