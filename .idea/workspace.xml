@@ -19,9 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ecce50e7-60f1-4088-9580-0bcf29b1574e" name="Default Changelist" comment="Team ApplePair pair 1: Kevina push - GameBoard and Main">
+    <list default="true" id="ecce50e7-60f1-4088-9580-0bcf29b1574e" name="Default Changelist" comment="Team ApplePair pair 1: Kevina push - GameBoard and Main - Ship input added, ship map added, update attack map">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/GameBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/GameBoard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/Main.java" afterDir="false" />
     </list>
@@ -121,7 +120,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613523122715</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Team ApplePair pair 1: Kevina push - GameBoard and Main - Ship input added, ship map added, update attack map">
+      <created>1613551833564</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1613551833564</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -139,7 +145,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="rename to team name" />
     <MESSAGE value="Team ApplePair pair 1: Kevina push - GameBoard and Main" />
-    <option name="LAST_COMMIT_MESSAGE" value="Team ApplePair pair 1: Kevina push - GameBoard and Main" />
+    <MESSAGE value="Team ApplePair pair 1: Kevina push - GameBoard and Main - Ship input added, ship map added, update attack map" />
+    <option name="LAST_COMMIT_MESSAGE" value="Team ApplePair pair 1: Kevina push - GameBoard and Main - Ship input added, ship map added, update attack map" />
   </component>
   <component name="WindowStateProjectService">
     <state x="575" y="134" key="#com.intellij.ide.util.MemberChooser" timestamp="1613550207395">
@@ -150,27 +157,27 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="500" y="180" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.864@0.0.1536.864" timestamp="1613504096256" />
-    <state width="1493" height="547" key="GridCell.Tab.0.bottom" timestamp="1613551421886">
+    <state width="1493" height="534" key="GridCell.Tab.0.bottom" timestamp="1613613834131">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="547" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1613551421886" />
-    <state width="1493" height="547" key="GridCell.Tab.0.center" timestamp="1613551421883">
+    <state width="1493" height="534" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1613613834131" />
+    <state width="1493" height="534" key="GridCell.Tab.0.center" timestamp="1613613834130">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="547" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1613551421883" />
-    <state width="1493" height="547" key="GridCell.Tab.0.left" timestamp="1613551421882">
+    <state width="1493" height="534" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1613613834130" />
+    <state width="1493" height="534" key="GridCell.Tab.0.left" timestamp="1613613834130">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="547" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1613551421882" />
-    <state width="1493" height="547" key="GridCell.Tab.0.right" timestamp="1613551421884">
+    <state width="1493" height="534" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1613613834130" />
+    <state width="1493" height="534" key="GridCell.Tab.0.right" timestamp="1613613834131">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="547" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1613551421884" />
-    <state x="280" y="93" key="Vcs.Push.Dialog.v2" timestamp="1613523171825">
+    <state width="1493" height="534" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1613613834131" />
+    <state x="280" y="93" key="Vcs.Push.Dialog.v2" timestamp="1613551839599">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1612371965217" />
-    <state x="280" y="93" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1613523171825" />
+    <state x="280" y="93" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1613551839599" />
     <state x="588" y="347" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1613501459769">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
