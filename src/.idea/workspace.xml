@@ -136,7 +136,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613709581509</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Team applepear pair 2: Working on Ship class2">
+      <created>1613763435172</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1613763435173</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -147,6 +154,7 @@
     <MESSAGE value="Team applepear pair 2: Modify the functions in Game class" />
     <MESSAGE value="Team applepear pair 2: Add the isGameOver in Game Class" />
     <MESSAGE value="Team applepear pair 2: Working on Ship class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Team applepear pair 2: Working on Ship class" />
+    <MESSAGE value="Team applepear pair 2: Working on Ship class2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Team applepear pair 2: Working on Ship class2" />
   </component>
 </project>

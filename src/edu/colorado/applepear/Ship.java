@@ -40,7 +40,7 @@ public class Ship {
         this.g  = g;
     }
 
-    public void sunkenOrNot(){ //checking to see if the ship is sunken or not
+    public boolean sunkenOrNot(){ //checking to see if the ship is sunken or not
         //get the location
         GameBoard p1Map = new GameBoard(gb1.getPlayer());
         GameBoard p2Map = new GameBoard(gb2.getPlayer());
@@ -48,13 +48,43 @@ public class Ship {
         String y = null;
 
         if(p1Map.equals(p1.getName())){
-
+            return true;
         }
         else if (p2Map.equals(p2.getName())){
-
+            return true;
         }
 
+        return false;
+    }
 
+    public boolean sunkenMinesweeper(){
+        return false;
+    }
+    public boolean sunkenDestroyer(){
+        return false;
+    }
+    public boolean sunkenBattleship(){
+        return false;
+    }
+    public boolean sunkenTower(){
+        return false;
+    }
+    public boolean sunkenLShip(){
+        return false;
+    }
+
+
+    public void determineSunkenShip(){
+        //maybe i can create 5 functions for ship shape and call it here
+        //put if statement to check each shape of ship is sunken or not
+        //If specific shape of ship is sunken, it will return true;
+        //because anyway every player has to place 5 ships
+        sunkenMinesweeper();
+        sunkenDestroyer();
+        sunkenBattleship();
+        sunkenTower();
+        sunkenLShip();
+        sunkenOrNot();
     }
 
 }
