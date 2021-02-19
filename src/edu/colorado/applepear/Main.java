@@ -130,6 +130,9 @@ public class Main {
                 run = false;
                 return;
              }
+             else{
+                 myGame.isGameOver();
+             }
              System.out.println("--- It is " + curMap.getPlayer().getName() + "'s turn ---");
              displayMenu();
         }

@@ -4,6 +4,8 @@
     <list default="true" id="5e4f39a5-e2e1-4607-8fcf-96619b63a397" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/edu/colorado/applepear/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/edu/colorado/applepear/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edu/colorado/applepear/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/edu/colorado/applepear/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edu/colorado/applepear/Ship.java" beforeDir="false" afterPath="$PROJECT_DIR$/edu/colorado/applepear/Ship.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +36,9 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -104,7 +109,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613430144384</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Team applepear pair 2: Modify the functions in Game class">
+      <created>1613435184305</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1613435184305</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -112,6 +124,7 @@
     <MESSAGE value="Team applepear pair 2: Yubin push 2" />
     <MESSAGE value="Team applepear pair 2: Added comment and Create Game class" />
     <MESSAGE value="Team applepear pair 2: created six functions in Game class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Team applepear pair 2: created six functions in Game class" />
+    <MESSAGE value="Team applepear pair 2: Modify the functions in Game class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Team applepear pair 2: Modify the functions in Game class" />
   </component>
 </project>

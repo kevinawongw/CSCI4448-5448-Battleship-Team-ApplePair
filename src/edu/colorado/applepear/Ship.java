@@ -12,4 +12,9 @@ public class Ship {
     public  void show()     {     // dunno why this is here maybe it is just an example method
         System.out.println("IF you can't see this then something is severely wrong!!");
     }
+
+    //how many coordinates the ship has to hit
+    //checking to see if the ship is sunken or not
+    //ship type:  5 different types of shape
+    //each ship type has different health (blocks)
 }
