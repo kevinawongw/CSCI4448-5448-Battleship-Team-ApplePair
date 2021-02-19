@@ -12,7 +12,7 @@ public class Main {
     // Param: None
     // Return: None
     // Prints Menu
-    public static void displayMenu() {
+    private static void displayMenu() {
         System.out.println("\n\n ========== Battleship Menu ========== \n");
         System.out.println("Please pick a menu option");
         System.out.println("1. Choose Coordinates to attack");
@@ -81,6 +81,7 @@ public class Main {
          displayMenu();
 
          while (run){
+             System.out.println("start");
              String myVal = myInput.nextLine();
              System.out.println(myVal);
              if (myVal.equals("1")){
@@ -128,10 +129,8 @@ public class Main {
              }
              else if (myVal.equals("6")){
                 run = false;
+                myGame.isGameOver();
                 return;
-             }
-             else{
-                 myGame.isGameOver();
              }
              System.out.println("--- It is " + curMap.getPlayer().getName() + "'s turn ---");
              displayMenu();

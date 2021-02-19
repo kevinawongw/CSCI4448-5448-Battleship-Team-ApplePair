@@ -17,4 +17,19 @@ public class Ship {
     //checking to see if the ship is sunken or not
     //ship type:  5 different types of shape
     //each ship type has different health (blocks)
+    //if the health become 0 then, determinate if the ship is sunken or not
+    //
+
+    // --Ships--:
+    // Minesweeper (2 blocks)
+    // Destroyer (3 blocks)
+    // Battleship (4 Blocks)
+    // Tower (1 block x 3 hits)
+    // L - Ship (3 blocks shaped like "L")
+
+    public void sunkenOrNot(){
+        //get the location
+
+    }
+
 }

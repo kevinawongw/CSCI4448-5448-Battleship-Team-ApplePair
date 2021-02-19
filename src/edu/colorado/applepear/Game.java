@@ -47,7 +47,6 @@ public class Game {
             System.out.println("Winner is " + g2.getPlayer().getName() + " Congratulations!");
         }
 
-        System.out.println("You choose the wrong number.");
         System.out.println("=============GAME OVER==============");
         System.exit(0);
     }
