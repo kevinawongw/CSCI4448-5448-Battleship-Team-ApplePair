@@ -41,14 +41,16 @@ public class Game {
     {
         if(p1.checkLose() == true){ //if player 1 have 0 ships left
             System.out.println("Winner is " + g1.getPlayer().getName() + " Congratulations!");
-
+            System.out.println("=============GAME OVER==============");
+            System.exit(0);
         }
         else if(p2.checkLose() == true){
             System.out.println("Winner is " + g2.getPlayer().getName() + " Congratulations!");
+            System.out.println("=============GAME OVER==============");
+            System.exit(0);
         }
 
-        System.out.println("=============GAME OVER==============");
-        System.exit(0);
+
     }
 
 }

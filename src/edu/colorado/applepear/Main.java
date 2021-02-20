@@ -70,6 +70,8 @@ public class Main {
          GameBoard curMap = p1Map;
          GameBoard oppMap = p2Map;
 
+         // Initialize Ship Object
+        Ship myship;
          // -- END Initialization--
 
 
@@ -91,6 +93,8 @@ public class Main {
                  System.out.println("What is the Y coordinate for the space you want to attack?");
                  String myY = myInput.nextLine();
                  boolean hitOrMiss = Game.updateMap(curMap,oppMap, myX,myY);
+//                 myship = new Ship(Integer.parseInt(myX),Integer.parseInt(myY));
+//                 myship.determineSunkenShip(Integer.parseInt(myX),Integer.parseInt(myY));
                  if (hitOrMiss){
                      System.out.println("You Hit an Opponent's Ship! Nice Shot!");
                  }
@@ -128,10 +132,11 @@ public class Main {
                  curMap.viewShips();
              }
              else if (myVal.equals("6")){
-                run = false;
-                myGame.isGameOver();
-                return;
+                 run = false;
+                 return;
              }
+             //end the game
+             myGame.isGameOver();
              System.out.println("--- It is " + curMap.getPlayer().getName() + "'s turn ---");
              displayMenu();
         }
