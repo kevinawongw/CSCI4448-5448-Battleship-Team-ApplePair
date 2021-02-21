@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="5e4f39a5-e2e1-4607-8fcf-96619b63a397" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Milestone1-csci4448-5448.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Milestone1-csci4448-5448.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edu/colorado/applepear/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/edu/colorado/applepear/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edu/colorado/applepear/GameBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/edu/colorado/applepear/GameBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edu/colorado/applepear/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/edu/colorado/applepear/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edu/colorado/applepear/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/edu/colorado/applepear/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edu/colorado/applepear/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/edu/colorado/applepear/Point.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/edu/colorado/applepear/Ship.java" beforeDir="false" afterPath="$PROJECT_DIR$/edu/colorado/applepear/Ship.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -198,7 +196,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613876773389</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Team applepear pair 2: Changing Ship class">
+      <created>1613880668640</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1613880668640</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -215,6 +220,7 @@
     <MESSAGE value="Team applepear pair 2: Working on Ship class: getter and setter" />
     <MESSAGE value="Team applepear pair 2: junit4" />
     <MESSAGE value="Team applepear pair 2: junit4 again" />
-    <option name="LAST_COMMIT_MESSAGE" value="Team applepear pair 2: junit4 again" />
+    <MESSAGE value="Team applepear pair 2: Changing Ship class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Team applepear pair 2: Changing Ship class" />
   </component>
 </project>
