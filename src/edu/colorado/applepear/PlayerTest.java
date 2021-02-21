@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Test;
 
 public class PlayerTest {
 
+
     private Player player1;
     private Player player2;
 
