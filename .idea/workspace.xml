@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -19,12 +22,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ecce50e7-60f1-4088-9580-0bcf29b1574e" name="Default Changelist" comment="Team ApplePair pair 1: Vienna push - modified GameTest">
+    <list default="true" id="ecce50e7-60f1-4088-9580-0bcf29b1574e" name="Default Changelist" comment="Team ApplePair pair 1: Kevina - GameBoard private -&gt; public functions">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Milestone1-csci4448-5448/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Milestone1-csci4448-5448/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/PlayerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/PlayerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/Ship.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/Ship.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/ShipTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/ShipTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/GameBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/GameBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/GameBoardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/GameBoardTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +49,9 @@
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1nymCa3Z6afdfwn8fylhElju0hB" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="false" id="Update" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -66,7 +69,35 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="JUnit.PlayerTest">
+  <component name="RunManager" selected="JUnit.GameBoardTest">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="edu.colorado.applepear.Main" />
+      <module name="Milestone1-csci4448-5448" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.colorado.applepear.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GameBoardTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Milestone1-csci4448-5448" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.colorado.applepear.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="edu.colorado.applepear" />
+      <option name="MAIN_CLASS_NAME" value="edu.colorado.applepear.GameBoardTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GameTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Milestone1-csci4448-5448" />
       <extension name="coverage">
@@ -98,23 +129,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GameTest.testGetNumPlusMissiles" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Milestone1-csci4448-5448" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="edu.colorado.applepear.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="edu.colorado.applepear" />
-      <option name="MAIN_CLASS_NAME" value="edu.colorado.applepear.GameTest" />
-      <option name="METHOD_NAME" value="testGetNumPlusMissiles" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PlayerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PlayerTest.testGetName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Milestone1-csci4448-5448" />
       <extension name="coverage">
         <pattern>
@@ -124,22 +139,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="edu.colorado.applepear" />
       <option name="MAIN_CLASS_NAME" value="edu.colorado.applepear.PlayerTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PlayerTest.checkLose" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Milestone1-csci4448-5448" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="edu.colorado.applepear.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="edu.colorado.applepear" />
-      <option name="MAIN_CLASS_NAME" value="edu.colorado.applepear.PlayerTest" />
-      <option name="METHOD_NAME" value="checkLose" />
+      <option name="METHOD_NAME" value="testGetName" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -171,11 +171,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PlayerTest" />
-        <item itemvalue="JUnit.PlayerTest.checkLose" />
-        <item itemvalue="JUnit.GameTest.testGetNumPlusMissiles" />
-        <item itemvalue="JUnit.GameTest" />
+        <item itemvalue="JUnit.GameBoardTest" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.GameTest.testGetName" />
+        <item itemvalue="JUnit.GameTest" />
+        <item itemvalue="JUnit.PlayerTest.testGetName" />
       </list>
     </recent_temporary>
   </component>
@@ -230,28 +230,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613877935464</updated>
     </task>
-    <task id="LOCAL-00007" summary="Team ApplePair pair 1: Vienna push - GameTest">
-      <created>1613878291401</created>
+    <task id="LOCAL-00007" summary="Team ApplePair pair 1: Kevina - GameBoard private -&gt; public functions">
+      <created>1613887998468</created>
       <option name="number" value="00007" />
       <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
-      <updated>1613878291402</updated>
+      <updated>1613887998468</updated>
     </task>
-    <task id="LOCAL-00008" summary="Team ApplePair pair 1: Vienna push - modified GameTest">
-      <created>1613883843240</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1613883843240</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Team ApplePair pair 1: Vienna push - modified GameTest">
-      <created>1613885277617</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1613885277617</updated>
-    </task>
-    <option name="localTasksCounter" value="10" />
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -271,8 +257,8 @@
     <MESSAGE value="Team ApplePair pair 1: Kevina push - GameBoard and Main" />
     <MESSAGE value="Team ApplePair pair 1: Vienna push - Player losing state" />
     <MESSAGE value="Team ApplePair pair 1: Vienna push - GameTest" />
-    <MESSAGE value="Team ApplePair pair 1: Vienna push - modified GameTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="Team ApplePair pair 1: Vienna push - modified GameTest" />
+    <MESSAGE value="Team ApplePair pair 1: Kevina - GameBoard private -&gt; public functions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Team ApplePair pair 1: Kevina - GameBoard private -&gt; public functions" />
   </component>
   <component name="WindowStateProjectService">
     <state x="321" y="76" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1613874164867">
@@ -291,42 +277,43 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="348" y="81" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1613876998814" />
-    <state width="1237" height="163" key="GridCell.Tab.0.bottom" timestamp="1613888850662">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="746" height="2" key="GridCell.Tab.0.bottom" timestamp="1613888198035">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1613888850662" />
-    <state width="1493" height="224" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1613506808830" />
-    <state width="1237" height="163" key="GridCell.Tab.0.center" timestamp="1613888850662">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1237" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1613877721049" />
+    <state width="746" height="2" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1613888198035" />
+    <state width="746" height="2" key="GridCell.Tab.0.center" timestamp="1613888198035">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1613888850662" />
-    <state width="1493" height="224" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1613506808830" />
-    <state width="1237" height="163" key="GridCell.Tab.0.left" timestamp="1613888850662">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1237" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1613877721049" />
+    <state width="746" height="2" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1613888198035" />
+    <state width="746" height="2" key="GridCell.Tab.0.left" timestamp="1613888198035">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1613888850662" />
-    <state width="1493" height="224" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1613506808829" />
-    <state width="1237" height="163" key="GridCell.Tab.0.right" timestamp="1613888850662">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1237" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1613877721048" />
+    <state width="746" height="2" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1613888198035" />
+    <state width="746" height="2" key="GridCell.Tab.0.right" timestamp="1613888198035">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1613888850662" />
-    <state width="1493" height="224" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1613506808830" />
+    <state width="1237" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1613877721049" />
+    <state width="746" height="2" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1613888198035" />
     <state x="121" y="0" key="SettingsEditor" timestamp="1613876831407">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="121" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1613876831407" />
-    <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1613885279547">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="280" y="93" key="Vcs.Push.Dialog.v2" timestamp="1613888004597">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1613885279547" />
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1613877959350" />
+    <state x="280" y="93" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1613888004597" />
     <state x="375" y="232" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1613876458203">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="375" y="232" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1280.680@0.0.1280.680" timestamp="1613876458203" />
-    <state x="490" y="273" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1613880078636">
+    <state x="490" y="273" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1613876662259">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="490" y="273" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1613880078636" />
+    <state x="490" y="273" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1613876662259" />
     <state x="588" y="347" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.864@0.0.1536.864" timestamp="1613501459769" />
     <state x="395" y="242" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1612371469634">
       <screen x="0" y="0" width="1280" height="680" />

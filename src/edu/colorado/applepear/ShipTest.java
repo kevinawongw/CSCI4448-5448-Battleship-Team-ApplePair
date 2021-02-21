@@ -28,6 +28,6 @@ public class ShipTest {
     @DisplayName("Displaying ship type")
     public void testGetShip(){
         System.out.println("Testing GetShip");
-//        assertEquals("minesweeper",gb.minesweeper.getShipType(),"GetShip should display the minesweeper");
+        assertEquals("minesweeper", gb.getMinesweeper().getShipType(),"GetShip should display the minesweeper");
     }
 }
