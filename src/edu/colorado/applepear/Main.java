@@ -135,7 +135,7 @@ public class Main {
                  return;
              }
              //end the game
-             bool gameEnd = myGame.isGameOver();
+             boolean gameEnd = myGame.isGameOver();
              if(gameEnd){
                  System.exit(0);
              }

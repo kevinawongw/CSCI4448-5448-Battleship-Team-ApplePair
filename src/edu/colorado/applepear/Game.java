@@ -38,19 +38,19 @@ public class Game {
     //Yubin
     //Call the function: checkLose() from Player to check which player lose or win the game
     //Calling this function inside the while loop of main class
-    public void isGameOver()
+    public boolean isGameOver()
     {
         if(p1.checkLose() == true){ //if player 1 have 0 ships left, then 2 win
             System.out.println("Winner is " + g2.getPlayer().getName() + " Congratulations!");
             System.out.println("=============GAME OVER==============");
-            System.exit(0);
+            return true;
         }
         else if(p2.checkLose() == true){
             System.out.println("Winner is " + g1.getPlayer().getName() + " Congratulations!");
             System.out.println("=============GAME OVER==============");
-            System.exit(0);
+            return true;
         }
-
+        return false;
 
     }
 
