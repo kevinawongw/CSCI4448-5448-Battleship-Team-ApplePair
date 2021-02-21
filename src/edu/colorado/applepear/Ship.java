@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 public class Ship {
     public ArrayList<Point> location;
-    public String shipType;
+    private String shipType;
     GameBoard gb;
 
     //Constructor
@@ -22,6 +22,8 @@ public class Ship {
         this.shipType = shipType;
         this.gb = gb;
     }
+
+    public String getShipType() { return shipType; }
 
     //Function to determine did the player has sunken the Minesweeper or not, by getting the attackMap function from Gameboard class
 

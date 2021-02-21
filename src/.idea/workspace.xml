@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e4f39a5-e2e1-4607-8fcf-96619b63a397" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/edu/colorado/applepear/GameTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edu/colorado/applepear/ShipTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/edu/colorado/applepear/ShipTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -245,7 +245,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613886096947</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Team applepear pair 2: Processing on GameTest.java">
+      <created>1613886654346</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1613886654346</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -266,6 +273,7 @@
     <MESSAGE value="Team applepear pair 2: Done with Ship class" />
     <MESSAGE value="Team applepear pair 2: Adding the PointTest.java" />
     <MESSAGE value="Team applepear pair 2: Processing on ShipTest.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Team applepear pair 2: Processing on ShipTest.java" />
+    <MESSAGE value="Team applepear pair 2: Processing on GameTest.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Team applepear pair 2: Processing on GameTest.java" />
   </component>
 </project>
