@@ -29,12 +29,47 @@ public class Ship {
         Llocation = new ArrayList<Point>();
     }
 
+    //setter
+    public void setMlocation(int myX, int myY){
+        Point newPoint = new Point(myX, myY);
+        Mlocation.add(newPoint);
+    }
+    public void setDlocation(ArrayList<Point> Dlocation){
+        this.Dlocation = Dlocation;
+    }
+    public void setBlocation(ArrayList<Point> Blocation){
+        this.Mlocation = Mlocation;
+    }
+    public void setTlocation(ArrayList<Point> Tlocation){
+        this.Tlocation = Tlocation;
+    }
+    public void setLlocation(ArrayList<Point> Llocation){
+        this.Llocation = Llocation;
+    }
+
+    //getter
+    public ArrayList<Point> getMlocation(){
+        return Mlocation;
+    }
+    public ArrayList<Point> getDlocation(){
+        return Dlocation;
+    }
+    public ArrayList<Point> getBlocation(){
+        return Blocation;
+    }
+    public ArrayList<Point> getTlocation(){
+        return Tlocation;
+    }
+    public ArrayList<Point> getLlocation(){
+        return Llocation;
+    }
+
     /*function to determine which ship did the player hit and if the player sink the entire ship.
         if then, call each sunken functions by the location. */
     //calling it in main class
     public void determineShip(GameBoard attackMap, int posX, int posY){
         Point myPoint = new Point(posX, posY);
-
+//        System.out.println(setMlocation(posX, posY) + " Testtest");
         if(Mlocation.contains(myPoint)){
             System.out.println("You have hit the minesweeper!");
             sunkenMinesweeper(attackMap);

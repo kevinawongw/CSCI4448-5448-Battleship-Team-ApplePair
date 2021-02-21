@@ -38,11 +38,11 @@ public class GameBoard {
         this.p = p;
         shipMap = new int[numX][numY];
         attackMap = new int[numX][numY];
-        this.minesweeper = minesweeper;
-        this.destroyer = destroyer;
-        this.battleship = battleship;
-        this.tower = tower;
-        this.L = L;
+//        this.minesweeper = minesweeper;
+//        this.destroyer = destroyer;
+//        this.battleship = battleship;
+//        this.tower = tower;
+//        this.L = L;
     }
 
     // Getters
@@ -175,9 +175,9 @@ public class GameBoard {
             shipMap[Integer.parseInt(inputValY)][Integer.parseInt(inputValX)] = 1;
             shipMap[Integer.parseInt(inputValY)][Integer.parseInt(inputValX) + 1] = 1;
             //Getting location for Ship class
-            minesweeper.Mlocation.add(new Point(Integer.parseInt(inputValY), Integer.parseInt(inputValX)));
-            minesweeper.Mlocation.add(new Point(Integer.parseInt(inputValY),Integer.parseInt(inputValX) + 1));
-//            System.out.println("Test Code: "+minesweeper.Mlocation.size());
+            minesweeper.setMlocation(Integer.parseInt(inputValY), Integer.parseInt(inputValX));
+            minesweeper.setMlocation(Integer.parseInt(inputValY), Integer.parseInt(inputValX)+1);
+
 
             viewShips();
 
