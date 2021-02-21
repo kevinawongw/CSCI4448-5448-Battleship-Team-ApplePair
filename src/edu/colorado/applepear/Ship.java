@@ -24,39 +24,6 @@ public class Ship {
         this.gb = gb;
     }
 
-
-    //getter
-//    public ArrayList<Point> getlocation(){
-//        return location;
-//    }
-
-
-    /*function to determine which ship did the player hit and if the player sink the entire ship.
-        if then, call each sunken functions by the location. */
-    //calling it in main class
-//    public void determineShip(){
-//        if(shipType == "minesweeper"){
-//            getlocation();
-//        }
-//        else if(shipType == "destroyer"){
-//            getlocation();
-//        }
-//        else if(shipType == "battleship"){
-//            getlocation();
-//
-//        }
-//        else if(shipType == "tower"){
-//            getlocation();
-//            sunkenTower();
-//
-//        }
-//        else{
-//            getlocation();
-//            sunkenLShip();
-//        }
-//
-//    }
-
     //Function to determine did the player has sunken the Minesweeper or not, by getting the attackMap function from Gameboard class
     // pseudocode:
     // for coordinatepoints (x,y) in ship location:
