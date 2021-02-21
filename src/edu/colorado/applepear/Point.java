@@ -1,5 +1,6 @@
 package edu.colorado.applepear;
 
+//Created a Point class for getting location of ship in Ship class
 public class Point {
     public int x;
     public int y;
