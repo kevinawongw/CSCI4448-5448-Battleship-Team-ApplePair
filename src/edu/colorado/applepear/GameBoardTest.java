@@ -43,17 +43,17 @@ public class GameBoardTest {
                 "Should correctly place minesweeper on map");
     }
 
-//    @Test
-//    @DisplayName("Place Destroyer")
-//    public void testPlaceMineSweeper() {
-//        m1 = new Point(0,0);
-//        m2 = new Point(1,0);
-//        gameBoard.placeMinesweeper(m1,m2);
-//        System.out.println("Testing Minesweeper Placement");assertEquals(1, gameBoard.getShipMap()[m1.y][m1.x],
-//                "Should correctly place minesweeper on map");
-//        assertEquals(1, gameBoard.getShipMap()[m2.y][m2.x],
-//                "Should correctly place minesweeper on map");
-//    }
+    @Test
+    @DisplayName("Place Destroyer")
+    public void testPlaceMineSweeper() {
+        m1 = new Point(0,0);
+        m2 = new Point(1,0);
+        gameBoard.placeMinesweeper(m1,m2);
+        System.out.println("Testing Minesweeper Placement");assertEquals(1, gameBoard.getShipMap()[m1.y][m1.x],
+                "Should correctly place minesweeper on map");
+        assertEquals(1, gameBoard.getShipMap()[m2.y][m2.x],
+                "Should correctly place minesweeper on map");
+    }
 
 }
 //    @Test
