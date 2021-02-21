@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5e4f39a5-e2e1-4607-8fcf-96619b63a397" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edu/colorado/applepear/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/edu/colorado/applepear/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/edu/colorado/applepear/GameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/edu/colorado/applepear/GameTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edu/colorado/applepear/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/edu/colorado/applepear/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -315,7 +313,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613889641057</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Team applepear pair 2: Processing with GameTest.java">
+      <created>1613890466823</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1613890466823</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -340,6 +345,7 @@
     <MESSAGE value="Team applepear pair 2: Processing on ShipTest.java 2" />
     <MESSAGE value="Team applepear pair 2: Done with ShipTest.java" />
     <MESSAGE value="Team applepear pair 2: Done with ShipTest.java with 5 cases" />
-    <option name="LAST_COMMIT_MESSAGE" value="Team applepear pair 2: Done with ShipTest.java with 5 cases" />
+    <MESSAGE value="Team applepear pair 2: Processing with GameTest.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Team applepear pair 2: Processing with GameTest.java" />
   </component>
 </project>

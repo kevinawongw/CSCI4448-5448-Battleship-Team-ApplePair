@@ -30,12 +30,12 @@ public class GameTest {
         gb1.placeTower(new Point(0,0));
             assertEquals(true, game.updateMap(gb2,gb1,new Point(0,0)), "updateMap should return true");
     }
-//
-//    @Test
-//    @DisplayName("if updateMap and did not hit a ship")
-//    public void testUpdateMap2() {
-//            assertEquals(false, game.updateMap(), "updateMap should return false");
-//    }
+
+    @Test
+    @DisplayName("if updateMap and did not hit a ship")
+    public void testUpdateMap2() {
+            assertEquals(false, game.updateMap(gb2,gb1,new Point(0,1)), "updateMap should return false");
+    }
 //
 //    @Test
 //    @DisplayName("if game is not over")
