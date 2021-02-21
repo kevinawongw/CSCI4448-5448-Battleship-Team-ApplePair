@@ -54,6 +54,13 @@ public class Player {
             return false;
         }
     }
+    //Yubin was here
+    //Recursive function that decreasing the number of ship when the player hits the ship
+    //Using this function inside the Ship class
+    public int decreaseNumShip(int currShipNum){
+        return decreaseNumShip(currShipNum-1);
+
+    }
 
 }
 

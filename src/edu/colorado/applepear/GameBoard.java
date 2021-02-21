@@ -12,11 +12,11 @@ public class GameBoard {
     public static final int numX = 10;
     public static final int numY = 10;
     private Player p;
-//    private Ship minesweeper = new Ship();
-//    private Ship destroyer = new Ship();
-//    private Ship battleship = new Ship();
-//    private Ship tower = new Ship();
-//    private Ship L = new Ship();
+    private Ship minesweeper = new Ship();
+    private Ship destroyer = new Ship();
+    private Ship battleship = new Ship();
+    private Ship tower = new Ship();
+    private Ship L = new Ship();
 
     // Initializing Maps:
 
@@ -26,6 +26,7 @@ public class GameBoard {
     // 1 - checked, no ship
     // 2 - checked, ship found
     public int[][] attackMap;
+
 
     // Ship Map: Reflects that player's own ships
     // 0 - Not Present
@@ -37,11 +38,11 @@ public class GameBoard {
         this.p = p;
         shipMap = new int[numX][numY];
         attackMap = new int[numX][numY];
-//        this.minesweeper = minesweeper;
-//        this.destroyer = destroyer;
-//        this.battleship = battleship;
-//        this.tower = tower;
-//        this.L = L;
+        this.minesweeper = minesweeper;
+        this.destroyer = destroyer;
+        this.battleship = battleship;
+        this.tower = tower;
+        this.L = L;
     }
 
     // Getters
@@ -177,9 +178,9 @@ public class GameBoard {
             shipMap[Integer.parseInt(inputValY)][Integer.parseInt(inputValX)] = 1;
             shipMap[Integer.parseInt(inputValY)][Integer.parseInt(inputValX) + 1] = 1;
             //Getting location for Ship class
-//            minesweeper.location.add(new Point(Integer.parseInt(inputValY), Integer.parseInt(inputValX)));
-//            minesweeper.location.add(new Point(Integer.parseInt(inputValY),Integer.parseInt(inputValX) + 1));
-////               System.out.println("Test Code: "+minesweeper.location.size());
+            minesweeper.Mlocation.add(new Point(Integer.parseInt(inputValY), Integer.parseInt(inputValX)));
+            minesweeper.Mlocation.add(new Point(Integer.parseInt(inputValY),Integer.parseInt(inputValX) + 1));
+//            System.out.println("Test Code: "+minesweeper.Mlocation.size());
 
             viewShips();
 
@@ -194,8 +195,8 @@ public class GameBoard {
             shipMap[Integer.parseInt(inputValY) + 1][Integer.parseInt(inputValX)] = 1;
             //Getting location for Ship class
 
-//            minesweeper.location.add(new Point(Integer.parseInt(inputValY), Integer.parseInt(inputValX)));
-//            minesweeper.location.add(new Point(Integer.parseInt(inputValY)+1,Integer.parseInt(inputValX)));
+            minesweeper.Mlocation.add(new Point(Integer.parseInt(inputValY), Integer.parseInt(inputValX)));
+            minesweeper.Mlocation.add(new Point(Integer.parseInt(inputValY)+1,Integer.parseInt(inputValX)));
 
             viewShips();
 
@@ -232,9 +233,9 @@ public class GameBoard {
                     shipMap[Integer.parseInt(inputValY)][Integer.parseInt(inputValX) + 1] = 1;
                     shipMap[Integer.parseInt(inputValY)][Integer.parseInt(inputValX) + 2] = 1;
                     //Getting location for Ship class
-//                    destroyer.location.add(new Point(Integer.parseInt(inputValY),Integer.parseInt(inputValX)));
-//                    destroyer.location.add(new Point(Integer.parseInt(inputValY),Integer.parseInt(inputValX) + 1));
-//                    destroyer.location.add(new Point(Integer.parseInt(inputValY),Integer.parseInt(inputValX) + 2));
+                    destroyer.Dlocation.add(new Point(Integer.parseInt(inputValY),Integer.parseInt(inputValX)));
+                    destroyer.Dlocation.add(new Point(Integer.parseInt(inputValY),Integer.parseInt(inputValX) + 1));
+                    destroyer.Dlocation.add(new Point(Integer.parseInt(inputValY),Integer.parseInt(inputValX) + 2));
                     temp = false;
                     viewShips();
 
@@ -259,9 +260,9 @@ public class GameBoard {
                     shipMap[Integer.parseInt(inputValY) + 1][Integer.parseInt(inputValX)] = 1;
                     shipMap[Integer.parseInt(inputValY) + 2][Integer.parseInt(inputValX)] = 1;
                     //Getting location for Ship class
-//                    destroyer.location.add(new Point(Integer.parseInt(inputValY),Integer.parseInt(inputValX)));
-//                    destroyer.location.add(new Point(Integer.parseInt(inputValY) + 1,Integer.parseInt(inputValX) ));
-//                    destroyer.location.add(new Point(Integer.parseInt(inputValY) + 2,Integer.parseInt(inputValX)));
+                    destroyer.Dlocation.add(new Point(Integer.parseInt(inputValY),Integer.parseInt(inputValX)));
+                    destroyer.Dlocation.add(new Point(Integer.parseInt(inputValY) + 1,Integer.parseInt(inputValX) ));
+                    destroyer.Dlocation.add(new Point(Integer.parseInt(inputValY) + 2,Integer.parseInt(inputValX)));
                     temp = false;
                     viewShips();
 
@@ -307,10 +308,10 @@ public class GameBoard {
                     shipMap[Integer.parseInt(inputValY)][Integer.parseInt(inputValX) + 3] = 1;
 
                     //Getting location for Ship class
-//                    battleship.location.add(new Point(Integer.parseInt(inputValY),Integer.parseInt(inputValX)));
-//                    battleship.location.add(new Point(Integer.parseInt(inputValY),Integer.parseInt(inputValX) + 1));
-//                    battleship.location.add(new Point(Integer.parseInt(inputValY),Integer.parseInt(inputValX) + 2));
-//                    battleship.location.add(new Point(Integer.parseInt(inputValY),Integer.parseInt(inputValX) + 3));
+                    battleship.Blocation.add(new Point(Integer.parseInt(inputValY),Integer.parseInt(inputValX)));
+                    battleship.Blocation.add(new Point(Integer.parseInt(inputValY),Integer.parseInt(inputValX) + 1));
+                    battleship.Blocation.add(new Point(Integer.parseInt(inputValY),Integer.parseInt(inputValX) + 2));
+                    battleship.Blocation.add(new Point(Integer.parseInt(inputValY),Integer.parseInt(inputValX) + 3));
                     temp = false;
                     viewShips();
 
@@ -340,10 +341,10 @@ public class GameBoard {
                     shipMap[Integer.parseInt(inputValY) + 3][Integer.parseInt(inputValX)] = 1;
 
                     //Getting location for Ship class
-//                    battleship.location.add(new Point(Integer.parseInt(inputValY),Integer.parseInt(inputValX)));
-//                    battleship.location.add(new Point(Integer.parseInt(inputValY) + 1,Integer.parseInt(inputValX) ));
-//                    battleship.location.add(new Point(Integer.parseInt(inputValY) + 2,Integer.parseInt(inputValX)));
-//                    battleship.location.add(new Point(Integer.parseInt(inputValY) + 3,Integer.parseInt(inputValX)));
+                    battleship.Blocation.add(new Point(Integer.parseInt(inputValY),Integer.parseInt(inputValX)));
+                    battleship.Blocation.add(new Point(Integer.parseInt(inputValY) + 1,Integer.parseInt(inputValX) ));
+                    battleship.Blocation.add(new Point(Integer.parseInt(inputValY) + 2,Integer.parseInt(inputValX)));
+                    battleship.Blocation.add(new Point(Integer.parseInt(inputValY) + 3,Integer.parseInt(inputValX)));
                     viewShips();
                     temp = false;
                 } else {
@@ -370,7 +371,7 @@ public class GameBoard {
             if (criteriaA) {
                 shipMap[Integer.parseInt(inputValY)][Integer.parseInt(inputValX)] = 1;
                 //Getting location for Ship class
-//                tower.location.add(new Point(Integer.parseInt(inputValY),Integer.parseInt(inputValX)));
+                tower.Tlocation.add(new Point(Integer.parseInt(inputValY),Integer.parseInt(inputValX)));
                 temp = false;
                 viewShips();
 
@@ -399,9 +400,9 @@ public class GameBoard {
                 shipMap[Integer.parseInt(inputValY) + 1][Integer.parseInt(inputValX)] = 1;
                 shipMap[Integer.parseInt(inputValY) + 1][Integer.parseInt(inputValX) + 1] = 1;
                 //Getting location for Ship class
-//                L.location.add(new Point(Integer.parseInt(inputValY),Integer.parseInt(inputValX)));
-//                L.location.add(new Point(Integer.parseInt(inputValY+1),Integer.parseInt(inputValX)));
-//                L.location.add(new Point(Integer.parseInt(inputValY+1),Integer.parseInt(inputValX) + 1));
+                L.Llocation.add(new Point(Integer.parseInt(inputValY),Integer.parseInt(inputValX)));
+                L.Llocation.add(new Point(Integer.parseInt(inputValY+1),Integer.parseInt(inputValX)));
+                L.Llocation.add(new Point(Integer.parseInt(inputValY+1),Integer.parseInt(inputValX) + 1));
                 temp = false;
                 viewShips();
 
