@@ -1,6 +1,7 @@
 package edu.colorado.applepear;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -13,7 +14,7 @@ public class PlayerTest {
     private Player player2;
 
     @BeforeEach
-    public void setUp() throws Exception {
+    public void setUp() {
         System.out.println("Before Each Test");
         player1 = new Player("vienna", 3, 3, 0);
         player2 = new Player("kevina", 3, 3, 5);
@@ -52,8 +53,7 @@ public class PlayerTest {
     @Test
     public void checkLose() {
         System.out.println("Testing checkLose");
-        assertEquals(true, player1.checkLose(),
-                "checkLose should return true");
+        assertTrue(player1.checkLose(), "checkLose should return true");
 
     }
 }
