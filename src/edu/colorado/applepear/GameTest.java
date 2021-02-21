@@ -23,10 +23,6 @@ public class GameTest {
     public void testGetName() {
         assertEquals("vienna", player1.getName(),
                 "GetName should display player name");
-    }
-
-    @DisplayName("Displaying player2 name")
-    public void testGetName2() {
         assertEquals("kevina", player2.getName(),
                 "GetName should display player name");
     }
@@ -35,5 +31,20 @@ public class GameTest {
     public void testGetNumShips() {
         assertEquals(5, player1.getNumShips(),
                 "GetNumShips should give the number of ships");
+    }
+
+    @DisplayName("Getting number of missiles")
+    public void testGetNumRadarMissiles() {
+        assertEquals(3, player1.getRadarMissile(),
+                "GetRadarMissile should give the player's number of radar missiles");
+        assertEquals(3, player2.getRadarMissile(),
+                "GetRadarMissile should give the player's number of radar missiles");
+    }
+
+    public void testGetNumPlusMissiles() {
+        assertEquals(3, player1.getPlusMissile(),
+                "GetPlusMissile should give the player's number of Plus missiles");
+        assertEquals(3, player2.getPlusMissile(),
+                "GetPlusMissile should give the player's number of Plus missiles");
     }
 }
