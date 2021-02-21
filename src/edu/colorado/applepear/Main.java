@@ -31,9 +31,9 @@ public class Main {
     private static void printInstructions() {
         System.out.println("\n\n ========== Battleship Instructions ========== \n");
         System.out.println("Goal: Select Coordinates to take out your opponent's ships!");
-        System.out.println("Missiles: All Players have unlimited uses of the standard missile that attacks one coordinate! Each player gets 2 \"+\" Missiles and 2 radar missiles.");
+        System.out.println("Missiles: All Players have unlimited uses of the standard missile that attacks one coordinate! Each player gets 2 \"+\" Missils and 2 radar missiles.");
         System.out.println("\"+\" Missile: Attacks an area in the shape of a \"+\". The coordinate entered will attack that coordinate and the coordinates to the right, left, above, and below it. The player needs a rest turn after using this");
-        System.out.println("Radar Missile: Scans the coordinate the player selected along with the eight spaces around it. Tells player if a ship is present, but not where.");
+        System.out.println("Radar Missile: Scans the coordinate the player selected along with the eight spaces around it. Tells player if a shis is present, but not where.");
         System.out.println("Winner takes down all of their opponents ships! Good Luck!");
     }
 
@@ -85,61 +85,62 @@ public class Main {
              System.out.println("start");
              String myVal = myInput.nextLine();
              System.out.println(myVal);
-             switch (myVal) {
-                 case "1":
-                     System.out.println("+--- Let's Attack! ---+");
-                     System.out.println("What is the X coordinate for the space you want to attack?");
-                     String myX = myInput.nextLine();
-                     System.out.println("What is the Y coordinate for the space you want to attack?");
-                     String myY = myInput.nextLine();
-                     boolean hitOrMiss = Game.updateMap(curMap, oppMap, myX, myY);
+             if (myVal.equals("1")){
+                 System.out.println("+--- Let's Attack! ---+");
+                 System.out.println("What is the X coordinate for the space you want to attack?");
+                 String myX = myInput.nextLine();
+                 System.out.println("What is the Y coordinate for the space you want to attack?");
+                 String myY = myInput.nextLine();
+                 boolean hitOrMiss = Game.updateMap(curMap,oppMap, new Point(Integer.parseInt(myX),Integer.parseInt(myY)));
 
-                     if (hitOrMiss) {
-                         System.out.println("You Hit an Opponent's Ship! Nice Shot!");
+                 if (hitOrMiss){
+                     System.out.println("You Hit an Opponent's Ship! Nice Shot!");
 
-                     } else {
-                         System.out.println("You Missed...");
-                     }
-                     curMap.viewMap();
-                     // Depending on the player's turn, their map will be different
-                     // Update maps and turns
-                     if (curMap.equals(p1Map)) {
-                         p1Map = curMap;
-                         curMap = p2Map;
-                         oppMap = p1Map;
+                 }
+                 else{
+                     System.out.println("You Missed...");
+                 }
+                 curMap.viewMap();
+                 // Depending on the player's turn, their map will be different
+                 // Update maps and turns
+                 if (curMap.equals(p1Map)){
+                     p1Map = curMap;
+                     curMap = p2Map;
+                     oppMap = p1Map;
 
-                     } else if (curMap.equals(p2Map)) {
-                         p2Map = curMap;
-                         curMap = p1Map;
-                         oppMap = p2Map;
-                     }
-                     break;
-                 case "2":
-                     System.out.println("Player Map");
-                     curMap.viewMap();
-                     break;
-                 case "3":
-                     System.out.println("+-----" + curMap.getPlayer().getName() + "'s Inventory -----+");
-                     System.out.println("Number of Radar Missiles: " + curMap.getPlayer().getRadarMissile());
-                     System.out.println("Number of Plus Missiles: " + curMap.getPlayer().getPlusMissile());
-                     break;
-                 case "4":
-                     printInstructions();
-                     break;
-                 case "5":
-                     curMap.viewShips();
-                     break;
-                 case "6":
-                     run = false;
-                     return;
+                 }
+                 else if (curMap.equals(p2Map)){
+                     p2Map = curMap;
+                     curMap = p1Map;
+                     oppMap = p2Map;
+                 }
+             }
+             else if (myVal.equals("2")){
+                 System.out.println("Player Map");
+                 curMap.viewMap();
+             }
+             else if (myVal.equals("3")){
+                 System.out.println("+-----" + curMap.getPlayer().getName() + "'s Inventory -----+");
+                 System.out.println("Number of Radar Missiles: " + curMap.getPlayer().getRadarMissile());
+                 System.out.println("Number of Plus Missiles: " + curMap.getPlayer().getPlusMissile());
+             }
+             else if (myVal.equals("4")){
+                 printInstructions();
+             }
+             else if (myVal.equals("5")){
+                 curMap.viewShips();
+             }
+             else if (myVal.equals("6")){
+                 run = false;
+                 return;
              }
              //end the game
-             boolean gameEnd = myGame.isGameOver();
-             if(gameEnd){
-                 System.exit(0);
-             }
-             System.out.println("\n\n--- It is " + curMap.getPlayer().getName() + "'s turn ---");
-             displayMenu();
+//             bool gameEnd = myGame.isGameOver();
+//             if(gameEnd){
+//                 System.exit(0);
+//             }
+//             System.out.println("\n\n--- It is " + curMap.getPlayer().getName() + "'s turn ---");
+//             displayMenu();
         }
     }
 

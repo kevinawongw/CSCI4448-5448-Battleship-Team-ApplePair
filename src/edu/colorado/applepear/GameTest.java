@@ -14,7 +14,6 @@ public class GameTest {
     private GameBoard gb1;
     private GameBoard gb2;
     private Game game;
-    private Point point;
 
     @BeforeEach
     public void setUp() throws Exception {
@@ -28,11 +27,10 @@ public class GameTest {
     @Test
     @DisplayName("if updateMap and hit a ship")
     public void testUpdateMap1() {
-        System.out.println("Testing testUpdateMap1");
-
-            assertEquals(true, game.updateMap(gb1,gb2,"1","2"), "updateMap should return true");
+        gb1.placeTower(new Point(0,0));
+            assertEquals(true, game.updateMap(gb2,gb1,new Point(0,0)), "updateMap should return true");
     }
-
+//
 //    @Test
 //    @DisplayName("if updateMap and did not hit a ship")
 //    public void testUpdateMap2() {
