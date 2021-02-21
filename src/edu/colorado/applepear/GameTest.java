@@ -36,18 +36,19 @@ public class GameTest {
     public void testUpdateMap2() {
             assertEquals(false, game.updateMap(gb2,gb1,new Point(0,1)), "updateMap should return false");
     }
-//
-//    @Test
-//    @DisplayName("if game is not over")
-//    public void testIsGameOver1() {
-//            p1.checkLose() = true;
-//            assertEquals(true, game.isGameOver(), "isGameOver should return true");
-//    }
-//
-//    @Test
-//    @DisplayName("if game is over")
-//    public void testIsGameOver(2) {
-//            assertEquals(false, game.isGameOver(), "isGameOver should return false");
-//    }
+
+    @Test
+    @DisplayName("if game is not over")
+    public void testIsGameOver1() {
+            p1.checkLose() = true;
+            assertEquals(true, game.isGameOver(), "isGameOver should return true");
+    }
+
+    @Test
+    @DisplayName("if game is over")
+      public void testIsGameOver(2) {
+            p1.checkLose() = false;
+            assertEquals(false, game.isGameOver(), "isGameOver should return false");
+    }
 
 }
