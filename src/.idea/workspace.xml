@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e4f39a5-e2e1-4607-8fcf-96619b63a397" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/edu/colorado/applepear/ShipTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/edu/colorado/applepear/ShipTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -274,7 +275,21 @@
       <option name="project" value="LOCAL" />
       <updated>1613888627759</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Team applepear pair 2: Done with ShipTest.java">
+      <created>1613888946248</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1613888946248</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Team applepear pair 2: Done with ShipTest.java">
+      <created>1613888961566</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1613888961566</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -297,6 +312,7 @@
     <MESSAGE value="Team applepear pair 2: Processing on ShipTest.java" />
     <MESSAGE value="Team applepear pair 2: Processing on GameTest.java" />
     <MESSAGE value="Team applepear pair 2: Processing on ShipTest.java 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Team applepear pair 2: Processing on ShipTest.java 2" />
+    <MESSAGE value="Team applepear pair 2: Done with ShipTest.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Team applepear pair 2: Done with ShipTest.java" />
   </component>
 </project>
