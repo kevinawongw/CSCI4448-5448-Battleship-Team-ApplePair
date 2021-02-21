@@ -154,7 +154,7 @@ public class GameBoard {
     // Tower (1 block x 3 hits)
     // L - Ship (3 blocks shaped like "L")
 
-    private void placeMinesweeper(Point p1, Point p2) {
+    public void placeMinesweeper(Point p1, Point p2) {
         shipMap[p1.y][p1.x] = 1;
         shipMap[p2.y][p2.x] = 1;
         //Getting location for Ship class
@@ -162,7 +162,7 @@ public class GameBoard {
         minesweeper.location.add(p2);
     }
 
-    private List<Point> minesweeperInput(){
+    public List<Point> minesweeperInput(){
         Scanner myInput = new Scanner(System.in);
         String input = null;
 
@@ -214,7 +214,7 @@ public class GameBoard {
 
     }
 
-    private List<Point> destroyerInput(){
+    public List<Point> destroyerInput(){
         Scanner myInput = new Scanner(System.in);
         String input2 = null;
         System.out.println("Enter \"1\" or \"2\" \n 1. Horizontal \n 2. Vertical ");
@@ -252,7 +252,8 @@ public class GameBoard {
                 }
             }
 
-        } else if (input2.equals("2")) {
+        }
+        else if (input2.equals("2")) {
             temp = true;
             while (temp) {
                 System.out.println("Enter the X-coordinate of the top-most block of your ship: ");
@@ -280,7 +281,7 @@ public class GameBoard {
     }
 
 
-    private void placeBattleship(Point p1, Point p2, Point p3, Point p4) {
+    public void placeBattleship(Point p1, Point p2, Point p3, Point p4) {
         shipMap[p1.y][p1.x] = 1;
         shipMap[p2.y][p2.x] = 1;
         shipMap[p3.y][p3.x] = 1;
@@ -292,7 +293,7 @@ public class GameBoard {
         battleship.location.add(new Point(p4.x ,p4.y));
     }
 
-    private List<Point> battleshipInput(){
+    public List<Point> battleshipInput(){
         Scanner myInput = new Scanner(System.in);
         String input3 = null;
         System.out.println("Place Battleship (3 blocks wide): ");
@@ -341,7 +342,8 @@ public class GameBoard {
                 }
 
             }
-        } else if (input3.equals("2")) {
+        }
+        else if (input3.equals("2")) {
             temp = true;
 
             while (temp) {
@@ -386,13 +388,12 @@ public class GameBoard {
 
 
 
-    private void placeTower(Point p1) {
+    public void placeTower(Point p1) {
         shipMap[p1.y][p1.x] = 1;
-
         tower.location.add(p1);
     }
 
-    private List<Point> towerInput() {
+    public List<Point> towerInput() {
         Scanner myInput = new Scanner(System.in);
         System.out.println("Place Tower (1): ");
         boolean temp = true;
@@ -419,7 +420,7 @@ public class GameBoard {
         return null;
     }
 
-    private void placeLShip(Point p1, Point p2, Point p3) {
+    public void placeLShip(Point p1, Point p2, Point p3) {
 
         shipMap[p1.y][p1.x] = 1;
         shipMap[p2.y][p2.x] = 1;
@@ -469,21 +470,22 @@ public class GameBoard {
         placeMinesweeper(minesweeperCoords.get(0), minesweeperCoords.get(1));
         viewShips();
 
-        List<Point> destroyerCoords = destroyerInput();
-        placeDestroyer(destroyerCoords.get(0), destroyerCoords.get(1), destroyerCoords.get(2));
-        viewShips();
-
-        List<Point> battleshipCoords = battleshipInput();
-        placeBattleship(battleshipCoords.get(0), battleshipCoords.get(1), battleshipCoords.get(2), battleshipCoords.get(3));
-        viewShips();
-
-        List<Point> towerCoords = towerInput();
-        placeTower(towerCoords.get(0));
-        viewShips();
-
-        List<Point> lCoords = lInput();
-        placeDestroyer(lCoords.get(0), lCoords.get(1), lCoords.get(2));
-        viewShips();
+        // **** Commented out Temporarily - DO NOT DELETE :) ****
+//        List<Point> destroyerCoords = destroyerInput();
+//        placeDestroyer(destroyerCoords.get(0), destroyerCoords.get(1), destroyerCoords.get(2));
+//        viewShips();
+//
+//        List<Point> battleshipCoords = battleshipInput();
+//        placeBattleship(battleshipCoords.get(0), battleshipCoords.get(1), battleshipCoords.get(2), battleshipCoords.get(3));
+//        viewShips();
+//
+//        List<Point> towerCoords = towerInput();
+//        placeTower(towerCoords.get(0));
+//        viewShips();
+//
+//        List<Point> lCoords = lInput();
+//        placeDestroyer(lCoords.get(0), lCoords.get(1), lCoords.get(2));
+//        viewShips();
     }
 }
 
