@@ -11,11 +11,18 @@ public class GameTest {
 
     private Player player1;
     private Player player2;
+    private GameBoard g1;
+    private  GameBoard g2;
+    private Game game;
 
     @BeforeEach
     public void setUp() throws Exception {
         player1 = new Player("vienna", 3, 3, 5);
         player2 = new Player("kevina", 3, 3, 5);
+        g1 = new GameBoard(player1);
+        g2 = new GameBoard(player2);
+
+        game = new Game (player1,player2,g1,g2);
     }
 
     @Test

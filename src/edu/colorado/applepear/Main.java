@@ -79,7 +79,7 @@ public class Main {
 
          // Menu Display & User Input
          // Refer to the displayMenu Print function for what each menu option will do
-         System.out.println("+--- It is " + curMap.getPlayer().getName() + "'s turn ---+");
+         System.out.println("\n\n+--- It is " + curMap.getPlayer().getName() + "'s turn ---+");
          displayMenu();
 
          while (run){
@@ -139,7 +139,7 @@ public class Main {
              }
              //end the game
              myGame.isGameOver();
-             System.out.println("--- It is " + curMap.getPlayer().getName() + "'s turn ---");
+             System.out.println("\n\n--- It is " + curMap.getPlayer().getName() + "'s turn ---");
              displayMenu();
         }
     }
