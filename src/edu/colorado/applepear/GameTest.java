@@ -11,40 +11,42 @@ public class GameTest {
 
     private Player player1;
     private Player player2;
+    private Gameboard gb1;
+    private Gameboard gb2;
+    private Game game;
 
     @BeforeEach
     public void setUp() throws Exception {
         player1 = new Player("vienna", 3, 3, 5);
         player2 = new Player("kevina", 3, 3, 5);
+        gb1 = new Gameboard(player1);
+        gb2 = new Gameboard(player2);
+        game = new Game(player1, player2, gb1, gb2);
     }
 
     @Test
-    @DisplayName("Displaying player1 name")
-    public void testGetName() {
-        assertEquals("vienna", player1.getName(),
-                "GetName should display player name");
-        assertEquals("kevina", player2.getName(),
-                "GetName should display player name");
+    @DisplayName("if updateMap and hit a ship")
+    public void testUpdateMap1() {
+            assertEquals(true, , "updateMap should return true");
     }
 
-    @DisplayName("Getting number of ships")
-    public void testGetNumShips() {
-        assertEquals(5, player1.getNumShips(),
-                "GetNumShips should give the number of ships");
+    @Test
+    @DisplayName("if updateMap and did not hit a ship")
+    public void testUpdateMap2() {
+            assertEquals(false, , "updateMap should return false");
     }
 
-    @DisplayName("Getting number of missiles")
-    public void testGetNumRadarMissiles() {
-        assertEquals(3, player1.getRadarMissile(),
-                "GetRadarMissile should give the player's number of radar missiles");
-        assertEquals(3, player2.getRadarMissile(),
-                "GetRadarMissile should give the player's number of radar missiles");
+    @Test
+    @DisplayName("if game is not over")
+    public void testIsGameOver1() {
+            p1.checkLose() = true;
+            assertEquals(true, , "isGameOver should return true");
     }
 
-    public void testGetNumPlusMissiles() {
-        assertEquals(3, player1.getPlusMissile(),
-                "GetPlusMissile should give the player's number of Plus missiles");
-        assertEquals(3, player2.getPlusMissile(),
-                "GetPlusMissile should give the player's number of Plus missiles");
+    @Test
+    @DisplayName("if game is over")
+    public void testIsGameOver(2) {
+            assertEquals(false, , "isGameOver should return false");
     }
+
 }
