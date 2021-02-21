@@ -18,7 +18,7 @@ public class Ship {
 
     //Constructor
     public Ship(String shipType){
-        location = new ArrayList<Point>();
+        location = new ArrayList<>();
         this.shipType = shipType;
         this.gb = gb;
     }

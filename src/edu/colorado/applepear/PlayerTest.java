@@ -15,7 +15,7 @@ public class PlayerTest {
     @BeforeEach
     public void setUp() throws Exception {
         System.out.println("Before Each Test");
-        player1 = new Player("vienna", 3, 3, 5);
+        player1 = new Player("vienna", 3, 3, 0);
         player2 = new Player("kevina", 3, 3, 5);
     }
 
@@ -31,7 +31,7 @@ public class PlayerTest {
     @DisplayName("Getting number of ships")
     public void testGetNumShips() {
         System.out.println("Testing GetNumShips");
-        assertEquals(5, player1.getNumShips(),
+        assertEquals(5, player2.getNumShips(),
                 "GetNumShips should give the number of ships");
     }
     @Test
@@ -47,6 +47,13 @@ public class PlayerTest {
         System.out.println("Testing getPlusMissiles");
         assertEquals(3, player1.getPlusMissile(),
                 "GetPlusMissile should give the player's number of Plus missiles");
+
+    }
+    @Test
+    public void checkLose() {
+        System.out.println("Testing checkLose");
+        assertEquals(true, player1.checkLose(),
+                "checkLose should return true");
 
     }
 }
