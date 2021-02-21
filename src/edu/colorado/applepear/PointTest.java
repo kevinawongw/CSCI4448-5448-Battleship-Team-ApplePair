@@ -17,7 +17,7 @@ public class PointTest {
     }
 
     @Test
-    @DisplayName("Displating the point")
+    @DisplayName("Displaying the point")
     public void testGetPoint(){
         System.out.println("Testing GetPoint");
         assertEquals(1, point.getX(), "GetX should display the valid point X");
