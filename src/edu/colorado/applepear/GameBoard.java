@@ -53,6 +53,9 @@ public class GameBoard {
         return this.shipMap;
     }
 
+    public int[][] getAttackMap() {
+        return this.attackMap;
+    }
 
     // Function 2: View Map
     // Param: None
