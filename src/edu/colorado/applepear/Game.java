@@ -37,6 +37,8 @@ public class Game {
         return false;
     }
     //Yubin
+    //Call the function: checkLose() from Player to check which player lose or win the game
+    //Calling this function inside the while loop of main class
     public void isGameOver()
     {
         if(p1.checkLose() == true){ //if player 1 have 0 ships left, then 2 win

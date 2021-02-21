@@ -11,203 +11,70 @@ import java.util.ArrayList;
 // L - Ship (3 blocks shaped like "L")
 
 
-public class Ship {
-    public ArrayList<Point> Mlocation; //minesweeper
-    public ArrayList<Point> Dlocation; //Destroyer
-    public ArrayList<Point> Blocation; //Battleship
-    public ArrayList<Point> Tlocation; //Tower
-    public ArrayList<Point> Llocation; //L-ship
-    Player p;
 
+public class Ship {
+    public ArrayList<Point> location;
+    public String shipType;
+    GameBoard gb;
 
     //Constructor
-    public Ship(){
-        Mlocation = new ArrayList<Point>();
-        Dlocation = new ArrayList<Point>();
-        Blocation = new ArrayList<Point>();
-        Tlocation = new ArrayList<Point>();
-        Llocation = new ArrayList<Point>();
+    public Ship(String shipType){
+        location = new ArrayList<Point>();
+        this.shipType = shipType;
+        this.gb = gb;
     }
 
-    //setter
-    public void setMlocation(int myX, int myY){
-        Point newPoint = new Point(myX, myY);
-        Mlocation.add(newPoint);
-    }
-    public void setDlocation(ArrayList<Point> Dlocation){
-        this.Dlocation = Dlocation;
-    }
-    public void setBlocation(ArrayList<Point> Blocation){
-        this.Mlocation = Mlocation;
-    }
-    public void setTlocation(ArrayList<Point> Tlocation){
-        this.Tlocation = Tlocation;
-    }
-    public void setLlocation(ArrayList<Point> Llocation){
-        this.Llocation = Llocation;
-    }
 
     //getter
-    public ArrayList<Point> getMlocation(){
-        return Mlocation;
-    }
-    public ArrayList<Point> getDlocation(){
-        return Dlocation;
-    }
-    public ArrayList<Point> getBlocation(){
-        return Blocation;
-    }
-    public ArrayList<Point> getTlocation(){
-        return Tlocation;
-    }
-    public ArrayList<Point> getLlocation(){
-        return Llocation;
-    }
+//    public ArrayList<Point> getlocation(){
+//        return location;
+//    }
+
 
     /*function to determine which ship did the player hit and if the player sink the entire ship.
         if then, call each sunken functions by the location. */
     //calling it in main class
-    public void determineShip(GameBoard attackMap, int posX, int posY){
-        Point myPoint = new Point(posX, posY);
-//        System.out.println(setMlocation(posX, posY) + " Testtest");
-        if(Mlocation.contains(myPoint)){
-            System.out.println("You have hit the minesweeper!");
-            sunkenMinesweeper(attackMap);
-        }
-        else if(Dlocation.contains(myPoint)){
-            System.out.println(Dlocation.contains(myPoint)+ " print!");
-            System.out.println("You have hit the destroyer!");
-            sunkenDestroyer(attackMap);
-        }
-        else if (Blocation.contains(myPoint)){
-            System.out.println(Blocation.contains(myPoint)+ " print!");
-            System.out.println("You have hit the battleship!");
-            sunkenBattleship(attackMap);
+//    public void determineShip(){
+//        if(shipType == "minesweeper"){
+//            getlocation();
+//        }
+//        else if(shipType == "destroyer"){
+//            getlocation();
+//        }
+//        else if(shipType == "battleship"){
+//            getlocation();
+//
+//        }
+//        else if(shipType == "tower"){
+//            getlocation();
+//            sunkenTower();
+//
+//        }
+//        else{
+//            getlocation();
+//            sunkenLShip();
+//        }
+//
+//    }
 
-        }
-        else if (Tlocation.contains(myPoint)){
-            System.out.println(Tlocation.contains(myPoint)+ " print!");
-            System.out.println("You have hit the Tower!");
-            sunkenTower(attackMap);
+    //Function to determine did the player has sunken the Minesweeper or not, by getting the attackMap function from Gameboard class
+    // pseudocode:
+    // for coordinatepoints (x,y) in ship location:
+    // if ALL attackmaps[x][y] == 2
+    // then ship sunk, ship --
 
-        }
-        else{
-//            System.out.println(Llocation.contains(myPoint.x)+ " print!");
-//            System.out.println(Llocation.contains(myPoint.y)+ " print!");
-            System.out.println("You have hit the L-ship!");
-            sunkenLShip(attackMap);
+    public boolean issunkenShip(){
+//        int numShips= p.getNumShips();
+        for(int i=0; i<location.size(); i++){
+            int x = location.get(i).getX();
+            int y = location.get(i).getY();
 
-        }
-
-    }
-
-    //Function to determine did the player have sunken the Minesweeper or not by getting the attackMap function from Gameboard class
-    public void sunkenMinesweeper(GameBoard attackMap){
-        int numShip = p.getNumShips();
-        for(int i=0; i<Mlocation.size(); i++){
-            int currX = Mlocation.get(i).x;
-            int currY = Mlocation.get(i).y;
-            /* From Gameboard class,
-               attackMap = 0: unchecked
-                         = 1: checked, but not found ship
-                         = 2: checked and found ship
-            */
-            if(attackMap.attackMap[currX][currY] == 1 || attackMap.attackMap[currX][currY] == 0){ // check if attackMap is 1 or 0
-                System.out.println("You have not sunken the Minesweeper.");
-                p.decreaseNumShip(numShip);
-                return;
+            if(gb.attackMap[x][y] != 2){
+                return false;
             }
         }
-        System.out.println("You have sunken the Destroyer!");
-
+//        p.setNumShips(numShips--);
+        return true;
     }
-
-    //Function to determine did the player have sunken the Destroyer or not by getting the attackMap function from Gameboard class
-    public void sunkenDestroyer(GameBoard attackMap){
-        int numShip = p.getNumShips();
-        for(int i=0; i<Dlocation.size(); i++){
-            int currX = Dlocation.get(i).x;
-            int currY = Dlocation.get(i).y;
-
-            /* From Gameboard class,
-               attackMap = 0: unchecked
-                         = 1: checked, but not found ship
-                         = 2: checked and found ship
-            */
-            if(attackMap.attackMap[currX][currY] == 1 || attackMap.attackMap[currX][currY] == 0){ // check if attackMap is 1 or 0
-                System.out.println("You have not sunken the Destroyer.");
-                p.decreaseNumShip(numShip);
-                return;
-            }
-
-        }
-        System.out.println("You have sunken the Destroyer!");
-    }
-
-    //Function to determine did the player have sunken the Battleship or not by getting the attackMap function from Gameboard class
-    public void sunkenBattleship(GameBoard attackMap){
-        int numShip = p.getNumShips();
-        for(int i=0; i<Blocation.size(); i++){
-            int currX = Blocation.get(i).x;
-            int currY = Blocation.get(i).y;
-            /* From Gameboard class,
-               attackMap = 0: unchecked
-                         = 1: checked, but not found ship
-                         = 2: checked and found ship
-            */
-            if(attackMap.attackMap[currX][currY] == 1 || attackMap.attackMap[currX][currY] == 0){// check if attackMap is 1 or 0
-                System.out.println("You have not sunken the Battleship.");
-                p.decreaseNumShip(numShip);
-                return;
-            }
-
-        }
-        System.out.println("You have sunken the Battleship!");
-
-    }
-
-    //Function to determine did the player have sunken the Tower or not by getting the attackMap function from Gameboard class
-    public void sunkenTower(GameBoard attackMap){
-        int numShip = p.getNumShips();
-        for(int i=0; i<Tlocation.size(); i++){
-            int currX = Tlocation.get(i).x;
-            int currY = Tlocation.get(i).y;
-            /* From Gameboard class,
-               attackMap = 0: unchecked
-                         = 1: checked, but not found ship
-                         = 2: checked and found ship
-            */
-            if(attackMap.attackMap[currX][currY] == 1 || attackMap.attackMap[currX][currY] == 0){ // check if attackMap is 1 or 0
-                System.out.println("You have not sunken the Tower.");
-                p.decreaseNumShip(numShip);
-                return;
-            }
-
-        }
-        System.out.println("You have sunken the Tower!");
-    }
-
-    //Function to determine did the player have sunken the L-ship or not by getting the attackMap function from Gameboard class
-    public void sunkenLShip(GameBoard attackMap){
-        int numShip = p.getNumShips();
-        for(int i=0; i<Blocation.size(); i++){
-            int currX = Blocation.get(i).x;
-            int currY = Blocation.get(i).y;
-            /* From Gameboard class,
-               attackMap = 0: unchecked
-                         = 1: checked, but not found ship
-                         = 2: checked and found ship
-            */
-            if(attackMap.attackMap[currX][currY] == 1 || attackMap.attackMap[currX][currY] == 0){ // check if attackMap is 1 or 0
-                System.out.println("You have not sunken the L-ship.");
-                p.decreaseNumShip(numShip);
-                return;
-            }
-
-        }
-        System.out.println("You have sunken the L-ship!");
-    }
-
-
 
 }

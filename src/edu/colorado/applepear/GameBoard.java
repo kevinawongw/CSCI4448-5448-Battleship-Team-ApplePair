@@ -12,11 +12,11 @@ public class GameBoard {
     public static final int numX = 10;
     public static final int numY = 10;
     private Player p;
-    private Ship minesweeper = new Ship();
-    private Ship destroyer = new Ship();
-    private Ship battleship = new Ship();
-    private Ship tower = new Ship();
-    private Ship L = new Ship();
+    private Ship minesweeper = new Ship("minesweeper");
+    private Ship destroyer = new Ship("destroyer");
+    private Ship battleship = new Ship("battleship");
+    private Ship tower = new Ship("tower");
+    private Ship L = new Ship("l");
 
     // Initializing Maps:
 
@@ -194,9 +194,10 @@ public class GameBoard {
             shipMap[Integer.parseInt(inputValY)][Integer.parseInt(inputValX)] = 1;
             shipMap[Integer.parseInt(inputValY) + 1][Integer.parseInt(inputValX)] = 1;
             //Getting location for Ship class
-
-            minesweeper.Mlocation.add(new Point(Integer.parseInt(inputValY), Integer.parseInt(inputValX)));
-            minesweeper.Mlocation.add(new Point(Integer.parseInt(inputValY)+1,Integer.parseInt(inputValX)));
+            minesweeper.setMlocation(Integer.parseInt(inputValY), Integer.parseInt(inputValX));
+            minesweeper.setMlocation(Integer.parseInt(inputValY)+1, Integer.parseInt(inputValX));
+//            minesweeper.Mlocation.add(new Point(Integer.parseInt(inputValY), Integer.parseInt(inputValX)));
+//            minesweeper.Mlocation.add(new Point(Integer.parseInt(inputValY)+1,Integer.parseInt(inputValX)));
 
             viewShips();
 
