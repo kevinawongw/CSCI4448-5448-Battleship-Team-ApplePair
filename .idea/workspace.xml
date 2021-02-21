@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -22,13 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ecce50e7-60f1-4088-9580-0bcf29b1574e" name="Default Changelist" comment="Team ApplePair pair 1: Vienna push - Player losing state">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Milestone1-csci4448-5448.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Milestone1-csci4448-5448.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Milestone1-csci4448-5448/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Milestone1-csci4448-5448/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/GameBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/GameBoard.java" afterDir="false" />
+    <list default="true" id="ecce50e7-60f1-4088-9580-0bcf29b1574e" name="Default Changelist" comment="Team ApplePair pair 1: Vienna push - GameTest">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/GameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/GameTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,9 +45,7 @@
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1nymCa3Z6afdfwn8fylhElju0hB" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <OptionsSetting value="false" id="Update" />
-  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -72,7 +63,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="JUnit.GameTest">
+  <component name="RunManager" selected="JUnit.GameTest.testGetName">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="edu.colorado.applepear.Main" />
       <module name="Milestone1-csci4448-5448" />
@@ -97,6 +88,22 @@
       <option name="PACKAGE_NAME" value="edu.colorado.applepear" />
       <option name="MAIN_CLASS_NAME" value="edu.colorado.applepear.GameTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GameTest.testGetName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Milestone1-csci4448-5448" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.colorado.applepear.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="edu.colorado.applepear" />
+      <option name="MAIN_CLASS_NAME" value="edu.colorado.applepear.GameTest" />
+      <option name="METHOD_NAME" value="testGetName" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -158,6 +165,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.GameTest.testGetName" />
         <item itemvalue="JUnit.GameTest" />
         <item itemvalue="JUnit.PlayerTest.testGetName" />
         <item itemvalue="JUnit.PlayerTest" />
@@ -209,7 +217,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613675065015</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Team ApplePair pair 1: Vienna push - GameTest">
+      <created>1613877935464</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1613877935464</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -228,7 +243,8 @@
     <MESSAGE value="rename to team name" />
     <MESSAGE value="Team ApplePair pair 1: Kevina push - GameBoard and Main" />
     <MESSAGE value="Team ApplePair pair 1: Vienna push - Player losing state" />
-    <option name="LAST_COMMIT_MESSAGE" value="Team ApplePair pair 1: Vienna push - Player losing state" />
+    <MESSAGE value="Team ApplePair pair 1: Vienna push - GameTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="Team ApplePair pair 1: Vienna push - GameTest" />
   </component>
   <component name="WindowStateProjectService">
     <state x="321" y="76" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1613874164867">
@@ -267,18 +283,14 @@
     </state>
     <state width="1237" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1613877721049" />
     <state width="1493" height="224" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1613506808830" />
-    <state x="148" y="69" key="MergeDialog" timestamp="1613880692259">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="148" y="69" key="MergeDialog/0.0.1536.864@0.0.1536.864" timestamp="1613880692259" />
     <state x="121" y="0" key="SettingsEditor" timestamp="1613876831407">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="121" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1613876831407" />
-    <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1613675067515">
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1613877959350">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1613675067515" />
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1613877959350" />
     <state x="375" y="232" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1613876458203">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -288,10 +300,6 @@
     </state>
     <state x="490" y="273" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1613876662259" />
     <state x="588" y="347" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.864@0.0.1536.864" timestamp="1613501459769" />
-    <state x="-6" y="0" width="661" height="870" key="dock-window-1" timestamp="1613880630455">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="-6" y="0" width="661" height="870" key="dock-window-1/0.0.1536.864@0.0.1536.864" timestamp="1613880630455" />
     <state x="395" y="242" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1612371469634">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
