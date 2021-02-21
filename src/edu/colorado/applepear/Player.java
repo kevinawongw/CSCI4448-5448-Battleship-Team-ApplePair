@@ -47,12 +47,7 @@ public class Player {
 
     public boolean checkLose(){
         int myShips = getNumShips();
-        if (myShips == 0) {
-            return true;
-        }
-        else {
-            return false;
-        }
+        return myShips == 0;
     }
 
 
