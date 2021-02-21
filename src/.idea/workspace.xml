@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5e4f39a5-e2e1-4607-8fcf-96619b63a397" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edu/colorado/applepear/GameBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/edu/colorado/applepear/GameBoard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/edu/colorado/applepear/Ship.java" beforeDir="false" afterPath="$PROJECT_DIR$/edu/colorado/applepear/Ship.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,9 +43,10 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -173,7 +173,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613871008229</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Team applepear pair 2: Working on Ship class: getter and setter">
+      <created>1613874531473</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1613874531473</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -187,6 +194,7 @@
     <MESSAGE value="Team applepear pair 2: Working on Ship class3" />
     <MESSAGE value="Team applepear pair 2: Added the Point class for getting the location of Ship class/ added the lines in GameBoard class" />
     <MESSAGE value="Team applepear pair 2: Working on Ship class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Team applepear pair 2: Working on Ship class" />
+    <MESSAGE value="Team applepear pair 2: Working on Ship class: getter and setter" />
+    <option name="LAST_COMMIT_MESSAGE" value="Team applepear pair 2: Working on Ship class: getter and setter" />
   </component>
 </project>
