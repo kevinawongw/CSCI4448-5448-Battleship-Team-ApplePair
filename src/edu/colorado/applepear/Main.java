@@ -135,7 +135,10 @@ public class Main {
                  return;
              }
              //end the game
-             myGame.isGameOver();
+             bool gameEnd = myGame.isGameOver();
+             if(gameEnd){
+                 System.exit(0);
+             }
              System.out.println("\n\n--- It is " + curMap.getPlayer().getName() + "'s turn ---");
              displayMenu();
         }
