@@ -40,14 +40,14 @@ public class GameTest {
     @Test
     @DisplayName("if game is not over")
     public void testIsGameOver1() {
-            p1.checkLose() = true;
+            player1.setNumShips(0);
             assertEquals(true, game.isGameOver(), "isGameOver should return true");
     }
 
     @Test
     @DisplayName("if game is over")
-      public void testIsGameOver(2) {
-            p1.checkLose() = false;
+      public void testIsGameOver() {
+            player2.setNumShips(3);
             assertEquals(false, game.isGameOver(), "isGameOver should return false");
     }
 
