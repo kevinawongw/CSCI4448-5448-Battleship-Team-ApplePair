@@ -38,11 +38,6 @@ public class GameBoard {
         this.p = p;
         shipMap = new int[numX][numY];
         attackMap = new int[numX][numY];
-//        this.minesweeper = minesweeper;
-//        this.destroyer = destroyer;
-//        this.battleship = battleship;
-//        this.tower = tower;
-//        this.L = L;
     }
 
     // Getters
@@ -56,6 +51,26 @@ public class GameBoard {
 
     public int[][] getAttackMap() {
         return this.attackMap;
+    }
+
+    public Ship getMinesweeper(){
+        return minesweeper;
+    }
+
+    public Ship getDestroyer(){
+        return destroyer;
+    }
+
+    public Ship getBattleship(){
+        return battleship;
+    }
+
+    public Ship getTower(){
+        return tower;
+    }
+
+    public Ship getL(){
+        return L;
     }
 
     // Function 2: View Map
