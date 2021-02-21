@@ -198,8 +198,8 @@ public class GameBoard {
             System.out.println("Enter the Y-coordinate of the right-most block of your ship: ");
             String inputValY = myInput.nextLine();
 
-            Point p1 = new Point(Integer.parseInt(inputValX),Integer.parseInt(inputValY));
-            Point p2 = new Point(Integer.parseInt(inputValX) + 1,Integer.parseInt(inputValY));
+            Point p1 = new Point(Integer.parseInt(inputValX), Integer.parseInt(inputValY));
+            Point p2 = new Point(Integer.parseInt(inputValX) + 1, Integer.parseInt(inputValY));
 
             return Arrays.asList(p1, p2);
 
@@ -210,10 +210,10 @@ public class GameBoard {
             System.out.println("Enter the Y-coordinate of the top-most block of your ship: ");
             String inputValY = myInput.nextLine();
 
-            Point p1 = new Point(Integer.parseInt(inputValX),Integer.parseInt(inputValY));
+            Point p1 = new Point(Integer.parseInt(inputValX), Integer.parseInt(inputValY));
             Point p2 = new Point(Integer.parseInt(inputValX),Integer.parseInt(inputValY) + 1);
 
-            return Arrays.asList(p1,p2);
+            return Arrays.asList(p1, p2);
         }
         return null;
     }
@@ -255,11 +255,11 @@ public class GameBoard {
                 boolean criteriaC = (shipMap[Integer.parseInt(inputValY)][Integer.parseInt(inputValX) + 2] == 0);
 
                 if (criteriaA && criteriaB && criteriaC) {
-                    Point p1 = new Point(Integer.parseInt(inputValX),Integer.parseInt(inputValY));
-                    Point p2 = new Point(Integer.parseInt(inputValX) + 1,Integer.parseInt(inputValY));
+                    Point p1 = new Point(Integer.parseInt(inputValX), Integer.parseInt(inputValY));
+                    Point p2 = new Point(Integer.parseInt(inputValX) + 1, Integer.parseInt(inputValY));
                     Point p3 = new Point(Integer.parseInt(inputValX) + 2, Integer.parseInt(inputValY));
                     temp = false;
-                    return Arrays.asList(p1,p2,p3);
+                    return Arrays.asList(p1, p2, p3);
                 }
                 else {
                     System.out.println("You already placed another ship there! Try another location.");
@@ -284,7 +284,7 @@ public class GameBoard {
                     Point p2 = new Point (Integer.parseInt(inputValX), Integer.parseInt(inputValY) + 1);
                     Point p3 = new Point (Integer.parseInt(inputValX), Integer.parseInt(inputValY) + 2);
                     temp = false;
-                    return Arrays.asList(p1,p2,p3);
+                    return Arrays.asList(p1, p2, p3);
                 }
                 else {
                     System.out.println("You already placed another ship there! Try another location.");
@@ -302,10 +302,10 @@ public class GameBoard {
         shipMap[p3.y][p3.x] = 1;
         shipMap[p4.y][p4.x] = 1;
 
-        battleship.location.add(new Point(p1.x ,p1.y));
-        battleship.location.add(new Point(p2.x ,p2.y));
-        battleship.location.add(new Point(p3.x ,p3.y));
-        battleship.location.add(new Point(p4.x ,p4.y));
+        battleship.location.add(new Point(p1.x, p1.y));
+        battleship.location.add(new Point(p2.x, p2.y));
+        battleship.location.add(new Point(p3.x, p3.y));
+        battleship.location.add(new Point(p4.x, p4.y));
     }
 
     public List<Point> battleshipInput(){
@@ -338,18 +338,18 @@ public class GameBoard {
                 if (criteriaA && criteriaB && criteriaC && criteriaD) {
                     int x1 = Integer.parseInt(inputValX);
                     int y1 = Integer.parseInt(inputValY);
-                    Point p1 = new Point (x1,y1);
+                    Point p1 = new Point (x1, y1);
                     int x2 = Integer.parseInt(inputValX) + 1;
                     int y2 = Integer.parseInt(inputValY);
-                    Point p2 = new Point (x2,y2);
+                    Point p2 = new Point (x2, y2);
                     int x3 = Integer.parseInt(inputValX) + 2;
                     int y3 = Integer.parseInt(inputValY);
-                    Point p3 = new Point (x3,y3);
+                    Point p3 = new Point (x3, y3);
                     int x4 = Integer.parseInt(inputValX) + 3;
                     int y4 = Integer.parseInt(inputValY);
-                    Point p4 = new Point (x4,y4);
+                    Point p4 = new Point (x4, y4);
                     temp = false;
-                    return Arrays.asList(p1,p2,p3,p4);
+                    return Arrays.asList(p1, p2, p3, p4);
 
 
                 } else {
@@ -374,22 +374,22 @@ public class GameBoard {
                 if (criteriaA && criteriaB && criteriaC && criteriaD) {
                     int x1 = Integer.parseInt(inputValX);
                     int y1 = Integer.parseInt(inputValY);
-                    Point p1 = new Point (x1,y1);
+                    Point p1 = new Point (x1, y1);
 
                     int x2 = Integer.parseInt(inputValX);
                     int y2 = Integer.parseInt(inputValY) + 1;
-                    Point p2 = new Point (x2,y2);
+                    Point p2 = new Point (x2, y2);
 
                     int x3 = Integer.parseInt(inputValX);
                     int y3 = Integer.parseInt(inputValY) + 2;
-                    Point p3 = new Point (x3,y3);
+                    Point p3 = new Point (x3, y3);
 
                     int x4 = Integer.parseInt(inputValX);
                     int y4 = Integer.parseInt(inputValY) + 3;
-                    Point p4 = new Point (x4,y4);
+                    Point p4 = new Point (x4, y4);
 
                     temp = false;
-                    return Arrays.asList(p1,p2,p3,p4);
+                    return Arrays.asList(p1, p2, p3, p4);
 
                 } else {
                     System.out.println("You already placed another ship there! Try another location.");
@@ -422,7 +422,7 @@ public class GameBoard {
             if (criteriaA) {
                 int x1 = Integer.parseInt(inputValX);
                 int y1 = Integer.parseInt(inputValY);
-                Point p1 = new Point(x1,y1);
+                Point p1 = new Point(x1, y1);
                 temp = false;
                 return Arrays.asList(p1);
 
@@ -462,16 +462,16 @@ public class GameBoard {
             if (criteriaA && criteriaB && criteriaC) {
                 int x1 = Integer.parseInt(inputValX);
                 int y1 = Integer.parseInt(inputValY);
-                Point p1 = new Point(x1,y1);
+                Point p1 = new Point(x1, y1);
                 int x2 = Integer.parseInt(inputValX);
                 int y2 = Integer.parseInt(inputValY) + 1;
-                Point p2 = new Point(x2,y2);
+                Point p2 = new Point(x2, y2);
                 int x3 =Integer.parseInt(inputValX) + 1;
                 int y3 = Integer.parseInt(inputValY) + 1;
-                Point p3 = new Point(x3,y3);
+                Point p3 = new Point(x3, y3);
 
                 temp = false;
-                return Arrays.asList(p1,p2,p3);
+                return Arrays.asList(p1, p2, p3);
             }
             else {
                 System.out.println("You already placed another ship there! Try another location.");

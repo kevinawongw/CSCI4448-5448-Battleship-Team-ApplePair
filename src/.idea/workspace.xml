@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="5e4f39a5-e2e1-4607-8fcf-96619b63a397" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edu/colorado/applepear/ShipTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/edu/colorado/applepear/ShipTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edu/colorado/applepear/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/edu/colorado/applepear/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edu/colorado/applepear/GameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/edu/colorado/applepear/GameTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edu/colorado/applepear/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/edu/colorado/applepear/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +21,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -53,7 +56,7 @@
       <recent name="edu.colorado.applepear" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ShipTest">
+  <component name="RunManager" selected="JUnit.GameTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="edu.colorado.applepear.Main" />
       <module name="Milestone1-csci4448-5448" />
@@ -63,6 +66,21 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GameTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Milestone1-csci4448-5448" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.colorado.applepear.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="edu.colorado.applepear" />
+      <option name="MAIN_CLASS_NAME" value="edu.colorado.applepear.GameTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -99,6 +117,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.GameTest" />
         <item itemvalue="JUnit.ShipTest" />
         <item itemvalue="JUnit.PointTest" />
         <item itemvalue="Application.Main" />
@@ -289,7 +308,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613888961566</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Team applepear pair 2: Done with ShipTest.java with 5 cases">
+      <created>1613889641057</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1613889641057</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -313,6 +339,7 @@
     <MESSAGE value="Team applepear pair 2: Processing on GameTest.java" />
     <MESSAGE value="Team applepear pair 2: Processing on ShipTest.java 2" />
     <MESSAGE value="Team applepear pair 2: Done with ShipTest.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Team applepear pair 2: Done with ShipTest.java" />
+    <MESSAGE value="Team applepear pair 2: Done with ShipTest.java with 5 cases" />
+    <option name="LAST_COMMIT_MESSAGE" value="Team applepear pair 2: Done with ShipTest.java with 5 cases" />
   </component>
 </project>

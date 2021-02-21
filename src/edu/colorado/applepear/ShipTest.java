@@ -10,10 +10,7 @@ public class ShipTest {
     private Ship ship;
     private GameBoard gb;
     private Player p;
-    private Point p1;
-    private Point p2;
-    private Point p3;
-    private Point p4;
+    private Point p1, p2, p3, p4;
 
     @BeforeEach
     public void setShip() throws Exception{

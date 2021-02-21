@@ -27,7 +27,7 @@ public class Ship {
 
     //Function to determine did the player has sunken the Minesweeper or not, by getting the attackMap function from Gameboard class
 
-    public boolean issunkenShip(){
+    public boolean isSunkenShip(){
 //        int numShips= p.getNumShips();
         for(int i=0; i<location.size(); i++){
             int x = location.get(i).getX();

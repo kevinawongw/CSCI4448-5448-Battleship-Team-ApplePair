@@ -21,17 +21,16 @@ public class Game {
     // Param:
     // 1. Current Player's Game Board
     // 2. Opponent's Game Board
-    // 3. Player input X coord
-    // 4. Player input y coord
+    // 3. Player input point
     // Returns: boolean & updates attackMap within gameBoard directly
     // Returns: boolean & updates attackMap within gameBoard directly
-    public static boolean updateMap(GameBoard myMap, GameBoard oppMap, String myX, String myY) {
-        if (oppMap.getShipMap()[Integer.parseInt(myY)][Integer.parseInt(myX)] == 1){
-            myMap.attackMap[Integer.parseInt(myY)][Integer.parseInt(myX)] = 2;
+    public static boolean updateMap(GameBoard myMap, GameBoard oppMap, Point p1) {
+        if (oppMap.getShipMap()[p1.getY()][p1.getX()] == 1){
+            myMap.attackMap[p1.getY()][p1.getX()] = 2;
             return true;
         }
-        else if (oppMap.getShipMap()[Integer.parseInt(myY)][Integer.parseInt(myX)] == 0){
-            myMap.attackMap[Integer.parseInt(myY)][Integer.parseInt(myX)] = 1;
+        else if (oppMap.getShipMap()[p1.getY()][p1.getX()] == 0){
+            myMap.attackMap[p1.getY()][p1.getX()] = 1;
             return false;
         }
         return false;
@@ -39,19 +38,19 @@ public class Game {
     //Yubin
     //Call the function: checkLose() from Player to check which player lose or win the game
     //Calling this function inside the while loop of main class
-    public void isGameOver()
+    public boolean isGameOver()
     {
         if(p1.checkLose() == true){ //if player 1 have 0 ships left, then 2 win
             System.out.println("Winner is " + g2.getPlayer().getName() + " Congratulations!");
             System.out.println("=============GAME OVER==============");
-            System.exit(0);
+            return true;
         }
         else if(p2.checkLose() == true){
             System.out.println("Winner is " + g1.getPlayer().getName() + " Congratulations!");
             System.out.println("=============GAME OVER==============");
-            System.exit(0);
+            return true;
         }
-
+        return false;
 
     }
 
