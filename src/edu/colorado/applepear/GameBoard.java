@@ -201,7 +201,7 @@ public class GameBoard {
             Point p1 = new Point(Integer.parseInt(inputValX),Integer.parseInt(inputValY));
             Point p2 = new Point(Integer.parseInt(inputValX) + 1,Integer.parseInt(inputValY));
 
-            return Arrays.asList(p1,p2);
+            return Arrays.asList(p1, p2);
 
 
         } else if (input.equals("2")) {
