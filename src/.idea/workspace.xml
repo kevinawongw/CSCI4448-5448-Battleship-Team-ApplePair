@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e4f39a5-e2e1-4607-8fcf-96619b63a397" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/edu/colorado/applepear/PointTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/edu/colorado/applepear/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/edu/colorado/applepear/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edu/colorado/applepear/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/edu/colorado/applepear/Point.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edu/colorado/applepear/Ship.java" beforeDir="false" afterPath="$PROJECT_DIR$/edu/colorado/applepear/Ship.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +54,7 @@
       <recent name="edu.colorado.applepear" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.PointTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="edu.colorado.applepear.Main" />
       <module name="Milestone1-csci4448-5448" />
@@ -69,8 +68,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PointTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Milestone1-csci4448-5448" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.colorado.applepear.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="edu.colorado.applepear" />
+      <option name="MAIN_CLASS_NAME" value="edu.colorado.applepear.PointTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PointTest" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -203,7 +218,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613880668640</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Team applepear pair 2: Done with Ship class">
+      <created>1613882610058</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1613882610058</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -221,6 +243,7 @@
     <MESSAGE value="Team applepear pair 2: junit4" />
     <MESSAGE value="Team applepear pair 2: junit4 again" />
     <MESSAGE value="Team applepear pair 2: Changing Ship class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Team applepear pair 2: Changing Ship class" />
+    <MESSAGE value="Team applepear pair 2: Done with Ship class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Team applepear pair 2: Done with Ship class" />
   </component>
 </project>
