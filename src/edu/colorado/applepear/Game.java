@@ -24,7 +24,7 @@ public class Game {
     // 3. Player input point
     // Returns: boolean & updates attackMap within gameBoard directly
     // Returns: boolean & updates attackMap within gameBoard directly
-    public static boolean updateMap(GameBoard myMap, GameBoard oppMap, Point p1) {
+    public static boolean hitOrMiss(GameBoard myMap, GameBoard oppMap, Point p1) {
         if (oppMap.getShipMap()[p1.getY()][p1.getX()] == 1){
             myMap.attackMap[p1.getY()][p1.getX()] = 2;
             return true;
