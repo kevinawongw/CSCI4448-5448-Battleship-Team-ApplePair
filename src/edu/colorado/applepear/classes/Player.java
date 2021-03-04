@@ -149,7 +149,7 @@ This function attacks the coordinates above, below, left, right of the coordinat
             int currY = p.getY();
             if (map[currX][currY] == 1){
                 System.out.println("Attack!");
-//                playerMap.getAttackMap()[thisX][thisY] = 2;
+                getGb().getAttackMap()[currX][currY] = 2;
                 attack = true;
             }
         }
