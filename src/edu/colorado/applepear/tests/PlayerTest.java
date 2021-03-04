@@ -37,7 +37,6 @@ public class PlayerTest {
         myPoints.add(point1);
         myPoints.add(point2);
 
-
         player2.setRadarMissile(0);
         player2.setPlusMissile(0);
 
@@ -55,6 +54,22 @@ public class PlayerTest {
                 "GetName should display player name");
         assertEquals("kevina", player2.getName(),
                 "GetName should display player name");
+    }
+    @Test
+    public void testSetName() {
+        player1.setName("sally");
+        assertEquals("sally", player1.getName(), "setName should set player 1 name");
+    }
+
+    @Test
+    public void testSetPlusMissile() {
+        player1.setPlusMissile(4);
+        assertEquals(4 , player1.getPlusMissile(), "setPlusMissile should set the number of Plus Missiles the player has");
+    }
+    @Test
+    public void testSetRadarMissile() {
+        player1.setRadarMissile(4);
+        assertEquals(4 , player1.getRadarMissile(), "setPlusMissile should set the number of Plus Missiles the player has");
     }
 
     @Test
@@ -100,6 +115,7 @@ public class PlayerTest {
     @Test
     public void useRadarMissileTest(){
         System.out.println("Testing radarMissile");
+        player2.setName("Vienna");
         Point testPoint = new Point( 0,0);
         Point testPoint2 = new Point( 4,4);
 
@@ -114,4 +130,8 @@ public class PlayerTest {
         );
 
     }
+
+    //test
+
+
 }
