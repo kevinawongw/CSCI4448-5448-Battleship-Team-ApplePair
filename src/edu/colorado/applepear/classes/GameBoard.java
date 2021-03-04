@@ -111,12 +111,7 @@ public class GameBoard {
             System.out.print(i + " | ");
 
             for (int j = 0; j < numY; j++) {
-                if (shipMap[i][j] == 1) {
-                    System.out.print("S" + " | ");
-                }
-                else {
-                    System.out.print(attackMap[i][j] + " | ");
-                }
+                System.out.print(shipMap[i][j] + " | ");
             }
             System.out.print("\n");
         }
