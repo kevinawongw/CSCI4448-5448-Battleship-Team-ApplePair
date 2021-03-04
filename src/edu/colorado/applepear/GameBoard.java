@@ -37,11 +37,11 @@ public class GameBoard {
 
     // Getters
     public int[][] getShipMap() {
-        return this.shipMap;
+        return shipMap;
     }
 
     public int[][] getAttackMap() {
-        return this.attackMap;
+        return attackMap;
     }
 
     public List<Ship> getShips(){return ships;}
@@ -158,7 +158,7 @@ public class GameBoard {
 
     public List<Point> minesweeperInput(){
         Scanner myInput = new Scanner(System.in);
-        String input = null;
+        String input = "";
 
         System.out.println("Place Minesweeper (2 blocks wide): ");
         System.out.println("Enter \"1\" or \"2\" \n 1. Horizontal \n 2. Vertical ");
@@ -200,7 +200,7 @@ public class GameBoard {
 
     public List<Point> destroyerInput(){
         Scanner myInput = new Scanner(System.in);
-        String input2 = null;
+        String input2 = "";
         System.out.println("Enter \"1\" or \"2\" \n 1. Horizontal \n 2. Vertical ");
         System.out.println("Place Destroyer (3 blocks wide): ");
         boolean temp = true;
@@ -267,7 +267,7 @@ public class GameBoard {
 
     public List<Point> battleshipInput(){
         Scanner myInput = new Scanner(System.in);
-        String input3 = null;
+        String input3 = "";
         System.out.println("Place Battleship (3 blocks wide): ");
         System.out.println("Enter \"1\" or \"2\" \n 1. Horizontal \n 2. Vertical ");
 
@@ -441,6 +441,30 @@ public class GameBoard {
 //        List<Point> lCoords = lInput();
 //        placeDestroyer(lCoords.get(0), lCoords.get(1), lCoords.get(2));
 //        viewShips();
+    }
+    public boolean updateAttackMap(GameBoard oppMap, Point p1) {
+        System.out.println("1");
+        System.out.println(oppMap.attackMap);
+        if (oppMap.getShipMap()[p1.getY()][p1.getX()] == 1){
+            System.out.println("2");
+
+            getAttackMap()[p1.getY()][p1.getX()] = 2;
+            System.out.println("3");
+
+            return true;
+        }
+        else if (oppMap.getShipMap()[p1.getY()][p1.getX()] == 0){
+            System.out.println("4");
+
+            getAttackMap()[p1.getY()][p1.getX()] = 1;
+            System.out.println("5");
+
+            return false;
+        }
+        else {
+            System.out.println("6");
+            return false;
+        }
     }
 }
 

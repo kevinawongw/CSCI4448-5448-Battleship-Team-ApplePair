@@ -23,17 +23,7 @@ public class Game {
     // 3. Player input point
     // Returns: boolean & updates attackMap within gameBoard directly
     // Returns: boolean & updates attackMap within gameBoard directly
-    public static boolean updateAttackMap(GameBoard myMap, GameBoard oppMap, Point p1) {
-        if (oppMap.getShipMap()[p1.getY()][p1.getX()] == 1){
-            myMap.attackMap[p1.getY()][p1.getX()] = 2;
-            return true;
-        }
-        else if (oppMap.getShipMap()[p1.getY()][p1.getX()] == 0){
-            myMap.attackMap[p1.getY()][p1.getX()] = 1;
-            return false;
-        }
-        return false;
-    }
+
     //Yubin
     //Call the function: checkLose() from Player to check which player lose or win the game
     //Calling this function inside the while loop of main class

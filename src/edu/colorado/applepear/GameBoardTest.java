@@ -24,7 +24,7 @@ public class GameBoardTest {
         gameBoard = new GameBoard();
     }
 
-    // placeMinesweeper()
+    // Place Ship
     @Test
     @DisplayName("Place Ship")
     public void testPlaceShip() {

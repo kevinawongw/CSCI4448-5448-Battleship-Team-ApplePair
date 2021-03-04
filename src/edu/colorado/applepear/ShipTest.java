@@ -35,7 +35,24 @@ public class ShipTest {
         myPoints.add(p2);
         gb.placeShip(myPoints);
         System.out.println(gb.getShips().get(0).getShipName());
+        assertEquals("minesweeper", gb.getShips().get(0).getShipName(),"setShip should display the minesweeper");
+    }
+
+    @Test
+    @DisplayName("Displaying ship type")
+    public void testGetShipName(){
+        System.out.println("Testing getShip");
+        ship = new Ship();
+        p1 = new Point(0,0);
+        p2 = new Point(0,1);
+        List<Point> myPoints = new ArrayList<Point>();
+        myPoints.add(p1);
+        myPoints.add(p2);
+        gb.placeShip(myPoints);
+        System.out.println(gb.getShips().get(0).getShipName());
         assertEquals("minesweeper", gb.getShips().get(0).getShipName(),"GetShip should display the minesweeper");
     }
+
+
 
 }

@@ -33,7 +33,7 @@ public class Player{
 
     public int getPlusMissile() { return plusMissile; }
 
-    public GameBoard getGb() {return gb;}
+    public GameBoard getGb() { return gb; }
 
 }
 
