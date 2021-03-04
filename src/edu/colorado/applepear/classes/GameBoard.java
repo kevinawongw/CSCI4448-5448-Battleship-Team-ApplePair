@@ -94,7 +94,7 @@ public class GameBoard {
     // Prints Map with 0s, 1s
     // Prints where that player's ships are located
     public void viewShips() {
-        System.out.print("----- My Ships -----\n\n");
+        System.out.print("----- My Ship Map -----\n\n");
 
         for (int i = 0; i < numX; i++) {
             System.out.print("  ");
@@ -111,8 +111,11 @@ public class GameBoard {
             System.out.print(i + " | ");
 
             for (int j = 0; j < numY; j++) {
-                if (attackMap[i][j] == 1) {
+                if (shipMap[i][j] == 1) {
                     System.out.print("S" + " | ");
+                }
+                else {
+                    System.out.print(attackMap[i][j] + " | ");
                 }
             }
             System.out.print("\n");
