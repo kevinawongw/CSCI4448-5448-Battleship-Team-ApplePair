@@ -37,8 +37,10 @@ public class PlayerTest {
         myPoints.add(point2);
 
         player2.setRadarMissile(0);
+        player2.setPlusMissile(0);
 
         g2.placeShip(myPoints);
+        g1.placeShip(myPoints);
 
     }
 
@@ -95,5 +97,24 @@ public class PlayerTest {
         );
 
     }
+
+    @Test
+    public void usePlusMissileTest(){
+        System.out.println("Testing plusMissile");
+        Point testPoint = new Point(0, 1);
+        Point testPoint2 = new Point(4, 4);
+
+        assertAll("Should return boolean for whether attacks were performed using the plus missile",
+                () -> assertTrue(player1.useRadarMissile(g2, g1, testPoint),
+                "should return true -- plus missile used and found"),
+                () -> assertFalse(player2.useRadarMissile(g1, g2, testPoint),
+                        "should return false -- player owns no plus missiles"),
+                () -> assertFalse(player1.useRadarMissile(g2, g1, testPoint2),
+                        "Should return false -- no ships found")
+
+        );
+
+    }
+
 
 }
