@@ -1,4 +1,4 @@
-package edu.colorado.applepear.methods;
+package edu.colorado.applepear.classes;
 
 public class Game {
     // Kevina was here

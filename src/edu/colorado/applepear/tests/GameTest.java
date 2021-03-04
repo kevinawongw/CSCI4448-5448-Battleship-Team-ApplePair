@@ -1,9 +1,9 @@
-package edu.colorado.applepear.test;
+package edu.colorado.applepear.tests;
 
-import edu.colorado.applepear.methods.Game;
-import edu.colorado.applepear.methods.GameBoard;
-import edu.colorado.applepear.methods.Player;
-import edu.colorado.applepear.methods.Point;
+import edu.colorado.applepear.classes.Game;
+import edu.colorado.applepear.classes.GameBoard;
+import edu.colorado.applepear.classes.Player;
+import edu.colorado.applepear.classes.Point;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

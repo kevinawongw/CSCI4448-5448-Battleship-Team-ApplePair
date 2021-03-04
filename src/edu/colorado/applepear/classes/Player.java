@@ -1,10 +1,8 @@
-package edu.colorado.applepear.methods;
-
-
+package edu.colorado.applepear.classes;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
+
 
 //Vienna part: player class
 public class Player{
@@ -15,7 +13,6 @@ public class Player{
 
     //constructor
     public Player(GameBoard gb){
-        this.name = name;
         this.radarMissile = 3;
         this.plusMissile = 3;
         this.gb = gb;
@@ -45,7 +42,7 @@ public class Player{
 
     public boolean useRadarMissile( GameBoard opponentBoard, Point P){
         if (getRadarMissile() < 1){
-            System.out.println( getName() + "has no more radar missiles remaining");
+            System.out.println( getName() + " has no more radar missiles remaining");
             return false;
         }
         else{
@@ -75,9 +72,16 @@ public class Player{
             radarRange.add(downRight);
             radarRange.add(downLeft);
 
+            List<Point> scannedCells = new ArrayList<>();
+            for (Point thisPoint: radarRange){
+                if ( (thisPoint.getX() >= 0) && (thisPoint.getX() <= 9) && (thisPoint.getY() <= 9) && (thisPoint.getY() >= 0)){
+                    scannedCells.add(thisPoint);
+                }
+            }
+
             int[][] map =  opponentBoard.getShipMap();
 
-            for ( Point i :radarRange){
+            for ( Point i :scannedCells){
                 int thisX = i.getX();
                 int thisY = i.getY();
                 if (map[thisX][thisY] == 1){

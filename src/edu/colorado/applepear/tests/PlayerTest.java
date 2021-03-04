@@ -1,8 +1,8 @@
-package edu.colorado.applepear.test;
+package edu.colorado.applepear.tests;
 
-import edu.colorado.applepear.methods.GameBoard;
-import edu.colorado.applepear.methods.Player;
-import edu.colorado.applepear.methods.Point;
+import edu.colorado.applepear.classes.GameBoard;
+import edu.colorado.applepear.classes.Player;
+import edu.colorado.applepear.classes.Point;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -80,7 +80,8 @@ public class PlayerTest {
     @Test
     public void useRadarMissileTest(){
         System.out.println("Testing radarMissile");
-        Point testPoint = new Point( 1,0);
+        player2.setName("Vienna");
+        Point testPoint = new Point( 0,0);
         Point testPoint2 = new Point( 4,4);
 
         assertAll("Should return boolean for whether a ship was found using the radar missile",

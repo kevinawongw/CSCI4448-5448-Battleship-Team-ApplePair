@@ -1,8 +1,8 @@
-package edu.colorado.applepear.test;
+package edu.colorado.applepear.tests;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import edu.colorado.applepear.methods.Point;
+import edu.colorado.applepear.classes.Point;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
