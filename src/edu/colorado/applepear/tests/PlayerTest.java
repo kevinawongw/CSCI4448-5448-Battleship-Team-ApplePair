@@ -109,7 +109,7 @@ public class PlayerTest {
         assertAll("Should return boolean for whether attacks were performed using the plus missile",
                 () -> assertTrue(player1.usePlusMissile(g2, testPoint),
                 "should return true -- plus missile used and found"),
-                () -> assertFalse(player2.usePlusMissile(g2, testPoint),
+                () -> assertFalse(player2.usePlusMissile(g1, testPoint),
                         "should return false -- player owns no plus missiles"),
                 () -> assertFalse(player1.usePlusMissile(g2, testPoint2),
                         "Should return false -- no ships found")
