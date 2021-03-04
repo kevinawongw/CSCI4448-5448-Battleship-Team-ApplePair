@@ -9,13 +9,17 @@ import org.junit.jupiter.api.Test;
 
 public class PlayerTest {
 
-    Player player1, player2;
+    Player player1;
+    Player player2;
+    GameBoard g1;
+    GameBoard g2;
+
 
     @BeforeEach
     public void setUp() {
         System.out.println("Before Each Test");
-        player1 = new Player("vienna", 3, 3, 0);
-        player2 = new Player("kevina", 3, 3, 5);
+        player1 = new Player("vienna", g1);
+        player2 = new Player("kevina", g2);
     }
 
     @Test
@@ -26,13 +30,7 @@ public class PlayerTest {
         assertEquals("kevina", player2.getName(),
                 "GetName should display player name");
     }
-    @Test
-    @DisplayName("Getting number of ships")
-    public void testGetNumShips() {
-        System.out.println("Testing GetNumShips");
-        assertEquals(5, player2.getNumShips(),
-                "GetNumShips should give the number of ships");
-    }
+
     @Test
     @DisplayName("Getting number of missiles")
     public void testGetNumRadarMissiles() {
@@ -48,10 +46,13 @@ public class PlayerTest {
                 "GetPlusMissile should give the player's number of Plus missiles");
 
     }
+
     @Test
-    public void checkLose() {
-        System.out.println("Testing checkLose");
-        assertTrue(player1.checkLose(), "checkLose should return true");
+    public void testGetGB() {
+        System.out.println("Testing getGb");
+        assertEquals(3, player1.getPlusMissile(),
+                "GetPlusMissile should give the player's number of Plus missiles");
 
     }
+
 }

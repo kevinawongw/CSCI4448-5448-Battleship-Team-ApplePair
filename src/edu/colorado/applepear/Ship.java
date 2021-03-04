@@ -17,11 +17,6 @@ public class Ship {
     private GameBoard gb;
 
     //Constructor
-    public Ship(String shipType){
-        location = new ArrayList<>();
-        this.shipName = shipName;
-        this.gb = gb;
-    }
 
     public Ship(){
         location = new ArrayList<>();

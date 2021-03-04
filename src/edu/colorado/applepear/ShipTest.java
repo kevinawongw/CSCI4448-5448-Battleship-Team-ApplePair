@@ -27,7 +27,7 @@ public class ShipTest {
     @DisplayName("Displaying ship type")
     public void testSetShipName(){
         System.out.println("Testing SetShip");
-        ship = new Ship("minesweeper");
+        ship = new Ship();
         p1 = new Point(0,0);
         p2 = new Point(0,1);
         List<Point> myPoints = new ArrayList<Point>();
