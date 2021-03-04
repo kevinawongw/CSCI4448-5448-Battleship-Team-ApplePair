@@ -9,7 +9,7 @@ public class Player{
     // player class will hold the following
     private String name;
     private int radarMissile, plusMissile, numShips;
-    private GameBoard gb;
+    private final GameBoard gb;
 
     //constructor
     public Player(GameBoard gb){
@@ -47,6 +47,7 @@ This function scans the 8 blocks around a point for the presence of a ship.
 **/
     public boolean useRadarMissile( GameBoard opponentBoard, Point P){
         //checks if this player has any radar missiles left
+
         if (getRadarMissile() < 1){
             System.out.println( getName() + " has no more radar missiles remaining");
             return false;
@@ -99,6 +100,7 @@ This function scans the 8 blocks around a point for the presence of a ship.
                     return true;
                 }
             }
+            System.out.println("point2: ");
             System.out.println("No ship was found in this range");
             return false;
 
@@ -126,30 +128,29 @@ This function attacks the coordinates above, below, left, right of the coordinat
         //points
         Point above = new Point(point.getX(), point.getY()+1);
         Point below = new Point(point.getX(), point.getY()-1);
-        Point right = new Point(point.getX()+1,point.getY()+1);
-        Point left = new Point(point.getX()-1, point.getY()+1);
+        Point right = new Point(point.getX()+1,point.getY());
+        Point left = new Point(point.getX()-1, point.getY());
 
         //checks if the point is on the grid and not out of bounds then appends if on grid
-        if(above != null)
+        if(above.getX() >=0 && above.getY()<=9)
             plusRange.add(above);
-        if(below != null)
+        if(below.getX() >=0 && below.getY()<=9)
             plusRange.add(below);
-        if(right != null)
+        if(right.getX() >=0 && right.getY()<=9)
             plusRange.add(right);
-        if(left != null)
+        if(left.getX() >=0 && left.getY()<=9)
             plusRange.add(left);
 
-        //saves the opponent's map
+        //saves the opponent map
         int[][] map =  oppBoard.getShipMap();
 
         boolean attack = false;
-
         for (Point p : plusRange){
             int currX = p.getX();
             int currY = p.getY();
+
             if (map[currX][currY] == 1){
-                System.out.println("Attack!");
-                getGb().getAttackMap()[currX][currY] = 2;
+//                playerMap.getAttackMap()[thisX][thisY] = 2;
                 attack = true;
             }
 
