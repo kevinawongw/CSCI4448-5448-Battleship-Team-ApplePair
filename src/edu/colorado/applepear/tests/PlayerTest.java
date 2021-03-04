@@ -102,6 +102,7 @@ public class PlayerTest {
     @Test
     public void usePlusMissileTest(){
         System.out.println("Testing plusMissile");
+        player2.setName("Yvonne");
         Point testPoint = new Point(0, 1);
         Point testPoint2 = new Point(4, 4);
 
