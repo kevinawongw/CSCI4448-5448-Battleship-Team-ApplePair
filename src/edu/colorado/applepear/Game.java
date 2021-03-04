@@ -2,11 +2,10 @@ package edu.colorado.applepear;
 
 public class Game {
     // Kevina was here
+
     // Private Variables
-    private Player p1;
-    private Player p2;
-    private GameBoard g1;
-    private GameBoard g2;
+    private final Player p1, p2;
+    private final GameBoard g1, g2;
 
 
     //constructor
@@ -40,12 +39,12 @@ public class Game {
     //Calling this function inside the while loop of main class
     public boolean isGameOver()
     {
-        if(p1.checkLose() == true){ //if player 1 have 0 ships left, then 2 win
+        if(p1.checkLose()){ //if player 1 have 0 ships left, then 2 win
             System.out.println("Winner is " + g2.getPlayer().getName() + " Congratulations!");
             System.out.println("=============GAME OVER==============");
             return true;
         }
-        else if(p2.checkLose() == true){
+        else if(p2.checkLose()){
             System.out.println("Winner is " + g1.getPlayer().getName() + " Congratulations!");
             System.out.println("=============GAME OVER==============");
             return true;

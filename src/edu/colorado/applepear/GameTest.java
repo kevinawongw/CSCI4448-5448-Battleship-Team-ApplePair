@@ -1,19 +1,18 @@
 package edu.colorado.applepear;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
+import java.util.*;
+
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class GameTest {
 
-    private Player player1;
-    private Player player2;
-    private GameBoard gb1;
-    private GameBoard gb2;
-    private Game game;
+    Player player1, player2;
+    GameBoard gb1, gb2;
+    Game game;
 
     @BeforeEach
     public void setUp() throws Exception {
@@ -27,28 +26,30 @@ public class GameTest {
     @Test
     @DisplayName("if updateMap and hit a ship")
     public void testUpdateMap1() {
-        gb1.placeTower(new Point(0,0));
-            assertEquals(true, game.updateMap(gb2,gb1,new Point(0,0)), "updateMap should return true");
+        List<Point> myPoint= null;
+        myPoint.add(new Point(0,0));
+        gb1.placeShip(myPoint);
+        assertTrue(game.updateMap(gb2,gb1,new Point(0,0)), "updateMap should return true");
     }
 
     @Test
     @DisplayName("if updateMap and did not hit a ship")
     public void testUpdateMap2() {
-            assertEquals(false, game.updateMap(gb2,gb1,new Point(0,1)), "updateMap should return false");
+            assertFalse(game.updateMap(gb2,gb1,new Point(0,1)), "updateMap should return false");
     }
 
     @Test
     @DisplayName("if game is not over")
     public void testIsGameOver1() {
             player1.setNumShips(0);
-            assertEquals(true, game.isGameOver(), "isGameOver should return true");
+            assertFalse(game.isGameOver(), "isGameOver should return true");
     }
 
     @Test
     @DisplayName("if game is over")
       public void testIsGameOver() {
             player2.setNumShips(3);
-            assertEquals(false, game.isGameOver(), "isGameOver should return false");
+            assertFalse(game.isGameOver(), "isGameOver should return false");
     }
 
 }

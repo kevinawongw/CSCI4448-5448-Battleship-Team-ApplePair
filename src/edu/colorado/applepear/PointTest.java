@@ -4,11 +4,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
 
 public class PointTest {
-    private Point point;
+    Point point;
 
     @BeforeEach
     public void setPoint() throws Exception{
@@ -17,10 +16,10 @@ public class PointTest {
     }
 
     @Test
-    @DisplayName("Displaying the point")
+    @DisplayName("Setting the point")
     public void testGetPoint(){
         System.out.println("Testing GetPoint");
-        assertEquals(1, point.getX(), "GetX should display the valid point X");
-        assertEquals(2, point.getY(), "GetY should display the valid point Y");
+        assertEquals(1, point.getX(), "GetX should return the valid point X");
+        assertEquals(2, point.getY(), "GetY should return the valid point Y");
     }
 }

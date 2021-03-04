@@ -4,9 +4,7 @@ package edu.colorado.applepear;
 public class Player {
     // player class will hold the following
     private String name;
-    private int radarMissile;
-    private int plusMissile;
-    private int numShips;
+    private int radarMissile, plusMissile, numShips;
 
     //constructor
     public Player(String name, int radarMissile, int plusMissile, int numShips){
@@ -17,7 +15,6 @@ public class Player {
     }
 
     //setters
-
     public void setName(String name) {
         this.name = name;
     }

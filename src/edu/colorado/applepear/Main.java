@@ -30,10 +30,10 @@ public class Main {
     // Prints Instructions
     private static void printInstructions() {
         System.out.println("\n\n ========== Battleship Instructions ========== \n");
-        System.out.println("Goal: Select Coordinates to take out your opponent's ships!");
-        System.out.println("Missiles: All Players have unlimited uses of the standard missile that attacks one coordinate! Each player gets 2 \"+\" Missiles and 2 radar missiles.");
-        System.out.println("\"+\" Missile: Attacks an area in the shape of a \"+\". The coordinate entered will attack that coordinate and the coordinates to the right, left, above, and below it. The player needs a rest turn after using this");
-        System.out.println("Radar Missile: Scans the coordinate the player selected along with the eight spaces around it. Tells player if a ship is present, but not where.");
+        System.out.println("[Goal] : Select Coordinates to take out your opponent's ships!");
+        System.out.println("[Missiles] : All Players have unlimited uses of the standard missile that attacks one coordinate! Each player gets 2 \"+\" Missiles and 2 radar missiles.");
+        System.out.println("[\"+\" Missile] : Attacks an area in the shape of a \"+\". The coordinate entered will attack that coordinate and the coordinates to the right, left, above, and below it. The player needs a rest turn after using this");
+        System.out.println("[Radar Missile] : Scans the coordinate the player selected along with the eight spaces around it. Tells player if a ship is present, but not where.");
         System.out.println("Winner takes down all of their opponents ships! Good Luck!");
     }
 
@@ -82,35 +82,31 @@ public class Main {
          displayMenu();
 
          while (run){
-             System.out.println("start");
              String myVal = myInput.nextLine();
              System.out.println(myVal);
              switch (myVal) {
                  case "1":
-                     System.out.println("+--- Let's Attack! ---+");
+                     System.out.println("\n\n+--- Let's Attack! ---+");
                      System.out.println("What is the X coordinate for the space you want to attack?");
                      String myX = myInput.nextLine();
                      System.out.println("What is the Y coordinate for the space you want to attack?");
                      String myY = myInput.nextLine();
-                     Point myXY = new Point(Integer.parseInt(myX), Integer.parseInt(myY));
-                     boolean hitOrMiss = Game.updateMap(curMap, oppMap, myXY);
-
+                     boolean hitOrMiss = Game.updateMap(curMap,oppMap, new Point(Integer.parseInt(myX),Integer.parseInt(myY)));
+                     curMap.viewMap();
                      if (hitOrMiss) {
                          System.out.println("You Hit an Opponent's Ship! Nice Shot!");
 
                      } else {
                          System.out.println("You Missed...");
                      }
-                     curMap.viewMap();
                      // Depending on the player's turn, their map will be different
                      // Update maps and turns
                      if (curMap.equals(p1Map)) {
-                         p1Map = curMap;
                          curMap = p2Map;
                          oppMap = p1Map;
 
-                     } else if (curMap.equals(p2Map)) {
-                         p2Map = curMap;
+                     }
+                     else if (curMap.equals(p2Map)) {
                          curMap = p1Map;
                          oppMap = p2Map;
                      }
@@ -120,7 +116,7 @@ public class Main {
                      curMap.viewMap();
                      break;
                  case "3":
-                     System.out.println("+-----" + curMap.getPlayer().getName() + "'s Inventory -----+");
+                     System.out.println("\n\n +-----" + curMap.getPlayer().getName() + "'s Inventory -----+\n");
                      System.out.println("Number of Radar Missiles: " + curMap.getPlayer().getRadarMissile());
                      System.out.println("Number of Plus Missiles: " + curMap.getPlayer().getPlusMissile());
                      break;
@@ -133,6 +129,9 @@ public class Main {
                  case "6":
                      run = false;
                      return;
+                 default:
+                     System.out.println("Please select a valid menu option...");
+                     displayMenu();
              }
              //end the game
              boolean gameEnd = myGame.isGameOver();

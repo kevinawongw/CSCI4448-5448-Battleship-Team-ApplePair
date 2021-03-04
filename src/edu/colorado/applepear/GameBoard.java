@@ -11,12 +11,8 @@ public class GameBoard {
     // Helpful Variables
     public static final int numX = 10;
     public static final int numY = 10;
-    private Player p;
-    private Ship minesweeper = new Ship("minesweeper");
-    private Ship destroyer = new Ship("destroyer");
-    private Ship battleship = new Ship("battleship");
-    private Ship tower = new Ship("tower");
-    private Ship L = new Ship("l");
+    private final Player p;
+    private List<Ship> ships;
 
     // Initializing Maps:
 
@@ -31,13 +27,14 @@ public class GameBoard {
     // Ship Map: Reflects that player's own ships
     // 0 - Not Present
     // 1 - Present
-    private int[][] shipMap;
+    private final int[][] shipMap;
 
     // Constructor
     public GameBoard(Player p) {
         this.p = p;
         shipMap = new int[numX][numY];
         attackMap = new int[numX][numY];
+        ships = new ArrayList<>();
     }
 
     // Getters
@@ -53,25 +50,7 @@ public class GameBoard {
         return this.attackMap;
     }
 
-    public Ship getMinesweeper(){
-        return minesweeper;
-    }
-
-    public Ship getDestroyer(){
-        return destroyer;
-    }
-
-    public Ship getBattleship(){
-        return battleship;
-    }
-
-    public Ship getTower(){
-        return tower;
-    }
-
-    public Ship getL(){
-        return L;
-    }
+    public List<Ship> getShips(){return ships;}
 
     // Function 2: View Map
     // Param: None
@@ -169,12 +148,18 @@ public class GameBoard {
     // Tower (1 block x 3 hits)
     // L - Ship (3 blocks shaped like "L")
 
-    public void placeMinesweeper(Point p1, Point p2) {
-        shipMap[p1.y][p1.x] = 1;
-        shipMap[p2.y][p2.x] = 1;
-        //Getting location for Ship class
-        minesweeper.location.add(p1);
-        minesweeper.location.add(p2);
+    public void placeShip(List<Point> points) {
+        Ship tempShip = new Ship();
+
+        for (int i = 0; i < points.size() ; i++){
+            tempShip.location.add(points.get(i));
+            int myX = points.get(i).x;
+            int myY = points.get(i).y;
+            shipMap[myY][myX] = 1;
+        }
+        tempShip.setShipName();
+        ships.add(tempShip);
+
     }
 
     public List<Point> minesweeperInput(){
@@ -218,16 +203,6 @@ public class GameBoard {
         return null;
     }
 
-    public void placeDestroyer(Point p1, Point p2, Point p3){
-        shipMap[p1.y][p1.x] = 1;
-        shipMap[p2.y][p2.x] = 1;
-        shipMap[p3.y][p3.x] = 1;
-
-        destroyer.location.add(p1);
-        destroyer.location.add(p2);
-        destroyer.location.add(p3);
-
-    }
 
     public List<Point> destroyerInput(){
         Scanner myInput = new Scanner(System.in);
@@ -295,18 +270,6 @@ public class GameBoard {
         return null;
     }
 
-
-    public void placeBattleship(Point p1, Point p2, Point p3, Point p4) {
-        shipMap[p1.y][p1.x] = 1;
-        shipMap[p2.y][p2.x] = 1;
-        shipMap[p3.y][p3.x] = 1;
-        shipMap[p4.y][p4.x] = 1;
-
-        battleship.location.add(new Point(p1.x, p1.y));
-        battleship.location.add(new Point(p2.x, p2.y));
-        battleship.location.add(new Point(p3.x, p3.y));
-        battleship.location.add(new Point(p4.x, p4.y));
-    }
 
     public List<Point> battleshipInput(){
         Scanner myInput = new Scanner(System.in);
@@ -402,12 +365,6 @@ public class GameBoard {
     }
 
 
-
-    public void placeTower(Point p1) {
-        shipMap[p1.y][p1.x] = 1;
-        tower.location.add(p1);
-    }
-
     public List<Point> towerInput() {
         Scanner myInput = new Scanner(System.in);
         System.out.println("Place Tower (1): ");
@@ -435,17 +392,6 @@ public class GameBoard {
         return null;
     }
 
-    public void placeLShip(Point p1, Point p2, Point p3) {
-
-        shipMap[p1.y][p1.x] = 1;
-        shipMap[p2.y][p2.x] = 1;
-        shipMap[p3.y][p3.x] = 1;
-        L.location.add(p1);
-        L.location.add(p2);
-        L.location.add(p3);
-
-    }
-
     public List<Point> lInput() {
         Scanner myInput = new Scanner(System.in);
         System.out.println("Place L-Ship (3 blocks is L shape): ");
@@ -469,7 +415,6 @@ public class GameBoard {
                 int x3 =Integer.parseInt(inputValX) + 1;
                 int y3 = Integer.parseInt(inputValY) + 1;
                 Point p3 = new Point(x3, y3);
-
                 temp = false;
                 return Arrays.asList(p1, p2, p3);
             }
@@ -482,10 +427,11 @@ public class GameBoard {
 
     public void populateShipMap(){
         List<Point> minesweeperCoords = minesweeperInput();
-        placeMinesweeper(minesweeperCoords.get(0), minesweeperCoords.get(1));
+        placeShip(minesweeperCoords);
         viewShips();
 
         // **** Commented out Temporarily - DO NOT DELETE :) ****
+
 //        List<Point> destroyerCoords = destroyerInput();
 //        placeDestroyer(destroyerCoords.get(0), destroyerCoords.get(1), destroyerCoords.get(2));
 //        viewShips();
