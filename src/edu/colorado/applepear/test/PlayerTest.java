@@ -1,5 +1,8 @@
-package edu.colorado.applepear;
+package edu.colorado.applepear.test;
 
+import edu.colorado.applepear.methods.GameBoard;
+import edu.colorado.applepear.methods.Player;
+import edu.colorado.applepear.methods.Point;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -23,9 +26,8 @@ public class PlayerTest {
 
         g1 = new GameBoard();
         g2 = new GameBoard();
-        player1 = new Player("vienna", g1);
-        player2 = new Player("kevina", g2);
-
+        player1 = new Player(g1);
+        player2 = new Player(g2);
 
         Point point1 = new Point(1,1);
         Point point2 = new Point(1,2);
@@ -43,6 +45,8 @@ public class PlayerTest {
     @Test
     @DisplayName("Displaying player1 name")
     public void testGetName() {
+        player1.setName("vienna");
+        player2.setName("kevina");
         System.out.println("Testing GetName");assertEquals("vienna", player1.getName(),
                 "GetName should display player name");
         assertEquals("kevina", player2.getName(),
@@ -88,7 +92,6 @@ public class PlayerTest {
                         "Should return false -- no ships found")
 
         );
-
 
     }
 

@@ -1,5 +1,9 @@
-package edu.colorado.applepear;
+package edu.colorado.applepear.test;
 
+import edu.colorado.applepear.methods.Game;
+import edu.colorado.applepear.methods.GameBoard;
+import edu.colorado.applepear.methods.Player;
+import edu.colorado.applepear.methods.Point;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -11,16 +15,13 @@ import static org.junit.jupiter.api.Assertions.*;
 public class GameTest {
 
     Player player1, player2;
-    GameBoard gb1, gb2;
     Game game;
-
     @BeforeEach
     public void setUp() throws Exception {
-        player1 = new Player("vienna", gb1);
-        player2 = new Player("kevina", gb2);
-        gb1 = new GameBoard();
-        gb2 = new GameBoard();
-        game = new Game(player1, player2, gb1, gb2);
+        GameBoard gb1 = new GameBoard(), gb2 = new GameBoard();
+        player1 = new Player(gb1);
+        player2 = new Player(gb2);
+        game = new Game(player1, player2);
     }
 
 
@@ -29,16 +30,17 @@ public class GameTest {
     @Test
     @DisplayName("if game is not over")
     public void testIsGameOver1() {
-        assertFalse(game.isGameOver(), "isGameOver should return true");
+        assertTrue(game.isGameOver(), "isGameOver should return true");
     }
 
     @Test
     @DisplayName("if game is over")
       public void testIsGameOver() {
-        List<Point> coordLoc = new ArrayList<>();
+        List<Point> coordLoc = new ArrayList<Point>();
         coordLoc.add(new Point(0,0));
         coordLoc.add(new Point(0,1));
         player2.getGb().placeShip(coordLoc);
+        player1.getGb().placeShip(coordLoc);
         assertFalse(game.isGameOver(), "isGameOver should return false");
     }
 

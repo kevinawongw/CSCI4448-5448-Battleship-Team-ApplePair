@@ -1,4 +1,4 @@
-package edu.colorado.applepear;
+package edu.colorado.applepear.methods;
 import java.util.Scanner;
 
 // Kevina was here doing menu things
@@ -54,8 +54,10 @@ public class Main {
          String name2 = myInput.nextLine();
          GameBoard p1Map = new GameBoard();
          GameBoard p2Map = new GameBoard();
-         Player p1 = new Player(name1,p1Map);
-         Player p2 = new Player(name2,p2Map);
+         Player p1 = new Player(p1Map);
+         p1.setName(name1);
+         Player p2 = new Player(p2Map);
+         p2.setName(name2);
 
          // Initialize GameBoard Objects
 
@@ -65,7 +67,7 @@ public class Main {
          p2Map.populateShipMap();
 
          // Initialize Game Object
-         Game myGame = new Game(p1,p2,p1Map, p2Map);
+         Game myGame = new Game(p1,p2);
 
          // Variables to keep track of which player's turn
          Player curPlayer = p1;

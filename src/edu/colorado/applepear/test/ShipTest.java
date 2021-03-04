@@ -1,7 +1,11 @@
-package edu.colorado.applepear;
+package edu.colorado.applepear.test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import edu.colorado.applepear.methods.GameBoard;
+import edu.colorado.applepear.methods.Player;
+import edu.colorado.applepear.methods.Point;
+import edu.colorado.applepear.methods.Ship;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -18,7 +22,7 @@ public class ShipTest {
     @BeforeEach
     public void setShip() throws Exception{
         System.out.println("Before Each Test");
-        p = new Player("yubin", gb);
+        p = new Player(gb);
         gb = new GameBoard();
     }
 

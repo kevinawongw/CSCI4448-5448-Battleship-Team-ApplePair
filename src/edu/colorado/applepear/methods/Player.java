@@ -1,4 +1,6 @@
-package edu.colorado.applepear;
+package edu.colorado.applepear.methods;
+
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,11 +14,11 @@ public class Player{
     private GameBoard gb;
 
     //constructor
-    public Player(String name, GameBoard gb){
+    public Player(GameBoard gb){
         this.name = name;
         this.radarMissile = 3;
         this.plusMissile = 3;
-
+        this.gb = gb;
     }
 
     //setters
@@ -92,4 +94,3 @@ public class Player{
 
 
 }
-

@@ -1,4 +1,4 @@
-package edu.colorado.applepear;
+package edu.colorado.applepear.methods;
 import java.util.Arrays;
 import java.util.Scanner;
 import java.util.*;
@@ -32,7 +32,7 @@ public class GameBoard {
     public GameBoard() {
         shipMap = new int[numX][numY];
         attackMap = new int[numX][numY];
-        ships = new ArrayList<>();
+        ships = new ArrayList<Ship>();
     }
 
     // Getters

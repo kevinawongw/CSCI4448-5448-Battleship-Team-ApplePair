@@ -1,4 +1,4 @@
-package edu.colorado.applepear;
+package edu.colorado.applepear.methods;
 import java.util.ArrayList;
 import java.util.Scanner;
 

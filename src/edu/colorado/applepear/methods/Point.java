@@ -1,4 +1,4 @@
-package edu.colorado.applepear;
+package edu.colorado.applepear.methods;
 
 //Created a Point class for getting location of ship in Ship class
 public class Point {

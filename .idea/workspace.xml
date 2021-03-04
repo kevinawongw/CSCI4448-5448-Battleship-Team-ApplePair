@@ -23,11 +23,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ecce50e7-60f1-4088-9580-0bcf29b1574e" name="Default Changelist" comment="Player takes in gameboard, instead of GameBoard takes in Player">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/GameBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/GameBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/GameBoardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/GameBoardTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/GameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/GameTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Milestone1-csci4448-5448/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Milestone1-csci4448-5448/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/methods/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/GameBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/methods/GameBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/GameBoardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/test/GameBoardTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/GameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/test/GameTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/methods/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/methods/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/PlayerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/test/PlayerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/methods/Point.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/PointTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/test/PointTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/Ship.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/methods/Ship.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/ShipTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/test/ShipTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,13 +80,13 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="JUnit.GameBoardTest">
+  <component name="RunManager" selected="JUnit.edu.colorado.applepear.test in Milestone1-csci4448-5448">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="edu.colorado.applepear.Main" />
+      <option name="MAIN_CLASS_NAME" value="edu.colorado.applepear.methods.Main" />
       <module name="Milestone1-csci4448-5448" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="edu.colorado.applepear.*" />
+          <option name="PATTERN" value="edu.colorado.applepear.test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -89,27 +98,12 @@
       <module name="Milestone1-csci4448-5448" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="edu.colorado.applepear.*" />
+          <option name="PATTERN" value="edu.colorado.applepear.test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="edu.colorado.applepear" />
-      <option name="MAIN_CLASS_NAME" value="edu.colorado.applepear.GameBoardTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GameTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Milestone1-csci4448-5448" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="edu.colorado.applepear.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="edu.colorado.applepear" />
-      <option name="MAIN_CLASS_NAME" value="edu.colorado.applepear.GameTest" />
+      <option name="PACKAGE_NAME" value="edu.colorado.applepear.test" />
+      <option name="MAIN_CLASS_NAME" value="edu.colorado.applepear.test.GameBoardTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -119,12 +113,12 @@
       <module name="Milestone1-csci4448-5448" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="edu.colorado.applepear.*" />
+          <option name="PATTERN" value="edu.colorado.applepear.test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="edu.colorado.applepear" />
-      <option name="MAIN_CLASS_NAME" value="edu.colorado.applepear.PlayerTest" />
+      <option name="PACKAGE_NAME" value="edu.colorado.applepear.test" />
+      <option name="MAIN_CLASS_NAME" value="edu.colorado.applepear.test.PlayerTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -134,13 +128,27 @@
       <module name="Milestone1-csci4448-5448" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="edu.colorado.applepear.*" />
+          <option name="PATTERN" value="edu.colorado.applepear.test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="edu.colorado.applepear" />
-      <option name="MAIN_CLASS_NAME" value="edu.colorado.applepear.ShipTest" />
+      <option name="PACKAGE_NAME" value="edu.colorado.applepear.test" />
+      <option name="MAIN_CLASS_NAME" value="edu.colorado.applepear.test.ShipTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="edu.colorado.applepear.test in Milestone1-csci4448-5448" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Milestone1-csci4448-5448" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.colorado.applepear.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="edu.colorado.applepear.test" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -171,11 +179,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.edu.colorado.applepear.test in Milestone1-csci4448-5448" />
         <item itemvalue="JUnit.GameBoardTest" />
         <item itemvalue="JUnit.ShipTest" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.PlayerTest" />
-        <item itemvalue="JUnit.GameTest" />
       </list>
     </recent_temporary>
   </component>
@@ -293,7 +301,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614827976916</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Player takes in gameboard, instead of GameBoard takes in Player">
+      <created>1614829934207</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1614829934207</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -321,10 +336,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="Player takes in gameboard, instead of GameBoard takes in Player" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="575" y="139" key="#com.intellij.ide.util.MemberChooser" timestamp="1614829004165">
+    <state x="575" y="139" key="#com.intellij.ide.util.MemberChooser" timestamp="1614831666246">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="575" y="139" key="#com.intellij.ide.util.MemberChooser/0.0.1536.864@0.0.1536.864" timestamp="1614829004165" />
+    <state x="575" y="139" key="#com.intellij.ide.util.MemberChooser/0.0.1536.864@0.0.1536.864" timestamp="1614831666246" />
     <state x="321" y="76" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1613874164867">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -341,51 +356,55 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="348" y="81" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1613876998814" />
-    <state width="1493" height="197" key="GridCell.Tab.0.bottom" timestamp="1614829845800">
+    <state width="1493" height="171" key="GridCell.Tab.0.bottom" timestamp="1614834122057">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1237" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1613877721049" />
-    <state width="1493" height="197" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1614829845800" />
-    <state width="1493" height="197" key="GridCell.Tab.0.center" timestamp="1614829845800">
+    <state width="1493" height="171" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1614834122057" />
+    <state width="1493" height="171" key="GridCell.Tab.0.center" timestamp="1614834122057">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1237" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1613877721049" />
-    <state width="1493" height="197" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1614829845800" />
-    <state width="1493" height="197" key="GridCell.Tab.0.left" timestamp="1614829845800">
+    <state width="1493" height="171" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1614834122057" />
+    <state width="1493" height="171" key="GridCell.Tab.0.left" timestamp="1614834122057">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1237" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1613877721048" />
-    <state width="1493" height="197" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1614829845800" />
-    <state width="1493" height="197" key="GridCell.Tab.0.right" timestamp="1614829845800">
+    <state width="1493" height="171" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1614834122057" />
+    <state width="1493" height="171" key="GridCell.Tab.0.right" timestamp="1614834122057">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1237" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1613877721049" />
-    <state width="1493" height="197" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1614829845800" />
-    <state width="1493" height="372" key="GridCell.Tab.1.bottom" timestamp="1614828782456">
+    <state width="1493" height="171" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1614834122057" />
+    <state width="1493" height="254" key="GridCell.Tab.1.bottom" timestamp="1614834011870">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="372" key="GridCell.Tab.1.bottom/0.0.1536.864@0.0.1536.864" timestamp="1614828782456" />
-    <state width="1493" height="372" key="GridCell.Tab.1.center" timestamp="1614828782456">
+    <state width="1493" height="254" key="GridCell.Tab.1.bottom/0.0.1536.864@0.0.1536.864" timestamp="1614834011870" />
+    <state width="1493" height="254" key="GridCell.Tab.1.center" timestamp="1614834011870">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="372" key="GridCell.Tab.1.center/0.0.1536.864@0.0.1536.864" timestamp="1614828782456" />
-    <state width="1493" height="372" key="GridCell.Tab.1.left" timestamp="1614828782456">
+    <state width="1493" height="254" key="GridCell.Tab.1.center/0.0.1536.864@0.0.1536.864" timestamp="1614834011870" />
+    <state width="1493" height="254" key="GridCell.Tab.1.left" timestamp="1614834011870">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="372" key="GridCell.Tab.1.left/0.0.1536.864@0.0.1536.864" timestamp="1614828782456" />
-    <state width="1493" height="372" key="GridCell.Tab.1.right" timestamp="1614828782456">
+    <state width="1493" height="254" key="GridCell.Tab.1.left/0.0.1536.864@0.0.1536.864" timestamp="1614834011870" />
+    <state width="1493" height="254" key="GridCell.Tab.1.right" timestamp="1614834011870">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="372" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1614828782456" />
+    <state width="1493" height="254" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1614834011870" />
+    <state x="148" y="69" key="MergeDialog" timestamp="1614832851841">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="148" y="69" key="MergeDialog/0.0.1536.864@0.0.1536.864" timestamp="1614832851841" />
     <state x="121" y="0" key="SettingsEditor" timestamp="1613876831407">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="121" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1613876831407" />
-    <state x="280" y="93" key="Vcs.Push.Dialog.v2" timestamp="1614827982052">
+    <state x="280" y="93" key="Vcs.Push.Dialog.v2" timestamp="1614829940393">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1613890727187" />
-    <state x="280" y="93" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1614827982052" />
+    <state x="280" y="93" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1614829940393" />
     <state x="375" y="232" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1613876458203">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -403,10 +422,11 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="395" y="242" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1280.680@0.0.1280.680" timestamp="1612371469634" />
-    <state x="484" y="98" key="refactoring.ChangeSignatureDialog" timestamp="1613890922732">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="581" y="125" key="refactoring.ChangeSignatureDialog" timestamp="1614831674507">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="484" y="98" key="refactoring.ChangeSignatureDialog/0.0.1280.680@0.0.1280.680" timestamp="1613890922732" />
+    <state x="581" y="125" key="refactoring.ChangeSignatureDialog/0.0.1536.864@0.0.1536.864" timestamp="1614831674507" />
     <state x="431" y="182" width="672" height="678" key="search.everywhere.popup" timestamp="1613503142503">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -445,6 +465,9 @@
     </SUITE>
     <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$PointTest.ic" NAME="PointTest Coverage Results" MODIFIED="1614823409113" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>edu.colorado.applepear.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$edu_colorado_applepear_test_in_Milestone1_csci4448_5448.ic" NAME="edu.colorado.applepear.test in Milestone1-csci4448-5448 Coverage Results" MODIFIED="1614834048550" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>edu.colorado.applepear.test.*</FILTER>
     </SUITE>
   </component>
 </project>
