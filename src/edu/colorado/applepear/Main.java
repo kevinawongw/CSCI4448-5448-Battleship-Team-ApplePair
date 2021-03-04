@@ -91,7 +91,7 @@ public class Main {
                      String myX = myInput.nextLine();
                      System.out.println("What is the Y coordinate for the space you want to attack?");
                      String myY = myInput.nextLine();
-                     Point attackPoint = new Point(Integer.parseInt(myX),Integer.parseInt(myY));
+                     Point attackPoint = new Point(Integer.parseInt(myX), Integer.parseInt(myY));
                      Boolean hitOrMiss = curPlayer.getGb().updateAttackMap(opponentPlayer.getGb(), attackPoint);
                      p1.getGb().viewMap();
                      if (hitOrMiss) {
@@ -106,8 +106,7 @@ public class Main {
                          curPlayer = p2;
                          opponentPlayer = p1;
 
-                     }
-                     else if (curPlayer.equals(p2)) {
+                     } else if (curPlayer.equals(p2)) {
                          curPlayer = p1;
                          opponentPlayer = p2;
                      }
@@ -133,16 +132,19 @@ public class Main {
                  default:
                      System.out.println("Please select a valid menu option...");
                      displayMenu();
-
-
-                 boolean gameEnd = myGame.isGameOver();
-                 if(gameEnd){
-                     System.exit(0);
-                 }
+             }
+             boolean gameEnd = myGame.isGameOver();
+             if(gameEnd){
+                 System.exit(0);
+             }
+             if (myVal.equals("1")){
                  System.out.println("\n\n--- It is " + curPlayer.getName() + "'s turn ---");
                  displayMenu();
              }
-             //end the game
+             else{
+                 displayMenu();
+             }
+
         }
     }
     // -- END Game Menu Loop--
