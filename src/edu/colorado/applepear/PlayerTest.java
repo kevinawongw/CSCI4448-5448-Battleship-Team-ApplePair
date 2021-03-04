@@ -1,14 +1,13 @@
 package edu.colorado.applepear;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class PlayerTest {
 
@@ -34,6 +33,8 @@ public class PlayerTest {
         List<Point> myPoints = new ArrayList<>();
         myPoints.add(point1);
         myPoints.add(point2);
+
+        player2.setRadarMissile(0);
 
         g2.placeShip(myPoints);
 
@@ -67,7 +68,7 @@ public class PlayerTest {
     @Test
     public void testGetGB() {
         System.out.println("Testing getGb");
-        assertEquals(3, player1.getPlusMissile(),
+        assertEquals(g1 , player1.getGb(),
                 "GetPlusMissile should give the player's number of Plus missiles");
 
     }
@@ -76,8 +77,17 @@ public class PlayerTest {
     public void useRadarMissileTest(){
         System.out.println("Testing radarMissile");
         Point testPoint = new Point( 1,0);
-        assertTrue(player1.useRadarMissile(g2, testPoint),
-                "radarMissile should return true");
+        Point testPoint2 = new Point( 4,4);
+
+        assertAll("Should return boolean for whether a ship was found using the radar missile",
+                () -> assertTrue(player1.useRadarMissile(g2, testPoint),
+                "should return true -- radar missile used and found"),
+                () -> assertFalse(player2.useRadarMissile(g1, testPoint),
+                        "should return false -- player owns no radar missiles"),
+                () -> assertFalse(player1.useRadarMissile(g2, testPoint2),
+                        "Should return false -- no ships found")
+
+        );
 
 
     }
