@@ -130,13 +130,13 @@ This function attacks the coordinates above, below, left, right of the coordinat
         Point left = new Point(point.getX()-1, point.getY()+1);
 
         //checks if the point is on the grid and not out of bounds then appends if on grid
-        if(above != null)
+        if(above.getX() >=0 && above.getY()<=9)
             plusRange.add(above);
-        if(below != null)
+        if(below.getX() >=0 && below.getY()<=9)
             plusRange.add(below);
-        if(right != null)
+        if(right.getX() >=0 && right.getY()<=9)
             plusRange.add(right);
-        if(left != null)
+        if(left.getX() >=0 && left.getY()<=9)
             plusRange.add(left);
 
         //saves the opponent's map
@@ -149,7 +149,7 @@ This function attacks the coordinates above, below, left, right of the coordinat
             int currY = p.getY();
             if (map[currX][currY] == 1){
                 System.out.println("Attack!");
-                getGb().getAttackMap()[currX][currY] = 2;
+//                playerMap.getAttackMap()[thisX][thisY] = 2;
                 attack = true;
             }
         }
