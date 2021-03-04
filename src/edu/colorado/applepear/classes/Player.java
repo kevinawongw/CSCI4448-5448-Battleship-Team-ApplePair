@@ -130,7 +130,7 @@ This function attacks the coordinates above, below, left, right of the coordinat
         Point left = new Point(point.getX()-1, point.getY()+1);
 
         //checks if the point is on the grid and not out of bounds then appends if on grid
-        if(above != null && above > 0)
+        if(above != null)
             plusRange.add(above);
         if(below != null)
             plusRange.add(below);
@@ -145,12 +145,8 @@ This function attacks the coordinates above, below, left, right of the coordinat
         boolean attack = false;
 
         for (Point p : plusRange){
-
             int currX = p.getX();
             int currY = p.getY();
-            System.out.println(currX);
-            System.out.println(currY);
-
             if (map[currX][currY] == 1){
                 System.out.println("Attack!");
                 getGb().getAttackMap()[currX][currY] = 2;
