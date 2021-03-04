@@ -73,10 +73,10 @@ public class PlayerTest {
     }
 
     @Test
-    public void radarMissileTest(){
+    public void useRadarMissileTest(){
         System.out.println("Testing radarMissile");
         Point testPoint = new Point( 1,0);
-        assertTrue(player1.radarMissile(g2, testPoint),
+        assertTrue(player1.useRadarMissile(g2, testPoint),
                 "radarMissile should return true");
 
 

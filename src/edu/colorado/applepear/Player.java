@@ -41,7 +41,7 @@ public class Player{
 
     public GameBoard getGb() { return gb; }
 
-    public boolean radarMissile( GameBoard opponentBoard, Point P){
+    public boolean useRadarMissile( GameBoard opponentBoard, Point P){
         if (getRadarMissile() < 1){
             System.out.println( getName() + "has no more radar missiles remaining");
             return false;
