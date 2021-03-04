@@ -111,7 +111,7 @@ Parameters: the opponent's board as GameBoard type, the point to check as Point 
 Returns: whether an attack was performed as a boolean
 This function attacks the coordinates above, below, left, right of the coordinate entered .
 **/
-    public boolean usePlusMissile(Gameboard oppBoard, GameBoard playerBoard, Point point){
+    public boolean usePlusMissile(GameBoard oppBoard, GameBoard playerBoard, Point point){
         //checks if this player has any plus missiles left
         if (getPlusMissile() < 1){
             System.out.println(getName() + " has no more plus missiles remaining.");
@@ -124,10 +124,10 @@ This function attacks the coordinates above, below, left, right of the coordinat
         List<Point> plusRange = new ArrayList<>();
 
         //points
-        Point above = new Point(Point.getX(), Point.getY()+1);
-        Point below = new Point(Ppint.getX(), Point.getY()-1);
-        Point right = new Point(Point.getX()+1,Point.getY()+1);
-        Point left = new Point(Point.getX()-1, Point.getY()+1);
+        Point above = new Point(point.getX(), point.getY()+1);
+        Point below = new Point(point.getX(), point.getY()-1);
+        Point right = new Point(point.getX()+1,point.getY()+1);
+        Point left = new Point(point.getX()-1, point.getY()+1);
 
         //checks if the point is on the grid and not out of bounds then appends if on grid
         if(above != null)
@@ -147,9 +147,9 @@ This function attacks the coordinates above, below, left, right of the coordinat
         for (Point p : plusRange){
             int currX = p.getX();
             int currY = p.getY();
-            if (map[thisX][thisY] == 1){
+            if (map[currX][currY] == 1){
                 System.out.println("Attack!");
-                playerMap.getAttackMap()[thisX][thisY] = 2;
+//                playerMap.getAttackMap()[thisX][thisY] = 2;
                 attack = true;
             }
         }
