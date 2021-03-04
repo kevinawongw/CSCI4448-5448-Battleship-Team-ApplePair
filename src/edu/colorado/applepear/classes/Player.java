@@ -111,7 +111,7 @@ Parameters: the opponent's board as GameBoard type, the point to check as Point 
 Returns: whether an attack was performed as a boolean
 This function attacks the coordinates above, below, left, right of the coordinate entered .
 **/
-    public boolean usePlusMissile(GameBoard oppBoard, GameBoard playerBoard, Point point){
+    public boolean usePlusMissile(GameBoard oppBoard, Point point){
         //checks if this player has any plus missiles left
         if (getPlusMissile() < 1){
             System.out.println(getName() + " has no more plus missiles remaining.");
