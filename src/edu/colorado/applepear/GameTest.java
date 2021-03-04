@@ -29,13 +29,13 @@ public class GameTest {
         List<Point> myPoint= null;
         myPoint.add(new Point(0,0));
         gb1.placeShip(myPoint);
-        assertTrue(game.updateMap(gb2,gb1,new Point(0,0)), "updateMap should return true");
+        assertTrue(game.updateAttackMap(gb2,gb1,new Point(0,0)), "updateMap should return true");
     }
 
     @Test
     @DisplayName("if updateMap and did not hit a ship")
     public void testUpdateMap2() {
-            assertFalse(game.updateMap(gb2,gb1,new Point(0,1)), "updateMap should return false");
+            assertFalse(game.updateAttackMap(gb2,gb1,new Point(0,1)), "updateMap should return false");
     }
 
     @Test

@@ -91,7 +91,7 @@ public class Main {
                      String myX = myInput.nextLine();
                      System.out.println("What is the Y coordinate for the space you want to attack?");
                      String myY = myInput.nextLine();
-                     boolean hitOrMiss = Game.updateMap(curMap,oppMap, new Point(Integer.parseInt(myX),Integer.parseInt(myY)));
+                     boolean hitOrMiss = Game.updateAttackMap(curMap,oppMap, new Point(Integer.parseInt(myX),Integer.parseInt(myY)));
                      curMap.viewMap();
                      if (hitOrMiss) {
                          System.out.println("You Hit an Opponent's Ship! Nice Shot!");
