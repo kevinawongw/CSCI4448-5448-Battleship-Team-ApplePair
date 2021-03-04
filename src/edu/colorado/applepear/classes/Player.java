@@ -152,11 +152,15 @@ This function attacks the coordinates above, below, left, right of the coordinat
                 getGb().getAttackMap()[currX][currY] = 2;
                 attack = true;
             }
+
         }
         if(attack)
             return attack;
-        System.out.println("No attacks were made since there are no ships around.");
-        return false;     
+        else{
+            System.out.println("No attacks were made since there are no ships around.");
+            return false;
+        }
+
     }
 
 }
