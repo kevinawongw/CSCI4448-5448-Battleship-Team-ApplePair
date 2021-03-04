@@ -98,6 +98,7 @@ public class PlayerTest {
 
     }
 
+    //test
     @Test
     public void usePlusMissileTest(){
         System.out.println("Testing plusMissile");
@@ -112,8 +113,6 @@ public class PlayerTest {
                 () -> assertFalse(player1.useRadarMissile(g1, testPoint2),
                         "Should return false -- no ships found")
         );
-
     }
-
 
 }
