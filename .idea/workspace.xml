@@ -22,8 +22,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ecce50e7-60f1-4088-9580-0bcf29b1574e" name="Default Changelist" comment="player attack map update">
+    <list default="true" id="ecce50e7-60f1-4088-9580-0bcf29b1574e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/tests/PlayerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/tests/PlayerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -68,7 +69,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="JUnit.PlayerTest.usePlusMissileTest">
+  <component name="RunManager" selected="JUnit.edu.colorado.applepear.tests in Milestone1-csci4448-5448">
     <configuration name="PlayerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Milestone1-csci4448-5448" />
       <extension name="coverage">
@@ -171,9 +172,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PlayerTest.usePlusMissileTest" />
         <item itemvalue="JUnit.edu.colorado.applepear.tests in Milestone1-csci4448-5448" />
         <item itemvalue="JUnit.PlayerTest" />
+        <item itemvalue="JUnit.PlayerTest.usePlusMissileTest" />
         <item itemvalue="JUnit.PlayerTest.useRadarMissileTest" />
         <item itemvalue="JUnit.PointTest (1)" />
       </list>
@@ -321,7 +322,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614878463517</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="change name in PlayerTest.java">
+      <created>1614879437081</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1614879437081</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -348,7 +356,8 @@
     <MESSAGE value="Player takes in gameboard, instead of GameBoard takes in Player" />
     <MESSAGE value="player fix" />
     <MESSAGE value="player attack map update" />
-    <option name="LAST_COMMIT_MESSAGE" value="player attack map update" />
+    <MESSAGE value="change name in PlayerTest.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="change name in PlayerTest.java" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

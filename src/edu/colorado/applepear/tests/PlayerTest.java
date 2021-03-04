@@ -3,6 +3,7 @@ package edu.colorado.applepear.tests;
 import edu.colorado.applepear.classes.GameBoard;
 import edu.colorado.applepear.classes.Player;
 import edu.colorado.applepear.classes.Point;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -78,6 +79,22 @@ public class PlayerTest {
                 "GetPlusMissile should give the player's number of Plus missiles");
 
     }
+    @Test
+    public void usePlusMissileTest(){
+        System.out.println("Testing plusMissile");
+        player2.setName("Yvonne");
+        Point testPoint = new Point(0, 1);
+        Point testPoint2 = new Point(4, 4);
+
+        assertAll("Should return boolean for whether attacks were performed using the plus missile",
+                () -> assertTrue(player1.usePlusMissile(g2, testPoint),
+                        "should return true -- plus missile used and found"),
+                () -> assertFalse(player2.usePlusMissile(g1, testPoint),
+                        "should return false -- player owns no plus missiles"),
+                () -> assertFalse(player1.usePlusMissile(g2, testPoint2),
+                        "Should return false -- no ships found")
+        );
+    }
 
     @Test
     public void useRadarMissileTest(){
@@ -99,21 +116,6 @@ public class PlayerTest {
     }
 
     //test
-    @Test
-    public void usePlusMissileTest(){
-        System.out.println("Testing plusMissile");
-        player2.setName("Yvonne");
-        Point testPoint = new Point(0, 1);
-        Point testPoint2 = new Point(4, 4);
 
-        assertAll("Should return boolean for whether attacks were performed using the plus missile",
-                () -> assertTrue(player1.usePlusMissile(g2, testPoint),
-                "should return true -- plus missile used and found"),
-                () -> assertFalse(player2.usePlusMissile(g1, testPoint),
-                        "should return false -- player owns no plus missiles"),
-                () -> assertFalse(player1.usePlusMissile(g2, testPoint2),
-                        "Should return false -- no ships found")
-        );
-    }
 
 }
