@@ -16,10 +16,10 @@ public class GameTest {
 
     @BeforeEach
     public void setUp() throws Exception {
-        player1 = new Player("vienna", 3, 3, 5);
-        player2 = new Player("kevina", 3, 3, 5);
-        gb1 = new GameBoard(player1);
-        gb2 = new GameBoard(player2);
+        player1 = new Player("vienna", gb1);
+        player2 = new Player("kevina", gb2);
+        gb1 = new GameBoard();
+        gb2 = new GameBoard();
         game = new Game(player1, player2, gb1, gb2);
     }
 
@@ -38,18 +38,20 @@ public class GameTest {
             assertFalse(game.updateAttackMap(gb2,gb1,new Point(0,1)), "updateMap should return false");
     }
 
-    @Test
-    @DisplayName("if game is not over")
-    public void testIsGameOver1() {
-            player1.setNumShips(0);
-            assertFalse(game.isGameOver(), "isGameOver should return true");
-    }
+//    Kevina is working on this
 
-    @Test
-    @DisplayName("if game is over")
-      public void testIsGameOver() {
-            player2.setNumShips(3);
-            assertFalse(game.isGameOver(), "isGameOver should return false");
-    }
+//    @Test
+//    @DisplayName("if game is not over")
+//    public void testIsGameOver1() {
+//            player1;
+//            assertFalse(game.isGameOver(), "isGameOver should return true");
+//    }
+//
+//    @Test
+//    @DisplayName("if game is over")
+//      public void testIsGameOver() {
+//            player2.setNumShips(3);
+//            assertFalse(game.isGameOver(), "isGameOver should return false");
+//    }
 
 }

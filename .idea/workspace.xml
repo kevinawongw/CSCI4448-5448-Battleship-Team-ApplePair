@@ -25,8 +25,12 @@
     <list default="true" id="ecce50e7-60f1-4088-9580-0bcf29b1574e" name="Default Changelist" comment="Team ApplePair pair 1: Kevina - updates to gameboard, update to ship, test updates">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/GameBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/GameBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/GameBoardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/GameBoardTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/GameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/GameTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/ShipTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/ShipTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -252,7 +256,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613890721723</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Team ApplePair pair 1: Kevina - updates to gameboard, update to ship, test updates">
+      <created>1614816391204</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1614816391204</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -275,7 +286,8 @@
     <MESSAGE value="Team ApplePair pair 1: Kevina - GameBoard private -&gt; public functions" />
     <MESSAGE value="Team ApplePair pair 1: Kevina - GameBoard getters" />
     <MESSAGE value="Team ApplePair pair 1: Vienna push - Modified Main" />
-    <option name="LAST_COMMIT_MESSAGE" value="Team ApplePair pair 1: Vienna push - Modified Main" />
+    <MESSAGE value="Team ApplePair pair 1: Kevina - updates to gameboard, update to ship, test updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="Team ApplePair pair 1: Kevina - updates to gameboard, update to ship, test updates" />
   </component>
   <component name="WindowStateProjectService">
     <state x="321" y="76" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1613874164867">
@@ -318,11 +330,11 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="121" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1613876831407" />
-    <state x="280" y="93" key="Vcs.Push.Dialog.v2" timestamp="1614816180380">
+    <state x="280" y="93" key="Vcs.Push.Dialog.v2" timestamp="1614816396302">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1613890727187" />
-    <state x="280" y="93" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1614816180380" />
+    <state x="280" y="93" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1614816396302" />
     <state x="375" y="232" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1613876458203">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

@@ -52,23 +52,24 @@ public class Main {
          String name1 = myInput.nextLine();
          System.out.println("\n Enter Player 2's Name: \n");
          String name2 = myInput.nextLine();
-         Player p1 = new Player(name1,2,2,5);
-         Player p2 = new Player(name2,2,2,5);
+         GameBoard p1Map = new GameBoard();
+         GameBoard p2Map = new GameBoard();
+         Player p1 = new Player(name1,p1Map);
+         Player p2 = new Player(name2,p2Map);
 
          // Initialize GameBoard Objects
-         GameBoard p1Map = new GameBoard(p1);
-         GameBoard p2Map = new GameBoard(p2);
-         System.out.println("\n\n ========== " + p1Map.getPlayer().getName() + "'s Turn to Place Ships ========== \n");
+
+         System.out.println("\n\n ========== " + p1.getName() + "'s Turn to Place Ships ========== \n");
          p1Map.populateShipMap();
-         System.out.println("\n\n ========== " + p2Map.getPlayer().getName() + "'s Turn to Place Ships ========== \n");
+         System.out.println("\n\n ========== " + p2.getName() + "'s Turn to Place Ships ========== \n");
          p2Map.populateShipMap();
 
          // Initialize Game Object
          Game myGame = new Game (p1,p2,p1Map, p2Map);
 
          // Variables to keep track of which player's turn
-         GameBoard curMap = p1Map;
-         GameBoard oppMap = p2Map;
+         Player curPlayer = p1;
+         Player opponentPlayer = p2;
 
 
          // -- END Initialization--
@@ -78,7 +79,7 @@ public class Main {
 
          // Menu Display & User Input
          // Refer to the displayMenu Print function for what each menu option will do
-         System.out.println("\n\n+--- It is " + curMap.getPlayer().getName() + "'s turn ---+");
+         System.out.println("\n\n+--- It is " + curPlayer.getName() + "'s turn ---+");
          displayMenu();
 
          while (run){
@@ -91,8 +92,8 @@ public class Main {
                      String myX = myInput.nextLine();
                      System.out.println("What is the Y coordinate for the space you want to attack?");
                      String myY = myInput.nextLine();
-                     boolean hitOrMiss = Game.updateAttackMap(curMap,oppMap, new Point(Integer.parseInt(myX),Integer.parseInt(myY)));
-                     curMap.viewMap();
+                     boolean hitOrMiss = Game.updateAttackMap(curPlayer.getGb(),opponentPlayer.getGb(), new Point(Integer.parseInt(myX),Integer.parseInt(myY)));
+                     curPlayer.getGb().viewMap();
                      if (hitOrMiss) {
                          System.out.println("You Hit an Opponent's Ship! Nice Shot!");
 
@@ -101,30 +102,30 @@ public class Main {
                      }
                      // Depending on the player's turn, their map will be different
                      // Update maps and turns
-                     if (curMap.equals(p1Map)) {
-                         curMap = p2Map;
-                         oppMap = p1Map;
+                     if (curPlayer.equals(p1)) {
+                         curPlayer = p2;
+                         opponentPlayer = p1;
 
                      }
-                     else if (curMap.equals(p2Map)) {
-                         curMap = p1Map;
-                         oppMap = p2Map;
+                     else if (curPlayer.equals(p2)) {
+                         curPlayer = p1;
+                         opponentPlayer = p2;
                      }
                      break;
                  case "2":
                      System.out.println("Player Map");
-                     curMap.viewMap();
+                     curPlayer.getGb().viewMap();
                      break;
                  case "3":
-                     System.out.println("\n\n +-----" + curMap.getPlayer().getName() + "'s Inventory -----+\n");
-                     System.out.println("Number of Radar Missiles: " + curMap.getPlayer().getRadarMissile());
-                     System.out.println("Number of Plus Missiles: " + curMap.getPlayer().getPlusMissile());
+                     System.out.println("\n\n +-----" + curPlayer.getName() + "'s Inventory -----+\n");
+                     System.out.println("Number of Radar Missiles: " + curPlayer.getRadarMissile());
+                     System.out.println("Number of Plus Missiles: " + curPlayer.getPlusMissile());
                      break;
                  case "4":
                      printInstructions();
                      break;
                  case "5":
-                     curMap.viewShips();
+                     curPlayer.getGb().viewShips();
                      break;
                  case "6":
                      run = false;
@@ -138,7 +139,7 @@ public class Main {
              if(gameEnd){
                  System.exit(0);
              }
-             System.out.println("\n\n--- It is " + curMap.getPlayer().getName() + "'s turn ---");
+             System.out.println("\n\n--- It is " + curPlayer.getName() + "'s turn ---");
              displayMenu();
         }
     }

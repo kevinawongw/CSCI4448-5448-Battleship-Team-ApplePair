@@ -18,8 +18,8 @@ public class ShipTest {
     @BeforeEach
     public void setShip() throws Exception{
         System.out.println("Before Each Test");
-        p = new Player("yubin", 3,3,5);
-        gb = new GameBoard(p);
+        p = new Player("yubin", gb);
+        gb = new GameBoard();
     }
 
     //Testng Setter

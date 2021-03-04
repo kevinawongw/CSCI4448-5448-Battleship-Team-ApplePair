@@ -39,13 +39,13 @@ public class Game {
     //Calling this function inside the while loop of main class
     public boolean isGameOver()
     {
-        if(p1.checkLose()){ //if player 1 have 0 ships left, then 2 win
-            System.out.println("Winner is " + g2.getPlayer().getName() + " Congratulations!");
+        if(p1.getGb().getShips().size() == 0){ //if player 1 have 0 ships left, then 2 win
+            System.out.println("Winner is " + p1.getName() + " Congratulations!");
             System.out.println("=============GAME OVER==============");
             return true;
         }
-        else if(p2.checkLose()){
-            System.out.println("Winner is " + g1.getPlayer().getName() + " Congratulations!");
+        else if(p1.getGb().getShips().size() == 0){
+            System.out.println("Winner is " + p1.getName() + " Congratulations!");
             System.out.println("=============GAME OVER==============");
             return true;
         }

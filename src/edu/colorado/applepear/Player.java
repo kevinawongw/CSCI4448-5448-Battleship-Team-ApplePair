@@ -1,17 +1,16 @@
 package edu.colorado.applepear;
 
 //Vienna part: player class
-public class Player {
+public class Player{
     // player class will hold the following
     private String name;
     private int radarMissile, plusMissile, numShips;
-
+    private GameBoard gb;
     //constructor
-    public Player(String name, int radarMissile, int plusMissile, int numShips){
+    public Player(String name, GameBoard gb){
         this.name = name;
-        this.radarMissile = radarMissile;
-        this.plusMissile = plusMissile;
-        this.numShips = numShips;
+        this.radarMissile = 3;
+        this.plusMissile = 3;
     }
 
     //setters
@@ -27,10 +26,6 @@ public class Player {
         this.radarMissile = radarMissile;
     }
 
-    public void setNumShips(int numShips) {
-        this.numShips = numShips;
-    }
-
     //getters
     public String getName(){ return name; }
 
@@ -38,15 +33,7 @@ public class Player {
 
     public int getPlusMissile() { return plusMissile; }
 
-    public int getNumShips() { return numShips; }
-
-    //check for losing state
-
-    public boolean checkLose(){
-        int myShips = getNumShips();
-        return myShips == 0;
-    }
-
+    public GameBoard getGb() {return gb;}
 
 }
 

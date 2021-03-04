@@ -11,7 +11,6 @@ public class GameBoard {
     // Helpful Variables
     public static final int numX = 10;
     public static final int numY = 10;
-    private final Player p;
     private List<Ship> ships;
 
     // Initializing Maps:
@@ -30,18 +29,13 @@ public class GameBoard {
     private final int[][] shipMap;
 
     // Constructor
-    public GameBoard(Player p) {
-        this.p = p;
+    public GameBoard() {
         shipMap = new int[numX][numY];
         attackMap = new int[numX][numY];
         ships = new ArrayList<>();
     }
 
     // Getters
-    public Player getPlayer() {
-        return p;
-    }
-
     public int[][] getShipMap() {
         return this.shipMap;
     }
@@ -57,7 +51,7 @@ public class GameBoard {
     // Returns: None
     // Prints Map with 0s, Ms, and Hs - representing "Miss" and "Hit"
     public void viewMap() {
-        System.out.print("----- " + getPlayer().getName() + "'s Map -----\n\n");
+        System.out.print("----- Attack Map -----\n\n");
 
         for (int i = 0; i < numX; i++) {
             System.out.print("  ");
@@ -100,7 +94,7 @@ public class GameBoard {
     // Prints Map with 0s, 1s
     // Prints where that player's ships are located
     public void viewShips() {
-        System.out.print("----- " + getPlayer().getName() + "'s Ships -----\n\n");
+        System.out.print("----- My Ships -----\n\n");
 
         for (int i = 0; i < numX; i++) {
             System.out.print("  ");
