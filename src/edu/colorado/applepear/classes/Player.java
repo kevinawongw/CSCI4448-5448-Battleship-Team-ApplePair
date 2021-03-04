@@ -124,10 +124,10 @@ This function attacks the coordinates above, below, left, right of the coordinat
         List<Point> plusRange = new ArrayList<>();
 
         //points
-        Point above = new Point(P.getX(),P.getY()+1);
-        Point below = new Point(P.getX(),P.getY()-1);
-        Point right = new Point(P.getX()+1,P.getY()+1);
-        Point left = new Point(P.getX()-1,P.getY()+1);
+        Point above = new Point(Point.getX(), Point.getY()+1);
+        Point below = new Point(Ppint.getX(), Point.getY()-1);
+        Point right = new Point(Point.getX()+1,Point.getY()+1);
+        Point left = new Point(Point.getX()-1, Point.getY()+1);
 
         //checks if the point is on the grid and not out of bounds then appends if on grid
         if(above != null)
@@ -140,7 +140,7 @@ This function attacks the coordinates above, below, left, right of the coordinat
             plusRange.add(left);
 
         //saves the opponent's map
-        int[][] map =  opponentBoard.getShipMap();
+        int[][] map =  oppBoard.getShipMap();
 
         boolean attack = false;
 
