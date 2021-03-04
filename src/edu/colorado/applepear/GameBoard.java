@@ -11,7 +11,7 @@ public class GameBoard {
     // Helpful Variables
     public static final int numX = 10;
     public static final int numY = 10;
-    private List<Ship> ships;
+    private final List<Ship> ships;
 
     // Initializing Maps:
 
@@ -111,7 +111,9 @@ public class GameBoard {
             System.out.print(i + " | ");
 
             for (int j = 0; j < numY; j++) {
-                System.out.print(shipMap[i][j] + " | ");
+                if (attackMap[i][j] == 1) {
+                    System.out.print("S" + " | ");
+                }
             }
             System.out.print("\n");
         }
@@ -143,12 +145,13 @@ public class GameBoard {
     // L - Ship (3 blocks shaped like "L")
 
     public void placeShip(List<Point> points) {
+
         Ship tempShip = new Ship();
 
-        for (int i = 0; i < points.size() ; i++){
-            tempShip.location.add(points.get(i));
-            int myX = points.get(i).x;
-            int myY = points.get(i).y;
+        for (Point point : points) {
+            tempShip.location.add(point);
+            int myX = point.x;
+            int myY = point.y;
             shipMap[myY][myX] = 1;
         }
         tempShip.setShipName();
@@ -426,22 +429,24 @@ public class GameBoard {
 
         // **** Commented out Temporarily - DO NOT DELETE :) ****
 
-//        List<Point> destroyerCoords = destroyerInput();
-//        placeDestroyer(destroyerCoords.get(0), destroyerCoords.get(1), destroyerCoords.get(2));
-//        viewShips();
-//
-//        List<Point> battleshipCoords = battleshipInput();
-//        placeBattleship(battleshipCoords.get(0), battleshipCoords.get(1), battleshipCoords.get(2), battleshipCoords.get(3));
-//        viewShips();
-//
-//        List<Point> towerCoords = towerInput();
-//        placeTower(towerCoords.get(0));
-//        viewShips();
-//
-//        List<Point> lCoords = lInput();
-//        placeDestroyer(lCoords.get(0), lCoords.get(1), lCoords.get(2));
-//        viewShips();
+        List<Point> destroyerCoords = destroyerInput();
+        viewShips();
+        placeShip(destroyerCoords);
+
+        List<Point> battleshipCoords = battleshipInput();
+        viewShips();
+        placeShip(battleshipCoords);
+
+        List<Point> towerCoords = towerInput();
+        viewShips();
+        placeShip(towerCoords);
+
+        List<Point> lCoords = lInput();
+        viewShips();
+        placeShip(lCoords);
     }
+
+
     public boolean updateAttackMap(GameBoard oppMap, Point p1) {
         System.out.println("1");
         System.out.println(oppMap.attackMap);

@@ -11,7 +11,7 @@ public class Player{
         this.name = name;
         this.radarMissile = 3;
         this.plusMissile = 3;
-        this.gb = gb;
+        gb = gb;
     }
 
     //setters
