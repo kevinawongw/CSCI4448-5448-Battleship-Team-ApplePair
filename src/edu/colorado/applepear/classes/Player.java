@@ -139,7 +139,7 @@ This function attacks the coordinates above, below, left, right of the coordinat
         if(left.getX() >=0 && left.getY()<=9)
             plusRange.add(left);
 
-        //saves the opponent's map
+        //saves the opponent map
         int[][] map =  oppBoard.getShipMap();
 
         boolean attack = false;
