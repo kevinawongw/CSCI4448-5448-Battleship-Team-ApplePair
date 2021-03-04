@@ -37,6 +37,7 @@ public class PlayerTest {
         myPoints.add(point1);
         myPoints.add(point2);
 
+
         player2.setRadarMissile(0);
         player2.setPlusMissile(0);
 
@@ -99,7 +100,6 @@ public class PlayerTest {
     @Test
     public void useRadarMissileTest(){
         System.out.println("Testing radarMissile");
-        player2.setName("Vienna");
         Point testPoint = new Point( 0,0);
         Point testPoint2 = new Point( 4,4);
 
@@ -114,8 +114,4 @@ public class PlayerTest {
         );
 
     }
-
-    //test
-
-
 }
