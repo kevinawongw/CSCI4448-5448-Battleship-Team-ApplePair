@@ -94,6 +94,15 @@ public class Main {
                      System.out.println("What is the Y coordinate for the space you want to attack?");
                      String myY = myInput.nextLine();
                      Point attackPoint = new Point(Integer.parseInt(myX), Integer.parseInt(myY));
+
+                     System.out.println("What type of missile would you like to use?");
+                     String choice = myInput.nextLine();
+
+                     System.out.println("1. Regular Missile");
+                     System.out.println("2. Plus Missile");
+                     System.out.println("3. Radar Missile");
+
+
                      Boolean hitOrMiss = curPlayer.getGb().updateAttackMap(opponentPlayer.getGb(), attackPoint);
                      p1.getGb().viewMap();
                      if (hitOrMiss) {
