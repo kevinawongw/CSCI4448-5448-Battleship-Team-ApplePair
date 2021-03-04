@@ -40,7 +40,13 @@ public class Player{
 
     public GameBoard getGb() { return gb; }
 
+/**
+Parameters: the opponent's board as GameBoard type, the point to check as Point type
+Returns: whether there are ships nearby as a boolean
+This function scans the 8 blocks around a point for the presence of a ship. 
+**/
     public boolean useRadarMissile( GameBoard opponentBoard, Point P){
+        //checks if this player has any radar missiles left
         if (getRadarMissile() < 1){
             System.out.println( getName() + " has no more radar missiles remaining");
             return false;
@@ -60,6 +66,7 @@ public class Player{
             Point downRight = new Point(P.getX()+1,P.getY()-1);
             Point downLeft = new Point(P.getX()-1,P.getY()-1);
 
+            //adding points to check into array list
             List<Point> radarRange = new ArrayList<>();
 
             radarRange.add(P);
@@ -72,6 +79,7 @@ public class Player{
             radarRange.add(downRight);
             radarRange.add(downLeft);
 
+            //making sre the points are in the grid
             List<Point> scannedCells = new ArrayList<>();
             for (Point thisPoint: radarRange){
                 if ( (thisPoint.getX() >= 0) && (thisPoint.getX() <= 9) && (thisPoint.getY() <= 9) && (thisPoint.getY() >= 0)){
@@ -79,8 +87,10 @@ public class Player{
                 }
             }
 
+            //saving the opponent's ship map into a new map
             int[][] map =  opponentBoard.getShipMap();
 
+            //trying to find ships by checking the points in the array list
             for ( Point i :scannedCells){
                 int thisX = i.getX();
                 int thisY = i.getY();
@@ -96,5 +106,58 @@ public class Player{
 
     }
 
+/**
+Parameters: the opponent's board as GameBoard type, the point to check as Point type
+Returns: whether an attack was performed as a boolean
+This function attacks the coordinates above, below, left, right of the coordinate entered .
+**/
+    public boolean usePlusMissile(Gameboard oppBoard, GameBoard playerBoard, Point point){
+        //checks if this player has any plus missiles left
+        if (getPlusMissile() < 1){
+            System.out.println(getName() + " has no more plus missiles remaining.");
+            return false;
+        }
+        setPlusMissile(getPlusMissile() - 1);
+        System.out.println("Using plus missile...");
+
+        //new arrayList to save the points
+        List<Point> plusRange = new ArrayList<>();
+
+        //points
+        Point above = new Point(P.getX(),P.getY()+1);
+        Point below = new Point(P.getX(),P.getY()-1);
+        Point right = new Point(P.getX()+1,P.getY()+1);
+        Point left = new Point(P.getX()-1,P.getY()+1);
+
+        //checks if the point is on the grid and not out of bounds then appends if on grid
+        if(above != null)
+            plusRange.add(above);
+        if(below != null)
+            plusRange.add(below);
+        if(right != null)
+            plusRange.add(right);
+        if(left != null)
+            plusRange.add(left);
+
+        //saves the opponent's map
+        int[][] map =  opponentBoard.getShipMap();
+
+        boolean attack = false;
+
+        for (Point p : plusRange){
+            int currX = p.getX();
+            int currY = p.getY();
+            if (map[thisX][thisY] == 1){
+                System.out.println("Attack!");
+                playerMap.getAttackMap()[thisX][thisY] = 2;
+                attack = true;
+            }
+        }
+        if(attack)
+            return attack;
+        System.out.println("No attacks were made since there are no ships around.");
+        return false;     
+    }
 
 }
+
