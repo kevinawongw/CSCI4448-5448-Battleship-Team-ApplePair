@@ -3,12 +3,15 @@ package edu.colorado.applepear.tests;
 import edu.colorado.applepear.classes.GameBoard;
 import edu.colorado.applepear.classes.Player;
 import edu.colorado.applepear.classes.Point;
+import org.junit.Assert;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
+
+import java.util.Arrays;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -99,15 +102,22 @@ public class PlayerTest {
     public void usePlusMissileTest(){
         System.out.println("Testing plusMissile");
         player2.setName("Yvonne");
-        Point testPoint = new Point(0, 1);
+        Point testPoint = new Point(1, 0);
         Point testPoint2 = new Point(4, 4);
 
+        ArrayList<Point> expected1 = new ArrayList<>();
+        Point hitSpot = new Point(1,1);
+        expected1.add(hitSpot);
+
+
         assertAll("Should return boolean for whether attacks were performed using the plus missile",
-                () -> assertTrue(player1.usePlusMissile(g2, testPoint),
+                () -> assertEquals(expected1.get(0).getX() , player1.usePlusMissile(g2, testPoint).get(0).getX(),
                         "should return true -- plus missile used and found"),
-                () -> assertFalse(player2.usePlusMissile(g1, testPoint),
+                () -> assertEquals(expected1.get(0).getY() , player1.usePlusMissile(g2, testPoint).get(0).getY(),
+                "should return true -- plus missile used and found"),
+                () -> assertEquals(new ArrayList<>() ,player2.usePlusMissile(g1, testPoint),
                         "should return false -- player owns no plus missiles"),
-                () -> assertFalse(player1.usePlusMissile(g2, testPoint2),
+                () -> assertEquals(new ArrayList<>() , player1.usePlusMissile(g2, testPoint2),
                         "Should return false -- no ships found")
         );
     }

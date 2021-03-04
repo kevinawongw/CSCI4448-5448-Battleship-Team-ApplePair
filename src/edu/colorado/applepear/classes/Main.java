@@ -1,4 +1,5 @@
 package edu.colorado.applepear.classes;
+import java.util.List;
 import java.util.Scanner;
 
 // Kevina was here doing menu things
@@ -96,32 +97,66 @@ public class Main {
                      Point attackPoint = new Point(Integer.parseInt(myX), Integer.parseInt(myY));
 
                      System.out.println("What type of missile would you like to use?");
-                     String choice = myInput.nextLine();
-
                      System.out.println("1. Regular Missile");
-                     System.out.println("2. Plus Missile");
-                     System.out.println("3. Radar Missile");
+                     System.out.println("2. Radar Missile");
+                     System.out.println("3. Plus Missile");
+                     int choice = Integer.parseInt(myInput.nextLine());
 
+                     switch (choice){
+                         case 1:
+                             Boolean hitOrMiss = curPlayer.getGb().updateAttackMap(opponentPlayer.getGb(), attackPoint);
+                             p1.getGb().viewMap();
+                             if (hitOrMiss) {
+                                 System.out.println("You Hit an Opponent's Ship! Nice Shot!");
 
-                     Boolean hitOrMiss = curPlayer.getGb().updateAttackMap(opponentPlayer.getGb(), attackPoint);
-                     p1.getGb().viewMap();
-                     if (hitOrMiss) {
-                         System.out.println("You Hit an Opponent's Ship! Nice Shot!");
+                             } else {
+                                 System.out.println("You Missed...");
+                             }
+                             // Depending on the player's turn, their map will be different
+                             // Update maps and turns
+                             if (curPlayer.equals(p1)) {
+                                 curPlayer = p2;
+                                 opponentPlayer = p1;
 
-                     } else {
-                         System.out.println("You Missed...");
+                             } else if (curPlayer.equals(p2)) {
+                                 curPlayer = p1;
+                                 opponentPlayer = p2;
+                             }
+                             break;
+
+                         case 2:
+                             curPlayer.useRadarMissile(p2Map,attackPoint);
+
+                             // Update maps and turns
+                             if (curPlayer.equals(p1)) {
+                                 curPlayer = p2;
+                                 opponentPlayer = p1;
+
+                             } else if (curPlayer.equals(p2)) {
+                                 curPlayer = p1;
+                                 opponentPlayer = p2;
+                             }
+                             break;
+
+                         case 3:
+                             curPlayer.usePlusMissile(p2Map,attackPoint);
+                             curPlayer.getGb().viewMap();
+                             // Update maps and turns
+
+                             if (curPlayer.equals(p1)) {
+                                 curPlayer = p2;
+                                 opponentPlayer = p1;
+
+                             } else if (curPlayer.equals(p2)) {
+                                 curPlayer = p1;
+                                 opponentPlayer = p2;
+                             }
+                             break;
+
                      }
-                     // Depending on the player's turn, their map will be different
-                     // Update maps and turns
-                     if (curPlayer.equals(p1)) {
-                         curPlayer = p2;
-                         opponentPlayer = p1;
 
-                     } else if (curPlayer.equals(p2)) {
-                         curPlayer = p1;
-                         opponentPlayer = p2;
-                     }
-                     break;
+
+
                  case "2":
                      System.out.println("Player Map");
                      curPlayer.getGb().viewMap();

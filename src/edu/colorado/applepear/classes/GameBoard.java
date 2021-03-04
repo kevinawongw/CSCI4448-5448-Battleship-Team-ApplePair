@@ -426,22 +426,22 @@ public class GameBoard {
         viewShips();
 
         // **** Commented out Temporarily - DO NOT DELETE :) ****
-
-        List<Point> destroyerCoords = destroyerInput();
-        viewShips();
-        placeShip(destroyerCoords);
-
-        List<Point> battleshipCoords = battleshipInput();
-        viewShips();
-        placeShip(battleshipCoords);
-
-        List<Point> towerCoords = towerInput();
-        viewShips();
-        placeShip(towerCoords);
-
-        List<Point> lCoords = lInput();
-        viewShips();
-        placeShip(lCoords);
+//
+//        List<Point> destroyerCoords = destroyerInput();
+//        viewShips();
+//        placeShip(destroyerCoords);
+//
+//        List<Point> battleshipCoords = battleshipInput();
+//        viewShips();
+//        placeShip(battleshipCoords);
+//
+//        List<Point> towerCoords = towerInput();
+//        viewShips();
+//        placeShip(towerCoords);
+//
+//        List<Point> lCoords = lInput();
+//        viewShips();
+//        placeShip(lCoords);
     }
 
 
