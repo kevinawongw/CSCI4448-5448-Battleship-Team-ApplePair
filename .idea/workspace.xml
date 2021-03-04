@@ -23,20 +23,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ecce50e7-60f1-4088-9580-0bcf29b1574e" name="Default Changelist" comment="Player takes in gameboard, instead of GameBoard takes in Player">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Milestone1-csci4448-5448/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Milestone1-csci4448-5448/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/methods/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/GameBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/methods/GameBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/GameBoardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/test/GameBoardTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/GameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/test/GameTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/methods/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/methods/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/PlayerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/test/PlayerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/methods/Point.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/PointTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/test/PointTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/Ship.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/methods/Ship.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/ShipTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/test/ShipTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/test/GameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/test/GameTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -308,7 +296,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614829934207</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Player takes in gameboard, instead of GameBoard takes in Player">
+      <created>1614834367827</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1614834367827</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -356,26 +351,26 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="348" y="81" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1613876998814" />
-    <state width="1493" height="171" key="GridCell.Tab.0.bottom" timestamp="1614834122057">
+    <state width="1493" height="165" key="GridCell.Tab.0.bottom" timestamp="1614834606621">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1237" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1613877721049" />
-    <state width="1493" height="171" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1614834122057" />
-    <state width="1493" height="171" key="GridCell.Tab.0.center" timestamp="1614834122057">
+    <state width="1493" height="165" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1614834606621" />
+    <state width="1493" height="165" key="GridCell.Tab.0.center" timestamp="1614834606621">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1237" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1613877721049" />
-    <state width="1493" height="171" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1614834122057" />
-    <state width="1493" height="171" key="GridCell.Tab.0.left" timestamp="1614834122057">
+    <state width="1493" height="165" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1614834606621" />
+    <state width="1493" height="165" key="GridCell.Tab.0.left" timestamp="1614834606621">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1237" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1613877721048" />
-    <state width="1493" height="171" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1614834122057" />
-    <state width="1493" height="171" key="GridCell.Tab.0.right" timestamp="1614834122057">
+    <state width="1493" height="165" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1614834606621" />
+    <state width="1493" height="165" key="GridCell.Tab.0.right" timestamp="1614834606621">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1237" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1613877721049" />
-    <state width="1493" height="171" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1614834122057" />
+    <state width="1493" height="165" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1614834606621" />
     <state width="1493" height="254" key="GridCell.Tab.1.bottom" timestamp="1614834011870">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -400,11 +395,11 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="121" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1613876831407" />
-    <state x="280" y="93" key="Vcs.Push.Dialog.v2" timestamp="1614829940393">
+    <state x="280" y="93" key="Vcs.Push.Dialog.v2" timestamp="1614834373108">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1613890727187" />
-    <state x="280" y="93" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1614829940393" />
+    <state x="280" y="93" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1614834373108" />
     <state x="375" y="232" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1613876458203">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -466,7 +461,7 @@
     <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$PointTest.ic" NAME="PointTest Coverage Results" MODIFIED="1614823409113" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>edu.colorado.applepear.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$edu_colorado_applepear_test_in_Milestone1_csci4448_5448.ic" NAME="edu.colorado.applepear.test in Milestone1-csci4448-5448 Coverage Results" MODIFIED="1614834048550" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$edu_colorado_applepear_test_in_Milestone1_csci4448_5448.ic" NAME="edu.colorado.applepear.test in Milestone1-csci4448-5448 Coverage Results" MODIFIED="1614834606532" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>edu.colorado.applepear.test.*</FILTER>
     </SUITE>
   </component>
