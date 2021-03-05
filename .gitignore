@@ -26,3 +26,7 @@ src/edu/.DS_Store
 src/.DS_Store
 .DS_Store
 .idea/workspace.xml
+/bin/
+*.xml
+*.xml
+.project
