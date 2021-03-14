@@ -62,7 +62,7 @@ This function scans the 8 blocks around a point for the presence of a ship.
             return false;
         }
         else if(getHasSunkenShip() == false){
-            System.out.println("Sonar Pulse is not unlocked yet");
+            System.out.println("Sonar Pulse is not unlocked");
             return false;
         }
         else{

@@ -103,6 +103,7 @@ public class Main {
                      int choice = Integer.parseInt(myInput.nextLine());
 
                      switch (choice){
+                         //vienna: added switch case to determine what weapon to use
                          case 1:
                              Boolean hitOrMiss = curPlayer.getGb().updateAttackMap(opponentPlayer.getGb(), attackPoint);
                              p1.getGb().viewMap();
