@@ -61,7 +61,7 @@ This function scans the 8 blocks around a point for the presence of a ship.
             System.out.println( getName() + " has no more radar missiles remaining \n");
             return false;
         }
-        else if(getHasSunkenShip() == false){
+        else if(!getHasSunkenShip()){
             System.out.println("Sonar Pulse is not unlocked \n");
             return false;
         }
@@ -128,7 +128,7 @@ This function scans the 8 blocks around a point for the presence of a ship.
                     getGb().getAttackMap()[thisY][thisX] = 4;
                 }
             }
-            if (myReturn == false){
+            if (!myReturn){
                 System.out.println("No ship was found in this range \n");
             }
             else{

@@ -3,15 +3,11 @@ package edu.colorado.applepear.tests;
 import edu.colorado.applepear.classes.GameBoard;
 import edu.colorado.applepear.classes.Player;
 import edu.colorado.applepear.classes.Point;
-import org.junit.Assert;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
-
-import java.util.Arrays;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -108,8 +104,8 @@ public class PlayerTest {
     @Test
     public void testUpdateSunkShip() {
         System.out.println("Testing updateSunkShip");
-        player1.updateSunkShip(true);;
-        assertEquals(true, player1.getHasSunkenShip(), "updateSunkShip should make the player's hasSunkenShip value true");
+        player1.updateSunkShip(true);
+        assertTrue(player1.getHasSunkenShip(), "updateSunkShip should make the player's hasSunkenShip value true");
 
 
     }
