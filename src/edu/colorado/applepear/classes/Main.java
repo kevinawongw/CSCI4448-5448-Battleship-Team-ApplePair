@@ -126,6 +126,11 @@ public class Main {
                              break;
 
                          case 2:
+                             if (p1.getHasSunkenShip()==false){
+                                 curPlayer.useSonarPulse(p2Map,attackPoint);
+                                 break;
+                             }
+
                              curPlayer.useSonarPulse(p2Map,attackPoint);
 
                              // Update maps and turns

@@ -85,7 +85,7 @@ public class PlayerTest {
     @DisplayName("Getting number of missiles")
     public void testGetNumSonarPulses() {
         System.out.println("Testing GetSonarPulses");
-        assertEquals(3, player1.getSonarPulse(),
+        assertEquals(2, player1.getSonarPulse(),
                 "GetSonarPulse should give the player's number of radar missiles");
 
     }
