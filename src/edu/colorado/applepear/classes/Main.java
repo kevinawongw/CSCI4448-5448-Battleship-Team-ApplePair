@@ -108,7 +108,6 @@ public class Main {
                              p1.getGb().viewMap();
                              if (hitOrMiss) {
                                  System.out.println("You Hit an Opponent's Ship! Nice Shot!");
-
                              } else {
                                  System.out.println("You Missed...");
                              }

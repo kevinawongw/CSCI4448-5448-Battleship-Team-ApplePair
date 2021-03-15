@@ -12,6 +12,7 @@ public class GameBoard {
     public static final int numX = 10;
     public static final int numY = 10;
     private final List<Ship> ships;
+    private List<CaptainsQuarters> capQuarters;
 
     // Initializing Maps:
 
@@ -33,6 +34,7 @@ public class GameBoard {
         shipMap = new int[numX][numY];
         attackMap = new int[numX][numY];
         ships = new ArrayList<Ship>();
+        capQuarters = new ArrayList<CaptainsQuarters>();
     }
 
     // Getters
@@ -179,6 +181,8 @@ public class GameBoard {
             String inputValY = myInput.nextLine();
 
             Point p1 = new Point(Integer.parseInt(inputValX), Integer.parseInt(inputValY));
+            CaptainsQuarters minesweeperCQ = new CaptainsQuarters(1, p1);
+            capQuarters.add(minesweeperCQ);
             Point p2 = new Point(Integer.parseInt(inputValX) + 1, Integer.parseInt(inputValY));
 
             return Arrays.asList(p1, p2);
@@ -191,6 +195,8 @@ public class GameBoard {
             String inputValY = myInput.nextLine();
 
             Point p1 = new Point(Integer.parseInt(inputValX), Integer.parseInt(inputValY));
+            CaptainsQuarters minesweeperCQ = new CaptainsQuarters(1, p1);
+            capQuarters.add(minesweeperCQ);
             Point p2 = new Point(Integer.parseInt(inputValX),Integer.parseInt(inputValY) + 1);
 
             return Arrays.asList(p1, p2);
@@ -227,6 +233,8 @@ public class GameBoard {
                 if (criteriaA && criteriaB && criteriaC) {
                     Point p1 = new Point(Integer.parseInt(inputValX), Integer.parseInt(inputValY));
                     Point p2 = new Point(Integer.parseInt(inputValX) + 1, Integer.parseInt(inputValY));
+                    CaptainsQuarters destroyerCQ = new CaptainsQuarters(2, p2);
+                    capQuarters.add(destroyerCQ);
                     Point p3 = new Point(Integer.parseInt(inputValX) + 2, Integer.parseInt(inputValY));
                     temp = false;
                     return Arrays.asList(p1, p2, p3);
@@ -252,6 +260,8 @@ public class GameBoard {
                 if (criteriaA && criteriaB && criteriaC) {
                     Point p1 = new Point (Integer.parseInt(inputValX), Integer.parseInt(inputValY));
                     Point p2 = new Point (Integer.parseInt(inputValX), Integer.parseInt(inputValY) + 1);
+                    CaptainsQuarters destroyerCQ = new CaptainsQuarters(2, p2);
+                    capQuarters.add(destroyerCQ);
                     Point p3 = new Point (Integer.parseInt(inputValX), Integer.parseInt(inputValY) + 2);
                     temp = false;
                     return Arrays.asList(p1, p2, p3);
@@ -303,6 +313,8 @@ public class GameBoard {
                     int x3 = Integer.parseInt(inputValX) + 2;
                     int y3 = Integer.parseInt(inputValY);
                     Point p3 = new Point (x3, y3);
+                    CaptainsQuarters battleshipCQ = new CaptainsQuarters(2, p3);
+                    capQuarters.add(battleshipCQ);
                     int x4 = Integer.parseInt(inputValX) + 3;
                     int y4 = Integer.parseInt(inputValY);
                     Point p4 = new Point (x4, y4);
@@ -341,6 +353,8 @@ public class GameBoard {
                     int x3 = Integer.parseInt(inputValX);
                     int y3 = Integer.parseInt(inputValY) + 2;
                     Point p3 = new Point (x3, y3);
+                    CaptainsQuarters battleshipCQ = new CaptainsQuarters(2, p3);
+                    capQuarters.add(battleshipCQ);
 
                     int x4 = Integer.parseInt(inputValX);
                     int y4 = Integer.parseInt(inputValY) + 3;
@@ -446,26 +460,26 @@ public class GameBoard {
 
 
     public boolean updateAttackMap(GameBoard oppMap, Point p1) {
-        System.out.println("1");
+        //System.out.println("1");
         System.out.println(oppMap.attackMap);
         if (oppMap.getShipMap()[p1.getY()][p1.getX()] == 1){
-            System.out.println("2");
+            //System.out.println("2");
 
             getAttackMap()[p1.getY()][p1.getX()] = 2;
-            System.out.println("3");
+            //System.out.println("3");
 
             return true;
         }
         else if (oppMap.getShipMap()[p1.getY()][p1.getX()] == 0){
-            System.out.println("4");
+            //System.out.println("4");
 
             getAttackMap()[p1.getY()][p1.getX()] = 1;
-            System.out.println("5");
+            //System.out.println("5");
 
             return false;
         }
         else {
-            System.out.println("6");
+            //System.out.println("6");
             return false;
         }
     }

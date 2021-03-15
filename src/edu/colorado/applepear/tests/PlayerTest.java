@@ -3,7 +3,7 @@ package edu.colorado.applepear.tests;
 import edu.colorado.applepear.classes.GameBoard;
 import edu.colorado.applepear.classes.Player;
 import edu.colorado.applepear.classes.Point;
-import org.junit.Assert;
+//import org.junit.Assert;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
