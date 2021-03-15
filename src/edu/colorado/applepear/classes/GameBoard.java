@@ -73,10 +73,20 @@ public class GameBoard {
                 if (attackMap[i][j] == 1) {
                     System.out.print("M" + " | ");
 
-                } else if (attackMap[i][j] == 2) {
+                }
+                else if (attackMap[i][j] == 2) {
                     System.out.print("H" + " | ");
 
-                } else {
+                }
+                else if (attackMap[i][j] == 3) {
+                    System.out.print("*" + " | ");
+
+                }
+                else if (attackMap[i][j] == 4) {
+                    System.out.print(" " + " | ");
+
+                }
+                else {
                     System.out.print(attackMap[i][j] + " | ");
                 }
             }
@@ -460,29 +470,23 @@ public class GameBoard {
 
 
     public boolean updateAttackMap(GameBoard oppMap, Point p1) {
-        //System.out.println("1");
-        System.out.println(oppMap.attackMap);
         if (oppMap.getShipMap()[p1.getY()][p1.getX()] == 1){
-            //System.out.println("2");
 
             getAttackMap()[p1.getY()][p1.getX()] = 2;
-            //System.out.println("3");
 
             return true;
         }
         else if (oppMap.getShipMap()[p1.getY()][p1.getX()] == 0){
-            //System.out.println("4");
 
             getAttackMap()[p1.getY()][p1.getX()] = 1;
-            //System.out.println("5");
 
             return false;
         }
         else {
-            //System.out.println("6");
             return false;
         }
     }
+
 }
 
 

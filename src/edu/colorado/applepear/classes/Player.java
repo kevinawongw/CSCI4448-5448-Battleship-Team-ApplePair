@@ -8,14 +8,17 @@ import java.util.List;
 public class Player{
     // player class will hold the following
     private String name;
-    private int radarMissile, plusMissile, numShips;
+    private int sonarPulse, plusMissile, numShips;
     private final GameBoard gb;
+    private Boolean hasSunkenShip;
+
 
     //constructor
     public Player(GameBoard gb){
-        this.radarMissile = 3;
+        this.sonarPulse = 2;
         this.plusMissile = 3;
         this.gb = gb;
+        this.hasSunkenShip = false ;
     }
 
     //setters
@@ -27,45 +30,61 @@ public class Player{
         this.plusMissile = plusMissile;
     }
 
-    public void setRadarMissile(int radarMissile) {
-        this.radarMissile = radarMissile;
+    public void setSonarPulse(int sonarPulse) {
+        this.sonarPulse = sonarPulse;
     }
 
     //getters
     public String getName(){ return name; }
 
-    public int getRadarMissile() { return radarMissile; }
+    public int getSonarPulse() { return sonarPulse; }
 
     public int getPlusMissile() { return plusMissile; }
 
     public GameBoard getGb() { return gb; }
+
+    public boolean getHasSunkenShip(){return hasSunkenShip;}
+    public void updateSunkShip(Boolean trueOrFalse){
+        this.hasSunkenShip = trueOrFalse;
+    }
 
 /**
 Parameters: the opponent's board as GameBoard type, the point to check as Point type
 Returns: whether there are ships nearby as a boolean
 This function scans the 8 blocks around a point for the presence of a ship. 
 **/
-    public boolean useRadarMissile( GameBoard opponentBoard, Point P){
+
+    public boolean useSonarPulse( GameBoard opponentBoard, Point P){
         //checks if this player has any radar missiles left
 
-        if (getRadarMissile() < 1){
-            System.out.println( getName() + " has no more radar missiles remaining");
+        if (getSonarPulse() < 1){
+            System.out.println( getName() + " has no more radar missiles remaining \n");
+            return false;
+        }
+        else if(!getHasSunkenShip()){
+            System.out.println("Sonar Pulse is not unlocked \n");
             return false;
         }
         else{
             //update number of radar missiles for this player
-            setRadarMissile(getRadarMissile()-1);
+            setSonarPulse(getSonarPulse()-1);
             System.out.println("Using radar missile... \n");
+            boolean myReturn = false;
+            int count = 0;
             //points
 
             Point above = new Point(P.getX(),P.getY()+1);
             Point below = new Point(P.getX(),P.getY()-1);
-            Point right = new Point(P.getX()+1,P.getY()+1);
-            Point left = new Point(P.getX()-1,P.getY()+1);
+            Point right = new Point(P.getX()+1,P.getY());
+            Point left = new Point(P.getX()-1,P.getY());
             Point upRight = new Point(P.getX()+1,P.getY()+1);
             Point upLeft = new Point(P.getX()-1,P.getY()+1);
             Point downRight = new Point(P.getX()+1,P.getY()-1);
             Point downLeft = new Point(P.getX()-1,P.getY()-1);
+            Point farUp = new Point(P.getX(),P.getY()+2);
+            Point farDown = new Point(P.getX(),P.getY()-2);
+            Point farRight = new Point(P.getX()+2, P.getY());
+            Point farLeft = new Point(P.getX()-2, P.getY());
 
             //adding points to check into array list
             List<Point> radarRange = new ArrayList<>();
@@ -79,12 +98,17 @@ This function scans the 8 blocks around a point for the presence of a ship.
             radarRange.add(upLeft);
             radarRange.add(downRight);
             radarRange.add(downLeft);
+            radarRange.add(farDown);
+            radarRange.add(farLeft);
+            radarRange.add(farRight);
+            radarRange.add(farUp);
 
-            //making sre the points are in the grid
+            //making are the points are in the grid
             List<Point> scannedCells = new ArrayList<>();
             for (Point thisPoint: radarRange){
                 if ( (thisPoint.getX() >= 0) && (thisPoint.getX() <= 9) && (thisPoint.getY() <= 9) && (thisPoint.getY() >= 0)){
                     scannedCells.add(thisPoint);
+
                 }
             }
 
@@ -95,14 +119,23 @@ This function scans the 8 blocks around a point for the presence of a ship.
             for ( Point i :scannedCells){
                 int thisX = i.getX();
                 int thisY = i.getY();
-                if (map[thisX][thisY] == 1){
-                    System.out.println("Ship detected in this range! \n");
-                    return true;
+                if (map[thisY][thisX] == 1){
+                    getGb().getAttackMap()[thisY][thisX] = 3;
+                    count +=1;
+                    myReturn = true;
+                }
+                else{
+                    getGb().getAttackMap()[thisY][thisX] = 4;
                 }
             }
-
-            System.out.println("No ship was found in this range \n");
-            return false;
+            if (!myReturn){
+                System.out.println("No ship was found in this range \n");
+            }
+            else{
+                System.out.println(count +" spot(s) detected something... \n");
+            }
+            getGb().viewMap();
+            return myReturn;
 
         }
 
@@ -120,8 +153,8 @@ This function attacks the coordinates above, below, left, right of the coordinat
             System.out.println(getName() + " has no more plus missiles remaining.");
             return attacked;
         }
-        setPlusMissile(getPlusMissile() - 1);
 
+        setPlusMissile(getPlusMissile() - 1);
         System.out.println("Using plus missile...");
 
         //new arrayList to save the points
@@ -166,7 +199,6 @@ This function attacks the coordinates above, below, left, right of the coordinat
         }
         else{
             System.out.println("No attacks were made since there are no ships around.");
-//            return attacked;
         }
         return attacked;
 

@@ -98,11 +98,12 @@ public class Main {
 
                      System.out.println("What type of missile would you like to use?");
                      System.out.println("1. Regular Missile");
-                     System.out.println("2. Radar Missile");
+                     System.out.println("2. Sonar Pulse  Missile");
                      System.out.println("3. Plus Missile");
                      int choice = Integer.parseInt(myInput.nextLine());
 
                      switch (choice){
+                         //vienna: added switch case to determine what weapon to use
                          case 1:
                              Boolean hitOrMiss = curPlayer.getGb().updateAttackMap(opponentPlayer.getGb(), attackPoint);
                              p1.getGb().viewMap();
@@ -124,7 +125,12 @@ public class Main {
                              break;
 
                          case 2:
-                             curPlayer.useRadarMissile(p2Map,attackPoint);
+                             if (p1.getHasSunkenShip()==false){
+                                 curPlayer.useSonarPulse(p2Map,attackPoint);
+                                 break;
+                             }
+
+                             curPlayer.useSonarPulse(p2Map,attackPoint);
 
                              // Update maps and turns
                              if (curPlayer.equals(p1)) {
@@ -162,7 +168,7 @@ public class Main {
                      break;
                  case "3":
                      System.out.println("\n\n +-----" + curPlayer.getName() + "'s Inventory -----+\n");
-                     System.out.println("Number of Radar Missiles: " + curPlayer.getRadarMissile());
+                     System.out.println("Number of Radar Missiles: " + curPlayer.getSonarPulse());
                      System.out.println("Number of Plus Missiles: " + curPlayer.getPlusMissile());
                      break;
                  case "4":
