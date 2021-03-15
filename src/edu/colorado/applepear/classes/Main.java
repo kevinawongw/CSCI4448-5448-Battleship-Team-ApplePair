@@ -109,14 +109,6 @@ public class Main {
                              p1.getGb().viewMap();
                              if (hitOrMiss) {
                                  System.out.println("You Hit an Opponent's Ship! Nice Shot!");
-                                 Ship shipCheck = opponentPlayer.getGb().findShip(attackPoint);
-                                 if (shipCheck != null){
-                                     boolean didSink = shipCheck.isSunkenShip();
-                                     if(didSink == true){
-                                         curPlayer.updateSunkShip(true);
-                                     }
-                                     System.out.println(shipCheck.getShipName() + "has been sunk");
-                                 }
 
                              } else {
                                  System.out.println("You Missed...");

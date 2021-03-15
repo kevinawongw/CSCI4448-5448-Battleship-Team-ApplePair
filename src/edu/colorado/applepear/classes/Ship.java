@@ -15,6 +15,7 @@ public class Ship {
     public ArrayList<Point> location;
     private String shipName;
     private GameBoard gb;
+    private boolean isSunken;
 
     //Constructor
 
@@ -22,6 +23,15 @@ public class Ship {
         location = new ArrayList<>();
         this.shipName = shipName;
         this.gb = gb;
+        this.isSunken = false;
+    }
+
+    public void setIsSunken(boolean isSunken){
+        this.isSunken = isSunken;
+    }
+
+    public boolean getIsSunken(){
+        return isSunken;
     }
 
     public void setShipName() {

@@ -22,12 +22,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ecce50e7-60f1-4088-9580-0bcf29b1574e" name="Default Changelist" comment="Vienna : features Implemented in Main: plus and radar missile">
+    <list default="true" id="ecce50e7-60f1-4088-9580-0bcf29b1574e" name="Default Changelist" comment="view ship update">
+      <change afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/tests/CaptainsQuartersTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/CaptainsQuarters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/CaptainsQuarters.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/GameBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/GameBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/tests/PlayerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/tests/PlayerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/Ship.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/Ship.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,12 +67,21 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../payroll" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
-  <component name="RunManager" selected="JUnit.PlayerTest.useSonarPulseTest">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="edu.colorado.applepear.classes.Main" />
       <module name="Milestone1-csci4448-5448" />
@@ -85,7 +95,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PlayerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CaptainsQuartersTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Milestone1-csci4448-5448" />
       <extension name="coverage">
         <pattern>
@@ -94,29 +117,27 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="edu.colorado.applepear.tests" />
-      <option name="MAIN_CLASS_NAME" value="edu.colorado.applepear.tests.PlayerTest" />
+      <option name="MAIN_CLASS_NAME" value="edu.colorado.applepear.tests.CaptainsQuartersTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PlayerTest.testUpdateSunkShip" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GameBoardTest and 4 more" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Milestone1-csci4448-5448" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="edu.colorado.applepear.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="edu.colorado.applepear.tests" />
-      <option name="MAIN_CLASS_NAME" value="edu.colorado.applepear.tests.PlayerTest" />
-      <option name="METHOD_NAME" value="testUpdateSunkShip" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="pattern" />
+      <patterns>
+        <pattern testClass="edu.colorado.applepear.tests.GameBoardTest" />
+        <pattern testClass="edu.colorado.applepear.tests.GameTest" />
+        <pattern testClass="edu.colorado.applepear.tests.PlayerTest" />
+        <pattern testClass="edu.colorado.applepear.tests.PointTest" />
+        <pattern testClass="edu.colorado.applepear.tests.ShipTest" />
+      </patterns>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PlayerTest.useSonarPulseTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PointTest.testGetPoint" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Milestone1-csci4448-5448" />
       <extension name="coverage">
         <pattern>
@@ -125,8 +146,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="edu.colorado.applepear.tests" />
-      <option name="MAIN_CLASS_NAME" value="edu.colorado.applepear.tests.PlayerTest" />
-      <option name="METHOD_NAME" value="useSonarPulseTest" />
+      <option name="MAIN_CLASS_NAME" value="edu.colorado.applepear.tests.PointTest" />
+      <option name="METHOD_NAME" value="testGetPoint" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -172,10 +193,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PlayerTest.useSonarPulseTest" />
-        <item itemvalue="JUnit.PlayerTest.testUpdateSunkShip" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.PlayerTest" />
+        <item itemvalue="JUnit.CaptainsQuartersTest" />
+        <item itemvalue="JUnit.GameBoardTest and 4 more" />
+        <item itemvalue="JUnit.PointTest.testGetPoint" />
         <item itemvalue="JUnit.edu.colorado.applepear.tests in Milestone1-csci4448-5448" />
       </list>
     </recent_temporary>
@@ -188,6 +209,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1612370581325</updated>
+      <workItem from="1615531086052" duration="8620000" />
     </task>
     <task id="LOCAL-00001" summary="rename to team name">
       <created>1612371506505</created>
@@ -329,15 +351,18 @@
       <option name="project" value="LOCAL" />
       <updated>1614878517184</updated>
     </task>
-    <task id="LOCAL-00021" summary="Vienna : features Implemented in Main: plus and radar missile">
-      <created>1614893480031</created>
+    <task id="LOCAL-00021" summary="view ship update">
+      <created>1614885063133</created>
       <option name="number" value="00021" />
       <option name="presentableId" value="LOCAL-00021" />
       <option name="project" value="LOCAL" />
-      <updated>1614893480031</updated>
+      <updated>1614885063133</updated>
     </task>
     <option name="localTasksCounter" value="22" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -364,113 +389,8 @@
     <MESSAGE value="player fix" />
     <MESSAGE value="player attack map update" />
     <MESSAGE value="player map update" />
-    <MESSAGE value="Vienna : features Implemented in Main: plus and radar missile" />
-    <option name="LAST_COMMIT_MESSAGE" value="Vienna : features Implemented in Main: plus and radar missile" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="93" y="93" width="1095" height="495" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1614891068304">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="93" y="93" width="1095" height="495" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1280.680@0.0.1280.680" timestamp="1614891068304" />
-    <state x="575" y="139" key="#com.intellij.ide.util.MemberChooser" timestamp="1614831666246">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="575" y="139" key="#com.intellij.ide.util.MemberChooser/0.0.1536.864@0.0.1536.864" timestamp="1614831666246" />
-    <state x="321" y="76" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1613874164867">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="321" y="76" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1280.680@0.0.1280.680" timestamp="1613874164867" />
-    <state x="424" y="235" width="432" height="217" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1613876375782">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="424" y="235" width="432" height="217" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1280.680@0.0.1280.680" timestamp="1613876375782" />
-    <state x="500" y="180" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1613504096256">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="500" y="180" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.864@0.0.1536.864" timestamp="1613504096256" />
-    <state x="348" y="81" key="FileChooserDialogImpl" timestamp="1613876998814">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="348" y="81" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1613876998814" />
-    <state width="1237" height="453" key="GridCell.Tab.0.bottom" timestamp="1615753678226">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1237" height="453" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1615753678226" />
-    <state width="1493" height="186" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1614884990949" />
-    <state width="1237" height="453" key="GridCell.Tab.0.center" timestamp="1615753678226">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1237" height="453" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1615753678226" />
-    <state width="1493" height="186" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1614884990948" />
-    <state width="1237" height="453" key="GridCell.Tab.0.left" timestamp="1615753678226">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1237" height="453" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1615753678226" />
-    <state width="1493" height="186" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1614884990948" />
-    <state width="1237" height="453" key="GridCell.Tab.0.right" timestamp="1615753678226">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1237" height="453" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1615753678226" />
-    <state width="1493" height="186" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1614884990949" />
-    <state width="1237" height="523" key="GridCell.Tab.1.bottom" timestamp="1614895059921">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1237" height="523" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1614895059921" />
-    <state width="1493" height="254" key="GridCell.Tab.1.bottom/0.0.1536.864@0.0.1536.864" timestamp="1614834011870" />
-    <state width="1237" height="523" key="GridCell.Tab.1.center" timestamp="1614895059921">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1237" height="523" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1614895059921" />
-    <state width="1493" height="254" key="GridCell.Tab.1.center/0.0.1536.864@0.0.1536.864" timestamp="1614834011870" />
-    <state width="1237" height="523" key="GridCell.Tab.1.left" timestamp="1614895059921">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1237" height="523" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1614895059921" />
-    <state width="1493" height="254" key="GridCell.Tab.1.left/0.0.1536.864@0.0.1536.864" timestamp="1614834011870" />
-    <state width="1237" height="523" key="GridCell.Tab.1.right" timestamp="1614895059921">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1237" height="523" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1614895059921" />
-    <state width="1493" height="254" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1614834011870" />
-    <state x="148" y="69" key="MergeDialog" timestamp="1614832851841">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="148" y="69" key="MergeDialog/0.0.1536.864@0.0.1536.864" timestamp="1614832851841" />
-    <state x="121" y="0" key="SettingsEditor" timestamp="1613876831407">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="121" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1613876831407" />
-    <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1614893483299">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1614893483299" />
-    <state x="280" y="93" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1614878521688" />
-    <state x="375" y="232" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1613876458203">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="375" y="232" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1280.680@0.0.1280.680" timestamp="1613876458203" />
-    <state x="490" y="273" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1613876662259">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="490" y="273" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1613876662259" />
-    <state x="588" y="347" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.864@0.0.1536.864" timestamp="1613501459769" />
-    <state x="317" y="169" width="903" height="628" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1614826146144">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="317" y="169" width="903" height="628" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.864@0.0.1536.864" timestamp="1614826146144" />
-    <state x="395" y="242" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1612371469634">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="395" y="242" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1280.680@0.0.1280.680" timestamp="1612371469634" />
-    <state x="581" y="125" key="refactoring.ChangeSignatureDialog" timestamp="1614831674507">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="484" y="98" key="refactoring.ChangeSignatureDialog/0.0.1280.680@0.0.1280.680" timestamp="1613890922732" />
-    <state x="581" y="125" key="refactoring.ChangeSignatureDialog/0.0.1536.864@0.0.1536.864" timestamp="1614831674507" />
-    <state x="431" y="182" width="672" height="678" key="search.everywhere.popup" timestamp="1613503142503">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="431" y="182" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1613503142503" />
+    <MESSAGE value="view ship update" />
+    <option name="LAST_COMMIT_MESSAGE" value="view ship update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -483,68 +403,59 @@
     </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
-        <PinnedItemInfo parentTag="edu.colorado.applepear.classes.Point" memberName="y" />
         <PinnedItemInfo parentTag="edu.colorado.applepear.GameBoardTest" memberName="m1" />
       </pinned-members>
     </pin-to-top-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/CSCI4448_5448_Battleship_Team_ApplePair$ShipTest.ic" NAME="ShipTest Coverage Results" MODIFIED="1614832729890" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>edu.colorado.applepear.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/CSCI4448_5448_Battleship_Team_ApplePair$PlayerTest_usePlusMissileTest.ic" NAME="PlayerTest.usePlusMissileTest Coverage Results" MODIFIED="1614882782140" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>edu.colorado.applepear.tests.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/CSCI4448_5448_Battleship_Team_ApplePair$PointTest.ic" NAME="PointTest Coverage Results" MODIFIED="1614832663589" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>edu.colorado.applepear.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$PlayerTest_usePlusMissileTest.ic" NAME="PlayerTest.usePlusMissileTest Coverage Results" MODIFIED="1614883634239" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$PlayerTest.ic" NAME="PlayerTest Coverage Results" MODIFIED="1614878653906" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>edu.colorado.applepear.tests.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/CSCI4448_5448_Battleship_Team_ApplePair$edu_colorado_applepear_test_in_Milestone1_csci4448_5448.ic" NAME="edu.colorado.applepear.test in Milestone1-csci4448-5448 Coverage Results" MODIFIED="1614834444017" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>edu.colorado.applepear.test.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$PlayerTest_useRadarMissileTest.ic" NAME="PlayerTest.useRadarMissileTest Coverage Results" MODIFIED="1614883584336" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>edu.colorado.applepear.tests.*</FILTER>
+    <SUITE FILE_PATH="coverage/CSCI4448_5448_Battleship_Team_ApplePair$PointTest.ic" NAME="PointTest Coverage Results" MODIFIED="1614832663589" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>edu.colorado.applepear.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$Main.ic" NAME="Main Coverage Results" MODIFIED="1615796413960" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>edu.colorado.applepear.classes.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$GameTest.ic" NAME="GameTest Coverage Results" MODIFIED="1614823433084" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>edu.colorado.applepear.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$Main.ic" NAME="Main Coverage Results" MODIFIED="1614103547153" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>edu.colorado.applepear.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/CSCI4448_5448_Battleship_Team_ApplePair$PlayerTest.ic" NAME="PlayerTest Coverage Results" MODIFIED="1614883712977" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>edu.colorado.applepear.tests.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/CSCI4448_5448_Battleship_Team_ApplePair$edu_colorado_applepear_tests_in_Milestone1_csci4448_5448.ic" NAME="edu.colorado.applepear.tests in Milestone1-csci4448-5448 Coverage Results" MODIFIED="1614883929133" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>edu.colorado.applepear.tests.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$GameBoardTest.ic" NAME="GameBoardTest Coverage Results" MODIFIED="1614823378441" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>edu.colorado.applepear.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/CSCI4448_5448_Battleship_Team_ApplePair$GameBoardTest.ic" NAME="GameBoardTest Coverage Results" MODIFIED="1614832712919" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>edu.colorado.applepear.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/CSCI4448_5448_Battleship_Team_ApplePair$PlayerTest_testGetName.ic" NAME="PlayerTest.testGetName Coverage Results" MODIFIED="1614882797499" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$PointTest_testGetPoint.ic" NAME="PointTest.testGetPoint Coverage Results" MODIFIED="1615796933764" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>edu.colorado.applepear.tests.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$edu_colorado_applepear_tests_in_Milestone1_csci4448_5448.ic" NAME="edu.colorado.applepear.tests in Milestone1-csci4448-5448 Coverage Results" MODIFIED="1614878403247" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>edu.colorado.applepear.tests.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/CSCI4448_5448_Battleship_Team_ApplePair$PlayerTest_useRadarMissileTest.ic" NAME="PlayerTest.useRadarMissileTest Coverage Results" MODIFIED="1614882755193" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>edu.colorado.applepear.tests.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$PlayerTest.ic" NAME="PlayerTest Coverage Results" MODIFIED="1614823417773" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$GameBoardTest_and_4_more.ic" NAME="GameBoardTest and 4 more Coverage Results" MODIFIED="1615825274593" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$GameBoardTest.ic" NAME="GameBoardTest Coverage Results" MODIFIED="1614829845678" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>edu.colorado.applepear.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$ShipTest.ic" NAME="ShipTest Coverage Results" MODIFIED="1614823398741" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$edu_colorado_applepear_tests_in_Milestone1_csci4448_5448.ic" NAME="edu.colorado.applepear.tests in Milestone1-csci4448-5448 Coverage Results" MODIFIED="1614878862911" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>edu.colorado.applepear.tests.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$edu_colorado_applepear_test_in_Milestone1_csci4448_5448.ic" NAME="edu.colorado.applepear.test in Milestone1-csci4448-5448 Coverage Results" MODIFIED="1614834606532" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>edu.colorado.applepear.test.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/CSCI4448_5448_Battleship_Team_ApplePair$PlayerTest_useRadarMissileTest.ic" NAME="PlayerTest.useRadarMissileTest Coverage Results" MODIFIED="1614833757381" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>edu.colorado.applepear.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$CaptainsQuartersTest.ic" NAME="CaptainsQuartersTest Coverage Results" MODIFIED="1615825364735" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>edu.colorado.applepear.tests.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$PointTest.ic" NAME="PointTest Coverage Results" MODIFIED="1614823409113" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>edu.colorado.applepear.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$edu_colorado_applepear_test_in_Milestone1_csci4448_5448.ic" NAME="edu.colorado.applepear.test in Milestone1-csci4448-5448 Coverage Results" MODIFIED="1614834048550" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>edu.colorado.applepear.test.*</FILTER>
+    <SUITE FILE_PATH="coverage/CSCI4448_5448_Battleship_Team_ApplePair$PlayerTest.ic" NAME="PlayerTest Coverage Results" MODIFIED="1614832661029" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>edu.colorado.applepear.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$ShipTest.ic" NAME="ShipTest Coverage Results" MODIFIED="1614829704351" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>edu.colorado.applepear.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/CSCI4448_5448_Battleship_Team_ApplePair$ShipTest.ic" NAME="ShipTest Coverage Results" MODIFIED="1614832729890" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>edu.colorado.applepear.*</FILTER>
     </SUITE>
   </component>
 </project>
