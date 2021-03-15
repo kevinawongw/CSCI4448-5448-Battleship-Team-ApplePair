@@ -1,4 +1,6 @@
 package edu.colorado.applepear.classes;
+import org.junit.Test;
+
 import java.util.Arrays;
 import java.util.Scanner;
 import java.util.*;
@@ -471,6 +473,21 @@ public class GameBoard {
         else {
             return false;
         }
+    }
+
+    public Ship findShip(Point P){
+        for (Ship thisShip : getShips()){
+            for (Point p : thisShip.location){
+                int testX = P.getX();
+                int testY = P.getY();
+                int actualX = p.getX();
+                int actualY = p.getY();
+                if ((testX == actualX) && (testY == actualY)){
+                    return thisShip;
+                }
+            }
+        }
+        return null;
     }
 
 }
