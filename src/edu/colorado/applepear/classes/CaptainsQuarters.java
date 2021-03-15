@@ -3,11 +3,13 @@ package edu.colorado.applepear.classes;
 public class CaptainsQuarters {
     private int health;
     private Point location;
+    private String shipName;
 
     //Constructor
-    public CaptainsQuarters(int health, Point location){
+    public CaptainsQuarters(int health, Point location, String shipName){
         this.health = health;
         this.location = location;
+        this.shipName = shipName;
     }
 
     /**
@@ -29,6 +31,15 @@ public class CaptainsQuarters {
     }
 
     /**
+     * Parameters: none
+     * @return shipName (string)
+     * This is the getter method for the attribute shipName.
+     */
+    public String getShipName(){
+        return shipName;
+    }
+
+    /**
      * Parameters: new health to be set
      * @return none
      * This is the setter method for the attribute health.
@@ -44,6 +55,15 @@ public class CaptainsQuarters {
      */
     public void setLocation(Point location){
         this.location = location;
+    }
+
+    /**
+     * Parameters: new ship type to be set
+     * @return none
+     * This is the setter method for the attribute shipType.
+     */
+    public void setShipType(String shipName){
+        this.shipName = shipName;
     }
 
 
