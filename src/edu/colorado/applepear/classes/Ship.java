@@ -21,8 +21,6 @@ public class Ship {
 
     public Ship(){
         location = new ArrayList<>();
-        this.shipName = shipName;
-        this.gb = gb;
         this.isSunken = false;
     }
 
@@ -63,7 +61,7 @@ public class Ship {
         }
         else {
             System.out.println("Hmm... That's a new ship. Go ahead and give it a name!");
-            String newShipName = myInput.nextLine();
+            var newShipName = myInput.nextLine();
             shipName = newShipName;
         }
     }
