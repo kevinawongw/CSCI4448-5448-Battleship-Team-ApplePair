@@ -20,7 +20,7 @@ public class LShip implements Ship {
 
     public LShip(){
         location = new ArrayList<Point>();
-        shipName = "l-ship";
+        shipName = "lship";
         health = 3;
         isSunken = false;
         ct = null;
@@ -44,7 +44,7 @@ public class LShip implements Ship {
 
     @Override
     public void setShipName() {
-        shipName = "battleship";
+        shipName = "lship";
     }
 
     @Override
@@ -60,10 +60,9 @@ public class LShip implements Ship {
 
     @Override
     public void setLocation(List<Point> points) {
+        location = new ArrayList<Point>();
         for (Point point : points) {
             location.add(point);
-            int myX = point.getX();
-            int myY = point.getY();
         }
     }
 
@@ -79,10 +78,12 @@ public class LShip implements Ship {
 
     @Override
     public void updateHealth(Point p){
-        // remove location attacked
-        location.remove(p);
-        // set new health to location length
-        health = location.size();
+
+        int index = location.indexOf(p);
+        Point t = location.remove(index);
+
+        setLocation(location);
+        setShipHealth(location.size());
     }
 
 
