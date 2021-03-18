@@ -22,18 +22,17 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ecce50e7-60f1-4088-9580-0bcf29b1574e" name="Default Changelist" comment="Got started on interface implementation">
+    <list default="true" id="ecce50e7-60f1-4088-9580-0bcf29b1574e" name="Default Changelist" comment="Big changes on ship interface and moving a lot of functions around">
+      <change afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/tests/concreteShipTests/MinesweeperTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/GameBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/GameBoard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/Ship.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/Ship.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/ShipRem.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/concreteShips/Battleship.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/concreteShips/Battleship.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/concreteShips/Destroyer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/concreteShips/Destroyer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/concreteShips/LShip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/concreteShips/LShip.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/concreteShips/Minesweeper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/concreteShips/Minesweeper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/concreteShips/Tower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/concreteShips/Tower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/tests/ShipTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/tests/ShipTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/tests/ShipTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +86,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
-  <component name="RunManager" selected="JUnit.edu.colorado.applepear.classes.concreteShips in Milestone1-csci4448-5448">
+  <component name="RunManager" selected="JUnit.MinesweeperTest">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -129,16 +128,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GameBoardTest and 4 more" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MinesweeperTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Milestone1-csci4448-5448" />
-      <option name="TEST_OBJECT" value="pattern" />
-      <patterns>
-        <pattern testClass="edu.colorado.applepear.tests.GameBoardTest" />
-        <pattern testClass="edu.colorado.applepear.tests.GameTest" />
-        <pattern testClass="edu.colorado.applepear.tests.PlayerTest" />
-        <pattern testClass="edu.colorado.applepear.tests.PointTest" />
-        <pattern testClass="edu.colorado.applepear.tests.ShipTest" />
-      </patterns>
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.colorado.applepear.tests.concreteShipTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="edu.colorado.applepear.tests.concreteShipTests" />
+      <option name="MAIN_CLASS_NAME" value="edu.colorado.applepear.tests.concreteShipTests.MinesweeperTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -197,11 +197,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MinesweeperTest" />
         <item itemvalue="JUnit.edu.colorado.applepear.classes.concreteShips in Milestone1-csci4448-5448" />
         <item itemvalue="JUnit.edu.colorado.applepear.tests in Milestone1-csci4448-5448" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.CaptainsQuartersTest" />
-        <item itemvalue="JUnit.GameBoardTest and 4 more" />
       </list>
     </recent_temporary>
   </component>
@@ -369,7 +369,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616032638201</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Big changes on ship interface and moving a lot of functions around">
+      <created>1616047488462</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1616047488462</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -402,37 +409,54 @@
     <MESSAGE value="player map update" />
     <MESSAGE value="view ship update" />
     <MESSAGE value="Got started on interface implementation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Got started on interface implementation" />
+    <MESSAGE value="Big changes on ship interface and moving a lot of functions around" />
+    <option name="LAST_COMMIT_MESSAGE" value="Big changes on ship interface and moving a lot of functions around" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="575" y="139" key="#com.intellij.ide.util.MemberChooser" timestamp="1616046380966">
+    <state x="575" y="139" key="#com.intellij.ide.util.MemberChooser" timestamp="1616050335147">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="575" y="139" key="#com.intellij.ide.util.MemberChooser/0.0.1536.864@0.0.1536.864" timestamp="1616046380966" />
+    <state x="575" y="139" key="#com.intellij.ide.util.MemberChooser/0.0.1536.864@0.0.1536.864" timestamp="1616050335147" />
     <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1616030084645">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.864@0.0.1536.864" timestamp="1616030084645" />
-    <state width="1493" height="180" key="GridCell.Tab.0.bottom" timestamp="1616032151310">
+    <state width="1493" height="217" key="GridCell.Tab.0.bottom" timestamp="1616053871066">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="180" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1616032151310" />
-    <state width="1493" height="180" key="GridCell.Tab.0.center" timestamp="1616032151309">
+    <state width="1493" height="217" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1616053871066" />
+    <state width="1493" height="217" key="GridCell.Tab.0.center" timestamp="1616053871066">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="180" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1616032151309" />
-    <state width="1493" height="180" key="GridCell.Tab.0.left" timestamp="1616032151309">
+    <state width="1493" height="217" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1616053871066" />
+    <state width="1493" height="217" key="GridCell.Tab.0.left" timestamp="1616053871065">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="180" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1616032151309" />
-    <state width="1493" height="180" key="GridCell.Tab.0.right" timestamp="1616032151310">
+    <state width="1493" height="217" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1616053871065" />
+    <state width="1493" height="217" key="GridCell.Tab.0.right" timestamp="1616053871066">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="180" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1616032151310" />
-    <state x="0" y="166" key="Vcs.Push.Dialog.v2" timestamp="1616032642891">
+    <state width="1493" height="217" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1616053871066" />
+    <state width="1493" height="2" key="GridCell.Tab.1.bottom" timestamp="1616049754252">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="0" y="166" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1616032642891" />
+    <state width="1493" height="2" key="GridCell.Tab.1.bottom/0.0.1536.864@0.0.1536.864" timestamp="1616049754252" />
+    <state width="1493" height="2" key="GridCell.Tab.1.center" timestamp="1616049754252">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="2" key="GridCell.Tab.1.center/0.0.1536.864@0.0.1536.864" timestamp="1616049754252" />
+    <state width="1493" height="2" key="GridCell.Tab.1.left" timestamp="1616049754252">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="2" key="GridCell.Tab.1.left/0.0.1536.864@0.0.1536.864" timestamp="1616049754252" />
+    <state width="1493" height="2" key="GridCell.Tab.1.right" timestamp="1616049754252">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="2" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1616049754252" />
+    <state x="0" y="166" key="Vcs.Push.Dialog.v2" timestamp="1616047490506">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="0" y="166" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1616047490506" />
     <state x="768" y="0" width="774" height="870" key="dock-window-1" timestamp="1616043255886">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -463,6 +487,9 @@
     </SUITE>
     <SUITE FILE_PATH="coverage/CSCI4448_5448_Battleship_Team_ApplePair$PlayerTest_useRadarMissileTest.ic" NAME="PlayerTest.useRadarMissileTest Coverage Results" MODIFIED="1614833757381" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>edu.colorado.applepear.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$MinesweeperTest.ic" NAME="MinesweeperTest Coverage Results" MODIFIED="1616048926417" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>edu.colorado.applepear.tests.concreteShipTests.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$GameTest.ic" NAME="GameTest Coverage Results" MODIFIED="1614823433084" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>edu.colorado.applepear.*</FILTER>

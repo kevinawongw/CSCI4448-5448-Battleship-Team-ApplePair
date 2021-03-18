@@ -18,6 +18,15 @@ public class LShip implements Ship {
     private int health;
     private CaptainsQuarters ct;
 
+    public LShip(){
+        location = new ArrayList<Point>();
+        shipName = "l-ship";
+        health = 3;
+        isSunken = false;
+        ct = null;
+    }
+
+
     @Override
     public String getShipName() {
         return shipName;
@@ -39,8 +48,8 @@ public class LShip implements Ship {
     }
 
     @Override
-    public void setShipHealth() {
-        health = location.size();
+    public void setShipHealth(int newHealth) {
+        this.health = newHealth;
     }
 
     @Override

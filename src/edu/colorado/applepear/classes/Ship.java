@@ -10,7 +10,7 @@ public interface Ship {
     List<Point> getLocation();
 
     void setShipName();
-    void setShipHealth();
+    void setShipHealth(int newHealth);
     void setCaptainsQuarters();
     void setLocation(List <Point> points);
 

@@ -18,6 +18,13 @@ public class Battleship implements Ship {
     private int health;
     private CaptainsQuarters ct;
 
+    public Battleship(){
+        location = new ArrayList<Point>();
+        shipName = "battleship";
+        health = 4;
+        isSunken = false;
+    }
+
     @Override
     public String getShipName() {
         return shipName;
@@ -39,8 +46,8 @@ public class Battleship implements Ship {
     }
 
     @Override
-    public void setShipHealth() {
-        health = location.size();
+    public void setShipHealth(int newHealth) {
+        this.health = newHealth;
     }
 
     @Override

@@ -15,6 +15,7 @@ public class Game {
     }
 
     // If p1 hits p2 at point p
+
     public Boolean hitOrMiss(Point p, Player p1, Player p2){
         if (p2.getGb().getShipMap()[p.getY()][p.getX()] == 1){
 

@@ -5,6 +5,7 @@ import edu.colorado.applepear.classes.GameBoard;
 import edu.colorado.applepear.classes.Point;
 import edu.colorado.applepear.classes.Ship;
 
+import javax.sound.midi.SysexMessage;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -17,6 +18,13 @@ public class Minesweeper implements Ship {
     private boolean isSunken;
     private int health;
     private CaptainsQuarters ct;
+
+    public Minesweeper(){
+        location = new ArrayList<Point>();
+        shipName = "minesweeper";
+        health = 2;
+        isSunken = false;
+    }
 
     @Override
     public String getShipName() {
@@ -39,8 +47,8 @@ public class Minesweeper implements Ship {
     }
 
     @Override
-    public void setShipHealth() {
-        health = location.size();
+    public void setShipHealth(int newHealth) {
+        this.health = newHealth;
     }
 
     @Override
@@ -50,16 +58,15 @@ public class Minesweeper implements Ship {
 
     @Override
     public void setLocation(List<Point> points) {
+        location = new ArrayList<Point>();
         for (Point point : points) {
             location.add(point);
-            int myX = point.getX();
-            int myY = point.getY();
         }
     }
 
     @Override
     public Boolean isShipSunken() {
-        if (location.size() == 0){
+        if (health == 0){
             return true;
         }
         else{
@@ -69,10 +76,12 @@ public class Minesweeper implements Ship {
 
     @Override
     public void updateHealth(Point p){
-        // remove location attacked
-        location.remove(p);
-        // set new health to location length
-        health = location.size();
+
+        int index = location.indexOf(p);
+        Point t = location.remove(index);
+
+        setLocation(location);
+        setShipHealth(location.size());
     }
 
 

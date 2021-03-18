@@ -19,6 +19,14 @@ public class Tower implements Ship {
     private int health;
     private CaptainsQuarters ct;
 
+    public Tower(){
+        location = new ArrayList<Point>();
+        shipName = "tower";
+        health = 3;
+        ct = null;
+        isSunken = false;
+    }
+
     @Override
     public String getShipName() {
         return shipName;
@@ -40,8 +48,8 @@ public class Tower implements Ship {
     }
 
     @Override
-    public void setShipHealth() {
-        health = location.size();
+    public void setShipHealth(int newHealth) {
+        this.health = newHealth;
     }
 
     @Override
