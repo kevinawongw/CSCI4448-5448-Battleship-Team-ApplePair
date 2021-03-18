@@ -17,18 +17,11 @@ public class Game {
     // If p1 hits p2 at point p
 
     public Boolean hitOrMiss(Point p, Player p1, Player p2){
+
         if (p2.getGb().getShipMap()[p.getY()][p.getX()] == 1){
-
-            // Attack Map Update
-            p1.getGb().updateAttackMap(p2.getGb(),p);
-
-            // Update Ship Health
-            p2.getGb().identifyShip(p).updateHealth(p);
             return true;
         }
         else if (p2.getGb().getShipMap()[p.getY()][p.getX()] == 0){
-
-            p1.getGb().updateAttackMap(p2.getGb(),p);
             return false;
 
         }

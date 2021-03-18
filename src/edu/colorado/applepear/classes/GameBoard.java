@@ -28,12 +28,12 @@ public class GameBoard {
     // Ship Map: Reflects that player's own ships
     // 0 - Not Present
     // 1 - Present
-    private final int[][] shipMap;
+    private int[][] shipMap;
 
     // Constructor
     public GameBoard() {
-        shipMap = new int[numX][numY];
-        attackMap = new int[numX][numY];
+        shipMap = new int[numY][numX];
+        attackMap = new int[numY][numX];
         ships = new ArrayList<Ship>();
     }
 
@@ -48,6 +48,15 @@ public class GameBoard {
 
     public List<Ship> getShips() {
         return ships;
+    }
+
+    // Setters
+    public void setShipMap(Point p, int value){
+        shipMap[p.getY()][p.getX()] = value;
+    }
+
+    public void setAttackMap(Point p, int value){
+        attackMap[p.getY()][p.getX()] = value;
     }
 
     // Function 2: View Map
@@ -135,7 +144,7 @@ public class GameBoard {
     public void updateShipMap() {
         for (Ship ship : ships) {
             for (Point point : ship.getLocation()) {
-                shipMap[point.getY()][point.getX()] = 1;
+                setShipMap(point,1);
             }
         }
     }
@@ -143,6 +152,7 @@ public class GameBoard {
     public void populateShipMap() {
         Minesweeper minesweeper = new Minesweeper();
         List<Point> minesweeperCoords = minesweeper.input(shipMap);
+        placeShip(minesweeperCoords);
         updateShipMap();
         viewShips();
 
@@ -152,6 +162,7 @@ public class GameBoard {
         if (loc.size() == 2){
             Minesweeper minesweeper = new Minesweeper();
             minesweeper.setLocation(loc);
+            minesweeper.setShipHealth(loc.size());
             ships.add(minesweeper);
         }
         else if (loc.size() == 3){
