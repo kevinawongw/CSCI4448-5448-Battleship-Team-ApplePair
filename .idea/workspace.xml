@@ -22,25 +22,17 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ecce50e7-60f1-4088-9580-0bcf29b1574e" name="Default Changelist" comment="view ship update">
-      <change afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/ShipRem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/concreteShips/Battleship.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/concreteShips/Destroyer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/concreteShips/LShip.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/concreteShips/Minesweeper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/concreteShips/Tower.java" afterDir="false" />
+    <list default="true" id="ecce50e7-60f1-4088-9580-0bcf29b1574e" name="Default Changelist" comment="Got started on interface implementation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/CaptainsQuarters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/CaptainsQuarters.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/GameBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/GameBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/Point.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/Ship.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/Ship.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/interfaces/Battleship.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/interfaces/Destroyer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/interfaces/LShip.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/interfaces/Minesweeper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/interfaces/Tower.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/tests/CaptainsQuartersTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/tests/CaptainsQuartersTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/tests/GameBoardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/tests/GameBoardTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/ShipRem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/concreteShips/Battleship.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/concreteShips/Battleship.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/concreteShips/Destroyer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/concreteShips/Destroyer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/concreteShips/LShip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/concreteShips/LShip.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/concreteShips/Minesweeper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/concreteShips/Minesweeper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/concreteShips/Tower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/concreteShips/Tower.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/tests/ShipTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/tests/ShipTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -370,7 +362,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614885063133</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Got started on interface implementation">
+      <created>1616032638201</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1616032638201</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -402,13 +401,14 @@
     <MESSAGE value="player attack map update" />
     <MESSAGE value="player map update" />
     <MESSAGE value="view ship update" />
-    <option name="LAST_COMMIT_MESSAGE" value="view ship update" />
+    <MESSAGE value="Got started on interface implementation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Got started on interface implementation" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="575" y="139" key="#com.intellij.ide.util.MemberChooser" timestamp="1616031296325">
+    <state x="575" y="139" key="#com.intellij.ide.util.MemberChooser" timestamp="1616046380966">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="575" y="139" key="#com.intellij.ide.util.MemberChooser/0.0.1536.864@0.0.1536.864" timestamp="1616031296325" />
+    <state x="575" y="139" key="#com.intellij.ide.util.MemberChooser/0.0.1536.864@0.0.1536.864" timestamp="1616046380966" />
     <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1616030084645">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -429,10 +429,18 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1493" height="180" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1616032151310" />
-    <state x="762" y="0" width="779" height="870" key="dock-window-1" timestamp="1616032597334">
+    <state x="0" y="166" key="Vcs.Push.Dialog.v2" timestamp="1616032642891">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="762" y="0" width="779" height="870" key="dock-window-1/0.0.1536.864@0.0.1536.864" timestamp="1616032597334" />
+    <state x="0" y="166" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1616032642891" />
+    <state x="768" y="0" width="774" height="870" key="dock-window-1" timestamp="1616043255886">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="768" y="0" width="774" height="870" key="dock-window-1/0.0.1536.864@0.0.1536.864" timestamp="1616043255886" />
+    <state x="45" y="200" key="run.anything.popup" timestamp="1616043643489">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="45" y="200" key="run.anything.popup/0.0.1536.864@0.0.1536.864" timestamp="1616043643489" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
