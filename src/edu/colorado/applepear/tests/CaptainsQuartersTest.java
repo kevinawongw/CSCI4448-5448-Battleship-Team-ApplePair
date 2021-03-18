@@ -16,7 +16,7 @@ public class CaptainsQuartersTest {
     public void setCapQ() throws Exception{
         System.out.println("Before Each Test");
         newPoint = new Point(0, 0);
-        capQ = new CaptainsQuarters(1, newPoint, "minesweeper");
+        capQ = new CaptainsQuarters(1, newPoint);
     }
 
     @Test

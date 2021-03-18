@@ -6,10 +6,9 @@ public class CaptainsQuarters {
     private String shipName;
 
     //Constructor
-    public CaptainsQuarters(int health, Point location, String shipName){
+    public CaptainsQuarters(int health, Point location){
         this.health = health;
         this.location = location;
-        this.shipName = shipName;
     }
 
     /**

@@ -38,7 +38,7 @@ public class GameBoardTest {
         myPoints.add(m2);
         gb1.placeShip(myPoints);
         System.out.println("Testing Minesweeper Placement");
-        assertEquals(1, gb1.getShipMap()[m1.y][m1.x] & gb1.getShipMap()[m2.y][m2.x], "Should correctly place minesweeper on map");
+        assertEquals(1, gb1.getShipMap()[m1.getY()][m1.getX()] & gb1.getShipMap()[m2.getY()][m2.getX()], "Should correctly place minesweeper on map");
     }
 
     @Test

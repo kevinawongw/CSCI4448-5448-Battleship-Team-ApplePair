@@ -11,7 +11,7 @@ public class GameBoard {
     // Helpful Variables
     public static final int numX = 10;
     public static final int numY = 10;
-    private final List<Ship> ships;
+    private final List<ShipRem> ships;
     private List<CaptainsQuarters> capQuarters;
 
     // Initializing Maps:
@@ -33,7 +33,7 @@ public class GameBoard {
     public GameBoard() {
         shipMap = new int[numX][numY];
         attackMap = new int[numX][numY];
-        ships = new ArrayList<Ship>();
+        ships = new ArrayList<ShipRem>();
         capQuarters = new ArrayList<CaptainsQuarters>();
     }
 
@@ -46,7 +46,7 @@ public class GameBoard {
         return attackMap;
     }
 
-    public List<Ship> getShips(){return ships;}
+    public List<ShipRem> getShips(){return ships;}
 
     // Function 2: View Map
     // Param: None
@@ -156,12 +156,12 @@ public class GameBoard {
 
     public void placeShip(List<Point> points) {
 
-        Ship tempShip = new Ship();
+        ShipRem tempShip = new ShipRem();
 
         for (Point point : points) {
             tempShip.location.add(point);
-            int myX = point.x;
-            int myY = point.y;
+            int myX = point.getX();
+            int myY = point.getY();
             shipMap[myY][myX] = 1;
         }
         tempShip.setShipName();
@@ -191,7 +191,7 @@ public class GameBoard {
             String inputValY = myInput.nextLine();
 
             Point p1 = new Point(Integer.parseInt(inputValX), Integer.parseInt(inputValY));
-            capQuarters.add(new CaptainsQuarters(1, p1, "minesweeper"));
+            capQuarters.add(new CaptainsQuarters(1, p1));
             Point p2 = new Point(Integer.parseInt(inputValX) + 1, Integer.parseInt(inputValY));
 
             return Arrays.asList(p1, p2);
@@ -204,7 +204,7 @@ public class GameBoard {
             String inputValY = myInput.nextLine();
 
             Point p1 = new Point(Integer.parseInt(inputValX), Integer.parseInt(inputValY));
-            capQuarters.add(new CaptainsQuarters(1, p1, "minesweeper"));
+            capQuarters.add(new CaptainsQuarters(1, p1));
             Point p2 = new Point(Integer.parseInt(inputValX),Integer.parseInt(inputValY) + 1);
 
             return Arrays.asList(p1, p2);
@@ -241,7 +241,7 @@ public class GameBoard {
                 if (criteriaA && criteriaB && criteriaC) {
                     Point p1 = new Point(Integer.parseInt(inputValX), Integer.parseInt(inputValY));
                     Point p2 = new Point(Integer.parseInt(inputValX) + 1, Integer.parseInt(inputValY));
-                    capQuarters.add(new CaptainsQuarters(2, p2, "destroyer"));
+                    capQuarters.add(new CaptainsQuarters(2, p2));
                     Point p3 = new Point(Integer.parseInt(inputValX) + 2, Integer.parseInt(inputValY));
                     temp = false;
                     return Arrays.asList(p1, p2, p3);
@@ -267,7 +267,7 @@ public class GameBoard {
                 if (criteriaA && criteriaB && criteriaC) {
                     Point p1 = new Point (Integer.parseInt(inputValX), Integer.parseInt(inputValY));
                     Point p2 = new Point (Integer.parseInt(inputValX), Integer.parseInt(inputValY) + 1);
-                    capQuarters.add(new CaptainsQuarters(2, p2, "destroyer"));
+                    capQuarters.add(new CaptainsQuarters(2, p2));
                     Point p3 = new Point (Integer.parseInt(inputValX), Integer.parseInt(inputValY) + 2);
                     temp = false;
                     return Arrays.asList(p1, p2, p3);
@@ -319,7 +319,7 @@ public class GameBoard {
                     int x3 = Integer.parseInt(inputValX) + 2;
                     int y3 = Integer.parseInt(inputValY);
                     Point p3 = new Point (x3, y3);
-                    capQuarters.add(new CaptainsQuarters(2, p3, "battleship"));
+                    capQuarters.add(new CaptainsQuarters(2, p3));
                     int x4 = Integer.parseInt(inputValX) + 3;
                     int y4 = Integer.parseInt(inputValY);
                     Point p4 = new Point (x4, y4);
@@ -358,7 +358,7 @@ public class GameBoard {
                     int x3 = Integer.parseInt(inputValX);
                     int y3 = Integer.parseInt(inputValY) + 2;
                     Point p3 = new Point (x3, y3);
-                    capQuarters.add(new CaptainsQuarters(2, p3, "battleship"));
+                    capQuarters.add(new CaptainsQuarters(2, p3));
 
                     int x4 = Integer.parseInt(inputValX);
                     int y4 = Integer.parseInt(inputValY) + 3;
