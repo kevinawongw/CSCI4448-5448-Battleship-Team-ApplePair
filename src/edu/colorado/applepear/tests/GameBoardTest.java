@@ -71,7 +71,27 @@ public class GameBoardTest {
     @DisplayName("Test placeShip")
     public void testUpdateShipMap2(){
         gb1.updateShipMap();
-        assertEquals(gb1.getShipMap()[m1.getY()][m1.getX()], 0,"Ship Map at the location should equal 1");
+        assertEquals(gb1.getShipMap()[m1.getY()][m1.getX()], 0,"Ship Map at the location should equal 0");
+    }
+
+    @Test
+    @DisplayName("Test placeSubMarine")
+    public void testUpdateShipMap3(){
+        Point s1 = new Point(2,0);
+        Point s2 = new Point(0,1);
+        Point s3 = new Point(1,1);
+        Point s4 = new Point(2,1);
+        Point s5 = new Point(3,1);
+        List<Point> subPoints = new ArrayList<>();
+        subPoints.add(s1);
+        subPoints.add(s2);
+        subPoints.add(s3);
+        subPoints.add(s4);
+        subPoints.add(s5);
+        gb1.placeShip(subPoints);
+        System.out.println(gb1.identifyShip(s1));
+        gb1.updateUnderwaterMap();
+        assertEquals(gb1.getUnderwaterMap()[s1.getY()][s1.getX()], 1,"Underwater Map at the location should equal 1");
     }
 
     @Test

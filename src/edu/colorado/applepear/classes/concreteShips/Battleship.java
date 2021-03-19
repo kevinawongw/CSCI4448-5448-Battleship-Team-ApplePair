@@ -17,12 +17,14 @@ public class Battleship implements Ship {
     private boolean isSunken;
     private int health;
     private CaptainsQuarters ct;
+    private boolean underwater;
 
     public Battleship(){
         location = new ArrayList<Point>();
         shipName = "battleship";
         health = 4;
         isSunken = false;
+        underwater = false;
     }
 
     @Override
@@ -38,6 +40,11 @@ public class Battleship implements Ship {
     @Override
     public List<Point> getLocation() {
         return location;
+    }
+
+    @Override
+    public boolean getUnderwater() {
+        return false;
     }
 
     @Override
@@ -87,7 +94,7 @@ public class Battleship implements Ship {
     public List<Point> input(int[][] shipMap) {
         Scanner myInput = new Scanner(System.in);
         String input3 = "";
-        System.out.println("Place Battleship (3 blocks wide): ");
+        System.out.println("Place Battleship (4 blocks wide): ");
         System.out.println("Enter \"1\" or \"2\" \n 1. Horizontal \n 2. Vertical ");
 
         boolean temp = true;
@@ -102,9 +109,9 @@ public class Battleship implements Ship {
         if (input3.equals("1")) {
             temp = true;
             while (temp) {
-                System.out.println("Enter the X-coordinate of the right-most block of your ship: ");
+                System.out.println("Enter the X-coordinate of the left-most block of your ship: ");
                 String inputValX = myInput.nextLine();
-                System.out.println("Enter the Y-coordinate of the right-most block of your ship: ");
+                System.out.println("Enter the Y-coordinate of the left-most block of your ship: ");
                 String inputValY = myInput.nextLine();
                 boolean criteriaA = (shipMap[Integer.parseInt(inputValY)][Integer.parseInt(inputValX)] == 0);
                 boolean criteriaB = (shipMap[Integer.parseInt(inputValY)][Integer.parseInt(inputValX) + 1] == 0);

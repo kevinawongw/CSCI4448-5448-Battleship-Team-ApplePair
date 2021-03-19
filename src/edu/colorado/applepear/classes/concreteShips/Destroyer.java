@@ -17,12 +17,14 @@ public class Destroyer implements Ship {
     private boolean isSunken;
     private int health;
     private CaptainsQuarters ct;
+    private boolean underwater;
 
     public Destroyer(){
         location = new ArrayList<Point>();
         shipName = "destroyer";
         health = 3;
         isSunken = false;
+        underwater = false;
     }
 
     @Override
@@ -38,6 +40,11 @@ public class Destroyer implements Ship {
     @Override
     public List<Point> getLocation() {
         return location;
+    }
+
+    @Override
+    public boolean getUnderwater() {
+        return false;
     }
 
     @Override

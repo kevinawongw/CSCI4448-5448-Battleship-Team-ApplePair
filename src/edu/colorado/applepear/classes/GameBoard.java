@@ -1,8 +1,6 @@
 package edu.colorado.applepear.classes;
 import edu.colorado.applepear.classes.concreteShips.*;
 
-import java.util.Arrays;
-import java.util.Scanner;
 import java.util.*;
 
 // Kevina did this section
@@ -13,7 +11,7 @@ public class GameBoard {
     // Helpful Variables
     public static final int numX = 10;
     public static final int numY = 10;
-    private final List<Ship> ships;
+    private List<Ship> ships;
 
     // Initializing Maps:
 
@@ -22,7 +20,7 @@ public class GameBoard {
     // 0 - unchecked
     // 1 - checked, no ship
     // 2 - checked, ship found
-    public int[][] attackMap;
+    private int[][] attackMap;
 
 
     // Ship Map: Reflects that player's own ships
@@ -30,10 +28,16 @@ public class GameBoard {
     // 1 - Present
     private int[][] shipMap;
 
+    // Underwater Map: Reflects that player's own submarines
+    // 0 - Not Present
+    // 1 - Present
+    private int[][] underwaterMap;
+
     // Constructor
     public GameBoard() {
         shipMap = new int[numY][numX];
         attackMap = new int[numY][numX];
+        underwaterMap = new int[numY][numX];
         ships = new ArrayList<Ship>();
     }
 
@@ -46,6 +50,8 @@ public class GameBoard {
         return attackMap;
     }
 
+    public int[][] getUnderwaterMap() { return underwaterMap; }
+
     public List<Ship> getShips() {
         return ships;
     }
@@ -57,6 +63,10 @@ public class GameBoard {
 
     public void setAttackMap(Point p, int value){
         attackMap[p.getY()][p.getX()] = value;
+    }
+
+    public void setUnderwaterMap(Point p, int value){
+        underwaterMap[p.getY()][p.getX()] = value;
     }
 
     // Function 2: View Map
@@ -141,10 +151,56 @@ public class GameBoard {
         System.out.print("+\n\n");
     }
 
+    // Function 3: View Ship Map
+    // Param: None
+    // Returns: None
+    // Prints Map with 0s, 1s
+    // Prints where that player's ships are located
+    public void viewUnderwater() {
+        System.out.print("----- My Underwater Map -----\n\n");
+
+        for (int i = 0; i < numX; i++) {
+            System.out.print("  ");
+
+            for (int a = 0; a < 10; a++) {
+                if (i == 0) {
+                    System.out.print("+—" + a + "—");
+                } else {
+                    System.out.print("+———");
+                }
+            }
+            System.out.print("+");
+            System.out.print("\n");
+            System.out.print(i + " | ");
+
+            for (int j = 0; j < numY; j++) {
+                System.out.print(underwaterMap[i][j] + " | ");
+            }
+            System.out.print("\n");
+        }
+        System.out.print("  ");
+        for (int a = 0; a < 10; a++) {
+            System.out.print("+———");
+        }
+        System.out.print("+\n\n");
+    }
+
     public void updateShipMap() {
         for (Ship ship : ships) {
-            for (Point point : ship.getLocation()) {
-                setShipMap(point,1);
+            if (ship.getUnderwater() == false) {
+                for (Point point : ship.getLocation()) {
+                    setShipMap(point, 1);
+                }
+            }
+        }
+    }
+
+    public void updateUnderwaterMap() {
+        for (Ship ship : ships) {
+            if (ship.getUnderwater() == true) {
+                for (Point point : ship.getLocation()) {
+                    setUnderwaterMap(point, 1);
+                }
             }
         }
     }
@@ -156,6 +212,7 @@ public class GameBoard {
         updateShipMap();
         viewShips();
 
+        // Currently Minesweeper only - Kevina
     }
 
     public void placeShip(List<Point> loc){
@@ -191,16 +248,22 @@ public class GameBoard {
             battleship.setLocation(loc);
             ships.add(battleship);
         }
+        else if (loc.size() == 5){
+            Submarine sub = new Submarine();
+            sub.setLocation(loc);
+            ships.add(sub);
+        }
         updateShipMap();
+        updateUnderwaterMap();
     }
 
 
     public boolean updateAttackMap(GameBoard oppMap, Point p1) {
         if (oppMap.getShipMap()[p1.getY()][p1.getX()] == 1) {
-            getAttackMap()[p1.getY()][p1.getX()] = 2;
+            setAttackMap(p1,2);
             return true;
         } else if (oppMap.getShipMap()[p1.getY()][p1.getX()] == 0) {
-            getAttackMap()[p1.getY()][p1.getX()] = 1;
+            setAttackMap(p1,1);
             return false;
         } else {
             return false;

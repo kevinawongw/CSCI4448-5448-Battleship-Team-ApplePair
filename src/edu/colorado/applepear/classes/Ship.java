@@ -8,6 +8,7 @@ public interface Ship {
     String getShipName();
     int getShipHealth();
     List<Point> getLocation();
+    boolean getUnderwater();
 
     void setShipName();
     void setShipHealth(int newHealth);

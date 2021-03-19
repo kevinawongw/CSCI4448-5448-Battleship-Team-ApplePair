@@ -17,6 +17,7 @@ public class LShip implements Ship {
     private boolean isSunken;
     private int health;
     private CaptainsQuarters ct;
+    private boolean underwater;
 
     public LShip(){
         location = new ArrayList<Point>();
@@ -24,6 +25,7 @@ public class LShip implements Ship {
         health = 3;
         isSunken = false;
         ct = null;
+        underwater = false;
     }
 
 
@@ -40,6 +42,11 @@ public class LShip implements Ship {
     @Override
     public List<Point> getLocation() {
         return location;
+    }
+
+    @Override
+    public boolean getUnderwater() {
+        return false;
     }
 
     @Override

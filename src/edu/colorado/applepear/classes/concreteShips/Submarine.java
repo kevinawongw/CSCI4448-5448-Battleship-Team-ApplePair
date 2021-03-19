@@ -4,14 +4,14 @@ import edu.colorado.applepear.classes.CaptainsQuarters;
 import edu.colorado.applepear.classes.GameBoard;
 import edu.colorado.applepear.classes.Point;
 import edu.colorado.applepear.classes.Ship;
-import org.junit.Test;
+import org.junit.jupiter.api.DisplayName;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
-public class Tower implements Ship {
+public class Submarine implements Ship {
 
     public ArrayList<Point> location;
     private String shipName;
@@ -20,13 +20,12 @@ public class Tower implements Ship {
     private CaptainsQuarters ct;
     private boolean underwater;
 
-    public Tower(){
+    public Submarine(){
         location = new ArrayList<Point>();
-        shipName = "tower";
-        health = 3;
-        ct = null;
+        shipName = "submarine";
+        health = 5;
         isSunken = false;
-        underwater = false;
+        underwater = true;
     }
 
     @Override
@@ -45,13 +44,11 @@ public class Tower implements Ship {
     }
 
     @Override
-    public boolean getUnderwater() {
-        return false;
-    }
+    public boolean getUnderwater() { return underwater; }
 
     @Override
     public void setShipName() {
-        shipName = "tower";
+        shipName = "submarine";
     }
 
     @Override
@@ -61,8 +58,7 @@ public class Tower implements Ship {
 
     @Override
     public void setCaptainsQuarters() {
-        System.out.println("This type of ship cannot have a captain's quarters!");
-        ct = null;
+        ct = new CaptainsQuarters(2,location.get(4));
     }
 
     @Override
@@ -94,26 +90,43 @@ public class Tower implements Ship {
     }
 
     @Override
-    public List<Point> input(int[][] shipMap) {
+    public List<Point> input(int[][] underwaterMap) {
         Scanner myInput = new Scanner(System.in);
-        System.out.println("Place Tower (1): ");
+        System.out.println("Place Submarine: ");
+
+
         boolean temp = true;
         while (temp) {
-            System.out.println("Enter the X-coordinate of the ship: ");
+            System.out.println("Enter the X-coordinate of the left-most block of your ship: ");
             String inputValX = myInput.nextLine();
-            System.out.println("Enter the Y-coordinate of the ship: ");
+            System.out.println("Enter the Y-coordinate of the left-most block of your ship: ");
             String inputValY = myInput.nextLine();
-            boolean criteriaA = (shipMap[Integer.parseInt(inputValY)][Integer.parseInt(inputValX)] == 0);
+            boolean criteriaA = (underwaterMap[Integer.parseInt(inputValY)][Integer.parseInt(inputValX)] == 0);
+            boolean criteriaB = (underwaterMap[Integer.parseInt(inputValY)][Integer.parseInt(inputValX) + 1] == 0);
+            boolean criteriaC = (underwaterMap[Integer.parseInt(inputValY)][Integer.parseInt(inputValX) + 2] == 0);
+            boolean criteriaD = (underwaterMap[Integer.parseInt(inputValY)][Integer.parseInt(inputValX) + 3] == 0);
+            boolean criteriaE = (underwaterMap[Integer.parseInt(inputValY)-1][Integer.parseInt(inputValX) + 2] == 0);
 
-            if (criteriaA) {
+            if (criteriaA && criteriaB && criteriaC && criteriaD && criteriaE) {
                 int x1 = Integer.parseInt(inputValX);
                 int y1 = Integer.parseInt(inputValY);
                 Point p1 = new Point(x1, y1);
+                int x2 = Integer.parseInt(inputValX) + 1;
+                int y2 = Integer.parseInt(inputValY);
+                Point p2 = new Point(x2, y2);
+                int x3 = Integer.parseInt(inputValX) + 2;
+                int y3 = Integer.parseInt(inputValY);
+                Point p3 = new Point(x3, y3);
+                int x4 = Integer.parseInt(inputValX) + 3;
+                int y4 = Integer.parseInt(inputValY);
+                Point p4 = new Point(x4, y4);
+                int x5 = Integer.parseInt(inputValX) + 2;
+                int y5 = Integer.parseInt(inputValY) + 1;
+                Point p5 = new Point(x5, y5);
                 temp = false;
-                return Arrays.asList(p1);
+                return Arrays.asList(p1, p2, p3, p4, p5);
 
             }
-
             else {
                 System.out.println("You already placed another ship there! Try another location.");
             }
