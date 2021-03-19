@@ -111,6 +111,8 @@ public class Main {
                              curPlayer.getGb().viewMap();
 
                              if (attackHitOrMiss) {
+
+                                 // SORRY A LOT OF THIS NEEDED TO CHANGE BECAUSE OF THE WAY EVERYTHING IS RESTRUCTURED I CAN FIX IT SOON :)
 //                                 Ship temp = opponentPlayer.getGb().identifyShip(attackPoint);
 //                                 System.out.id
 //                                 System.out.println(opponentPlayer.getGb().identifyShip(attackPoint).getShipName());

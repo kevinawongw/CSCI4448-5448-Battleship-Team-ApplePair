@@ -1,11 +1,9 @@
 package edu.colorado.applepear.classes.concreteShips;
 
 import edu.colorado.applepear.classes.CaptainsQuarters;
-import edu.colorado.applepear.classes.GameBoard;
 import edu.colorado.applepear.classes.Point;
 import edu.colorado.applepear.classes.Ship;
 
-import javax.sound.midi.SysexMessage;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;

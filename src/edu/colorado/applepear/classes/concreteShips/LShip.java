@@ -1,7 +1,6 @@
 package edu.colorado.applepear.classes.concreteShips;
 
 import edu.colorado.applepear.classes.CaptainsQuarters;
-import edu.colorado.applepear.classes.GameBoard;
 import edu.colorado.applepear.classes.Point;
 import edu.colorado.applepear.classes.Ship;
 
