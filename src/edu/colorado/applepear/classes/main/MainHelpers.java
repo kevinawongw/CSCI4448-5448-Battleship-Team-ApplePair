@@ -1,14 +1,21 @@
-package edu.colorado.applepear.classes;
+package edu.colorado.applepear.classes.main;
+import edu.colorado.applepear.classes.Player;
+import edu.colorado.applepear.classes.Point;
+
 import java.sql.Array;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class MainPrint {
-    // Helper Function - Display Menu - Kevina
-    // Param: None
-    // Return: None
-    // Prints Menu
+public class MainHelpers {
+
+    /**
+    // Helper Function - displayMenu - Kevina
+    // @Param: None
+    // @Return: None
+    // Prints Menu for Main
+     */
+
     public static void displayMenu() {
         System.out.println("\n\n ========== Battleship Menu ========== \n");
         System.out.println("Please pick a menu option");
@@ -21,10 +28,13 @@ public class MainPrint {
         System.out.println("7. Quit >:(");
     }
 
-    // Helper Function - Display Instruction - Kevina
-    // Param: None
-    // Return: None
-    // Prints Instructions
+    /**
+     // Helper Function - printInstructions - Kevina
+     // @Param: None
+     // @Return: None
+     // Prints Instructions for View
+     */
+
     public static void printInstructions() {
         System.out.println("\n\n ========== Battleship Instructions ========== \n");
         System.out.println("[Goal] : Select Coordinates to take out your opponent's ships!");
@@ -34,9 +44,15 @@ public class MainPrint {
         System.out.println("Winner takes down all of their opponents ships! Good Luck!");
     }
 
-    // Helper Function - Get Inputs and Names
-    // Param: None
-    // Return Names
+    /**
+     // Helper Function - collectNames - Kevina
+     // @Param: None
+     // @Return: List<String> names
+     // Prints prompts for name inputs
+     // Takes in user input
+     // Make list of names.
+     */
+
     public static List<String> collectNames() {
         List<String> names = new ArrayList<>();
         Scanner myInput = new Scanner(System.in);
@@ -50,6 +66,16 @@ public class MainPrint {
         return names;
     }
 
+    /**
+     // Helper Function - collectAttackPoint - Kevina
+     // @Param: None
+     // @Return: Point attackPoint
+     // Prints prompt statements for inputting attack points
+     // Takes in user input for x-coord and y-coord
+     // Makes Point
+     // Returns Point
+     */
+
     public static Point collectAttackPoint(){
         Scanner myInput = new Scanner(System.in);
 
@@ -62,5 +88,49 @@ public class MainPrint {
 
         return attackPoint;
     }
+
+    /**
+     // Helper Function - collectMissileInput - Kevina
+     // @Param: None
+     // @Return: Int choice
+     // Prints prompt statements for missile picks
+     // Takes in user input item pick
+     // Makes Int
+     */
+
+    public static int collectMissileInput(){
+        Scanner myInput = new Scanner(System.in);
+
+
+        System.out.println("What type of missile would you like to use?");
+        System.out.println("1. Regular Missile");
+        System.out.println("2. Sonar Pulse  Missile");
+        System.out.println("3. Plus Missile");
+        int choice = Integer.parseInt(myInput.nextLine());
+
+        return choice;
+    }
+
+    public static void displayPlayerTurn(Player curPlayer) {
+        System.out.println("\n\n+--- It is " + curPlayer.getName() + "'s turn ---+");
+    }
+
+
+    public static void printInventory(Player curPlayer) {
+        System.out.println("\n\n +-----" + curPlayer.getName() + "'s Inventory -----+\n");
+        System.out.println("Number of Radar Missiles: " + curPlayer.getSonarPulse());
+        System.out.println("Number of Plus Missiles: " + curPlayer.getPlusMissile());
+        if (curPlayer.getHasSunkenShip()){
+            System.out.println("Sonar Missile Eligible? : Yes");
+        }
+        else{
+            System.out.println("Sonar Missile Eligible? : No, Sink an opponent's ship first!");
+        }
+    }
+
+    public static void printSinkMessage(Player opponentPlayer, int index){
+        System.out.println("Nice! You sunk the opponent's " + opponentPlayer.getGb().getShips().get(index).getShipName());
+    }
+
 
 }

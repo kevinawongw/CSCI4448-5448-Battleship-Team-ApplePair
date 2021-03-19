@@ -1,5 +1,9 @@
-package edu.colorado.applepear.classes;
-import java.io.Flushable;
+package edu.colorado.applepear.classes.main;
+import edu.colorado.applepear.classes.Game;
+import edu.colorado.applepear.classes.GameBoard;
+import edu.colorado.applepear.classes.Player;
+import edu.colorado.applepear.classes.Point;
+
 import java.util.List;
 import java.util.Scanner;
 
@@ -19,7 +23,7 @@ public class Main {
          // Initialize Objects for Game + Take User Inputs for Object Parameters - Kevina
 
          // Initialize Player Objects
-         List<String> names = MainPrint.collectNames();
+         List<String> names = MainHelpers.collectNames();
          GameBoard p1Map = new GameBoard();
          GameBoard p2Map = new GameBoard();
          Player p1 = new Player(p1Map);
@@ -43,30 +47,22 @@ public class Main {
 
          // -- END Initialization--
 
-
          // -- BEGIN Game Menu Loop --
-
          // Menu Display & User Input
          // Refer to the displayMenu Print function for what each menu option will do
-         System.out.println("\n\n+--- It is " + curPlayer.getName() + "'s turn ---+");
-         MainPrint.displayMenu();
+
+        MainHelpers.displayPlayerTurn(curPlayer);
+        MainHelpers.displayMenu();
 
          while (run){
              String myVal = myInput.nextLine();
-             System.out.println(myVal);
+
              switch (myVal) {
                  case "1":
-                     Point attackPoint = MainPrint.collectAttackPoint();
-
-                     System.out.println("What type of missile would you like to use?");
-                     System.out.println("1. Regular Missile");
-                     System.out.println("2. Sonar Pulse  Missile");
-                     System.out.println("3. Plus Missile");
-                     int choice = Integer.parseInt(myInput.nextLine());
+                     Point attackPoint = MainHelpers.collectAttackPoint();
+                     int choice = MainHelpers.collectMissileInput();
 
                      switch (choice) {
-                         // vienna: added switch case to determine what weapon to use
-                         // kevina: added necessary functions (ie. updateHealth, check isSunken, updateAttackMap)
                          case 1:
                              Boolean attackHitOrMiss = myGame.hitOrMiss(attackPoint, curPlayer, opponentPlayer);
                              curPlayer.getGb().updateAttackMap(opponentPlayer.getGb(), attackPoint);
@@ -83,9 +79,9 @@ public class Main {
                                      System.out.println("Nice! You sunk the opponent's " + opponentPlayer.getGb().getShips().get(shipAttackedIndex).getShipName());
                                      curPlayer.updateSunkShip(true);
                                  }
-                             } else {
-                                 System.out.println("You Missed...");
                              }
+
+                             else { System.out.println("You Missed..."); }
 
                              if (curPlayer.equals(p1)) {
                                  curPlayer = p2;
@@ -121,7 +117,7 @@ public class Main {
                                  opponentPlayer.getGb().getShips().get(index).updateHealth(loc);
                                  Boolean sunken = opponentPlayer.getGb().getShips().get(index).isShipSunken();
                                  if (sunken) {
-                                     System.out.println("Nice! You sunk the opponent's " + opponentPlayer.getGb().getShips().get(index).getShipName());
+                                     MainHelpers.printSinkMessage(opponentPlayer,index);
                                      curPlayer.updateSunkShip(true);
                                  }
                              }
@@ -139,43 +135,39 @@ public class Main {
                      break;
                  case "2":
                      System.out.println("Would you like to move a fleet or a submarine?");
-
+                     // Not Implemented yet
 
                  case "3":
                      System.out.println("Player Map");
                      curPlayer.getGb().viewMap();
                      break;
                  case "4":
-                     System.out.println("\n\n +-----" + curPlayer.getName() + "'s Inventory -----+\n");
-                     System.out.println("Number of Radar Missiles: " + curPlayer.getSonarPulse());
-                     System.out.println("Number of Plus Missiles: " + curPlayer.getPlusMissile());
+                     MainHelpers.printInventory(curPlayer);
                      break;
                  case "5":
-                     MainPrint.printInstructions();
+                     MainHelpers.printInstructions();
                      break;
                  case "6":
                      curPlayer.getGb().viewShips();
                      break;
                  case "7":
                      run = false;
-                     return;
+                     System.exit(0);
                  default:
                      System.out.println("Please select a valid menu option...");
-                     MainPrint.displayMenu();
-             }
-             boolean gameEnd = myGame.isGameOver();
-             if(gameEnd){
-                 System.exit(0);
-             }
-             if (myVal.equals("1")){
-                 System.out.println("\n\n--- It is " + curPlayer.getName() + "'s turn ---");
-                 MainPrint.displayMenu();
-             }
-             else{
-                 MainPrint.displayMenu();
+                     MainHelpers.displayMenu();
+                     break;
              }
 
+             boolean gameEnd = myGame.isGameOver();
+
+             if (gameEnd) { System.exit(0); }
+
+             if (myVal.equals("1") || myVal.equals("2")){
+                 MainHelpers.displayPlayerTurn(curPlayer);
+                 MainHelpers.displayMenu();
+             }
+             else { MainHelpers.displayMenu(); }
         }
     }
-    // -- END Game Menu Loop--
 }
