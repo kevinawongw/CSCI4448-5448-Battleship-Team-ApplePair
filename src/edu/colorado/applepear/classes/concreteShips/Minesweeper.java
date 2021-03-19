@@ -87,7 +87,16 @@ public class Minesweeper implements Ship {
     @Override
     public void updateHealth(Point p){
 
-        int index = location.indexOf(p);
+        int index = 0;
+        boolean found = false;
+        for (Point point : location){
+            if (p.getX() == point.getX() && p.getY() == point.getY()){
+                found = true;
+                break;
+            }
+            index++;
+        }
+
         Point t = location.remove(index);
 
         setLocation(location);

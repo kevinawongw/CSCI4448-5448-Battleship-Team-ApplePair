@@ -91,10 +91,10 @@ public class Main {
                  case "1":
                      System.out.println("\n\n+--- Let's Attack! ---+");
                      System.out.println("What is the X coordinate for the space you want to attack?");
-                     String myX = myInput.nextLine();
+                     int myX = Integer.parseInt(myInput.nextLine());
                      System.out.println("What is the Y coordinate for the space you want to attack?");
-                     String myY = myInput.nextLine();
-                     Point attackPoint = new Point(Integer.parseInt(myX), Integer.parseInt(myY));
+                     int myY = Integer.parseInt(myInput.nextLine());
+                     Point attackPoint = new Point(myX, myY);
 
                      System.out.println("What type of missile would you like to use?");
                      System.out.println("1. Regular Missile");
@@ -102,35 +102,29 @@ public class Main {
                      System.out.println("3. Plus Missile");
                      int choice = Integer.parseInt(myInput.nextLine());
 
-                     switch (choice){
+                     switch (choice) {
                          // vienna: added switch case to determine what weapon to use
                          // kevina: added necessary functions (ie. updateHealth, check isSunken, updateAttackMap)
                          case 1:
-                             Boolean attackHitOrMiss = myGame.hitOrMiss(attackPoint,curPlayer, opponentPlayer);
+                             Boolean attackHitOrMiss = myGame.hitOrMiss(attackPoint, curPlayer, opponentPlayer);
                              curPlayer.getGb().updateAttackMap(opponentPlayer.getGb(), attackPoint);
                              curPlayer.getGb().viewMap();
 
                              if (attackHitOrMiss) {
 
-                                 // SORRY A LOT OF THIS NEEDED TO CHANGE BECAUSE OF THE WAY EVERYTHING IS RESTRUCTURED I CAN FIX IT SOON :)
-//                                 Ship temp = opponentPlayer.getGb().identifyShip(attackPoint);
-//                                 System.out.id
-//                                 System.out.println(opponentPlayer.getGb().identifyShip(attackPoint).getShipName());
-//                             updateHealth(attackPoint);
-
-//                                 Boolean sunken = opponentPlayer.getGb().identifyShip(attackPoint).isShipSunken();
+                                 int shipAttackedIndex = opponentPlayer.getGb().identifyShip(attackPoint);
+                                 opponentPlayer.getGb().getShips().get(shipAttackedIndex).updateHealth(attackPoint);
+                                 boolean sunken = opponentPlayer.getGb().getShips().get(shipAttackedIndex).isShipSunken();
                                  System.out.println("You Hit an Opponent's Ship! Nice Shot!");
 
-//                                 if (sunken){
-//                                     System.out.println("Nice! You sunk the opponent's " + opponentPlayer.getGb().identifyShip(attackPoint).getShipName());
-//                                 }
-                             }
-                             else {
+                                 if (sunken){
+                                     System.out.println("Nice! You sunk the opponent's " + opponentPlayer.getGb().getShips().get(shipAttackedIndex).getShipName());
+                                     curPlayer.updateSunkShip(true);
+                                 }
+                             } else {
                                  System.out.println("You Missed...");
                              }
 
-                             // Depending on the player's turn, their map will be different
-                             // Update maps and turns
                              if (curPlayer.equals(p1)) {
                                  curPlayer = p2;
                                  opponentPlayer = p1;
@@ -142,14 +136,13 @@ public class Main {
                              break;
 
                          case 2:
-                             if (p1.getHasSunkenShip()==false){
-                                 curPlayer.useSonarPulse(p2Map,attackPoint);
+                             if (p1.getHasSunkenShip() == false) {
+                                 curPlayer.useSonarPulse(p2Map, attackPoint);
                                  break;
                              }
 
-                             curPlayer.useSonarPulse(p2Map,attackPoint);
 
-                             // Update maps and turns
+                             curPlayer.useSonarPulse(p2Map, attackPoint);
                              if (curPlayer.equals(p1)) {
                                  curPlayer = p2;
                                  opponentPlayer = p1;
@@ -161,16 +154,16 @@ public class Main {
                              break;
 
                          case 3:
-                             List<Point> attackedLoc = curPlayer.usePlusMissile(p2Map,attackPoint);
-                             for (Point loc : attackedLoc){
-                                 opponentPlayer.getGb().identifyShip(loc).updateHealth(loc);
-                                 Boolean sunken = opponentPlayer.getGb().identifyShip(loc).isShipSunken();
-                                 if (sunken){
-                                     System.out.println("Nice! You sunk the opponent's " + opponentPlayer.getGb().identifyShip(attackPoint).getShipName());
+                             List<Point> attackedLoc = curPlayer.usePlusMissile(p2Map, attackPoint);
+                             for (Point loc : attackedLoc) {
+                                 int index = opponentPlayer.getGb().identifyShip(loc);
+                                 opponentPlayer.getGb().getShips().get(index).updateHealth(loc);
+                                 Boolean sunken = opponentPlayer.getGb().getShips().get(index).isShipSunken();
+                                 if (sunken) {
+                                     System.out.println("Nice! You sunk the opponent's " + opponentPlayer.getGb().getShips().get(index).getShipName());
+                                     curPlayer.updateSunkShip(true);
                                  }
                              }
-                             curPlayer.getGb().viewMap();
-                             // Update maps and turns
 
                              if (curPlayer.equals(p1)) {
                                  curPlayer = p2;
@@ -181,8 +174,8 @@ public class Main {
                                  opponentPlayer = p2;
                              }
                              break;
-
                      }
+                     break;
 
                  case "2":
                      System.out.println("Player Map");

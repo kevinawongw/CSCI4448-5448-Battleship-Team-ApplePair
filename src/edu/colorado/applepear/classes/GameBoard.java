@@ -266,15 +266,22 @@ public class GameBoard {
         }
     }
 
-    public Ship identifyShip(Point point){
+    public Integer identifyShip(Point point){
+        int index = 0;
+        boolean found = false;
         for (Ship ship: ships){
             for (Point p : ship.getLocation()){
-                if (p.equals(point)){
-                    return ship;
+                if (p.getX() == point.getX() && p.getY() == point.getY() && ship.getUnderwater() == false){
+                    found = true;
+                    return index;
                 }
             }
+            index++;
         }
-        return null;
+        if (!found){
+            index = -1;
+        }
+        return index;
     }
 
 }

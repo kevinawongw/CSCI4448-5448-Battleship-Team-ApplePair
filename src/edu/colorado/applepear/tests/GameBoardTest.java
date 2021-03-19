@@ -98,7 +98,14 @@ public class GameBoardTest {
     @DisplayName("Test identifyShip")
     public void testIdentifyShip(){
         gb1.placeShip(myPoints);
-        assertEquals(gb1.identifyShip(myPoints.get(0)).getShipName(), "minesweeper","minesweeper is at this location");
+        assertEquals((gb1.identifyShip(myPoints.get(0))), 0,"minesweeper is at this location");
+    }
+
+    @Test
+    @DisplayName("Test identifyShip (Not Found)")
+    public void testIdentifyShip2(){
+        gb1.placeShip(myPoints);
+        assertEquals(gb1.identifyShip(new Point(5,5)), -1,"there is no ship there");
     }
 
 }
