@@ -1,32 +1,44 @@
 package edu.colorado.applepear.tests;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
-import edu.colorado.applepear.classes.CaptainsQuarters;
+import edu.colorado.applepear.classes.GameBoard;
 import edu.colorado.applepear.classes.Point;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.*;
+
 public class CaptainsQuartersTest {
-    CaptainsQuarters capQ;
-    Point newPoint;
+
+    GameBoard gb1;
+    Point m1, m2;
+    List<Point> myPoints;
 
     @BeforeEach
     public void setCapQ() throws Exception{
         System.out.println("Before Each Test");
-        newPoint = new Point(0, 0);
-        capQ = new CaptainsQuarters(1, newPoint);
+        gb1 = new GameBoard();
+        myPoints = new ArrayList<Point>();
+        m1 = new Point(0, 0);
+        m2 = new Point(0,1 );
+        myPoints.add(m1);
+        myPoints.add(m2);
+        gb1.placeShip(myPoints);
+        gb1.getShips().get(0).setCaptainsQuarters();
     }
 
     @Test
-    @DisplayName("Setting the Captain's Quarters")
-    public void testCapQ(){
-        System.out.println("Testing setting the Captain's Quarters for the minesweeper ship");
-        assertEquals(1, capQ.getHealth(), "GetHealth should return the valid health");
-        assertEquals(0, capQ.getLocation().getX(), "GetLocation for the x-coordinate should return the valid x-coordinate");
-        assertEquals(0, capQ.getLocation().getY(), "GetLocation for the y-coordinate should return the valid y-coordinate");
-        assertEquals("minesweeper", capQ.getShipName(), "GetShipName should return the valid ship name");
-
+    @DisplayName("Testing settingCaptainsQuarters")
+    public void testCapQ() {
+        assertAll("Should appropriately set the captain's quarters",
+                () -> assertEquals(gb1.getShips().get(0).getCaptainsQuarters().getHealth(), 1,
+                        "Should return 1 - the health of a minesweeper's captain's quarters"),
+                () -> assertEquals(gb1.getShips().get(0).getCaptainsQuarters().getLocation().getX(), 0,
+                        "Should return 0 - the location is (0,0)"),
+                () -> assertEquals(gb1.getShips().get(0).getCaptainsQuarters().getLocation().getY(), 0,
+                        "Should return 0 - the location is (0,0)"));
     }
 }

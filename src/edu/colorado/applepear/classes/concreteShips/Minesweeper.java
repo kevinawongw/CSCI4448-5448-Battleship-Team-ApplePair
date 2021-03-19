@@ -49,6 +49,11 @@ public class Minesweeper implements Ship {
     }
 
     @Override
+    public CaptainsQuarters getCaptainsQuarters() {
+        return ct;
+    }
+
+    @Override
     public void setShipName() {
         shipName = "minesweeper";
     }

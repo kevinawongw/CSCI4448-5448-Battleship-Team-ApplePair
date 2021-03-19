@@ -1,10 +1,8 @@
 package edu.colorado.applepear.classes.concreteShips;
 
 import edu.colorado.applepear.classes.CaptainsQuarters;
-import edu.colorado.applepear.classes.GameBoard;
 import edu.colorado.applepear.classes.Point;
 import edu.colorado.applepear.classes.Ship;
-import org.junit.jupiter.api.DisplayName;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -45,6 +43,11 @@ public class Submarine implements Ship {
 
     @Override
     public boolean getUnderwater() { return underwater; }
+
+    @Override
+    public CaptainsQuarters getCaptainsQuarters() {
+        return null;
+    }
 
     @Override
     public void setShipName() {

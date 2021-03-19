@@ -50,6 +50,11 @@ public class LShip implements Ship {
     }
 
     @Override
+    public CaptainsQuarters getCaptainsQuarters() {
+        return null;
+    }
+
+    @Override
     public void setShipName() {
         shipName = "lship";
     }

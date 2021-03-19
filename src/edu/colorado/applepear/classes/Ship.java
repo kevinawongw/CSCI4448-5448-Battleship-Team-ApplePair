@@ -1,6 +1,5 @@
 package edu.colorado.applepear.classes;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public interface Ship {
@@ -9,6 +8,7 @@ public interface Ship {
     int getShipHealth();
     List<Point> getLocation();
     boolean getUnderwater();
+    CaptainsQuarters getCaptainsQuarters();
 
     void setShipName();
     void setShipHealth(int newHealth);
