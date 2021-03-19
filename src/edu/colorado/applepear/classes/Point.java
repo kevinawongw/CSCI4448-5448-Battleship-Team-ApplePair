@@ -2,8 +2,8 @@ package edu.colorado.applepear.classes;
 
 //Created a Point class for getting location of ship in Ship class
 public class Point {
-    private int x;
-    private int y;
+    private final int x;
+    private final int y;
 
     public Point(int x, int y){
         this.x = x;

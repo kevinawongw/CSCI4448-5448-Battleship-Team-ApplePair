@@ -22,11 +22,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ecce50e7-60f1-4088-9580-0bcf29b1574e" name="Default Changelist" comment="Captain's Quarters">
+    <list default="true" id="ecce50e7-60f1-4088-9580-0bcf29b1574e" name="Default Changelist" comment="comment">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/concreteShips/LShip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/concreteShips/LShip.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/concreteShips/Minesweeper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/concreteShips/Minesweeper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/CaptainsQuarters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/CaptainsQuarters.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/GameBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/GameBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/Point.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/concreteShips/Tower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/concreteShips/Tower.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -419,7 +421,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616123767854</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="comment">
+      <created>1616123886227</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1616123886227</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -459,7 +468,8 @@
     <MESSAGE value="Test and code updates" />
     <MESSAGE value="Underwater map added, submarines added, tests 100% Coverage" />
     <MESSAGE value="Captain's Quarters" />
-    <option name="LAST_COMMIT_MESSAGE" value="Captain's Quarters" />
+    <MESSAGE value="comment" />
+    <option name="LAST_COMMIT_MESSAGE" value="comment" />
   </component>
   <component name="WindowStateProjectService">
     <state x="94" y="94" width="1349" height="677" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1616094977395">
@@ -482,22 +492,22 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.864@0.0.1536.864" timestamp="1616030084645" />
-    <state width="1493" height="294" key="GridCell.Tab.0.bottom" timestamp="1616123728159">
+    <state width="1493" height="294" key="GridCell.Tab.0.bottom" timestamp="1616123903793">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="294" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1616123728159" />
-    <state width="1493" height="294" key="GridCell.Tab.0.center" timestamp="1616123728159">
+    <state width="1493" height="294" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1616123903793" />
+    <state width="1493" height="294" key="GridCell.Tab.0.center" timestamp="1616123903793">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="294" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1616123728159" />
-    <state width="1493" height="294" key="GridCell.Tab.0.left" timestamp="1616123728159">
+    <state width="1493" height="294" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1616123903793" />
+    <state width="1493" height="294" key="GridCell.Tab.0.left" timestamp="1616123903793">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="294" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1616123728159" />
-    <state width="1493" height="294" key="GridCell.Tab.0.right" timestamp="1616123728159">
+    <state width="1493" height="294" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1616123903793" />
+    <state width="1493" height="294" key="GridCell.Tab.0.right" timestamp="1616123903793">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="294" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1616123728159" />
+    <state width="1493" height="294" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1616123903793" />
     <state width="1493" height="297" key="GridCell.Tab.1.bottom" timestamp="1616122397124">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -514,10 +524,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1493" height="297" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1616122397124" />
-    <state x="0" y="166" key="Vcs.Push.Dialog.v2" timestamp="1616123773061">
+    <state x="0" y="166" key="Vcs.Push.Dialog.v2" timestamp="1616123888310">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="0" y="166" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1616123773061" />
+    <state x="0" y="166" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1616123888310" />
     <state x="768" y="0" width="774" height="870" key="dock-window-1" timestamp="1616043255886">
       <screen x="0" y="0" width="1536" height="864" />
     </state>

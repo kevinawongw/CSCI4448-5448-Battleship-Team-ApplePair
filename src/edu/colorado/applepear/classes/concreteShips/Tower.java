@@ -1,10 +1,8 @@
 package edu.colorado.applepear.classes.concreteShips;
 
 import edu.colorado.applepear.classes.CaptainsQuarters;
-import edu.colorado.applepear.classes.GameBoard;
 import edu.colorado.applepear.classes.Point;
 import edu.colorado.applepear.classes.Ship;
-import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -80,12 +78,7 @@ public class Tower implements Ship {
 
     @Override
     public Boolean isShipSunken() {
-        if (location.size() == 0){
-            return true;
-        }
-        else{
-            return false;
-        }
+        return location.size() == 0;
     }
 
     @Override

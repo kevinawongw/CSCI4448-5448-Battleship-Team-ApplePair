@@ -8,7 +8,7 @@ import java.util.List;
 public class Player{
     // player class will hold the following
     private String name;
-    private int sonarPulse, plusMissile, numShips;
+    private int sonarPulse, plusMissile;
     private final GameBoard gb;
     private Boolean hasSunkenShip;
 

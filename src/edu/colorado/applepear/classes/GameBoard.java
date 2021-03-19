@@ -187,7 +187,7 @@ public class GameBoard {
 
     public void updateShipMap() {
         for (Ship ship : ships) {
-            if (ship.getUnderwater() == false) {
+            if (!ship.getUnderwater()) {
                 for (Point point : ship.getLocation()) {
                     setShipMap(point, 1);
                 }
@@ -197,7 +197,7 @@ public class GameBoard {
 
     public void updateUnderwaterMap() {
         for (Ship ship : ships) {
-            if (ship.getUnderwater() == true) {
+            if (ship.getUnderwater()) {
                 for (Point point : ship.getLocation()) {
                     setUnderwaterMap(point, 1);
                 }
@@ -258,15 +258,11 @@ public class GameBoard {
     }
 
 
-    public boolean updateAttackMap(GameBoard oppMap, Point p1) {
+    public void updateAttackMap(GameBoard oppMap, Point p1) {
         if (oppMap.getShipMap()[p1.getY()][p1.getX()] == 1) {
             setAttackMap(p1,2);
-            return true;
         } else if (oppMap.getShipMap()[p1.getY()][p1.getX()] == 0) {
             setAttackMap(p1,1);
-            return false;
-        } else {
-            return false;
         }
     }
 

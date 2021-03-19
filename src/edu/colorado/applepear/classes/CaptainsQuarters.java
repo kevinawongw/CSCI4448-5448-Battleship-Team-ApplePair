@@ -30,7 +30,6 @@ public class CaptainsQuarters {
 
     /**
      * Parameters: new health to be set
-     * @return none
      * This is the setter method for the attribute health.
      */
     public void setHealth(int health){
@@ -39,7 +38,6 @@ public class CaptainsQuarters {
 
     /**
      * Parameters: new location to be set
-     * @return none
      * This is the setter method for the attribute location.
      */
     public void setLocation(Point location){
