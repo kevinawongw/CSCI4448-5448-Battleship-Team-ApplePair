@@ -29,10 +29,10 @@ public class GameBoard {
      *     // 1 - Present
      */
 
-    private int[][] attackMap;
-    private int[][] shipMap;
-    private int[][] underwaterMap;
-    private int[][] underwaterAttackMap;
+    private final int[][] attackMap;
+    private final int[][] shipMap;
+    private final int[][] underwaterMap;
+    private final int[][] underwaterAttackMap;
 
 
     /**

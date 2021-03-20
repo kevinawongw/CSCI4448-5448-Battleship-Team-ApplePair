@@ -106,7 +106,7 @@ public class Main {
                          //vienna: added switch case to determine what weapon to use
                          case 1:
                              Boolean hitOrMiss = curPlayer.getGb().updateAttackMap(opponentPlayer.getGb(), attackPoint);
-                             p1.getGb().viewMap();
+                             p1.getGb().viewAttackMap();
                              if (hitOrMiss) {
                                  System.out.println("You Hit an Opponent's Ship! Nice Shot!");
                              } else {
@@ -145,7 +145,7 @@ public class Main {
 
                          case 3:
                              curPlayer.usePlusMissile(p2Map,attackPoint);
-                             curPlayer.getGb().viewMap();
+                             curPlayer.getGb().viewAttackMap();
                              // Update maps and turns
 
                              if (curPlayer.equals(p1)) {
@@ -164,7 +164,7 @@ public class Main {
 
                  case "2":
                      System.out.println("Player Map");
-                     curPlayer.getGb().viewMap();
+                     curPlayer.getGb().viewAttackMap();
                      break;
                  case "3":
                      System.out.println("\n\n +-----" + curPlayer.getName() + "'s Inventory -----+\n");
