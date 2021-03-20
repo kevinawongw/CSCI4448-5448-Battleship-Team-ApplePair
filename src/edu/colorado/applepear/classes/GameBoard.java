@@ -309,12 +309,15 @@ public class GameBoard {
      *      // Update map to a 2 if it attacked a ship
      *      // Update map to 1 otherwise
      */
-    public void updateAttackMap(GameBoard oppMap, Point p1) {
+    public boolean updateAttackMap(GameBoard oppMap, Point p1) {
         if (oppMap.getShipMap()[p1.getY()][p1.getX()] == 1) {
             setAttackMap(p1,2);
+            return true;
         } else if (oppMap.getShipMap()[p1.getY()][p1.getX()] == 0) {
             setAttackMap(p1,1);
+            return false;
         }
+        return false;
     }
 
     /**

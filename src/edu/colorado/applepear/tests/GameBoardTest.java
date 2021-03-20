@@ -21,12 +21,15 @@ public class GameBoardTest {
     GameBoard gb1 = new GameBoard();
     GameBoard gb2 = new GameBoard();
     Point m1, m2;
+    List <Point> myPoints;
 
     @BeforeEach
     public void setUp() throws Exception {
         System.out.println("Before Each Test");
         GameBoard gb1 = new GameBoard();
         GameBoard gb2 = new GameBoard();
+        myPoints.add(m1);
+        myPoints.add(m2);
     }
 
     // Place Ship
@@ -40,7 +43,7 @@ public class GameBoardTest {
         myPoints.add(m2);
         gb1.placeShip(myPoints);
         System.out.println("Testing Minesweeper Placement");
-        assertEquals(1, gb1.getShipMap()[m1.y][m1.x] & gb1.getShipMap()[m2.y][m2.x], "Should correctly place minesweeper on map");
+        assertEquals(1, gb1.getShipMap()[m1.getY()][m1.getX()] & gb1.getShipMap()[m2.getY()][m2.getX()], "Should correctly place minesweeper on map");
     }
 
     @Test
