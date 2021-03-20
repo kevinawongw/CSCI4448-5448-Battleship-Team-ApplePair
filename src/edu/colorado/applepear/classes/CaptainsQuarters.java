@@ -4,7 +4,6 @@ public class CaptainsQuarters {
     private int health;
     private Point location;
 
-    //Constructor
     public CaptainsQuarters(int health, Point location){
         this.health = health;
         this.location = location;

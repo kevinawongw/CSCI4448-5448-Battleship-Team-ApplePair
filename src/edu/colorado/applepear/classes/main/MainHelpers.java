@@ -2,7 +2,6 @@ package edu.colorado.applepear.classes.main;
 import edu.colorado.applepear.classes.Player;
 import edu.colorado.applepear.classes.Point;
 
-import java.sql.Array;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -10,12 +9,9 @@ import java.util.Scanner;
 public class MainHelpers {
 
     /**
-    // Helper Function - displayMenu - Kevina
-    // @Param: None
-    // @Return: None
-    // Prints Menu for Main
+     * Helper Function - displayMenu - Kevina
+     * Prints Menu for Main
      */
-
     public static void displayMenu() {
         System.out.println("\n\n ========== Battleship Menu ========== \n");
         System.out.println("Please pick a menu option");
@@ -29,12 +25,9 @@ public class MainHelpers {
     }
 
     /**
-     // Helper Function - printInstructions - Kevina
-     // @Param: None
-     // @Return: None
-     // Prints Instructions for View
+     * Helper Function - printInstructions - Kevina
+     * Prints Instructions for View
      */
-
     public static void printInstructions() {
         System.out.println("\n\n ========== Battleship Instructions ========== \n");
         System.out.println("[Goal] : Select Coordinates to take out your opponent's ships!");
@@ -53,6 +46,13 @@ public class MainHelpers {
      // Make list of names.
      */
 
+    /**
+     * Helper Function - collectNames - Kevina
+     * @return names
+     *      // Prints prompts for name inputs
+     *      // Takes in user input
+     *      // Make and return list of names
+     */
     public static List<String> collectNames() {
         List<String> names = new ArrayList<>();
         Scanner myInput = new Scanner(System.in);
@@ -67,15 +67,12 @@ public class MainHelpers {
     }
 
     /**
-     // Helper Function - collectAttackPoint - Kevina
-     // @Param: None
-     // @Return: Point attackPoint
-     // Prints prompt statements for inputting attack points
-     // Takes in user input for x-coord and y-coord
-     // Makes Point
-     // Returns Point
+     * Helper Function - collectAttackPoint - Kevina
+     * @return attackPoint
+     *      // Prints prompt statements for inputting attack points
+     *      // Takes in user input for x-coord and y-coord
+     *      // Makes and returns Point
      */
-
     public static Point collectAttackPoint(){
         Scanner myInput = new Scanner(System.in);
 
@@ -84,20 +81,17 @@ public class MainHelpers {
         int myX = Integer.parseInt(myInput.nextLine());
         System.out.println("What is the Y coordinate for the space you want to attack?");
         int myY = Integer.parseInt(myInput.nextLine());
-        Point attackPoint = new Point(myX, myY);
 
-        return attackPoint;
+        return new Point(myX, myY);
     }
 
     /**
-     // Helper Function - collectMissileInput - Kevina
-     // @Param: None
-     // @Return: Int choice
-     // Prints prompt statements for missile picks
-     // Takes in user input item pick
-     // Makes Int
+     * Helper Function - collectMissileInput - Kevina
+     * @return choice
+     *      // Prints prompt statements for missile picks
+     *      // Takes in user input item pick
+     *      // Makes Int
      */
-
     public static int collectMissileInput(){
         Scanner myInput = new Scanner(System.in);
 
@@ -106,16 +100,24 @@ public class MainHelpers {
         System.out.println("1. Regular Missile");
         System.out.println("2. Sonar Pulse  Missile");
         System.out.println("3. Plus Missile");
-        int choice = Integer.parseInt(myInput.nextLine());
 
-        return choice;
+        return Integer.parseInt(myInput.nextLine());
     }
 
+    /**
+     * Helper Function - collectAttackPoint - Kevina
+     * @param curPlayer
+     * Print Player's Turn
+     */
     public static void displayPlayerTurn(Player curPlayer) {
         System.out.println("\n\n+--- It is " + curPlayer.getName() + "'s turn ---+");
     }
 
-
+    /**
+     * Helper Function - collectAttackPoint - Kevina
+     * @param curPlayer
+     * Prints Player's inventory
+     */
     public static void printInventory(Player curPlayer) {
         System.out.println("\n\n +-----" + curPlayer.getName() + "'s Inventory -----+\n");
         System.out.println("Number of Radar Missiles: " + curPlayer.getSonarPulse());
@@ -128,9 +130,13 @@ public class MainHelpers {
         }
     }
 
+    /**
+     * Helper Function - collectAttackPoint - Kevina
+     * @param opponentPlayer
+     * @param index
+     * Prints Sunken Ship Message
+     */
     public static void printSinkMessage(Player opponentPlayer, int index){
         System.out.println("Nice! You sunk the opponent's " + opponentPlayer.getGb().getShips().get(index).getShipName());
     }
-
-
 }

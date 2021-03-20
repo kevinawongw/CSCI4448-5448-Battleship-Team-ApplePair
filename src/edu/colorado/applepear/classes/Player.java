@@ -134,7 +134,7 @@ This function scans the 8 blocks around a point for the presence of a ship.
             else{
                 System.out.println(count +" spot(s) detected something... \n");
             }
-            getGb().viewMap();
+            getGb().viewAttackMap();
             return myReturn;
 
         }

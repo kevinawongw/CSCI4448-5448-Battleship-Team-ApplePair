@@ -3,125 +3,102 @@ import edu.colorado.applepear.classes.concreteShips.*;
 
 import java.util.*;
 
-// Kevina did this section
-
-
+// Kevina's Section
 public class GameBoard {
 
-    // Helpful Variables
+    /**
+     * Data Variables:
+     * int numX = holds the width of the game board
+     * int numY = holds the height of the game board
+     */
     public static final int numX = 10;
     public static final int numY = 10;
     private List<Ship> ships;
 
-    // Initializing Maps:
+    /**
+     * Map Attributes:
+     * Attack Map: Map reflects what coordinates have been attacked as well as the results of those attacks
+     *     // 0 - unchecked
+     *     // 1 - checked, no ship
+     *     // 2 - checked, ship found
+     * Ship Map: Reflects that player's own ships
+     *     // 0 - Not Present
+     *     // 1 - Present
+     * Underwater Map: Reflects that player's own submarines
+     *     // 0 - Not Present
+     *     // 1 - Present
+     */
 
-    // Attack Map: Map reflects what coordinates have been attacked as well as the results of those attacks
-    // Note from Kevina: For now, I'm going to make the map 0,1,2 for y/n ship. We can change to string if easier :)
-    // 0 - unchecked
-    // 1 - checked, no ship
-    // 2 - checked, ship found
     private int[][] attackMap;
-
-
-    // Ship Map: Reflects that player's own ships
-    // 0 - Not Present
-    // 1 - Present
     private int[][] shipMap;
-
-    // Underwater Map: Reflects that player's own submarines
-    // 0 - Not Present
-    // 1 - Present
     private int[][] underwaterMap;
 
-    // Constructor
+    /**
+     * Constructor
+     */
     public GameBoard() {
         shipMap = new int[numY][numX];
         attackMap = new int[numY][numX];
         underwaterMap = new int[numY][numX];
-        ships = new ArrayList<Ship>();
+        ships = new ArrayList<>();
     }
 
-    // Getters
-    public int[][] getShipMap() {
-        return shipMap;
-    }
-
-    public int[][] getAttackMap() {
-        return attackMap;
-    }
-
+    /**
+     * Getters
+     */
+    public int[][] getShipMap() { return shipMap; }
+    public int[][] getAttackMap() { return attackMap; }
     public int[][] getUnderwaterMap() { return underwaterMap; }
+    public List<Ship> getShips() { return ships; }
 
-    public List<Ship> getShips() {
-        return ships;
-    }
+    /**
+     * Setter - shipMap, attackMap, underwaterMap
+     * @param point - Coordinate in which the new value is placed
+     * @param newValue - New Value
+     */
+    public void setShipMap(Point point, int newValue){ shipMap[point.getY()][point.getX()] = newValue; }
+    public void setAttackMap(Point point, int newValue){ attackMap[point.getY()][point.getX()] = newValue; }
+    public void setUnderwaterMap(Point point, int newValue){ underwaterMap[point.getY()][point.getX()] = newValue; }
 
-    // Setters
-    public void setShipMap(Point p, int value){
-        shipMap[p.getY()][p.getX()] = value;
-    }
-
-    public void setAttackMap(Point p, int value){
-        attackMap[p.getY()][p.getX()] = value;
-    }
-
-    public void setUnderwaterMap(Point p, int value){
-        underwaterMap[p.getY()][p.getX()] = value;
-    }
-
-    // Function 2: View Map
-    // Param: None
-    // Returns: None
-    // Prints Map with 0s, Ms, and Hs - representing "Miss" and "Hit"
-    public void viewMap() {
+    /**
+     * View Attack Map
+     * Prints Map with 0s, Ms, and Hs - representing "Miss" and "Hit"
+     */
+    public void viewAttackMap() {
         System.out.print("----- Attack Map -----\n\n");
 
         for (int i = 0; i < numX; i++) {
+
             System.out.print("  ");
 
             for (int a = 0; a < 10; a++) {
-                if (i == 0) {
-                    System.out.print("+—" + a + "—");
-                } else {
-                    System.out.print("+———");
-                }
+                if (i == 0) { System.out.print("+—" + a + "—"); }
+                else { System.out.print("+———"); }
             }
+
             System.out.print("+");
             System.out.print("\n");
             System.out.print(i + " | ");
 
             for (int j = 0; j < numY; j++) {
-                if (attackMap[i][j] == 1) {
-                    System.out.print("M" + " | ");
-
-                } else if (attackMap[i][j] == 2) {
-                    System.out.print("H" + " | ");
-
-                } else if (attackMap[i][j] == 3) {
-                    System.out.print("*" + " | ");
-
-                } else if (attackMap[i][j] == 4) {
-                    System.out.print(" " + " | ");
-
-                } else {
-                    System.out.print(attackMap[i][j] + " | ");
-                }
+                if (attackMap[i][j] == 1) { System.out.print("M" + " | "); }
+                else if (attackMap[i][j] == 2) { System.out.print("H" + " | "); }
+                else if (attackMap[i][j] == 3) { System.out.print("*" + " | "); }
+                else if (attackMap[i][j] == 4) { System.out.print(" " + " | "); }
+                else { System.out.print(attackMap[i][j] + " | "); }
             }
             System.out.print("\n");
         }
         System.out.print("  ");
-        for (int a = 0; a < 10; a++) {
-            System.out.print("+———");
-        }
+        for (int a = 0; a < 10; a++) { System.out.print("+———"); }
         System.out.print("+\n\n");
     }
 
-
-    // Function 3: View Ship Map
-    // Param: None
-    // Returns: None
-    // Prints Map with 0s, 1s
-    // Prints where that player's ships are located
+    /**
+     * View Ship Map
+     * Prints Map with 0s, 1s
+     * Prints where that player's ships are located
+     */
     public void viewShips() {
         System.out.print("----- My Ship Map -----\n\n");
 
@@ -129,63 +106,60 @@ public class GameBoard {
             System.out.print("  ");
 
             for (int a = 0; a < 10; a++) {
-                if (i == 0) {
-                    System.out.print("+—" + a + "—");
-                } else {
-                    System.out.print("+———");
-                }
+                if (i == 0) { System.out.print("+—" + a + "—"); }
+                else { System.out.print("+———"); }
             }
+
             System.out.print("+");
             System.out.print("\n");
             System.out.print(i + " | ");
 
-            for (int j = 0; j < numY; j++) {
-                System.out.print(shipMap[i][j] + " | ");
-            }
+            for (int j = 0; j < numY; j++) { System.out.print(shipMap[i][j] + " | "); }
             System.out.print("\n");
         }
+
         System.out.print("  ");
-        for (int a = 0; a < 10; a++) {
-            System.out.print("+———");
-        }
+        for (int a = 0; a < 10; a++) { System.out.print("+———"); }
         System.out.print("+\n\n");
     }
 
-    // Function 3: View Ship Map
-    // Param: None
-    // Returns: None
-    // Prints Map with 0s, 1s
-    // Prints where that player's ships are located
+    /**
+     * View Underwater Map
+     * Prints Map with 0s, 1s
+     * Prints where that player's ships are located
+     */
+
     public void viewUnderwater() {
+
         System.out.print("----- My Underwater Map -----\n\n");
 
         for (int i = 0; i < numX; i++) {
             System.out.print("  ");
 
             for (int a = 0; a < 10; a++) {
-                if (i == 0) {
-                    System.out.print("+—" + a + "—");
-                } else {
-                    System.out.print("+———");
-                }
+                if (i == 0) { System.out.print("+—" + a + "—"); }
+                else { System.out.print("+———"); }
             }
             System.out.print("+");
             System.out.print("\n");
             System.out.print(i + " | ");
 
-            for (int j = 0; j < numY; j++) {
-                System.out.print(underwaterMap[i][j] + " | ");
-            }
+            for (int j = 0; j < numY; j++) { System.out.print(underwaterMap[i][j] + " | "); }
             System.out.print("\n");
         }
+
         System.out.print("  ");
-        for (int a = 0; a < 10; a++) {
-            System.out.print("+———");
-        }
+        for (int a = 0; a < 10; a++) { System.out.print("+———"); }
         System.out.print("+\n\n");
     }
 
+
+    /**
+     * Update Ship Map
+     * Updates the Ship Map when a ship is placed.
+     */
     public void updateShipMap() {
+
         for (Ship ship : ships) {
             if (!ship.getUnderwater()) {
                 for (Point point : ship.getLocation()) {
@@ -195,6 +169,10 @@ public class GameBoard {
         }
     }
 
+    /**
+     * Update Underwater Map
+     * Updates the Underwater Map when a submarine is placed.
+     */
     public void updateUnderwaterMap() {
         for (Ship ship : ships) {
             if (ship.getUnderwater()) {
@@ -205,6 +183,10 @@ public class GameBoard {
         }
     }
 
+    /**
+     * Populate Ship Map
+     * Adds new ships to the map.
+     */
     public void populateShipMap() {
         Minesweeper minesweeper = new Minesweeper();
         List<Point> minesweeperCoords = minesweeper.input(shipMap);
@@ -215,6 +197,13 @@ public class GameBoard {
         // Currently Minesweeper only - Kevina
     }
 
+    /**
+     * Place Ship
+     * @param loc
+     *      // Determine what type of ship it is
+     *      // Instantiate concrete instance of the ship object
+     *      // Add to the appropriate map (Ship or Underwater)
+     */
     public void placeShip(List<Point> loc){
         if (loc.size() == 2){
             Minesweeper minesweeper = new Minesweeper();
@@ -257,7 +246,14 @@ public class GameBoard {
         updateUnderwaterMap();
     }
 
-
+    /**
+     * Update Attack Map
+     * @param oppMap - Opponent's Ship Map
+     * @param p1 - Point Attacked
+     *      // Checks if the attacked location hit a ship or not
+     *      // Update map to a 2 if it attacked a ship
+     *      // Update map to 1 otherwise
+     */
     public void updateAttackMap(GameBoard oppMap, Point p1) {
         if (oppMap.getShipMap()[p1.getY()][p1.getX()] == 1) {
             setAttackMap(p1,2);
@@ -266,12 +262,19 @@ public class GameBoard {
         }
     }
 
+    /**
+     * Identify Ship
+     * @param point - Identify ship occupying this point
+     * @return index
+     *      // Iterate through each ship's location points until point is found
+     *      // Return index of that ship
+     */
     public Integer identifyShip(Point point){
         int index = 0;
         boolean found = false;
         for (Ship ship: ships){
             for (Point p : ship.getLocation()){
-                if (p.getX() == point.getX() && p.getY() == point.getY() && ship.getUnderwater() == false){
+                if (p.getX() == point.getX() && p.getY() == point.getY() && !ship.getUnderwater()){
                     found = true;
                     return index;
                 }

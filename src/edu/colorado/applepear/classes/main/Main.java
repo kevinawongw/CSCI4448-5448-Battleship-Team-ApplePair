@@ -66,7 +66,7 @@ public class Main {
                          case 1:
                              Boolean attackHitOrMiss = myGame.hitOrMiss(attackPoint, curPlayer, opponentPlayer);
                              curPlayer.getGb().updateAttackMap(opponentPlayer.getGb(), attackPoint);
-                             curPlayer.getGb().viewMap();
+                             curPlayer.getGb().viewAttackMap();
 
                              if (attackHitOrMiss) {
 
@@ -139,7 +139,7 @@ public class Main {
 
                  case "3":
                      System.out.println("Player Map");
-                     curPlayer.getGb().viewMap();
+                     curPlayer.getGb().viewAttackMap();
                      break;
                  case "4":
                      MainHelpers.printInventory(curPlayer);

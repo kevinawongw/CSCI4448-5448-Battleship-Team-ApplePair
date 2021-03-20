@@ -2,6 +2,7 @@ package edu.colorado.applepear.classes;
 
 import java.util.List;
 
+// Kevina - Rearranged ship class and relationships, made ship interface
 public interface Ship {
 
     String getShipName();
