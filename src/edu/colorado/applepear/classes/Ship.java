@@ -19,5 +19,4 @@ public interface Ship {
     Boolean isShipSunken();
     void updateHealth(Point location);
     List<Point> input(int[][] shipMap);
-
 }

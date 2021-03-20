@@ -5,15 +5,22 @@ import java.util.List;
 
 
 //Vienna part: player class
+
 public class Player{
-    // player class will hold the following
+
+    /**
+     * Class Attributes
+     */
     private String name;
     private int sonarPulse, plusMissile;
     private final GameBoard gb;
     private Boolean hasSunkenShip;
 
 
-    //constructor
+    /**
+     * Constructor
+     * @param gb - GameBoard
+     */
     public Player(GameBoard gb){
         this.sonarPulse = 2;
         this.plusMissile = 3;
@@ -21,39 +28,40 @@ public class Player{
         this.hasSunkenShip = false ;
     }
 
-    //setters
-    public void setName(String name) {
-        this.name = name;
-    }
+    /**
+     * Setters
+     */
+    public void setName(String name) { this.name = name; }
+    public void setPlusMissile(int plusMissile) { this.plusMissile = plusMissile; }
+    public void setSonarPulse(int sonarPulse) { this.sonarPulse = sonarPulse; }
 
-    public void setPlusMissile(int plusMissile) {
-        this.plusMissile = plusMissile;
-    }
-
-    public void setSonarPulse(int sonarPulse) {
-        this.sonarPulse = sonarPulse;
-    }
-
-    //getters
+    /**
+     * Getters
+     */
     public String getName(){ return name; }
-
     public int getSonarPulse() { return sonarPulse; }
-
     public int getPlusMissile() { return plusMissile; }
-
     public GameBoard getGb() { return gb; }
-
     public boolean getHasSunkenShip(){return hasSunkenShip;}
+
+    /**
+     * Update Sunken Ship
+     * @param trueOrFalse
+     * Updates to see if a player has sunken a ship or not.
+     */
     public void updateSunkShip(Boolean trueOrFalse){
         this.hasSunkenShip = trueOrFalse;
     }
 
-/**
-Parameters: the opponent's board as GameBoard type, the point to check as Point type
-Returns: whether there are ships nearby as a boolean
-This function scans the 8 blocks around a point for the presence of a ship. 
-**/
-
+    /**
+     *
+     * @param opponentBoard - Opponent's Board
+     * @param P - Point
+     * @return boolean for whether or not a ship was detected in the sonar pulse.
+     *      // Scan the 8 blocks around a point for the presence of a ship
+     *      // If yes, True
+     *      // If no, False
+     */
     public boolean useSonarPulse( GameBoard opponentBoard, Point P){
         //checks if this player has any radar missiles left
 
@@ -66,7 +74,7 @@ This function scans the 8 blocks around a point for the presence of a ship.
             return false;
         }
         else{
-            //update number of radar missiles for this player
+            // number of radar missiles for this player
             setSonarPulse(getSonarPulse()-1);
             System.out.println("Using radar missile... \n");
             boolean myReturn = false;
@@ -141,11 +149,13 @@ This function scans the 8 blocks around a point for the presence of a ship.
 
     }
 
-/**
-Parameters: the opponent's board as GameBoard type, the point to check as Point type
-Returns: whether an attack was performed as a boolean
-This function attacks the coordinates above, below, left, right of the coordinate entered .
-**/
+    /**
+     *
+     * @param oppBoard - Opponent's Board
+     * @param point - Center of Plus Missile
+     * @return attacked - list of attacked points
+     *      // Attacks the coordinates above, below, to the left, and to the right of entered coordinates.
+     */
     public ArrayList<Point> usePlusMissile(GameBoard oppBoard, Point point){
         //checks if this player has any plus missiles left
         ArrayList<Point> attacked = new ArrayList<>();

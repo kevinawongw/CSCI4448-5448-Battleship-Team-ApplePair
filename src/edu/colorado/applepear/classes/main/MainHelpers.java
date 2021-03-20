@@ -1,6 +1,7 @@
 package edu.colorado.applepear.classes.main;
 import edu.colorado.applepear.classes.Player;
 import edu.colorado.applepear.classes.Point;
+import edu.colorado.applepear.classes.Ship;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -151,4 +152,37 @@ public class MainHelpers {
         System.out.println(curPlayer.getName() + " has no ships remaining!");
         System.out.println("Congratulations " + opponentPlayer.getName() + "!");
     }
+
+    public static void viewAllShips(Player curPlayer) {
+        curPlayer.getGb().viewShips();
+        curPlayer.getGb().viewUnderwater();
+    }
+
+    /**
+     * View All Ships As List
+     * @param curPlayer - Current Player
+     * @return Index of Ship Moved
+     */
+    public static int viewAllShipsAsList(Player curPlayer){
+        Scanner myInput = new Scanner(System.in);
+        System.out.println("Which fleet do you want to move? (Input Number) \n");
+        int i = 1;
+        for (Ship s : curPlayer.getGb().getShips()){
+            System.out.println(i + ". " + s.getShipName());
+            System.out.println("Coordinates: ");
+            for (Point p : s.getLocation()){
+                System.out.println("   (" + p.getX() + "," + p.getY() + ")");
+            }
+        i++;
+        }
+        return Integer.parseInt(myInput.nextLine()) - 1;
+    }
+
+
+//    public static String getMoves(List<String> validMoves) {
+//        int i = 1;
+//        for (String move : validMoves){
+//            System.out.println(i + ". " + move);
+//        }
+//    }
 }

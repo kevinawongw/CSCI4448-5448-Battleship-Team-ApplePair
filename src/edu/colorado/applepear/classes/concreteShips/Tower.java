@@ -31,22 +31,18 @@ public class Tower implements Ship {
     public String getShipName() {
         return shipName;
     }
-
     @Override
     public int getShipHealth() {
         return health;
     }
-
     @Override
     public List<Point> getLocation() {
         return location;
     }
-
     @Override
     public boolean getUnderwater() {
         return false;
     }
-
     @Override
     public CaptainsQuarters getCaptainsQuarters() {
         return null;
