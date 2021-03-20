@@ -228,7 +228,7 @@ public class Player{
         if(!getHasSunkenShip()){
 
             System.out.println("Space Missile is not unlocked \n");
-            return attacked;}
+        }
 
         else{
             int[][] map =  oppBoard.getShipMap();
@@ -246,10 +246,9 @@ public class Player{
             if (attacked.size() == 0){
                 System.out.println("no ship hit...");
             }
-            return attacked;
 
         }
-
+        return attacked;
 
 
     }
