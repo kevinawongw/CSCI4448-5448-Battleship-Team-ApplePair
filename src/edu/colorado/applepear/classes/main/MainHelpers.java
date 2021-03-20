@@ -179,10 +179,15 @@ public class MainHelpers {
     }
 
 
-//    public static String getMoves(List<String> validMoves) {
-//        int i = 1;
-//        for (String move : validMoves){
-//            System.out.println(i + ". " + move);
-//        }
-//    }
+    public static int getMoves(List<String> validMoves) {
+        Scanner myInput = new Scanner(System.in);
+        System.out.println("Which direction do you want to move? (Input Number)");
+        int i = 1;
+        for (String move : validMoves){
+            System.out.println(i + ". " + move);
+            i++;
+        }
+
+        return Integer.parseInt(myInput.nextLine()) - 1;
+    }
 }
