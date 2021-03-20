@@ -22,11 +22,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ecce50e7-60f1-4088-9580-0bcf29b1574e" name="Default Changelist" comment="test">
+    <list default="true" id="ecce50e7-60f1-4088-9580-0bcf29b1574e" name="Default Changelist" comment="moving fleets completed in main">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/GameBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/GameBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/main/MainHelpers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/main/MainHelpers.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -481,7 +479,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616212047003</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="moving fleets completed in main">
+      <created>1616212849183</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1616212849183</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -500,7 +505,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Team ApplePair pair 1: Vienna push - GameTest" />
     <MESSAGE value="Team ApplePair pair 1: Kevina - GameBoard private -&gt; public functions" />
     <MESSAGE value="Team ApplePair pair 1: Kevina - GameBoard getters" />
     <MESSAGE value="Team ApplePair pair 1: Vienna push - Modified Main" />
@@ -525,7 +529,8 @@
     <MESSAGE value="Update Main, Added function to remove ships when sunken" />
     <MESSAGE value="move fleet" />
     <MESSAGE value="test" />
-    <option name="LAST_COMMIT_MESSAGE" value="test" />
+    <MESSAGE value="moving fleets completed in main" />
+    <option name="LAST_COMMIT_MESSAGE" value="moving fleets completed in main" />
   </component>
   <component name="WindowStateProjectService">
     <state x="94" y="94" width="1349" height="677" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1616094977395">
@@ -548,22 +553,22 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.864@0.0.1536.864" timestamp="1616030084645" />
-    <state width="1493" height="114" key="GridCell.Tab.0.bottom" timestamp="1616212739587">
+    <state width="1493" height="104" key="GridCell.Tab.0.bottom" timestamp="1616213295638">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="114" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1616212739587" />
-    <state width="1493" height="114" key="GridCell.Tab.0.center" timestamp="1616212739586">
+    <state width="1493" height="104" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1616213295638" />
+    <state width="1493" height="104" key="GridCell.Tab.0.center" timestamp="1616213295638">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="114" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1616212739586" />
-    <state width="1493" height="114" key="GridCell.Tab.0.left" timestamp="1616212739586">
+    <state width="1493" height="104" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1616213295638" />
+    <state width="1493" height="104" key="GridCell.Tab.0.left" timestamp="1616213295638">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="114" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1616212739586" />
-    <state width="1493" height="114" key="GridCell.Tab.0.right" timestamp="1616212739586">
+    <state width="1493" height="104" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1616213295638" />
+    <state width="1493" height="104" key="GridCell.Tab.0.right" timestamp="1616213295638">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="114" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1616212739586" />
+    <state width="1493" height="104" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1616213295638" />
     <state width="1493" height="389" key="GridCell.Tab.1.bottom" timestamp="1616179049698">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -580,10 +585,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1493" height="389" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1616179049697" />
-    <state x="0" y="166" key="Vcs.Push.Dialog.v2" timestamp="1616212048932">
+    <state x="0" y="166" key="Vcs.Push.Dialog.v2" timestamp="1616212896291">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="0" y="166" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1616212048932" />
+    <state x="0" y="166" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1616212896291" />
     <state x="768" y="0" width="774" height="870" key="dock-window-1" timestamp="1616043255886">
       <screen x="0" y="0" width="1536" height="864" />
     </state>

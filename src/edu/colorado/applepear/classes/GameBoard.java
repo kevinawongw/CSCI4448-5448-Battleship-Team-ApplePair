@@ -32,6 +32,8 @@ public class GameBoard {
     private int[][] attackMap;
     private int[][] shipMap;
     private int[][] underwaterMap;
+    private int[][] underwaterAttackMap;
+
 
     /**
      * Constructor
@@ -40,6 +42,7 @@ public class GameBoard {
         shipMap = new int[numY][numX];
         attackMap = new int[numY][numX];
         underwaterMap = new int[numY][numX];
+        underwaterAttackMap = new int[numY][numX];
         ships = new ArrayList<>();
     }
 
@@ -49,6 +52,7 @@ public class GameBoard {
     public int[][] getShipMap() { return shipMap; }
     public int[][] getAttackMap() { return attackMap; }
     public int[][] getUnderwaterMap() { return underwaterMap; }
+    public int[][] getUnderwaterAttackMap () {return  underwaterAttackMap; }
     public List<Ship> getShips() { return ships; }
 
     /**
@@ -59,6 +63,52 @@ public class GameBoard {
     public void setShipMap(Point point, int newValue){ shipMap[point.getY()][point.getX()] = newValue; }
     public void setAttackMap(Point point, int newValue){ attackMap[point.getY()][point.getX()] = newValue; }
     public void setUnderwaterMap(Point point, int newValue){ underwaterMap[point.getY()][point.getX()] = newValue; }
+    public void setUnderwaterAttackMap(Point point, int newValue) { underwaterAttackMap[point.getY()][point.getX()] = newValue; }
+
+    /**
+     * View Underwater Attack Map
+     * Prints Map with 0s, Ms, and Hs - representing "Miss" and "Hit"
+     */
+    public void viewUnderwaterAttackMap(){
+        System.out.print("----- Underwater Attack Map -----\n\n");
+
+        for (int i = 0; i < numX; i++) {
+
+            System.out.print("  ");
+
+            for (int a = 0; a < 10; a++) {
+                if (i == 0) {
+                    System.out.print("+—" + a + "—");
+                } else {
+                    System.out.print("+———");
+                }
+            }
+
+            System.out.print("+");
+            System.out.print("\n");
+            System.out.print(i + " | ");
+
+            for (int j = 0; j < numY; j++) {
+                if (underwaterAttackMap[i][j] == 1) {
+                    System.out.print("M" + " | ");
+                } else if (underwaterAttackMap[i][j] == 2) {
+                    System.out.print("H" + " | ");
+                } else if (underwaterAttackMap[i][j] == 3) {
+                    System.out.print("*" + " | ");
+                } else if (underwaterAttackMap[i][j] == 4) {
+                    System.out.print(" " + " | ");
+                } else {
+                    System.out.print(underwaterAttackMap[i][j] + " | ");
+                }
+            }
+            System.out.print("\n");
+        }
+        System.out.print("  ");
+        for (int a = 0; a < 10; a++) {
+            System.out.print("+———");
+        }
+        System.out.print("+\n\n");
+    }
 
     /**
      * View Attack Map
@@ -263,6 +313,22 @@ public class GameBoard {
         if (oppMap.getShipMap()[p1.getY()][p1.getX()] == 1) {
             setAttackMap(p1,2);
         } else if (oppMap.getShipMap()[p1.getY()][p1.getX()] == 0) {
+            setAttackMap(p1,1);
+        }
+    }
+
+    /**
+     * Update Underwater Attack Map
+     * @param oppMap - Opponent's Underwater Ship Map
+     * @param p1 - Point Attacked
+     *      // Checks if the attacked location hit a ship or not
+     *      // Update map to a 2 if it attacked a ship
+     *      // Update map to 1 otherwise
+     */
+    public void updateUnderwaterAttackMap(GameBoard oppMap, Point p1) {
+        if (oppMap.getUnderwaterMap()[p1.getY()][p1.getX()] == 1) {
+            setAttackMap(p1,2);
+        } else if (oppMap.getUnderwaterMap()[p1.getY()][p1.getX()] == 0) {
             setAttackMap(p1,1);
         }
     }
