@@ -133,7 +133,11 @@ public class Main {
                      }
                      break;
                  case "2":
-                     System.out.println("Would you like to move a fleet or a submarine?");
+                     int indexOfMovingShip = MainHelpers.viewAllShipsAsList(curPlayer);
+                     List<String> validMoves = curPlayer.getGb().getPossibleMoveLocations(curPlayer.getGb().getShips().get(indexOfMovingShip));
+                     String move = MainHelpers.getMoves(validMoves);
+                     System.out.println(validMoves);
+                     break;
                      // Not Implemented yet
 
                  case "3":
@@ -147,7 +151,7 @@ public class Main {
                      MainHelpers.printInstructions();
                      break;
                  case "6":
-                     curPlayer.getGb().viewShips();
+                     MainHelpers.viewAllShips(curPlayer);
                      break;
                  case "7":
                      run = false;

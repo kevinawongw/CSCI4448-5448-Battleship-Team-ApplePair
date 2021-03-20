@@ -133,7 +133,7 @@ public class Submarine implements Ship {
                 int y4 = Integer.parseInt(inputValY);
                 Point p4 = new Point(x4, y4);
                 int x5 = Integer.parseInt(inputValX) + 2;
-                int y5 = Integer.parseInt(inputValY) + 1;
+                int y5 = Integer.parseInt(inputValY) - 1;
                 Point p5 = new Point(x5, y5);
                 temp = false;
                 return Arrays.asList(p1, p2, p3, p4, p5);
