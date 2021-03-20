@@ -16,27 +16,24 @@ public class MoveEast implements Command{
 
     @Override
     public void execute() {
-        List <String> valid = gb.getPossibleMoveLocations(ship);
         List <Point> newLocations = new ArrayList<>();
-        if(valid.contains("East")){
-            if(!ship.getUnderwater()){
-                for(Point p : ship.getLocation()){
-                    newLocations.add(new Point(p.getX(), p.getY() - 1));
-                    gb.setShipMap(p, 0);
-                }
-                ship.setLocation(newLocations);
-                gb.updateShipMap();
-                gb.viewShips();
+        if(!ship.getUnderwater()){
+            for (Point p : ship.getLocation()) {
+                newLocations.add(new Point(p.getX() + 1, p.getY()));
+                gb.setShipMap(p, 0);
             }
-            else if(ship.getUnderwater()){
-                for (Point p : ship.getLocation()){
-                    newLocations.add(new Point(p.getX(), p.getY()-1));
-                    gb.setUnderwaterMap(p,0);
-                }
-                ship.setLocation(newLocations);
-                gb.updateUnderwaterMap();
-                gb.viewUnderwater();
+            ship.setLocation(newLocations);
+            gb.updateShipMap();
+            gb.viewShips();
+        }
+        else if(ship.getUnderwater()){
+            for (Point p : ship.getLocation()) {
+                newLocations.add(new Point(p.getX() + 1, p.getY()));
+                gb.setShipMap(p, 0);
             }
+            ship.setLocation(newLocations);
+            gb.updateUnderwaterMap();
+            gb.viewUnderwater();
         }
     }
 }

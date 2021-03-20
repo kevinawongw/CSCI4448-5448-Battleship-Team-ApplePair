@@ -24,6 +24,11 @@
   <component name="ChangeListManager">
     <list default="true" id="ecce50e7-60f1-4088-9580-0bcf29b1574e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/commandClasses/MoveEast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/commandClasses/MoveEast.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/commandClasses/MoveNorth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/commandClasses/MoveNorth.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/commandClasses/MoveSouth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/commandClasses/MoveSouth.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/commandClasses/MoveWest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/commandClasses/MoveWest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/main/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/main/MainHelpers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/main/MainHelpers.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

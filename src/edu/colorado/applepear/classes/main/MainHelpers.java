@@ -207,7 +207,7 @@ public class MainHelpers {
         System.out.println("Which direction do you want to move? (Possible input example: North, north, n, or N)");
         int i = 1;
         for (String move : validMoves){
-            System.out.println(i + ". " + move);
+            System.out.println(move);
             i++;
         }
         String input = myInput.nextLine();

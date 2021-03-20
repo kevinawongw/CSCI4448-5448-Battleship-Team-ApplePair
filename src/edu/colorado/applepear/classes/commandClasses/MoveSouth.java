@@ -16,27 +16,25 @@ public class MoveSouth implements Command{
 
     @Override
     public void execute() {
-        List <String> valid = gb.getPossibleMoveLocations(ship);
         List <Point> newLocations = new ArrayList<>();
-        if(valid.contains("South")){
-            if(!ship.getUnderwater()){
-                for(Point p : ship.getLocation()){
-                    newLocations.add(new Point(p.getX(), p.getY() - 1));
-                    gb.setShipMap(p, 0);
-                }
-                ship.setLocation(newLocations);
-                gb.updateShipMap();
-                gb.viewShips();
+        if(!ship.getUnderwater()){
+            for (Point p : ship.getLocation()) {
+                newLocations.add(new Point(p.getX(), p.getY() + 1));
+                gb.setShipMap(p, 0);
             }
-            else if(ship.getUnderwater()){
-                for (Point p : ship.getLocation()){
-                    newLocations.add(new Point(p.getX(), p.getY()-1));
-                    gb.setUnderwaterMap(p,0);
-                }
-                ship.setLocation(newLocations);
-                gb.updateUnderwaterMap();
-                gb.viewUnderwater();
+            ship.setLocation(newLocations);
+            //System.out.println("Hiiiii");
+            gb.updateShipMap();
+            gb.viewShips();
+        }
+        else if(ship.getUnderwater()){
+            for (Point p : ship.getLocation()) {
+                newLocations.add(new Point(p.getX(), p.getY() + 1));
+                gb.setShipMap(p, 0);
             }
+            ship.setLocation(newLocations);
+            gb.updateUnderwaterMap();
+            gb.viewUnderwater();
         }
     }
 }
