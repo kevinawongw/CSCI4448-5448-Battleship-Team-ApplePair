@@ -153,29 +153,41 @@ public class Main {
                      }
                      break;
                  case "2":
-                     int indexOfMovingShip = MainHelpers.viewAllShipsAsList(curPlayer);
-                     List<String> validMoves = curPlayer.getGb().getPossibleMoveLocations(curPlayer.getGb().getShips().get(indexOfMovingShip));
-                     String moveIndex = MainHelpers.getMoves(validMoves);
-//                     curPlayer.getGb().moveShip(curPlayer.getGb().getShips().get(indexOfMovingShip), validMoves.get(moveIndex));
+                     int commandChoice = MainHelpers.collectMoveInput();
+                     switch (commandChoice) {
+                         case 1:
+                             int indexOfMovingShip = MainHelpers.viewAllShipsAsList(curPlayer);
+                             List<String> validMoves = curPlayer.getGb().getPossibleMoveLocations(curPlayer.getGb().getShips().get(indexOfMovingShip));
+                             String moveIndex = MainHelpers.getMoves(validMoves);
+                             MoveNorth mNorth = new MoveNorth(curPlayer.getGb(),curPlayer.getGb().getShips().get(indexOfMovingShip));
+                             MoveSouth mSouth = new MoveSouth(curPlayer.getGb(),curPlayer.getGb().getShips().get(indexOfMovingShip));
+//                             MoveEast mEast = new MoveEast(curPlayer.getGb(),curPlayer.getGb().getShips().get(indexOfMovingShip));
+//                             MoveWest mWest = new MoveWest(curPlayer.getGb(),curPlayer.getGb().getShips().get(indexOfMovingShip));
 
-                     MoveNorth mNorth = new MoveNorth(curPlayer.getGb(),curPlayer.getGb().getShips().get(indexOfMovingShip));
-                     MoveSouth mSouth = new MoveSouth(curPlayer.getGb(),curPlayer.getGb().getShips().get(indexOfMovingShip));
-//                     MoveEast mEast = new MoveEast(curPlayer.getGb(),curPlayer.getGb().getShips().get(indexOfMovingShip));
-//                     MoveWest mWest = new MoveWest(curPlayer.getGb(),curPlayer.getGb().getShips().get(indexOfMovingShip));
-
-                     if(moveIndex.equals("n") || moveIndex.equals("N") || moveIndex.equals("North") || moveIndex.equals("north")){ //north
-                         cd.setCommands(mNorth);
+                             if(moveIndex.equals("n") || moveIndex.equals("N") || moveIndex.equals("North") || moveIndex.equals("north")){ //north
+                                 cd.setCommands(mNorth);
+                             }
+                             else if(moveIndex.equals("s") || moveIndex.equals("S") || moveIndex.equals("South") || moveIndex.equals("south") ){ //south
+                                 cd.setCommands(mSouth);
+                             }
+//                             else if(moveIndex.equals("e") || moveIndex.equals("E") || moveIndex.equals("East") || moveIndex.equals("east") ){ //east
+//                                 cd.setCommands(mEast);
+//                             }
+//                             else if(moveIndex.equals("w") || moveIndex.equals("W") || moveIndex.equals("West") || moveIndex.equals("west") ){ //west
+//                                 cd.setCommands(mWest);
+//                             }
+                             break;
+                         case 2:
+                             cd.redo();
+                             break;
+                         case 3:
+                             cd.undo();
+                             break;
+                         case 4:
+                             cd.undoAll();
+                             System.out.println("You have undo all of your moves.");
+                             break;
                      }
-                     else if(moveIndex.equals("s") || moveIndex.equals("S") || moveIndex.equals("South") || moveIndex.equals("south") ){ //south
-                         cd.setCommands(mSouth);
-                     }
-//                     else if(moveIndex.equals("e") || moveIndex.equals("E") || moveIndex.equals("East") || moveIndex.equals("east") ){ //east
-//                         cd.setCommands(mEast);
-//                     }
-//                     else if(moveIndex.equals("w") || moveIndex.equals("W") || moveIndex.equals("West") || moveIndex.equals("west") ){ //west
-//                         cd.setCommands(mWest);
-//                     }
-
 
                      if (curPlayer.equals(p1)) {
                          curPlayer = p2;

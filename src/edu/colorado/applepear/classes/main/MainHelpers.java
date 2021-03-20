@@ -17,7 +17,7 @@ public class MainHelpers {
         System.out.println("\n\n ========== Battleship Menu ========== \n");
         System.out.println("Please pick a menu option");
         System.out.println("1. Choose Coordinates to attack");
-        System.out.println("2. Move a Ship");
+        System.out.println("2. Move a Ship(Move, Redo, & Undo)");
         System.out.println("3. View Current Map");
         System.out.println("4. Check Player Inventory");
         System.out.println("5. Help & Instructions");
@@ -108,6 +108,26 @@ public class MainHelpers {
         return Integer.parseInt(myInput.nextLine());
     }
 
+    /**
+     * Helper Function - collectMoveInput - Yubin
+     * @return choice
+     *      // Prints prompt statements for command pick
+     *      // Takes in user input item pick
+     *      // Makes Int
+     */
+    public static int collectMoveInput(){
+        Scanner myInput = new Scanner(System.in);
+
+
+        System.out.println("Do you want to move, redo, or undo your ships?");
+        System.out.println("1. Move");
+        System.out.println("2. Redo");
+        System.out.println("3. Undo");
+        System.out.println("4. Undo All");
+
+
+        return Integer.parseInt(myInput.nextLine());
+    }
     /**
      * Helper Function - collectAttackPoint - Kevina
      * @param curPlayer
