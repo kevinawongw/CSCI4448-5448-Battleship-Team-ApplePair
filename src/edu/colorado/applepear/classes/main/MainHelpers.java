@@ -139,4 +139,16 @@ public class MainHelpers {
     public static void printSinkMessage(Player opponentPlayer, int index){
         System.out.println("Nice! You sunk the opponent's " + opponentPlayer.getGb().getShips().get(index).getShipName());
     }
+
+    /**
+     * Display Game Over
+     * @param curPlayer - Current Player
+     * @param opponentPlayer - Opponent Player
+     * Displays Winner
+     */
+    public static void displayGameOver(Player curPlayer, Player opponentPlayer) {
+        System.out.println("=== GAME OVER ===");
+        System.out.println(curPlayer.getName() + " has no ships remaining!");
+        System.out.println("Congratulations " + opponentPlayer.getName() + "!");
+    }
 }

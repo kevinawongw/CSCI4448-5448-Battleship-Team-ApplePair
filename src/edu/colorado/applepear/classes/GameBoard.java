@@ -287,6 +287,14 @@ public class GameBoard {
         return index;
     }
 
+    /**
+     * Update Sunken Ship
+     * @param shipAttackedIndex
+     *      // Removes ship from ships array when a ship is sunken.
+     */
+    public void updateSunkenShip(int shipAttackedIndex) {
+        ships.remove(shipAttackedIndex);
+    }
 }
 
 

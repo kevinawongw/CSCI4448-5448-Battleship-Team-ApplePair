@@ -15,14 +15,14 @@ public class Main {
 
     public static void main(String[] args) {
 
-         // -- BEGIN Initialization --
+        /**
+         * ---- Begin Initialization Section ----
+         * Initialize Objects for Game + Take User Inputs for Object Parameters
+         * Initialize GameBoard Objects
+         */
 
-         // Takes User Inputs (Credit: GeeksForGeeks)
          Scanner myInput = new Scanner(System.in);
 
-         // Initialize Objects for Game + Take User Inputs for Object Parameters - Kevina
-
-         // Initialize Player Objects
          List<String> names = MainHelpers.collectNames();
          GameBoard p1Map = new GameBoard();
          GameBoard p2Map = new GameBoard();
@@ -31,26 +31,24 @@ public class Main {
          Player p2 = new Player(p2Map);
          p2.setName(names.get(1));
 
-         // Initialize GameBoard Objects
-
          System.out.println("\n\n ========== " + p1.getName() + "'s Turn to Place Ships ========== \n");
          p1Map.populateShipMap();
          System.out.println("\n\n ========== " + p2.getName() + "'s Turn to Place Ships ========== \n");
          p2Map.populateShipMap();
 
-         // Initialize Game Object
          Game myGame = new Game(p1,p2);
 
-         // Variables to keep track of which player's turn
          Player curPlayer = p1;
          Player opponentPlayer = p2;
 
-         // -- END Initialization--
+        /**
+         * ---- End Initialization Section ----
+         */
 
-         // -- BEGIN Game Menu Loop --
-         // Menu Display & User Input
-         // Refer to the displayMenu Print function for what each menu option will do
 
+        /**
+         * Begin Main Game Loop
+         */
         MainHelpers.displayPlayerTurn(curPlayer);
         MainHelpers.displayMenu();
 
@@ -78,6 +76,7 @@ public class Main {
                                  if (sunken){
                                      System.out.println("Nice! You sunk the opponent's " + opponentPlayer.getGb().getShips().get(shipAttackedIndex).getShipName());
                                      curPlayer.updateSunkShip(true);
+                                     curPlayer.getGb().updateSunkenShip(shipAttackedIndex);
                                  }
                              }
 
@@ -161,7 +160,10 @@ public class Main {
 
              boolean gameEnd = myGame.isGameOver();
 
-             if (gameEnd) { System.exit(0); }
+             if (gameEnd) {
+                 MainHelpers.displayGameOver(curPlayer,opponentPlayer);
+                 System.exit(0);
+             }
 
              if (myVal.equals("1") || myVal.equals("2")){
                  MainHelpers.displayPlayerTurn(curPlayer);

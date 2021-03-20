@@ -108,6 +108,15 @@ public class GameBoardTest {
         assertEquals(gb1.identifyShip(new Point(5,5)), -1,"there is no ship there");
     }
 
+    @Test
+    @DisplayName("Testing Removing Ship")
+    public void testUpdateSunkenShp(){
+        gb1.placeShip(myPoints);
+        int index = gb1.identifyShip(m1);
+        gb1.updateSunkenShip(index);
+        assertEquals(gb1.getShips().size(), 0 , "There should be no more ships in the ships list.");
+    }
+
 }
 
 
