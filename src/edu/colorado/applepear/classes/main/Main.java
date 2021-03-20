@@ -154,7 +154,6 @@ public class Main {
                      break;
                  case "2":
                      int commandChoice = MainHelpers.collectMoveInput();
-
                      switch (commandChoice) {
                          case 1:
                              int indexOfMovingShip = MainHelpers.viewAllShipsAsList(curPlayer);
@@ -177,14 +176,17 @@ public class Main {
 //                             else if(moveIndex.equals("w") || moveIndex.equals("W") || moveIndex.equals("West") || moveIndex.equals("west") ){ //west
 //                                 cd.setCommands(mWest);
 //                             }
+                             break;
                          case 2:
                              cd.redo();
+                             break;
                          case 3:
                              cd.undo();
+                             break;
                          case 4:
                              cd.undoAll();
                              System.out.println("You have undo all of your moves.");
-
+                             break;
                      }
 
                      if (curPlayer.equals(p1)) {
