@@ -1,9 +1,12 @@
 package edu.colorado.applepear.classes;
 
-//Created a Point class for getting location of ship in Ship class
+/**
+ * Point Class used to hold coordinate style objects
+ */
+
 public class Point {
-    public int x;
-    public int y;
+    private final int x;
+    private final int y;
 
     public Point(int x, int y){
         this.x = x;

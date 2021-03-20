@@ -18,7 +18,7 @@ public class GameBoardTest {
 
     GameBoard gb1 = new GameBoard();
     GameBoard gb2 = new GameBoard();
-    Point m1, m2, testPoint, testPoint2;
+    Point m1, m2;
 
     @BeforeEach
     public void setUp() throws Exception {
@@ -55,24 +55,6 @@ public class GameBoardTest {
     @DisplayName("if updateMap and did not hit a ship")
     public void testUpdateMap2() {
         assertFalse(gb1.updateAttackMap(gb2,new Point(0,1)), "updateMap should return false");
-    }
-    @Test
-    @DisplayName("Finding a ship")
-    public void testFindShip() {
-        m1 = new Point(0, 0);
-        m2 = new Point(1, 0);
-        List<Point> myPoints = new ArrayList<Point>();
-        myPoints.add(m1);
-        myPoints.add(m2);
-        gb1.placeShip(myPoints);
-        testPoint = new Point(0,0);
-        testPoint2 = new Point(6,6);
-
-        assertAll("return a ship if parameter is the location of a ship",
-                () -> assertEquals("minesweeper", gb1.findShip(testPoint).getShipName(),
-                        "Should return the ship name at that point" ),
-                ()-> assertNull(gb1.findShip(testPoint2),
-                        "Should return null because no ship is at that point"));
     }
 
 }
