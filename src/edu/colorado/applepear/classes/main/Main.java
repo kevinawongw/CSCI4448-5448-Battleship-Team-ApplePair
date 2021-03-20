@@ -93,12 +93,12 @@ public class Main {
                              break;
 
                          case 2:
-                             if (p1.getHasSunkenShip() == false) {
-                                 curPlayer.useSonarPulse(p2Map, attackPoint);
+                             if (!curPlayer.getHasSunkenShip()) {
+                                 curPlayer.useSonarPulse(opponentPlayer.getGb(), attackPoint);
                                  break;
                              }
 
-                             curPlayer.useSonarPulse(p2Map, attackPoint);
+                             curPlayer.useSonarPulse(opponentPlayer.getGb(), attackPoint);
                              if (curPlayer.equals(p1)) {
                                  curPlayer = p2;
                                  opponentPlayer = p1;
@@ -121,6 +121,22 @@ public class Main {
                                  }
                              }
 
+                             if (curPlayer.equals(p1)) {
+                                 curPlayer = p2;
+                                 opponentPlayer = p1;
+
+                             } else if (curPlayer.equals(p2)) {
+                                 curPlayer = p1;
+                                 opponentPlayer = p2;
+                             }
+                             break;
+                         case 4:
+                             if (curPlayer.getHasSunkenShip() == false) {
+                                 curPlayer.useSpaceLaser(opponentPlayer.getGb(), attackPoint);
+                                 break;
+                             }
+
+                             curPlayer.useSpaceLaser(opponentPlayer.getGb(), attackPoint);
                              if (curPlayer.equals(p1)) {
                                  curPlayer = p2;
                                  opponentPlayer = p1;

@@ -48,6 +48,28 @@ public class PlayerTest {
         g2.placeShip(myPoints);
         g1.placeShip(myPoints);
 
+        Point test1 = new Point(3,1);
+        Point test2 = new Point(3,2);
+
+        List<Point> newShip = new ArrayList<>();
+        newShip.add(test1);
+        newShip.add(test2);
+        g1.placeShip(newShip);
+
+
+        Point s1 = new Point(2,0);
+        Point s2 = new Point(0,1);
+        Point s3 = new Point(1,1);
+        Point s4 = new Point(2,1);
+        Point s5 = new Point(3,1);
+        List<Point> subPoints = new ArrayList<>();
+        subPoints.add(s1);
+        subPoints.add(s2);
+        subPoints.add(s3);
+        subPoints.add(s4);
+        subPoints.add(s5);
+        g1.placeShip(subPoints);
+
     }
 
     @Test
@@ -149,6 +171,32 @@ public class PlayerTest {
                         "Should return false -- no ships found"),
                 () -> assertFalse(player3.useSonarPulse(g1,testPoint),
             "should return false -- has not sunk first ship yet")
+
+        );
+
+    }
+    @Test
+    public void useSpaceLaserTest(){
+        System.out.println("Testing SonarPulse");
+        player2.setName("Vienna");
+        Point testPoint = new Point( 0,0);
+        Point testPoint2 = new Point( 4,4);
+        Point testPoint3 = new Point( 3,2);
+        Point testPoint4 = new Point( 3,1);
+        Point testPoint5 = new Point( 2,0);
+
+
+        assertAll("Should return boolean for whether a ship was found using the radar missile",
+                () -> assertEquals(0,player3.useSpaceLaser(g2, testPoint).size(),
+                        "should return 0 -- has not sunk first ship yet"),
+                () -> assertEquals(0,player2.useSpaceLaser(g1, testPoint).size(),
+                        "should return 0 -- No ships hit"),
+                () -> assertEquals(1,player2.useSpaceLaser(g1, testPoint3).size(),
+                        "should return 1 -- surface ship hit"),
+                () -> assertEquals(2,player2.useSpaceLaser(g1, testPoint4).size(),
+                        "should return 1 -- surface and underwater ship hit"),
+                () -> assertEquals(1,player2.useSpaceLaser(g1, testPoint5).size(),
+                        "should return 1 -- underwater ship hit")
 
         );
 

@@ -214,5 +214,45 @@ public class Player{
 
     }
 
+    /**
+     *
+     * @param oppBoard - Opponent's Board
+     * @param point - Center of Plus Missile
+     * @return attacked - list of attacked points
+     *      // Attacks the coordinate on the surface attack map and the underwater attack map
+     */
+    //Vienna: Space Laser
+
+    public ArrayList<Point> useSpaceLaser(GameBoard oppBoard, Point point){
+        ArrayList<Point> attacked = new ArrayList<>();
+        if(!getHasSunkenShip()){
+
+            System.out.println("Space Missile is not unlocked \n");
+            return attacked;}
+
+        else{
+            int[][] map =  oppBoard.getShipMap();
+            int[][] underMap = oppBoard.getUnderwaterMap();
+            if (map[point.getY()][point.getX()]==1){
+                attacked.add(point);
+                System.out.println("surface ship hit!");
+            }
+            if (underMap[point.getY()][point.getX()]==1){
+                attacked.add(point);
+                System.out.println("underwater ship hit!");
+            }
+            getGb().updateAttackMap(oppBoard, point);
+            getGb().updateUnderwaterAttackMap(oppBoard,point);
+            if (attacked.size() == 0){
+                System.out.println("no ship hit...");
+            }
+            return attacked;
+
+        }
+
+
+
+    }
+
 }
 

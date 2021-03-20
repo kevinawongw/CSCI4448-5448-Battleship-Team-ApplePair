@@ -88,6 +88,7 @@ public class MainHelpers {
 
     /**
      * Helper Function - collectMissileInput - Kevina
+     * Vienna added new missile features
      * @return choice
      *      // Prints prompt statements for missile picks
      *      // Takes in user input item pick
@@ -101,6 +102,8 @@ public class MainHelpers {
         System.out.println("1. Regular Missile");
         System.out.println("2. Sonar Pulse  Missile");
         System.out.println("3. Plus Missile");
+        System.out.println("4. Space Laser Missile");
+
 
         return Integer.parseInt(myInput.nextLine());
     }
