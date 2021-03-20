@@ -105,7 +105,7 @@ public class Main {
                      switch (choice){
                          //vienna: added switch case to determine what weapon to use
                          case 1:
-                             Boolean hitOrMiss = curPlayer.getGb().updateAttackMap(opponentPlayer.getGb(), attackPoint);
+                             boolean hitOrMiss = curPlayer.getGb().updateAttackMap(opponentPlayer.getGb(), attackPoint);
                              p1.getGb().viewAttackMap();
                              if (hitOrMiss) {
                                  System.out.println("You Hit an Opponent's Ship! Nice Shot!");
@@ -125,7 +125,7 @@ public class Main {
                              break;
 
                          case 2:
-                             if (p1.getHasSunkenShip()==false){
+                             if (!p1.getHasSunkenShip()){
                                  curPlayer.useSonarPulse(p2Map,attackPoint);
                                  break;
                              }
