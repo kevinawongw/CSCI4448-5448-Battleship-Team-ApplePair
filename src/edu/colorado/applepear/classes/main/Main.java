@@ -179,13 +179,15 @@ public class Main {
                              break;
                          case 2:
                              commDispatch.redo();
+                             curPlayer.getGb().viewShips();
                              break;
                          case 3:
                              commDispatch.undo();
+                             curPlayer.getGb().viewShips();
                              break;
                          case 4:
                              commDispatch.undoAll();
-                             System.out.println("You have undo all of your moves.");
+                             curPlayer.getGb().viewShips();
                              break;
                      }
 

@@ -8,10 +8,16 @@ import java.util.*;
 public class MoveSouth implements Command{
     GameBoard gb;
     Ship ship;
+    String direction;
 
     public MoveSouth(GameBoard gb, Ship ship){
         this.gb = gb;
         this.ship = ship;
+        direction = "South";
+    }
+
+    public String getDirection(){
+        return direction;
     }
 
     @Override
@@ -37,4 +43,5 @@ public class MoveSouth implements Command{
             gb.viewUnderwater();
         }
     }
+
 }

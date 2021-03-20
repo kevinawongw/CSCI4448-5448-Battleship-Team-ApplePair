@@ -7,22 +7,38 @@ public class CommandDispatcher {
     private List<Command> cmd = new ArrayList<Command>();
     public CommandDispatcher(){ }
     private Command currentC = null;
+
     public void setCommands(Command c){
         currentC = c;
         c.execute();
         cmd.add(c);
     }
     public void undoAll(){
+        if(cmd.size() == 0){
+            System.out.println("There are no moves to be undone.");
+            return;
+        }
         for(Command c : cmd){
             c.undo();
         }
+        System.out.println("You have undone all your moves.");
     }
     public void undo(){
-        cmd.remove(cmd.size()-1);
-        currentC = cmd.get(cmd.size()-1);
+        if(cmd.size() != 0) {
+            cmd.remove(cmd.size() - 1);
+            System.out.println("You have undone your latest move.");
+        }else
+            System.out.println("There are no moves to be undone.");
+        if(cmd.size() != 0) {
+            currentC = cmd.get(cmd.size() - 1);
+        }else
+            currentC = null;
     }
     public void redo(){
-        if(null != currentC)
-            currentC.redo();
+        if(currentC != null) {
+            currentC.execute();
+            System.out.println("You have redone your latest move.");
+        }else
+            System.out.println("There are no moves to be redone.");
     }
 }
