@@ -177,10 +177,8 @@ public class PlayerTest {
     }
     @Test
     public void useSpaceLaserTest(){
-        System.out.println("Testing SonarPulse");
-        player2.setName("Vienna");
+        System.out.println("Testing Space Laser Missile");
         Point testPoint = new Point( 0,0);
-        Point testPoint2 = new Point( 4,4);
         Point testPoint3 = new Point( 3,2);
         Point testPoint4 = new Point( 3,1);
         Point testPoint5 = new Point( 2,0);
