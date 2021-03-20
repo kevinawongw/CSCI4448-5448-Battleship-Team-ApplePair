@@ -1,4 +1,4 @@
-package edu.colorado.applepear.classes;
+package edu.colorado.applepear.classes.commandClasses;
 
 public interface Command {
     public void execute();

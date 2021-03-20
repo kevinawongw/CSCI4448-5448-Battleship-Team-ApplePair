@@ -1,7 +1,5 @@
 package edu.colorado.applepear.classes.commandClasses;
 
-import edu.colorado.applepear.classes.Command;
-
 import java.util.ArrayList;
 import java.util.List;
 

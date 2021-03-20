@@ -1,6 +1,5 @@
 package edu.colorado.applepear.classes.commandClasses;
 
-import edu.colorado.applepear.classes.Command;
 import edu.colorado.applepear.classes.GameBoard;
 import edu.colorado.applepear.classes.Point;
 import edu.colorado.applepear.classes.Ship;
