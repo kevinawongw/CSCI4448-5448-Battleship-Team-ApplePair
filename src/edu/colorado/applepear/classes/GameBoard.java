@@ -188,19 +188,18 @@ public class GameBoard {
      * Adds new ships to the map.
      */
     public void populateShipMap() {
-//        Minesweeper minesweeper = new Minesweeper();
-//        List<Point> minesweeperCoords = minesweeper.input(shipMap);
-//        placeShip(minesweeperCoords);
-//        updateShipMap();
-//        viewShips();
+        Minesweeper minesweeper = new Minesweeper();
+        List<Point> minesweeperCoords = minesweeper.input(shipMap);
+        placeShip(minesweeperCoords);
+        updateShipMap();
+        viewShips();
 
-        Submarine submarine = new Submarine();
-        List<Point> submarineCoords = submarine.input(shipMap);
-        placeShip(submarineCoords);
-        updateUnderwaterMap();
-        viewUnderwater();
+//        Submarine submarine = new Submarine();
+//        List<Point> submarineCoords = submarine.input(shipMap);
+//        placeShip(submarineCoords);
+//        updateUnderwaterMap();
+//        viewUnderwater();
 
-        // Currently Submarine only - Kevina
     }
 
     /**
@@ -351,7 +350,7 @@ public class GameBoard {
         List <Point> newLocations = new ArrayList<Point>();
         if (valid.contains(direction)){
 
-            if (ship.getUnderwater()) {
+            if (!ship.getUnderwater()) {
 
                 if (direction.equals("North")) {
                     for (Point p : ship.getLocation()) {
@@ -377,8 +376,14 @@ public class GameBoard {
 
                     }
                 }
+
+                ship.setLocation(newLocations);
+                updateShipMap();
+                viewShips();
+
             }
-            else if (!ship.getUnderwater()){
+
+            else if (ship.getUnderwater()){
                 if (direction.equals("North")){
                     for (Point p : ship.getLocation()){
                         newLocations.add(new Point(p.getX(), p.getY()-1));
@@ -405,11 +410,10 @@ public class GameBoard {
                         setUnderwaterMap(p,0);
                     }
                 }
+                ship.setLocation(newLocations);
+                updateUnderwaterMap();
+                viewUnderwater();
             }
-
-            ship.setLocation(newLocations);
-            updateShipMap();
-            updateUnderwaterMap();
         }
     }
 }

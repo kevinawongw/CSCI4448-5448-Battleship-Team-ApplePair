@@ -135,10 +135,19 @@ public class Main {
                  case "2":
                      int indexOfMovingShip = MainHelpers.viewAllShipsAsList(curPlayer);
                      List<String> validMoves = curPlayer.getGb().getPossibleMoveLocations(curPlayer.getGb().getShips().get(indexOfMovingShip));
-                     String move = MainHelpers.getMoves(validMoves);
-                     System.out.println(validMoves);
+                     int moveIndex = MainHelpers.getMoves(validMoves);
+                     curPlayer.getGb().moveShip(curPlayer.getGb().getShips().get(indexOfMovingShip), validMoves.get(moveIndex));
+
+                     if (curPlayer.equals(p1)) {
+                         curPlayer = p2;
+                         opponentPlayer = p1;
+
+                     } else if (curPlayer.equals(p2)) {
+                         curPlayer = p1;
+                         opponentPlayer = p2;
+                     }
+
                      break;
-                     // Not Implemented yet
 
                  case "3":
                      System.out.println("Player Map");
