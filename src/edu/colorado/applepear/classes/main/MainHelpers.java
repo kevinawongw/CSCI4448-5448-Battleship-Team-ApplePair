@@ -17,7 +17,7 @@ public class MainHelpers {
         System.out.println("\n\n ========== Battleship Menu ========== \n");
         System.out.println("Please pick a menu option");
         System.out.println("1. Choose Coordinates to attack");
-        System.out.println("2. Move a Ship(Move, Redo, & Undo)");
+        System.out.println("2. Move a Ship (Move, Redo, & Undo)");
         System.out.println("3. View Current Map");
         System.out.println("4. Check Player Inventory");
         System.out.println("5. Help & Instructions");
@@ -204,14 +204,14 @@ public class MainHelpers {
 
     public static String getMoves(List<String> validMoves) {
         Scanner myInput = new Scanner(System.in);
-        String input = myInput.nextLine();
         System.out.println("Which direction do you want to move? (Possible input example: North, north, n, or N)");
         int i = 1;
         for (String move : validMoves){
-            System.out.println(move);
+            System.out.println(i + ". " + move);
             i++;
         }
-
+        String input = myInput.nextLine();
         return input;
     }
+
 }
