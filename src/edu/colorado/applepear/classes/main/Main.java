@@ -149,6 +149,7 @@ public class Main {
                              break;
                      }
                      break;
+
                  case "2":
                      int commandChoice = MainHelpers.collectMoveInput();
                      switch (commandChoice) {
@@ -166,14 +167,15 @@ public class Main {
                                      MoveSouth mSouth = new MoveSouth(curPlayer.getGb(), curPlayer.getGb().getShips().get(indexOfMovingShip));
                                      curPlayer.getCommandDispatcher().setCommands(mSouth);
                                  }
-                                 else if(myMove.equals("East")){ //east
+                                 else if(myMove.equals("East")){
                                      MoveEast mEast = new MoveEast(curPlayer.getGb(), curPlayer.getGb().getShips().get(indexOfMovingShip));
                                      curPlayer.getCommandDispatcher().setCommands(mEast);
                                  }
-                                 else if(myMove.equals("West")){ //west
+                                 else if(myMove.equals("West")){
                                      MoveWest mWest = new MoveWest(curPlayer.getGb(), curPlayer.getGb().getShips().get(indexOfMovingShip));
                                      curPlayer.getCommandDispatcher().setCommands(mWest);
                                  }
+
                              break;
 
                          case 2:
@@ -187,6 +189,7 @@ public class Main {
                              break;
                          case 4:
                              curPlayer.getCommandDispatcher().undoAll();
+                             curPlayer.getGb().viewShips();
                              break;
                      }
 

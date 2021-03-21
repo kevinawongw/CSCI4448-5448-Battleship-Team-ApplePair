@@ -124,8 +124,6 @@ public class MainHelpers {
         System.out.println("2. Redo");
         System.out.println("3. Undo");
         System.out.println("4. Undo All");
-
-
         return Integer.parseInt(myInput.nextLine());
     }
     /**

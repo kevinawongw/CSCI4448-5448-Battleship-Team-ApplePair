@@ -13,7 +13,7 @@ public class GameBoard {
      */
     public static final int numX = 10;
     public static final int numY = 10;
-    private List<Ship> ships;
+    private final List<Ship> ships;
 
     /**
      * Map Attributes:
@@ -52,7 +52,7 @@ public class GameBoard {
     public int[][] getShipMap() { return shipMap; }
     public int[][] getAttackMap() { return attackMap; }
     public int[][] getUnderwaterMap() { return underwaterMap; }
-    public int[][] getUnderwaterAttackMap () {return  underwaterAttackMap; }
+    public int[][] getUnderwaterAttackMap () { return  underwaterAttackMap; }
     public List<Ship> getShips() { return ships; }
 
     /**
@@ -330,9 +330,9 @@ public class GameBoard {
      */
     public void updateUnderwaterAttackMap(GameBoard oppMap, Point p1) {
         if (oppMap.getUnderwaterMap()[p1.getY()][p1.getX()] == 1) {
-            setAttackMap(p1,2);
+            setUnderwaterAttackMap(p1,2);
         } else if (oppMap.getUnderwaterMap()[p1.getY()][p1.getX()] == 0) {
-            setAttackMap(p1,1);
+            setUnderwaterAttackMap(p1,2);
         }
     }
 
@@ -355,9 +355,7 @@ public class GameBoard {
             }
             index++;
         }
-        if (!found){
-            index = -1;
-        }
+        index = -1;
         return index;
     }
 
@@ -379,7 +377,7 @@ public class GameBoard {
      */
     public List<String> getPossibleMoveLocations(Ship ship){
 
-        List<String> possibleMoves = new ArrayList<String>();
+        List<String> possibleMoves = new ArrayList<>();
 
         boolean North = true;
         boolean South = true;
@@ -409,82 +407,6 @@ public class GameBoard {
         return possibleMoves;
     }
 
-    /**
-     * Move Ship
-     * @param ship - Ship that is being Moved
-     * @param direction - Direction that it will be moved
-     */
-//    public void moveShip(Ship ship, String direction){
-//        List <String> valid = getPossibleMoveLocations(ship);
-//        List <Point> newLocations = new ArrayList<Point>();
-//        if (valid.contains(direction)){
-//
-//            if (!ship.getUnderwater()) {
-//
-//                if (direction.equals("North")) {
-//                    for (Point p : ship.getLocation()) {
-//                        newLocations.add(new Point(p.getX(), p.getY() - 1));
-//                        setShipMap(p, 0);
-//                    }
-//                } else if (direction.equals("South")) {
-//                    for (Point p : ship.getLocation()) {
-//                        newLocations.add(new Point(p.getX(), p.getY() + 1));
-//                        setShipMap(p, 0);
-//
-//                    }
-//                } else if (direction.equals("East")) {
-//                    for (Point p : ship.getLocation()) {
-//                        newLocations.add(new Point(p.getX() + 1, p.getY()));
-//                        setShipMap(p, 0);
-//
-//                    }
-//                } else if (direction.equals("West")) {
-//                    for (Point p : ship.getLocation()) {
-//                        newLocations.add(new Point(p.getX() - 1, p.getY()));
-//                        setShipMap(p, 0);
-//
-//                    }
-//                }
-//
-//                ship.setLocation(newLocations);
-//                updateShipMap();
-//                viewShips();
-//
-//            }
-//
-//            else if (ship.getUnderwater()){
-//                if (direction.equals("North")){
-//                    for (Point p : ship.getLocation()){
-//                        newLocations.add(new Point(p.getX(), p.getY()-1));
-//                        setUnderwaterMap(p,0);
-//                    }
-//                }
-//                else if (direction.equals("South")){
-//                    for (Point p : ship.getLocation()){
-//                        newLocations.add(new Point(p.getX(), p.getY() + 1));
-//                        setUnderwaterMap(p,0);
-//
-//                    }
-//                }
-//                else if (direction.equals("East")){
-//                    for (Point p : ship.getLocation()){
-//                        newLocations.add(new Point(p.getX() + 1, p.getY()));
-//                        setUnderwaterMap(p,0);
-//
-//                    }
-//                }
-//                else if (direction.equals("West")){
-//                    for (Point p : ship.getLocation()){
-//                        newLocations.add(new Point(p.getX() - 1, p.getY()));
-//                        setUnderwaterMap(p,0);
-//                    }
-//                }
-//                ship.setLocation(newLocations);
-//                updateUnderwaterMap();
-//                viewUnderwater();
-//            }
-//        }
-//    }
 }
 
 
