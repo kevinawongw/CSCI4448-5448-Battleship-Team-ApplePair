@@ -18,6 +18,7 @@ public class CommandDispatcher {
         c.execute();
         undoCMD.add(c);
     }
+
     public void undoAll(){
         if(undoCMD.size() == 0){
             System.out.println("There are no moves to be undone.");
@@ -28,6 +29,7 @@ public class CommandDispatcher {
         }
         System.out.println("You have undone all your moves.");
     }
+
     public void undo(){
         if(undoCMD.size() != 0) {
             undoCMD.get(undoCMD.size() - 1).undo();
