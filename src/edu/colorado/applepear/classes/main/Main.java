@@ -42,7 +42,8 @@ public class Main {
          Player curPlayer = p1;
          Player opponentPlayer = p2;
 
-        CommandDispatcher commDispatch = new CommandDispatcher();
+        CommandDispatcher commDispatch1 = new CommandDispatcher();
+        CommandDispatcher commDispatch2 = new CommandDispatcher();
 
 
         /**
@@ -160,34 +161,71 @@ public class Main {
                              List<String> validMoves = curPlayer.getGb().getPossibleMoveLocations(curPlayer.getGb().getShips().get(indexOfMovingShip));
                              String moveIndex = MainHelpers.getMoves(validMoves);
 
-                             if(moveIndex.equals("n") || moveIndex.equals("N") || moveIndex.equals("North") || moveIndex.equals("north")){ //north
-                                 MoveNorth mNorth = new MoveNorth(curPlayer.getGb(), curPlayer.getGb().getShips().get(indexOfMovingShip));
-                                 commDispatch.setCommands(mNorth);
-                             }
-                             else if(moveIndex.equals("s") || moveIndex.equals("S") || moveIndex.equals("South") || moveIndex.equals("south") ){ //south
-                                 MoveSouth mSouth = new MoveSouth(curPlayer.getGb(), curPlayer.getGb().getShips().get(indexOfMovingShip));
-                                 commDispatch.setCommands(mSouth);
-                             }
-                             else if(moveIndex.equals("e") || moveIndex.equals("E") || moveIndex.equals("East") || moveIndex.equals("east") ){ //east
-                                 MoveEast mEast = new MoveEast(curPlayer.getGb(), curPlayer.getGb().getShips().get(indexOfMovingShip));
-                                 commDispatch.setCommands(mEast);
-                             }
-                             else if(moveIndex.equals("w") || moveIndex.equals("W") || moveIndex.equals("West") || moveIndex.equals("west") ){ //west
-                                 MoveWest mWest = new MoveWest(curPlayer.getGb(), curPlayer.getGb().getShips().get(indexOfMovingShip));
-                                 commDispatch.setCommands(mWest);
-                             }
+                                 if(moveIndex.equals("n") || moveIndex.equals("N") || moveIndex.equals("North") || moveIndex.equals("north")){ //north
+                                     MoveNorth mNorth = new MoveNorth(curPlayer.getGb(), curPlayer.getGb().getShips().get(indexOfMovingShip));
+                                     if(curPlayer.equals(p1)){
+                                         commDispatch1.setCommands(mNorth);
+                                     }
+                                     else if(curPlayer.equals(p2)){
+                                         commDispatch2.setCommands(mNorth);
+                                     }
+                                 }
+                                 else if(moveIndex.equals("s") || moveIndex.equals("S") || moveIndex.equals("South") || moveIndex.equals("south") ){ //south
+                                     MoveSouth mSouth = new MoveSouth(curPlayer.getGb(), curPlayer.getGb().getShips().get(indexOfMovingShip));
+
+                                     if(curPlayer.equals(p1)){
+                                         commDispatch1.setCommands(mSouth);
+                                     }
+                                     else if(curPlayer.equals(p2)){
+                                         commDispatch2.setCommands(mSouth);
+                                     }
+                                 }
+                                 else if(moveIndex.equals("e") || moveIndex.equals("E") || moveIndex.equals("East") || moveIndex.equals("east") ){ //east
+                                     MoveEast mEast = new MoveEast(curPlayer.getGb(), curPlayer.getGb().getShips().get(indexOfMovingShip));
+
+                                     if(curPlayer.equals(p1)){
+                                         commDispatch1.setCommands(mEast);
+                                     }
+                                     else if(curPlayer.equals(p2)){
+                                         commDispatch2.setCommands(mEast);
+                                     }
+                                 }
+                                 else if(moveIndex.equals("w") || moveIndex.equals("W") || moveIndex.equals("West") || moveIndex.equals("west") ){ //west
+                                     MoveWest mWest = new MoveWest(curPlayer.getGb(), curPlayer.getGb().getShips().get(indexOfMovingShip));
+
+                                     if(curPlayer.equals(p1)){
+                                         commDispatch1.setCommands(mWest);
+                                     }
+                                     else if(curPlayer.equals(p2)){
+                                         commDispatch2.setCommands(mWest);
+                                     }
+                                 }
+
+
+
+
                              break;
                          case 2:
+                             if(curPlayer.equals(p1))
+                                commDispatch1.redo();
+                             else if(curPlayer.equals(p2))
+                                 commDispatch2.redo();
 
-                             commDispatch.redo();
                              curPlayer.getGb().viewShips();
                              break;
                          case 3:
-                             commDispatch.undo();
+                             if(curPlayer.equals(p1))
+                                 commDispatch1.undo();
+                             else if(curPlayer.equals(p2))
+                                 commDispatch2.undo();
+
                              curPlayer.getGb().viewShips();
                              break;
                          case 4:
-                             commDispatch.undoAll();
+                             if(curPlayer.equals(p1))
+                                 commDispatch1.undoAll();
+                             else if(curPlayer.equals(p2))
+                                 commDispatch2.undoAll();
                              curPlayer.getGb().viewShips();
                              break;
                      }

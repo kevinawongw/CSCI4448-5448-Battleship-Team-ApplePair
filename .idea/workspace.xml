@@ -25,7 +25,6 @@
     <list default="true" id="ecce50e7-60f1-4088-9580-0bcf29b1574e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/commandClasses/CommandDispatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/commandClasses/CommandDispatcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/commandClasses/MoveNorth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/commandClasses/MoveNorth.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/main/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -524,7 +523,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616321778864</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="fixed redo being called before one undo">
+      <created>1616333597238</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1616333597238</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -543,7 +549,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Player takes in gameboard, instead of GameBoard takes in Player" />
     <MESSAGE value="player fix" />
     <MESSAGE value="player attack map update" />
     <MESSAGE value="player map update" />
@@ -568,7 +573,8 @@
     <MESSAGE value="Addinng the classes and interface for command using command pattern" />
     <MESSAGE value="Add the MoveSouth.java" />
     <MESSAGE value="delete getdirection" />
-    <option name="LAST_COMMIT_MESSAGE" value="delete getdirection" />
+    <MESSAGE value="fixed redo being called before one undo" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed redo being called before one undo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
