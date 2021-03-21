@@ -16,8 +16,6 @@ public class MoveWest implements Command{
 
     }
 
-
-
     @Override
     public void execute() {
         List <Point> newLocations = new ArrayList<>();
@@ -62,5 +60,4 @@ public class MoveWest implements Command{
             gb.viewUnderwater();
         }
     }
-
 }

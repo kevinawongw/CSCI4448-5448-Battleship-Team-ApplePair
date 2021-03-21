@@ -1,5 +1,8 @@
 package edu.colorado.applepear.classes;
 
+import edu.colorado.applepear.classes.commandClasses.Command;
+import edu.colorado.applepear.classes.commandClasses.CommandDispatcher;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,6 +18,7 @@ public class Player{
     private int sonarPulse, plusMissile;
     private final GameBoard gb;
     private Boolean hasSunkenShip;
+    private CommandDispatcher commandDispatcher;
 
 
     /**
@@ -26,6 +30,7 @@ public class Player{
         this.plusMissile = 3;
         this.gb = gb;
         this.hasSunkenShip = false ;
+        this.commandDispatcher = new CommandDispatcher();
     }
 
     /**
@@ -43,6 +48,7 @@ public class Player{
     public int getPlusMissile() { return plusMissile; }
     public GameBoard getGb() { return gb; }
     public boolean getHasSunkenShip(){return hasSunkenShip;}
+    public CommandDispatcher getCommandDispatcher(){ return commandDispatcher; };
 
     /**
      * Update Sunken Ship

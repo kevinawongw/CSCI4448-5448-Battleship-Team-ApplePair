@@ -202,16 +202,15 @@ public class MainHelpers {
     }
 
 
-    public static String getMoves(List<String> validMoves) {
+    public static int getMoves(List<String> validMoves) {
         Scanner myInput = new Scanner(System.in);
         System.out.println("Which direction do you want to move? (Possible input example: North, north, n, or N)");
         int i = 1;
         for (String move : validMoves){
-            System.out.println(move);
+            System.out.println(i+ "." + move);
             i++;
         }
-        String input = myInput.nextLine();
-        return input;
+        return Integer.parseInt(myInput.nextLine());
     }
 
 }
