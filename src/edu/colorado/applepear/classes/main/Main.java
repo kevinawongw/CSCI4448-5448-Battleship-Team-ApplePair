@@ -42,10 +42,6 @@ public class Main {
          Player curPlayer = p1;
          Player opponentPlayer = p2;
 
-        CommandDispatcher commDispatch1 = new CommandDispatcher();
-        CommandDispatcher commDispatch2 = new CommandDispatcher();
-
-
         /**
          * ---- End Initialization Section ----
          */
@@ -164,65 +160,33 @@ public class Main {
 
                                  if(myMove.equals("North")){
                                      MoveNorth mNorth = new MoveNorth(curPlayer.getGb(), curPlayer.getGb().getShips().get(indexOfMovingShip));
-                                     if(curPlayer.equals(p1)){
-                                         commDispatch1.setCommands(mNorth);
-                                     }
-                                     else if(curPlayer.equals(p2)){
-                                         commDispatch2.setCommands(mNorth);
-                                     }
+                                     curPlayer.getCommandDispatcher().setCommands(mNorth);
                                  }
                                  else if(myMove.equals("South")){
                                      MoveSouth mSouth = new MoveSouth(curPlayer.getGb(), curPlayer.getGb().getShips().get(indexOfMovingShip));
-                                     if(curPlayer.equals(p1)){
-                                         commDispatch1.setCommands(mSouth);
-                                     }
-                                     else if(curPlayer.equals(p2)){
-                                         commDispatch2.setCommands(mSouth);
-                                     }
+                                     curPlayer.getCommandDispatcher().setCommands(mSouth);
                                  }
                                  else if(myMove.equals("East")){ //east
                                      MoveEast mEast = new MoveEast(curPlayer.getGb(), curPlayer.getGb().getShips().get(indexOfMovingShip));
-
-                                     if(curPlayer.equals(p1)){
-                                         commDispatch1.setCommands(mEast);
-                                     }
-                                     else if(curPlayer.equals(p2)){
-                                         commDispatch2.setCommands(mEast);
-                                     }
+                                     curPlayer.getCommandDispatcher().setCommands(mEast);
                                  }
                                  else if(myMove.equals("West")){ //west
                                      MoveWest mWest = new MoveWest(curPlayer.getGb(), curPlayer.getGb().getShips().get(indexOfMovingShip));
-                                     if(curPlayer.equals(p1)){
-                                         commDispatch1.setCommands(mWest);
-                                     }
-                                     else if(curPlayer.equals(p2)){
-                                         commDispatch2.setCommands(mWest);
-                                     }
+                                     curPlayer.getCommandDispatcher().setCommands(mWest);
                                  }
                              break;
 
                          case 2:
-                             if(curPlayer.equals(p1))
-                                commDispatch1.redo();
-                             else if(curPlayer.equals(p2))
-                                 commDispatch2.redo();
-
+                             curPlayer.getCommandDispatcher().redo();
                              curPlayer.getGb().viewShips();
                              break;
                          case 3:
-                             if(curPlayer.equals(p1))
-                                 commDispatch1.undo();
-                             else if(curPlayer.equals(p2))
-                                 commDispatch2.undo();
-
+                             curPlayer.getCommandDispatcher().undo();
                              curPlayer.getGb().viewShips();
+
                              break;
                          case 4:
-                             if(curPlayer.equals(p1))
-                                 commDispatch1.undoAll();
-                             else if(curPlayer.equals(p2))
-                                 commDispatch2.undoAll();
-                             curPlayer.getGb().viewShips();
+                             curPlayer.getCommandDispatcher().undoAll();
                              break;
                      }
 

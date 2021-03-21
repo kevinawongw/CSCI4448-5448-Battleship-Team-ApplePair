@@ -22,12 +22,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ecce50e7-60f1-4088-9580-0bcf29b1574e" name="Default Changelist" comment="moving fleets completed in main">
+    <list default="true" id="ecce50e7-60f1-4088-9580-0bcf29b1574e" name="Default Changelist" comment="main">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/commandClasses/MoveWest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/commandClasses/MoveWest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/main/MainHelpers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/main/MainHelpers.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -490,7 +488,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616212849183</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="main">
+      <created>1616343064034</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1616343064034</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -509,7 +514,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Team ApplePair pair 1: Kevina - GameBoard private -&gt; public functions" />
     <MESSAGE value="Team ApplePair pair 1: Kevina - GameBoard getters" />
     <MESSAGE value="Team ApplePair pair 1: Vienna push - Modified Main" />
     <MESSAGE value="Team ApplePair pair 1: Kevina - updates to gameboard, update to ship, test updates" />
@@ -534,7 +538,8 @@
     <MESSAGE value="move fleet" />
     <MESSAGE value="test" />
     <MESSAGE value="moving fleets completed in main" />
-    <option name="LAST_COMMIT_MESSAGE" value="moving fleets completed in main" />
+    <MESSAGE value="main" />
+    <option name="LAST_COMMIT_MESSAGE" value="main" />
   </component>
   <component name="WindowStateProjectService">
     <state x="94" y="94" width="1349" height="677" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1616094977395">
@@ -589,10 +594,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1493" height="389" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1616179049697" />
-    <state x="0" y="166" key="Vcs.Push.Dialog.v2" timestamp="1616212896291">
+    <state x="0" y="166" key="Vcs.Push.Dialog.v2" timestamp="1616343067049">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="0" y="166" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1616212896291" />
+    <state x="0" y="166" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1616343067049" />
     <state x="768" y="0" width="774" height="870" key="dock-window-1" timestamp="1616043255886">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
