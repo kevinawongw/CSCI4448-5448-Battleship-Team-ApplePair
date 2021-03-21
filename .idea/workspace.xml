@@ -23,9 +23,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ecce50e7-60f1-4088-9580-0bcf29b1574e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/commandClasses/CommandDispatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/commandClasses/CommandDispatcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/main/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/tests/commandTests/CommandDispatcherTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/tests/commandTests/MoveEastTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/tests/commandTests/MoveNorthTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/tests/commandTests/MoveSouthTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/tests/commandTests/MoveWestTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -530,7 +532,21 @@
       <option name="project" value="LOCAL" />
       <updated>1616333597238</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="undo works fine">
+      <created>1616336238914</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1616336238915</updated>
+    </task>
+    <task id="LOCAL-00046" summary="delete some junk">
+      <created>1616336375845</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1616336375845</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -549,8 +565,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="player fix" />
-    <MESSAGE value="player attack map update" />
     <MESSAGE value="player map update" />
     <MESSAGE value="view ship update" />
     <MESSAGE value="Got started on interface implementation" />
@@ -574,7 +588,9 @@
     <MESSAGE value="Add the MoveSouth.java" />
     <MESSAGE value="delete getdirection" />
     <MESSAGE value="fixed redo being called before one undo" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed redo being called before one undo" />
+    <MESSAGE value="undo works fine" />
+    <MESSAGE value="delete some junk" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete some junk" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
