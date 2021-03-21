@@ -48,29 +48,31 @@ public class MoveNorthTest {
         assertEquals(gb.getShips().get(0).getLocation().get(0).getY(), 0, "The Y value should be 0.");
     }
 
-//    @Test
-//    @DisplayName("Testing undo Ship North1")
-//    public void testUndoNorth(){
-//        List<Point> centerPoint = new ArrayList<>();
-//        centerPoint.add(new Point(1,1));
-//        centerPoint.add(new Point(2,1));
-//
-//        gb.placeShip(centerPoint);
-//        mn = new MoveNorth(gb, gb.getShips().get(0) );
-//        mn.undo();
-//        assertEquals(gb.getShips().get(0).getLocation().get(0).getY(), 1, "The Y value should be 1.");
-//    }
-//    @Test
-//    @DisplayName("Testing undo Ship North2")
-//    public void testUndoNorth2(){
-//        List<Point> centerPoint = new ArrayList<>();
-//        centerPoint.add(new Point(2,5));
-//        centerPoint.add(new Point(3,5));
-//
-//        gb.placeShip(centerPoint);
-//        mn = new MoveNorth(gb, gb.getShips().get(0) );
-//        mn.undo();
-//        assertEquals(gb.getShips().get(0).getLocation().get(0).getY(), 5, "The Y value should be 5.");
-//    }
+    @Test
+    @DisplayName("Testing undo Ship North1")
+    public void testUndoNorth(){
+        List<Point> centerPoint = new ArrayList<>();
+        centerPoint.add(new Point(1,1));
+        centerPoint.add(new Point(2,1));
+
+        gb.placeShip(centerPoint);
+        mn = new MoveNorth(gb, gb.getShips().get(0) );
+        mn.execute();
+        mn.undo();
+        assertEquals(gb.getShips().get(0).getLocation().get(0).getY(), 1, "The Y value should be 1.");
+    }
+    @Test
+    @DisplayName("Testing undo Ship North2")
+    public void testUndoNorth2(){
+        List<Point> centerPoint = new ArrayList<>();
+        centerPoint.add(new Point(2,5));
+        centerPoint.add(new Point(3,5));
+
+        gb.placeShip(centerPoint);
+        mn = new MoveNorth(gb, gb.getShips().get(0) );
+        mn.execute();
+        mn.undo();
+        assertEquals(gb.getShips().get(0).getLocation().get(0).getY(), 5, "The Y value should be 5.");
+    }
 
 }
