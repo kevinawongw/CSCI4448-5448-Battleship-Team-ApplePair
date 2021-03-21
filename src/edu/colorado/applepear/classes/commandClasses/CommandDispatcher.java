@@ -6,8 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CommandDispatcher {
-    private final List<Command> cmd = new ArrayList<Command>(); //for player 1
-//    private final List<Command> cmd2 = new ArrayList<Command>(); //for player 2
+    private final List<Command> cmd = new ArrayList<Command>();
     public CommandDispatcher(){ }
     private Command currentC = null;
     private int countUndo = 0;
@@ -16,9 +15,6 @@ public class CommandDispatcher {
         currentC = c;
         c.execute();
         cmd.add(c);
-
-        for(Command x : cmd)
-            System.out.println("Move stack is "+x);
     }
     public void undoAll(){
         if(cmd.size() == 0){
@@ -26,7 +22,6 @@ public class CommandDispatcher {
             return;
         }
         for(Command c : cmd){
-            System.out.println("Move stack is "+c);
             c.undo();
         }
         System.out.println("You have undone all your moves.");
@@ -37,11 +32,8 @@ public class CommandDispatcher {
             currentC = cmd.get(cmd.size() - 1);
             countUndo+=1;
             System.out.println("You have undone your latest move.");
-            for(Command x : cmd)
-                System.out.println("Move stack is "+x);
+
         }else{
-            for(Command x : cmd)
-                System.out.println("Move stack is "+x);
             currentC = null;
             System.out.println("There are no moves to be undone.");
         }
