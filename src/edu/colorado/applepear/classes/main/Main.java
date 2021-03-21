@@ -179,15 +179,15 @@ public class Main {
                              break;
                          case 2:
                              commDispatch.redo();
-                             curPlayer.getGb().viewShips();
+                             //curPlayer.getGb().viewShips();
                              break;
                          case 3:
                              commDispatch.undo();
-                             curPlayer.getGb().viewShips();
+                             //curPlayer.getGb().viewShips();
                              break;
                          case 4:
                              commDispatch.undoAll();
-                             curPlayer.getGb().viewShips();
+                             //curPlayer.getGb().viewShips();
                              break;
                      }
 
