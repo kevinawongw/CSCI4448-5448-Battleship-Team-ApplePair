@@ -22,12 +22,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ecce50e7-60f1-4088-9580-0bcf29b1574e" name="Default Changelist" comment="player has command dispatcher">
+    <list default="true" id="ecce50e7-60f1-4088-9580-0bcf29b1574e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/tests/commandTests/MoveEastTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/tests/commandTests/MoveEastTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/tests/commandTests/CommandDispatcherTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/tests/commandTests/CommandDispatcherTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/tests/commandTests/MoveNorthTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/tests/commandTests/MoveNorthTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/tests/commandTests/MoveSouthTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/tests/commandTests/MoveSouthTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/tests/commandTests/MoveWestTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/tests/commandTests/MoveWestTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,8 +85,8 @@
       <recent name="edu.colorado.applepear.tests.concreteShipTests" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MoveNorthTest">
-    <configuration name="MoveEastTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.edu.colorado.applepear.tests.commandTests in Milestone1-csci4448-5448">
+    <configuration name="CommandDispatcherTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Milestone1-csci4448-5448" />
       <extension name="coverage">
         <pattern>
@@ -97,8 +95,24 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="edu.colorado.applepear.tests.commandTests" />
-      <option name="MAIN_CLASS_NAME" value="edu.colorado.applepear.tests.commandTests.MoveEastTest" />
+      <option name="MAIN_CLASS_NAME" value="edu.colorado.applepear.tests.commandTests.CommandDispatcherTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CommandDispatcherTest.testUndo1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Milestone1-csci4448-5448" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.colorado.applepear.tests.commandTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="edu.colorado.applepear.tests.commandTests" />
+      <option name="MAIN_CLASS_NAME" value="edu.colorado.applepear.tests.commandTests.CommandDispatcherTest" />
+      <option name="METHOD_NAME" value="testUndo1" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -118,36 +132,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MoveSouthTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Milestone1-csci4448-5448" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="edu.colorado.applepear.tests.commandTests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="edu.colorado.applepear.tests.commandTests" />
-      <option name="MAIN_CLASS_NAME" value="edu.colorado.applepear.tests.commandTests.MoveSouthTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MoveWestTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Milestone1-csci4448-5448" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="edu.colorado.applepear.tests.commandTests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="edu.colorado.applepear.tests.commandTests" />
-      <option name="MAIN_CLASS_NAME" value="edu.colorado.applepear.tests.commandTests.MoveWestTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="MoveWestTest.testUndoWest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Milestone1-csci4448-5448" />
       <extension name="coverage">
@@ -160,6 +144,20 @@
       <option name="MAIN_CLASS_NAME" value="edu.colorado.applepear.tests.commandTests.MoveWestTest" />
       <option name="METHOD_NAME" value="testUndoWest" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="edu.colorado.applepear.tests.commandTests in Milestone1-csci4448-5448" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Milestone1-csci4448-5448" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.colorado.applepear.tests.commandTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="edu.colorado.applepear.tests.commandTests" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -190,11 +188,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.edu.colorado.applepear.tests.commandTests in Milestone1-csci4448-5448" />
+        <item itemvalue="JUnit.CommandDispatcherTest" />
+        <item itemvalue="JUnit.CommandDispatcherTest.testUndo1" />
         <item itemvalue="JUnit.MoveNorthTest" />
         <item itemvalue="JUnit.MoveWestTest.testUndoWest" />
-        <item itemvalue="JUnit.MoveEastTest" />
-        <item itemvalue="JUnit.MoveWestTest" />
-        <item itemvalue="JUnit.MoveSouthTest" />
       </list>
     </recent_temporary>
   </component>
@@ -495,7 +493,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616343677144</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="done with movedirectiontest">
+      <created>1616346650511</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1616346650511</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -514,7 +519,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Team ApplePair pair 1: Vienna push - Modified Main" />
     <MESSAGE value="Team ApplePair pair 1: Kevina - updates to gameboard, update to ship, test updates" />
     <MESSAGE value="Player takes in gameboard, instead of GameBoard takes in Player" />
     <MESSAGE value="player fix" />
@@ -539,7 +543,8 @@
     <MESSAGE value="moving fleets completed in main" />
     <MESSAGE value="main" />
     <MESSAGE value="player has command dispatcher" />
-    <option name="LAST_COMMIT_MESSAGE" value="player has command dispatcher" />
+    <MESSAGE value="done with movedirectiontest" />
+    <option name="LAST_COMMIT_MESSAGE" value="done with movedirectiontest" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -581,6 +586,15 @@
     </SUITE>
     <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$ShipTest.ic" NAME="ShipTest Coverage Results" MODIFIED="1614829704351" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>edu.colorado.applepear.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$CommandDispatcherTest.ic" NAME="CommandDispatcherTest Coverage Results" MODIFIED="1616348475862" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>edu.colorado.applepear.tests.commandTests.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$CommandDispatcherTest_testUndo1.ic" NAME="CommandDispatcherTest.testUndo1 Coverage Results" MODIFIED="1616348216790" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>edu.colorado.applepear.tests.commandTests.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$edu_colorado_applepear_tests_commandTests_in_Milestone1_csci4448_5448.ic" NAME="edu.colorado.applepear.tests.commandTests in Milestone1-csci4448-5448 Coverage Results" MODIFIED="1616348516486" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>edu.colorado.applepear.tests.commandTests.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$CaptainsQuartersTest.ic" NAME="CaptainsQuartersTest Coverage Results" MODIFIED="1615825364735" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>edu.colorado.applepear.tests.*</FILTER>

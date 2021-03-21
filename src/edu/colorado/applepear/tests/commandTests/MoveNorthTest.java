@@ -31,7 +31,7 @@ public class MoveNorthTest {
         centerPoint.add(new Point(1,9));
 
         gb.placeShip(centerPoint);
-        mn = new MoveNorth(gb, gb.getShips().get(0) );
+        mn = new MoveNorth(gb, gb.getShips().get(0));
         mn.execute();
         assertEquals(gb.getShips().get(0).getLocation().get(0).getY(), 8, "The Y value should be 8.");
     }
