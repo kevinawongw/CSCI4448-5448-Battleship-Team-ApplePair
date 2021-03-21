@@ -47,4 +47,30 @@ public class MoveSouthTest {
         assertEquals(gb.getShips().get(0).getLocation().get(0).getY(), 6, "The Y value should be 6.");
     }
 
+    @Test
+    @DisplayName("Testing undo Ship South1")
+    public void testUndoSouth(){
+        List<Point> centerPoint = new ArrayList<>();
+        centerPoint.add(new Point(0,0));
+        centerPoint.add(new Point(1,0));
+
+        gb.placeShip(centerPoint);
+        ms = new MoveSouth(gb, gb.getShips().get(0) );
+        ms.execute();
+        ms.undo();
+        assertEquals(gb.getShips().get(0).getLocation().get(0).getY(), 0, "The Y value should be 0.");
+    }
+    @Test
+    @DisplayName("Testing undo Ship South2")
+    public void testUndoSouth2(){
+        List<Point> centerPoint = new ArrayList<>();
+        centerPoint.add(new Point(2,5));
+        centerPoint.add(new Point(3,5));
+
+        gb.placeShip(centerPoint);
+        ms = new MoveSouth(gb, gb.getShips().get(0) );
+        ms.execute();
+        ms.undo();
+        assertEquals(gb.getShips().get(0).getLocation().get(0).getY(), 5, "The Y value should be 5.");
+    }
 }
