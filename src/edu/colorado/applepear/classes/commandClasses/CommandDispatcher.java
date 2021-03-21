@@ -25,7 +25,7 @@ public class CommandDispatcher {
     }
     public void undo(){
         if(cmd.size() != 0) {
-            cmd.remove(cmd.size() - 1);
+            cmd.get(cmd.size() - 1).undo();
             System.out.println("You have undone your latest move.");
         }else
             System.out.println("There are no moves to be undone.");
@@ -37,6 +37,7 @@ public class CommandDispatcher {
     public void redo(){
         if(currentC != null) {
             currentC.execute();
+            cmd.remove(cmd.size() - 1);
             System.out.println("You have redone your latest move.");
         }else
             System.out.println("There are no moves to be redone.");

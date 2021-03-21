@@ -42,4 +42,27 @@ public class MoveEast implements Command{
             gb.viewUnderwater();
         }
     }
+
+    @Override
+    public void undo() {
+        List <Point> newLocations = new ArrayList<>();
+        if(!ship.getUnderwater()){
+            for (Point p : ship.getLocation()) {
+                newLocations.add(new Point(p.getX() - 1, p.getY()));
+                gb.setShipMap(p, 0);
+            }
+            ship.setLocation(newLocations);
+            gb.updateShipMap();
+            gb.viewShips();
+        }
+        else if(ship.getUnderwater()){
+            for (Point p : ship.getLocation()) {
+                newLocations.add(new Point(p.getX() - 1, p.getY()));
+                gb.setShipMap(p, 0);
+            }
+            ship.setLocation(newLocations);
+            gb.updateUnderwaterMap();
+            gb.viewUnderwater();
+        }
+    }
 }
