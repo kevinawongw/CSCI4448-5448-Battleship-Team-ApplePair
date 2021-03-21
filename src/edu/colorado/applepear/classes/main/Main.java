@@ -156,7 +156,7 @@ public class Main {
                              int indexOfMovingShip = MainHelpers.viewAllShipsAsList(curPlayer);
                              List<String> validMoves = curPlayer.getGb().getPossibleMoveLocations(curPlayer.getGb().getShips().get(indexOfMovingShip));
                              int moveIndex = MainHelpers.getMoves(validMoves);
-                             String myMove = validMoves.get(moveIndex);
+                             String myMove = validMoves.get(moveIndex-1);
 
                                  if(myMove.equals("North")){
                                      MoveNorth mNorth = new MoveNorth(curPlayer.getGb(), curPlayer.getGb().getShips().get(indexOfMovingShip));
