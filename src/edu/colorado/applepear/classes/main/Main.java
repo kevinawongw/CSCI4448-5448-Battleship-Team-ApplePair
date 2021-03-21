@@ -178,6 +178,7 @@ public class Main {
                              }
                              break;
                          case 2:
+
                              commDispatch.redo();
                              curPlayer.getGb().viewShips();
                              break;

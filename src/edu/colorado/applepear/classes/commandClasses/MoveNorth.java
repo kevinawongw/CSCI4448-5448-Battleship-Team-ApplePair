@@ -52,7 +52,7 @@ public class MoveNorth implements Command {
             }
             ship.setLocation(newLocations);
             gb.updateShipMap();
-            gb.viewShips();
+//            gb.viewShips();
         }
         else if(ship.getUnderwater()){
             for (Point p : ship.getLocation()){
@@ -61,7 +61,7 @@ public class MoveNorth implements Command {
             }
             ship.setLocation(newLocations);
             gb.updateUnderwaterMap();
-            gb.viewUnderwater();
+//            gb.viewUnderwater();
         }
     }
 
