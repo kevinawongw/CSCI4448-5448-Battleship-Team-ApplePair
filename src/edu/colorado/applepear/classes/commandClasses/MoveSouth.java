@@ -44,8 +44,8 @@ public class MoveSouth implements Command{
     public void undo(){
         List <Point> newLocations = new ArrayList<>();
         if(!ship.getUnderwater()){
-            for (Point p : ship.getLocation()) {
-                newLocations.add(new Point(p.getX(), p.getY() + 1));
+            for(Point p : ship.getLocation()){
+                newLocations.add(new Point(p.getX(), p.getY() - 1));
                 gb.setShipMap(p, 0);
             }
             ship.setLocation(newLocations);
@@ -54,7 +54,7 @@ public class MoveSouth implements Command{
         }
         else if(ship.getUnderwater()){
             for (Point p : ship.getLocation()){
-                newLocations.add(new Point(p.getX(), p.getY() + 1));
+                newLocations.add(new Point(p.getX(), p.getY() - 1));
                 gb.setUnderwaterMap(p,0);
             }
             ship.setLocation(newLocations);
