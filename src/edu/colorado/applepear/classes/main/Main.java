@@ -159,9 +159,10 @@ public class Main {
                          case 1:
                              int indexOfMovingShip = MainHelpers.viewAllShipsAsList(curPlayer);
                              List<String> validMoves = curPlayer.getGb().getPossibleMoveLocations(curPlayer.getGb().getShips().get(indexOfMovingShip));
-                             String moveIndex = MainHelpers.getMoves(validMoves);
+                             int moveIndex = MainHelpers.getMoves(validMoves);
+                             String myMove = validMoves.get(moveIndex);
 
-                                 if(moveIndex.equals("n") || moveIndex.equals("N") || moveIndex.equals("North") || moveIndex.equals("north")){ //north
+                                 if(myMove.equals("North")){
                                      MoveNorth mNorth = new MoveNorth(curPlayer.getGb(), curPlayer.getGb().getShips().get(indexOfMovingShip));
                                      if(curPlayer.equals(p1)){
                                          commDispatch1.setCommands(mNorth);
@@ -170,9 +171,8 @@ public class Main {
                                          commDispatch2.setCommands(mNorth);
                                      }
                                  }
-                                 else if(moveIndex.equals("s") || moveIndex.equals("S") || moveIndex.equals("South") || moveIndex.equals("south") ){ //south
+                                 else if(myMove.equals("South")){
                                      MoveSouth mSouth = new MoveSouth(curPlayer.getGb(), curPlayer.getGb().getShips().get(indexOfMovingShip));
-
                                      if(curPlayer.equals(p1)){
                                          commDispatch1.setCommands(mSouth);
                                      }
@@ -180,7 +180,7 @@ public class Main {
                                          commDispatch2.setCommands(mSouth);
                                      }
                                  }
-                                 else if(moveIndex.equals("e") || moveIndex.equals("E") || moveIndex.equals("East") || moveIndex.equals("east") ){ //east
+                                 else if(myMove.equals("East")){ //east
                                      MoveEast mEast = new MoveEast(curPlayer.getGb(), curPlayer.getGb().getShips().get(indexOfMovingShip));
 
                                      if(curPlayer.equals(p1)){
@@ -190,9 +190,8 @@ public class Main {
                                          commDispatch2.setCommands(mEast);
                                      }
                                  }
-                                 else if(moveIndex.equals("w") || moveIndex.equals("W") || moveIndex.equals("West") || moveIndex.equals("west") ){ //west
+                                 else if(myMove.equals("West")){ //west
                                      MoveWest mWest = new MoveWest(curPlayer.getGb(), curPlayer.getGb().getShips().get(indexOfMovingShip));
-
                                      if(curPlayer.equals(p1)){
                                          commDispatch1.setCommands(mWest);
                                      }
@@ -200,11 +199,8 @@ public class Main {
                                          commDispatch2.setCommands(mWest);
                                      }
                                  }
-
-
-
-
                              break;
+
                          case 2:
                              if(curPlayer.equals(p1))
                                 commDispatch1.redo();
