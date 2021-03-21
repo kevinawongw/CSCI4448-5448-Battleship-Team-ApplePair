@@ -8,17 +8,13 @@ import java.util.*;
 public class MoveEast implements Command{
     GameBoard gb;
     Ship ship;
-    String direction;
+
 
     public MoveEast(GameBoard gb, Ship ship){
         this.gb = gb;
         this.ship = ship;
-        direction = "East";
     }
 
-    public String getDirection(){
-        return direction;
-    }
 
     @Override
     public void execute() {

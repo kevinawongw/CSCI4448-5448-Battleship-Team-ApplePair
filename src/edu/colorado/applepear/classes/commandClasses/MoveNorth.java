@@ -9,17 +9,15 @@ import java.util.*;
 public class MoveNorth implements Command {
     GameBoard gb;
     Ship ship;
-    String direction;
+
 
     public MoveNorth(GameBoard gb, Ship ship){
         this.gb = gb;
         this.ship = ship;
-        direction = "North";
+
     }
 
-    public String getDirection(){
-        return direction;
-    }
+
 
     @Override
     public void execute() {
@@ -54,7 +52,7 @@ public class MoveNorth implements Command {
             }
             ship.setLocation(newLocations);
             gb.updateShipMap();
-            gb.viewShips();
+//            gb.viewShips();
         }
         else if(ship.getUnderwater()){
             for (Point p : ship.getLocation()){
@@ -63,7 +61,7 @@ public class MoveNorth implements Command {
             }
             ship.setLocation(newLocations);
             gb.updateUnderwaterMap();
-            gb.viewUnderwater();
+//            gb.viewUnderwater();
         }
     }
 

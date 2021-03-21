@@ -8,17 +8,15 @@ import java.util.*;
 public class MoveWest implements Command{
     GameBoard gb;
     Ship ship;
-    String direction;
+
 
     public MoveWest(GameBoard gb, Ship ship){
         this.gb = gb;
         this.ship = ship;
-        direction = "West";
+
     }
 
-    public String getDirection(){
-        return direction;
-    }
+
 
     @Override
     public void execute() {
