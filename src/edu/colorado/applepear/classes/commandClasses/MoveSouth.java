@@ -13,7 +13,6 @@ public class MoveSouth implements Command{
     public MoveSouth(GameBoard gb, Ship ship){
         this.gb = gb;
         this.ship = ship;
-
     }
 
 

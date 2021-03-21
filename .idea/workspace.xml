@@ -22,10 +22,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ecce50e7-60f1-4088-9580-0bcf29b1574e" name="Default Changelist" comment="main">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/main/Main.java" afterDir="false" />
+    <list default="true" id="ecce50e7-60f1-4088-9580-0bcf29b1574e" name="Default Changelist" comment="player has command dispatcher">
+      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/commandClasses/MoveSouth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/commandClasses/MoveSouth.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +83,7 @@
       <recent name="edu.colorado.applepear.tests.concreteShipTests" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.GameBoardTest">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -197,11 +195,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.GameBoardTest" />
+        <item itemvalue="JUnit.edu.colorado.applepear.tests in Milestone1-csci4448-5448" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.GameBoardTest.testMoveShip3" />
         <item itemvalue="JUnit.edu.colorado.applepear.tests.concreteShipTests in Milestone1-csci4448-5448" />
-        <item itemvalue="JUnit.edu.colorado.applepear.tests in Milestone1-csci4448-5448" />
       </list>
     </recent_temporary>
   </component>
@@ -495,7 +493,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616343064034</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="player has command dispatcher">
+      <created>1616343677144</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1616343677144</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -514,7 +519,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Team ApplePair pair 1: Kevina - GameBoard getters" />
     <MESSAGE value="Team ApplePair pair 1: Vienna push - Modified Main" />
     <MESSAGE value="Team ApplePair pair 1: Kevina - updates to gameboard, update to ship, test updates" />
     <MESSAGE value="Player takes in gameboard, instead of GameBoard takes in Player" />
@@ -539,7 +543,8 @@
     <MESSAGE value="test" />
     <MESSAGE value="moving fleets completed in main" />
     <MESSAGE value="main" />
-    <option name="LAST_COMMIT_MESSAGE" value="main" />
+    <MESSAGE value="player has command dispatcher" />
+    <option name="LAST_COMMIT_MESSAGE" value="player has command dispatcher" />
   </component>
   <component name="WindowStateProjectService">
     <state x="94" y="94" width="1349" height="677" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1616094977395">
@@ -594,10 +599,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1493" height="389" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1616179049697" />
-    <state x="0" y="166" key="Vcs.Push.Dialog.v2" timestamp="1616343067049">
+    <state x="0" y="166" key="Vcs.Push.Dialog.v2" timestamp="1616343679136">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="0" y="166" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1616343067049" />
+    <state x="0" y="166" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1616343679136" />
     <state x="768" y="0" width="774" height="870" key="dock-window-1" timestamp="1616043255886">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
