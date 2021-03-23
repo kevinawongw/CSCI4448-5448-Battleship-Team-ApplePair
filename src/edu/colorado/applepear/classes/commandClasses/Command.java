@@ -6,5 +6,4 @@ public interface Command {
     public default void undo(){
         System.out.println("Undo your last action!");
     }
-
 }
