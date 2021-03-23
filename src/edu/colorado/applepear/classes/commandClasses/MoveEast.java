@@ -6,26 +6,16 @@ import edu.colorado.applepear.classes.Ship;
 import java.util.*;
 
 public class MoveEast implements Command{
-
-    /**
-     * Class Attributes
-     */
     GameBoard gb;
     Ship ship;
 
-    /**
-     * Move East
-     * @param gb - GameBoard
-     * @param ship - Ship Moved
-     */
+
     public MoveEast(GameBoard gb, Ship ship){
         this.gb = gb;
         this.ship = ship;
     }
 
-    /**
-     * Execute Move
-     */
+
     @Override
     public void execute() {
         List <Point> newLocations = new ArrayList<>();
@@ -49,9 +39,6 @@ public class MoveEast implements Command{
         }
     }
 
-    /**
-     * Undo
-     */
     @Override
     public void undo() {
         List <Point> newLocations = new ArrayList<>();

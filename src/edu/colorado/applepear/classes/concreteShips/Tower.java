@@ -4,32 +4,29 @@ import edu.colorado.applepear.classes.CaptainsQuarters;
 import edu.colorado.applepear.classes.Point;
 import edu.colorado.applepear.classes.Ship;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Scanner;
 
 public class Tower implements Ship {
 
-    /**
-     * Class Attributes
-     */
     public ArrayList<Point> location;
     private String shipName;
+    private boolean isSunken;
     private int health;
+    private CaptainsQuarters ct;
+    private boolean underwater;
 
-    /**
-     * Constructor
-     */
     public Tower(){
-        location = new ArrayList<>();
+        location = new ArrayList<Point>();
         shipName = "tower";
         health = 3;
-        boolean isSunken = false;
-        boolean underwater = false;
+        ct = null;
+        isSunken = false;
+        underwater = false;
     }
 
-    /**
-     * Getters
-     * @return attributes
-     */
     @Override
     public String getShipName() {
         return shipName;
@@ -51,70 +48,54 @@ public class Tower implements Ship {
         return null;
     }
 
-    /**
-     * Setters
-     */
     @Override
     public void setShipName() {
         shipName = "tower";
     }
+
     @Override
     public void setShipHealth(int newHealth) {
         this.health = newHealth;
     }
+
     @Override
     public void setCaptainsQuarters() {
         System.out.println("This type of ship cannot have a captain's quarters!");
-    }
-    @Override
-    public void setLocation(List<Point> points) {
-        location = new ArrayList<>();
-        location.addAll(points);
+        ct = null;
     }
 
-    /**
-     * is Ship Sunken
-     * @return boolean
-     *      // Checks length of ship's location
-     *      // If 0, True
-     *      // Else, False
-     */
+    @Override
+    public void setLocation(List<Point> points) {
+        location = new ArrayList<Point>();
+        for (Point point : points) {
+            location.add(point);
+        }
+    }
+
     @Override
     public Boolean isShipSunken() {
         return location.size() == 0;
     }
 
-
-    /**
-     * Update Health
-     * @param p - Point that was attacked
-     *      // Find Point in ship's location list
-     *      // Remove that Point from the location list
-     *      // Update Health
-     */
     @Override
     public void updateHealth(Point p){
 
         int index = 0;
+        boolean found = false;
         for (Point point : location){
             if (p.getX() == point.getX() && p.getY() == point.getY()){
+                found = true;
                 break;
             }
             index++;
         }
 
-       location.remove(index);
+        Point t = location.remove(index);
 
         setLocation(location);
         setShipHealth(location.size());
     }
 
-    /**
-     * Input
-     * @param shipMap - Opponent's Ship Map
-     * @return list of points for the new ship
-     *      // Prompt user to enter left-most or top-most coordinates of the new tower.
-     */
     @Override
     public List<Point> input(int[][] shipMap) {
         Scanner myInput = new Scanner(System.in);
@@ -132,7 +113,7 @@ public class Tower implements Ship {
                 int y1 = Integer.parseInt(inputValY);
                 Point p1 = new Point(x1, y1);
                 temp = false;
-                return Collections.singletonList(p1);
+                return Arrays.asList(p1);
 
             }
 

@@ -11,95 +11,99 @@ import java.util.Scanner;
 
 public class Destroyer implements Ship {
 
-    /**
-     * Class Attributes
-     */
     public ArrayList<Point> location;
     private String shipName;
+    private boolean isSunken;
     private int health;
     private CaptainsQuarters ct;
+    private boolean underwater;
 
-    /**
-     * Constructor
-     */
     public Destroyer(){
-        location = new ArrayList<>();
+        location = new ArrayList<Point>();
         shipName = "destroyer";
         health = 3;
-        boolean isSunken = false;
-        boolean underwater = false;
+        isSunken = false;
+        underwater = false;
     }
 
-    /**
-     * Getters
-     * @return attributes
-     */
     @Override
-    public String getShipName() { return shipName; }
-    @Override
-    public int getShipHealth() { return health; }
-    @Override
-    public List<Point> getLocation() { return location; }
-    @Override
-    public boolean getUnderwater() { return false; }
-    @Override
-    public CaptainsQuarters getCaptainsQuarters() { return ct; }
+    public String getShipName() {
+        return shipName;
+    }
 
-    /**
-     * Setters
-     */
     @Override
-    public void setShipName() { shipName = "destroyer"; }
+    public int getShipHealth() {
+        return health;
+    }
+
     @Override
-    public void setShipHealth(int newHealth) { this.health = newHealth; }
+    public List<Point> getLocation() {
+        return location;
+    }
+
     @Override
-    public void setCaptainsQuarters() { ct = new CaptainsQuarters(2,location.get(1));}
+    public boolean getUnderwater() {
+        return false;
+    }
+
+    @Override
+    public CaptainsQuarters getCaptainsQuarters() {
+        return ct;
+    }
+
+    @Override
+    public void setShipName() {
+        shipName = "destroyer";
+    }
+
+    @Override
+    public void setShipHealth(int newHealth) {
+        this.health = newHealth;
+    }
+
+
+    @Override
+    public void setCaptainsQuarters() {
+        ct = new CaptainsQuarters(2,location.get(1));
+    }
+
     @Override
     public void setLocation(List<Point> points) {
-        location = new ArrayList<>();
-        location.addAll(points);
+        location = new ArrayList<Point>();
+        for (Point point : points) {
+            location.add(point);
+        }
     }
 
-    /**
-     * is Ship Sunken
-     * @return boolean
-     *      // Checks length of ship's location
-     *      // If 0, True
-     *      // Else, False
-     */
     @Override
     public Boolean isShipSunken() {
-        return location.size() == 0;
+        if (location.size() == 0){
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 
-    /**
-     * Update Health
-     * @param p - Point that was attacked
-     *      // Find Point in ship's location list
-     *      // Remove that Point from the location list
-     *      // Update Health
-     */
     @Override
     public void updateHealth(Point p){
 
         int index = 0;
+        boolean found = false;
         for (Point point : location){
             if (p.getX() == point.getX() && p.getY() == point.getY()){
+                found = true;
                 break;
             }
             index++;
         }
-        location.remove(index);
+
+        Point t = location.remove(index);
+
         setLocation(location);
         setShipHealth(location.size());
     }
 
-    /**
-     * Input
-     * @param shipMap - Opponent's Ship Map
-     * @return list of points for the new ship
-     *      // Prompt user to enter left-most or top-most coordinates of the new destroyer.
-     */
     @Override
     public List<Point> input(int[][] shipMap) {
         Scanner myInput = new Scanner(System.in);

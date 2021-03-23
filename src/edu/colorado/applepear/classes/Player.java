@@ -1,9 +1,11 @@
 package edu.colorado.applepear.classes;
 
+import edu.colorado.applepear.classes.commandClasses.Command;
 import edu.colorado.applepear.classes.commandClasses.CommandDispatcher;
 
 import java.util.ArrayList;
 import java.util.List;
+
 
 //Vienna part: player class
 
@@ -16,7 +18,7 @@ public class Player{
     private int sonarPulse, plusMissile;
     private final GameBoard gb;
     private Boolean hasSunkenShip;
-    private final CommandDispatcher commandDispatcher;
+    private CommandDispatcher commandDispatcher;
 
 
     /**
@@ -46,7 +48,7 @@ public class Player{
     public int getPlusMissile() { return plusMissile; }
     public GameBoard getGb() { return gb; }
     public boolean getHasSunkenShip(){return hasSunkenShip;}
-    public CommandDispatcher getCommandDispatcher(){ return commandDispatcher; }
+    public CommandDispatcher getCommandDispatcher(){ return commandDispatcher; };
 
     /**
      * Update Sunken Ship
