@@ -47,7 +47,7 @@ public class CommandDispatcher {
             return;
         } else if (redoCMD.size() != 0) { //if undo is called at least once
             redoCMD.get(redoCMD.size() - 1).execute();
-            undoCMD.add(redoCMD.get(redoCMD.size() - 1));
+            //undoCMD.add(redoCMD.get(redoCMD.size() - 1));
             redoCMD.remove(redoCMD.size() - 1);
             System.out.println("You have redone your latest move.");
         }else{
