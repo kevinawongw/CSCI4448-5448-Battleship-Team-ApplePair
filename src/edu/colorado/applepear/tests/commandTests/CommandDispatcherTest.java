@@ -58,8 +58,8 @@ public class CommandDispatcherTest {
         cmd.undo();
         cmd.redo();
         assertEquals(redocmd.size(), 0, "Size of Undo List should be 1.");
-
     }
+
     @Test
     @DisplayName("Testing undoAll CommandDispatcher")
     public void testUndoAll1(){
