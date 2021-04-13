@@ -11,7 +11,7 @@ public class CommandDispatcher {
 
     public CommandDispatcher(){ }
     private Command currentC = null;
-    private int countUndo = 0;
+
 
     public void setCommands(Command c){
         currentC = c;
@@ -44,7 +44,6 @@ public class CommandDispatcher {
     public void redo() {
         if(undoCMD.size() == 0){
             System.out.println("You should call at least one undo to redo.");
-            return;
         } else if (redoCMD.size() != 0) { //if undo is called at least once
             redoCMD.get(redoCMD.size() - 1).execute();
             //undoCMD.add(redoCMD.get(redoCMD.size() - 1));

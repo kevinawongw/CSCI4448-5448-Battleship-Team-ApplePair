@@ -23,9 +23,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ecce50e7-60f1-4088-9580-0bcf29b1574e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/commandClasses/Move.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/commandClasses/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/commandClasses/Command.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/commandClasses/CommandDispatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/commandClasses/CommandDispatcher.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -510,7 +510,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616346650511</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="Changed move to one class">
+      <created>1618338487014</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1618338487014</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -529,7 +536,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Team ApplePair pair 1: Kevina - updates to gameboard, update to ship, test updates" />
     <MESSAGE value="Player takes in gameboard, instead of GameBoard takes in Player" />
     <MESSAGE value="player fix" />
     <MESSAGE value="player attack map update" />
@@ -554,7 +560,8 @@
     <MESSAGE value="main" />
     <MESSAGE value="player has command dispatcher" />
     <MESSAGE value="done with movedirectiontest" />
-    <option name="LAST_COMMIT_MESSAGE" value="done with movedirectiontest" />
+    <MESSAGE value="Changed move to one class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed move to one class" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

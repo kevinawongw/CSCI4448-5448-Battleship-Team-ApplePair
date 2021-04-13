@@ -18,7 +18,7 @@ public class Player{
     private int sonarPulse, plusMissile;
     private final GameBoard gb;
     private Boolean hasSunkenShip;
-    private CommandDispatcher commandDispatcher;
+    private final CommandDispatcher commandDispatcher;
 
 
     /**
