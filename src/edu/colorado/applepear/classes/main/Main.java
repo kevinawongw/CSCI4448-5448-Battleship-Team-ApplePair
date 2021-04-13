@@ -157,23 +157,9 @@ public class Main {
                              List<String> validMoves = curPlayer.getGb().getPossibleMoveLocations(curPlayer.getGb().getShips().get(indexOfMovingShip));
                              int moveIndex = MainHelpers.getMoves(validMoves);
                              String myMove = validMoves.get(moveIndex-1);
-
-                                 if(myMove.equals("North")){
-                                     MoveNorth mNorth = new MoveNorth(curPlayer.getGb(), curPlayer.getGb().getShips().get(indexOfMovingShip));
-                                     curPlayer.getCommandDispatcher().setCommands(mNorth);
-                                 }
-                                 else if(myMove.equals("South")){
-                                     MoveSouth mSouth = new MoveSouth(curPlayer.getGb(), curPlayer.getGb().getShips().get(indexOfMovingShip));
-                                     curPlayer.getCommandDispatcher().setCommands(mSouth);
-                                 }
-                                 else if(myMove.equals("East")){ //east
-                                     MoveEast mEast = new MoveEast(curPlayer.getGb(), curPlayer.getGb().getShips().get(indexOfMovingShip));
-                                     curPlayer.getCommandDispatcher().setCommands(mEast);
-                                 }
-                                 else if(myMove.equals("West")){ //west
-                                     MoveWest mWest = new MoveWest(curPlayer.getGb(), curPlayer.getGb().getShips().get(indexOfMovingShip));
-                                     curPlayer.getCommandDispatcher().setCommands(mWest);
-                                 }
+                             System.out.println("Test move 2: "+myMove);
+                             Move move = new Move(curPlayer.getGb(), curPlayer.getGb().getShips().get(indexOfMovingShip),myMove);
+                             curPlayer.getCommandDispatcher().setCommands(move);
                              break;
 
                          case 2:
