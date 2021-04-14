@@ -8,8 +8,7 @@ import java.awt.event.ActionListener;
 
 public class PlayerGUI extends JFrame implements ActionListener {
     private JPanel ScreenMain;
-    private JTextField p2Name;
-    private JTextField p1Name;
+    private JButton button1;
 
 
     @Override
