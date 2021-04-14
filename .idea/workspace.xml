@@ -22,7 +22,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ecce50e7-60f1-4088-9580-0bcf29b1574e" name="Default Changelist" comment="&#10;file org" />
+    <list default="true" id="ecce50e7-60f1-4088-9580-0bcf29b1574e" name="Default Changelist" comment="&#10;file org">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -196,10 +198,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.edu.colorado.applepear.tests.commandTests in Milestone1-csci4448-5448" />
-        <item itemvalue="JUnit.CommandDispatcherTest" />
-        <item itemvalue="JUnit.CommandDispatcherTest.testUndo1" />
-        <item itemvalue="JUnit.MoveNorthTest" />
         <item itemvalue="JUnit.MoveWestTest.testUndoWest" />
+        <item itemvalue="JUnit.MoveNorthTest" />
+        <item itemvalue="JUnit.CommandDispatcherTest.testUndo1" />
+        <item itemvalue="JUnit.CommandDispatcherTest" />
       </list>
     </recent_temporary>
   </component>
@@ -535,7 +537,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618421670595</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="&#10;file org">
+      <created>1618421766388</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1618421766388</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -582,10 +591,26 @@
     <option name="LAST_COMMIT_MESSAGE" value="&#10;file org" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="724" y="165" key="Vcs.Push.Dialog.v2" timestamp="1618421677448">
+    <state x="362" y="74" key="#Plugins" timestamp="1618436396196">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="724" y="165" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1618421677448" />
+    <state x="362" y="74" key="#Plugins/0.0.1536.864@0.0.1536.864" timestamp="1618436396196" />
+    <state x="94" y="94" width="1349" height="677" key="DiffContextDialog" timestamp="1618441120807">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="94" y="94" width="1349" height="677" key="DiffContextDialog/0.0.1536.864@0.0.1536.864" timestamp="1618441120807" />
+    <state x="550" y="188" key="FileChooserDialogImpl" timestamp="1618436314595">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="550" y="188" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1618436314595" />
+    <state x="506" y="300" key="Github.CreatePullRequestDialog" timestamp="1618441117454">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="506" y="300" key="Github.CreatePullRequestDialog/0.0.1536.864@0.0.1536.864" timestamp="1618441117454" />
+    <state x="724" y="165" key="Vcs.Push.Dialog.v2" timestamp="1618421768188">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="724" y="165" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1618421768188" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
