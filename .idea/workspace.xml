@@ -22,26 +22,18 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ecce50e7-60f1-4088-9580-0bcf29b1574e" name="Default Changelist" comment="HomeScreen GUI">
-      <change afterPath="$PROJECT_DIR$/src/out/production/Milestone1-csci4448-5448/UML_Diagram/Battleship_ApplePearUMLClass_Milestone6.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/out/production/Milestone1-csci4448-5448/UML_Diagram/Battleship_ApplePearUMLClass_Milestone6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+    <list default="true" id="ecce50e7-60f1-4088-9580-0bcf29b1574e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/out/production/Milestone1-csci4448-5448/CRC_Cards/1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/out/production/Milestone1-csci4448-5448/CRC_Cards/2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/27-Refactoring.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/out/production/Milestone1-csci4448-5448/Refactoring_screenshots/27-Refactoring.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/out/production/Milestone1-csci4448-5448/CRC_Cards/3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/4.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/out/production/Milestone1-csci4448-5448/CRC_Cards/4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/5.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/out/production/Milestone1-csci4448-5448/CRC_Cards/5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/6.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/out/production/Milestone1-csci4448-5448/CRC_Cards/6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/7.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/out/production/Milestone1-csci4448-5448/CRC_Cards/7.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/8.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/out/production/Milestone1-csci4448-5448/CRC_Cards/8.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Battleship_ApplePearUMLClass.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/out/production/Milestone1-csci4448-5448/UML_Diagram/Battleship_ApplePearUMLClass_Milestone5.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Original.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/out/production/Milestone1-csci4448-5448/CRC_Cards/CRC_Cards_Milestone1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/GUI/PlayerGUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/GUI/PlayerGUI.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/GUI/PlayerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/GUI/PlayerGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/out/production/Milestone1-csci4448-5448/CRCCards.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/out/production/Milestone1-csci4448-5448/CRC_Cards/CRCCards.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/out/production/Milestone1-csci4448-5448/Milestone1-csci4448-5448.iml" beforeDir="false" afterPath="$PROJECT_DIR$/src/out/production/Milestone1-csci4448-5448/Misc/Milestone1-csci4448-5448.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/commandClasses/MoveEast.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/commandClasses/MoveNorth.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/commandClasses/MoveSouth.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/commandClasses/MoveWest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/tests/commandTests/CommandDispatcherTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/tests/commandTests/CommandDispatcherTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/tests/commandTests/MoveEastTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/tests/commandTests/MoveNorthTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/tests/commandTests/MoveNorthTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/tests/commandTests/MoveSouthTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/tests/commandTests/MoveWestTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,13 +102,6 @@
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="edu.colorado.applepear.classes" />
       <recent name="edu.colorado.applepear.tests.concreteShipTests" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\kevin\IdeaProjects\Milestone1-csci4448-5448\src\out\production\Milestone1-csci4448-5448\Misc" />
-      <recent name="C:\Users\kevin\IdeaProjects\Milestone1-csci4448-5448\src\out\production\Milestone1-csci4448-5448\CRC_Cards" />
-      <recent name="C:\Users\kevin\IdeaProjects\Milestone1-csci4448-5448\src\out\production\Milestone1-csci4448-5448\UML_Diagram" />
-      <recent name="C:\Users\kevin\IdeaProjects\Milestone1-csci4448-5448\src\out\production\Milestone1-csci4448-5448\Refactoring_screenshots" />
-      <recent name="C:\Users\kevin\IdeaProjects\Milestone1-csci4448-5448\src\out\production\Milestone1-csci4448-5448" />
     </key>
   </component>
   <component name="RunManager" selected="JUnit.edu.colorado.applepear.tests.commandTests in Milestone1-csci4448-5448">
@@ -594,12 +579,6 @@
     <MESSAGE value="HomeScreen GUI" />
     <option name="LAST_COMMIT_MESSAGE" value="HomeScreen GUI" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="227" y="237" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1618421136244">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="227" y="237" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.864@0.0.1536.864" timestamp="1618421136244" />
-  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -617,144 +596,144 @@
     </pin-to-top-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$edu_colorado_applepear_classes_concreteShips_in_Milestone1_csci4448_5448.ic" NAME="edu.colorado.applepear.classes.concreteShips in Milestone1-csci4448-5448 Coverage Results" MODIFIED="1616031983098" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>edu.colorado.applepear.classes.concreteShips.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$MoveWestTest_testUndoWest.ic" NAME="MoveWestTest.testUndoWest Coverage Results" MODIFIED="1616346575080" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>edu.colorado.applepear.tests.commandTests.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$TowerTest.ic" NAME="TowerTest Coverage Results" MODIFIED="1616090516517" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>edu.colorado.applepear.tests.concreteShipTests.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$DestroyerTest.ic" NAME="DestroyerTest Coverage Results" MODIFIED="1616054515800" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>edu.colorado.applepear.tests.concreteShipTests.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/CSCI4448_5448_Battleship_Team_ApplePair$edu_colorado_applepear_tests_in_Milestone1_csci4448_5448.ic" NAME="edu.colorado.applepear.tests in Milestone1-csci4448-5448 Coverage Results" MODIFIED="1616215484213" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>edu.colorado.applepear.tests.*</FILTER>
-    </SUITE>
     <SUITE FILE_PATH="coverage/CSCI4448_5448_Battleship_Team_ApplePair$PlayerTest.ic" NAME="PlayerTest Coverage Results" MODIFIED="1614832661029" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>edu.colorado.applepear.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/CSCI4448_5448_Battleship_Team_ApplePair$PlayerTest_testGetName.ic" NAME="PlayerTest.testGetName Coverage Results" MODIFIED="1614882797499" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>edu.colorado.applepear.tests.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/CSCI4448_5448_Battleship_Team_ApplePair$GameBoardTest.ic" NAME="GameBoardTest Coverage Results" MODIFIED="1614832712919" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>edu.colorado.applepear.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$MoveNorthTest.ic" NAME="MoveNorthTest Coverage Results" MODIFIED="1616346588325" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>edu.colorado.applepear.tests.commandTests.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/CSCI4448_5448_Battleship_Team_ApplePair$PlayerTest_useSpaceLaserTest.ic" NAME="PlayerTest.useSpaceLaserTest Coverage Results" MODIFIED="1616514659443" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>edu.colorado.applepear.tests.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$MoveEastTest.ic" NAME="MoveEastTest Coverage Results" MODIFIED="1616346548481" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>edu.colorado.applepear.tests.commandTests.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$PlayerTest_usePlusMissileTest.ic" NAME="PlayerTest.usePlusMissileTest Coverage Results" MODIFIED="1614883634239" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>edu.colorado.applepear.tests.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/CSCI4448_5448_Battleship_Team_ApplePair$CommandDispatcherTest__1_.ic" NAME="CommandDispatcherTest (1) Coverage Results" MODIFIED="1616515201302" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>edu.colorado.applepear.tests.commandTests.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/CSCI4448_5448_Battleship_Team_ApplePair$edu_colorado_applepear_tests_concreteShipTests_in_Milestone1_csci4448_5448.ic" NAME="edu.colorado.applepear.tests.concreteShipTests in Milestone1-csci4448-5448 Coverage Results" MODIFIED="1616215498696" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>edu.colorado.applepear.tests.concreteShipTests.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$PlayerTest_useRadarMissileTest.ic" NAME="PlayerTest.useRadarMissileTest Coverage Results" MODIFIED="1614883584336" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>edu.colorado.applepear.tests.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/CSCI4448_5448_Battleship_Team_ApplePair$CaptainsQuartersTest.ic" NAME="CaptainsQuartersTest Coverage Results" MODIFIED="1616515148330" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>edu.colorado.applepear.tests.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$edu_colorado_applepear_tests_commandTests_in_Milestone1_csci4448_5448.ic" NAME="edu.colorado.applepear.tests.commandTests in Milestone1-csci4448-5448 Coverage Results" MODIFIED="1616348516486" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>edu.colorado.applepear.tests.commandTests.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$LShipTest.ic" NAME="LShipTest Coverage Results" MODIFIED="1616090801122" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>edu.colorado.applepear.tests.concreteShipTests.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$CaptainsQuartersTest.ic" NAME="CaptainsQuartersTest Coverage Results" MODIFIED="1616123728144" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>edu.colorado.applepear.tests.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$GameBoardTest.ic" NAME="GameBoardTest Coverage Results" MODIFIED="1616206612726" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>edu.colorado.applepear.tests.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$GameBoardTest_and_4_more.ic" NAME="GameBoardTest and 4 more Coverage Results" MODIFIED="1615825274593" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$Main.ic" NAME="Main Coverage Results" MODIFIED="1614103547153" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>edu.colorado.applepear.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$BattleshipTest.ic" NAME="BattleshipTest Coverage Results" MODIFIED="1616054817648" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>edu.colorado.applepear.tests.concreteShipTests.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$MoveWestTest_testMoveNorth2.ic" NAME="MoveWestTest.testMoveNorth2 Coverage Results" MODIFIED="1616340522373" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>edu.colorado.applepear.tests.commandTests.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/CSCI4448_5448_Battleship_Team_ApplePair$PointTest.ic" NAME="PointTest Coverage Results" MODIFIED="1614832663589" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>edu.colorado.applepear.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$MoveSouthTest.ic" NAME="MoveSouthTest Coverage Results" MODIFIED="1616346177966" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>edu.colorado.applepear.tests.commandTests.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$MoveNorthTest_testUndoNorth.ic" NAME="MoveNorthTest.testUndoNorth Coverage Results" MODIFIED="1616346020015" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>edu.colorado.applepear.tests.commandTests.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/CSCI4448_5448_Battleship_Team_ApplePair$PlayerTest_useRadarMissileTest.ic" NAME="PlayerTest.useRadarMissileTest Coverage Results" MODIFIED="1614833757381" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>edu.colorado.applepear.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$MinesweeperTest.ic" NAME="MinesweeperTest Coverage Results" MODIFIED="1616054013716" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>edu.colorado.applepear.tests.concreteShipTests.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$PlayerTest.ic" NAME="PlayerTest Coverage Results" MODIFIED="1614878653906" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>edu.colorado.applepear.tests.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$GameTest.ic" NAME="GameTest Coverage Results" MODIFIED="1616092683656" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>edu.colorado.applepear.tests.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$MoveNorthTest_testUndoNorth2.ic" NAME="MoveNorthTest.testUndoNorth2 Coverage Results" MODIFIED="1616339112671" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>edu.colorado.applepear.tests.commandTests.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$CommandDispatcherTest_testUndo1.ic" NAME="CommandDispatcherTest.testUndo1 Coverage Results" MODIFIED="1616348216790" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>edu.colorado.applepear.tests.commandTests.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/CSCI4448_5448_Battleship_Team_ApplePair$edu_colorado_applepear_test_in_Milestone1_csci4448_5448.ic" NAME="edu.colorado.applepear.test in Milestone1-csci4448-5448 Coverage Results" MODIFIED="1614834444017" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>edu.colorado.applepear.test.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$CommandDispatcherTest.ic" NAME="CommandDispatcherTest Coverage Results" MODIFIED="1616348475862" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>edu.colorado.applepear.tests.commandTests.*</FILTER>
+    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$edu_colorado_applepear_classes_in_Milestone1_csci4448_5448.ic" NAME="edu.colorado.applepear.classes in Milestone1-csci4448-5448 Coverage Results" MODIFIED="1615833833836" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>edu.colorado.applepear.classes.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/CSCI4448_5448_Battleship_Team_ApplePair$GameTest.ic" NAME="GameTest Coverage Results" MODIFIED="1616215544739" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$edu_colorado_applepear_tests_in_Milestone1_csci4448_5448.ic" NAME="edu.colorado.applepear.tests in Milestone1-csci4448-5448 Coverage Results" MODIFIED="1616515618097" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>edu.colorado.applepear.tests.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/CSCI4448_5448_Battleship_Team_ApplePair$BattleshipTest.ic" NAME="BattleshipTest Coverage Results" MODIFIED="1616515121081" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>edu.colorado.applepear.tests.concreteShipTests.*</FILTER>
+    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$PlayerTest_usePlusMissileTest.ic" NAME="PlayerTest.usePlusMissileTest Coverage Results" MODIFIED="1614883634239" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>edu.colorado.applepear.tests.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$MoveWestTest.ic" NAME="MoveWestTest Coverage Results" MODIFIED="1616346411924" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>edu.colorado.applepear.tests.commandTests.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$edu_colorado_applepear_tests_in_Milestone1_csci4448_5448.ic" NAME="edu.colorado.applepear.tests in Milestone1-csci4448-5448 Coverage Results" MODIFIED="1616359029314" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/CSCI4448_5448_Battleship_Team_ApplePair$edu_colorado_applepear_tests_in_Milestone1_csci4448_5448.ic" NAME="edu.colorado.applepear.tests in Milestone1-csci4448-5448 Coverage Results" MODIFIED="1616215484213" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>edu.colorado.applepear.tests.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$edu_colorado_applepear_classes_in_Milestone1_csci4448_5448.ic" NAME="edu.colorado.applepear.classes in Milestone1-csci4448-5448 Coverage Results" MODIFIED="1615833833836" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>edu.colorado.applepear.classes.*</FILTER>
+    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$MoveWestTest_testUndoWest.ic" NAME="MoveWestTest.testUndoWest Coverage Results" MODIFIED="1616346575080" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>edu.colorado.applepear.tests.commandTests.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$GameBoardTest_and_4_more.ic" NAME="GameBoardTest and 4 more Coverage Results" MODIFIED="1615825274593" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/CSCI4448_5448_Battleship_Team_ApplePair$PlayerTest_testGetName.ic" NAME="PlayerTest.testGetName Coverage Results" MODIFIED="1614882797499" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>edu.colorado.applepear.tests.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$GameTest.ic" NAME="GameTest Coverage Results" MODIFIED="1614823433084" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>edu.colorado.applepear.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$ShipTest.ic" NAME="ShipTest Coverage Results" MODIFIED="1614829704351" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>edu.colorado.applepear.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$CommandDispatcherTest.ic" NAME="CommandDispatcherTest Coverage Results" MODIFIED="1616348475862" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>edu.colorado.applepear.tests.commandTests.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$PlayerTest_useRadarMissileTest.ic" NAME="PlayerTest.useRadarMissileTest Coverage Results" MODIFIED="1614883584336" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>edu.colorado.applepear.tests.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$CommandDispatcherTest_testUndo1.ic" NAME="CommandDispatcherTest.testUndo1 Coverage Results" MODIFIED="1616348216790" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>edu.colorado.applepear.tests.commandTests.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$edu_colorado_applepear_tests_commandTests_in_Milestone1_csci4448_5448.ic" NAME="edu.colorado.applepear.tests.commandTests in Milestone1-csci4448-5448 Coverage Results" MODIFIED="1616348516486" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>edu.colorado.applepear.tests.commandTests.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/CSCI4448_5448_Battleship_Team_ApplePair$BattleshipTest.ic" NAME="BattleshipTest Coverage Results" MODIFIED="1616515121081" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>edu.colorado.applepear.tests.concreteShipTests.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$CaptainsQuartersTest.ic" NAME="CaptainsQuartersTest Coverage Results" MODIFIED="1615825364735" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>edu.colorado.applepear.tests.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$MinesweeperTest.ic" NAME="MinesweeperTest Coverage Results" MODIFIED="1616054013716" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>edu.colorado.applepear.tests.concreteShipTests.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/CSCI4448_5448_Battleship_Team_ApplePair$GameTest.ic" NAME="GameTest Coverage Results" MODIFIED="1616215544739" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>edu.colorado.applepear.tests.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$GameBoardTest.ic" NAME="GameBoardTest Coverage Results" MODIFIED="1614829845678" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>edu.colorado.applepear.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$MoveEastTest.ic" NAME="MoveEastTest Coverage Results" MODIFIED="1616346548481" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>edu.colorado.applepear.tests.commandTests.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/CSCI4448_5448_Battleship_Team_ApplePair$PlayerTest_usePlusMissileTest.ic" NAME="PlayerTest.usePlusMissileTest Coverage Results" MODIFIED="1614882782140" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>edu.colorado.applepear.tests.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/CSCI4448_5448_Battleship_Team_ApplePair$ShipTest.ic" NAME="ShipTest Coverage Results" MODIFIED="1614832729890" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>edu.colorado.applepear.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$MoveNorthTest_testUndoNorth.ic" NAME="MoveNorthTest.testUndoNorth Coverage Results" MODIFIED="1616346020015" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>edu.colorado.applepear.tests.commandTests.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$Main.ic" NAME="Main Coverage Results" MODIFIED="1614103547153" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>edu.colorado.applepear.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/CSCI4448_5448_Battleship_Team_ApplePair$PointTest.ic" NAME="PointTest Coverage Results" MODIFIED="1614832663589" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>edu.colorado.applepear.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$PointTest_testGetPoint.ic" NAME="PointTest.testGetPoint Coverage Results" MODIFIED="1615796933764" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>edu.colorado.applepear.tests.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$edu_colorado_applepear_tests_concreteShipTests_in_Milestone1_csci4448_5448.ic" NAME="edu.colorado.applepear.tests.concreteShipTests in Milestone1-csci4448-5448 Coverage Results" MODIFIED="1616358670953" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$edu_colorado_applepear_tests_concreteShipTests_in_Milestone1_csci4448_5448.ic" NAME="edu.colorado.applepear.tests.concreteShipTests in Milestone1-csci4448-5448 Coverage Results" MODIFIED="1616206678167" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>edu.colorado.applepear.tests.concreteShipTests.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$TowerTest.ic" NAME="TowerTest Coverage Results" MODIFIED="1616090516517" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>edu.colorado.applepear.tests.concreteShipTests.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$LShipTest.ic" NAME="LShipTest Coverage Results" MODIFIED="1616090801122" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>edu.colorado.applepear.tests.concreteShipTests.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/CSCI4448_5448_Battleship_Team_ApplePair$GameBoardTest.ic" NAME="GameBoardTest Coverage Results" MODIFIED="1614832712919" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>edu.colorado.applepear.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$DestroyerTest.ic" NAME="DestroyerTest Coverage Results" MODIFIED="1616054515800" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>edu.colorado.applepear.tests.concreteShipTests.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/CSCI4448_5448_Battleship_Team_ApplePair$PlayerTest_useRadarMissileTest.ic" NAME="PlayerTest.useRadarMissileTest Coverage Results" MODIFIED="1614833757381" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>edu.colorado.applepear.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$edu_colorado_applepear_classes_concreteShips_in_Milestone1_csci4448_5448.ic" NAME="edu.colorado.applepear.classes.concreteShips in Milestone1-csci4448-5448 Coverage Results" MODIFIED="1616031983098" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>edu.colorado.applepear.classes.concreteShips.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$BattleshipTest.ic" NAME="BattleshipTest Coverage Results" MODIFIED="1616054742087" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>edu.colorado.applepear.tests.concreteShipTests.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$PointTest.ic" NAME="PointTest Coverage Results" MODIFIED="1614823409113" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>edu.colorado.applepear.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/CSCI4448_5448_Battleship_Team_ApplePair$ShipTest.ic" NAME="ShipTest Coverage Results" MODIFIED="1614832729890" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>edu.colorado.applepear.*</FILTER>
+    <SUITE FILE_PATH="coverage/CSCI4448_5448_Battleship_Team_ApplePair$PlayerTest_useSpaceLaserTest.ic" NAME="PlayerTest.useSpaceLaserTest Coverage Results" MODIFIED="1616514659443" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>edu.colorado.applepear.tests.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$MoveNorthTest_testUndoNorth2.ic" NAME="MoveNorthTest.testUndoNorth2 Coverage Results" MODIFIED="1616339112671" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>edu.colorado.applepear.tests.commandTests.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/CSCI4448_5448_Battleship_Team_ApplePair$CommandDispatcherTest__1_.ic" NAME="CommandDispatcherTest (1) Coverage Results" MODIFIED="1616515201302" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>edu.colorado.applepear.tests.commandTests.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/CSCI4448_5448_Battleship_Team_ApplePair$CaptainsQuartersTest.ic" NAME="CaptainsQuartersTest Coverage Results" MODIFIED="1616515148330" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>edu.colorado.applepear.tests.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$MoveSouthTest.ic" NAME="MoveSouthTest Coverage Results" MODIFIED="1616346177966" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>edu.colorado.applepear.tests.commandTests.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$MoveNorthTest.ic" NAME="MoveNorthTest Coverage Results" MODIFIED="1616346588325" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>edu.colorado.applepear.tests.commandTests.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$edu_colorado_applepear_test_in_Milestone1_csci4448_5448.ic" NAME="edu.colorado.applepear.test in Milestone1-csci4448-5448 Coverage Results" MODIFIED="1614834606532" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>edu.colorado.applepear.test.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/CSCI4448_5448_Battleship_Team_ApplePair$PlayerTest_usePlusMissileTest.ic" NAME="PlayerTest.usePlusMissileTest Coverage Results" MODIFIED="1614882782140" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$PlayerTest.ic" NAME="PlayerTest Coverage Results" MODIFIED="1614878653906" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>edu.colorado.applepear.tests.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Milestone1_csci4448_5448$MoveWestTest_testMoveNorth2.ic" NAME="MoveWestTest.testMoveNorth2 Coverage Results" MODIFIED="1616340522373" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>edu.colorado.applepear.tests.commandTests.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/CSCI4448_5448_Battleship_Team_ApplePair$edu_colorado_applepear_tests_concreteShipTests_in_Milestone1_csci4448_5448.ic" NAME="edu.colorado.applepear.tests.concreteShipTests in Milestone1-csci4448-5448 Coverage Results" MODIFIED="1616215498696" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>edu.colorado.applepear.tests.concreteShipTests.*</FILTER>
     </SUITE>
   </component>
 </project>
