@@ -23,7 +23,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ecce50e7-60f1-4088-9580-0bcf29b1574e" name="Default Changelist" comment="HomeScreen GUI">
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/GUI/PlayerGUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/GUI/PlayerGUI.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/GUI/PlayerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/GUI/PlayerGUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,7 +67,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH" value="257" />
+    <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH" value="160" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="260" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -516,7 +519,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618418307757</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="HomeScreen GUI">
+      <created>1618418539781</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1618418539781</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -567,14 +577,34 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="93" y="93" width="1095" height="495" key="DiffContextDialog/0.0.1280.680@0.0.1280.680" timestamp="1618416474442" />
-    <state x="421" y="95" key="FileChooserDialogImpl" timestamp="1618417723940">
+    <state x="421" y="95" key="FileChooserDialogImpl" timestamp="1618418487832">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1618417723940" />
-    <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1618418315739">
+    <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1618418487832" />
+    <state width="1237" height="83" key="GridCell.Tab.0.bottom" timestamp="1618420488322">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1618418315739" />
+    <state width="1237" height="83" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1618420488322" />
+    <state width="1237" height="83" key="GridCell.Tab.0.center" timestamp="1618420488322">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="83" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1618420488322" />
+    <state width="1237" height="83" key="GridCell.Tab.0.left" timestamp="1618420488321">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="83" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1618420488320" />
+    <state width="1237" height="83" key="GridCell.Tab.0.right" timestamp="1618420488322">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="83" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1618420488322" />
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1618418542834">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1618418542834" />
+    <state x="413" y="220" key="com.intellij.uiDesigner.propertyInspector.editors.string.StringEditorDialog" timestamp="1618420485576">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="413" y="220" key="com.intellij.uiDesigner.propertyInspector.editors.string.StringEditorDialog/0.0.1280.680@0.0.1280.680" timestamp="1618420485576" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
