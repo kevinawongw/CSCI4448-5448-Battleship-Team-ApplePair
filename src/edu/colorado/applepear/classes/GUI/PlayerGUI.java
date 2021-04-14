@@ -54,7 +54,7 @@ public class PlayerGUI {
     }
 
     private void createUIComponents() {
-        imageLogo = new JLabel(new ImageIcon("../boat (2).png"));
+        imageLogo = new JLabel(new ImageIcon("src/edu/colorado/applepear/classes/GUI/boat (2).png"));
     }
 
     public static void main(String[] args) {
