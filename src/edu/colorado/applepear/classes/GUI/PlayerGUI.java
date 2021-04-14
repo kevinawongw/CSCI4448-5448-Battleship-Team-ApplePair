@@ -4,5 +4,6 @@ import javax.swing.*;
 
 public class PlayerGUI {
     private JPanel ScreenMain;
-    private JButton button1;
+    private JTextField p2Name;
+    private JTextField p1Name;
 }
