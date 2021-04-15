@@ -12,8 +12,7 @@ public class PlayerGUI {
     private JTextField p1Name;
     private JButton STARTButton;
     private JLabel imageLogo;
-    private Boolean name1OK;
-    private Boolean name2OK;
+
 
 
     public PlayerGUI() {
@@ -48,6 +47,8 @@ public class PlayerGUI {
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.out.println(" The Text in boxes are " + p1Name.getText() + " and " + p2Name.getText());
+                ScreenMain.setVisible(false);
+
             }
         });
 
