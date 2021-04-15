@@ -17,6 +17,7 @@ public class Player{
     private final GameBoard gb;
     private Boolean hasSunkenShip;
     private final CommandDispatcher commandDispatcher;
+    private String nameString;
 
 
     /**
@@ -257,5 +258,12 @@ public class Player{
 
     }
 
+    public String getNameString() {
+        return nameString;
+    }
+
+    public void setNameString(final String nameString) {
+        this.nameString = nameString;
+    }
 }
 
