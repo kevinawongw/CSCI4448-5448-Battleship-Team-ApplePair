@@ -1,33 +1,46 @@
 package edu.colorado.applepear.classes.GUI;
-
-import edu.colorado.applepear.classes.GameBoard;
 import edu.colorado.applepear.classes.Player;
-
 import javax.swing.*;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
-import java.awt.Graphics;
-import javax.swing.JFrame;
 import javax.swing.JPanel;
 
+
 public class PlayerGUI {
+    private Player p1;
+    private Player p2;
     private JPanel ScreenMain;
     private JTextField p2Name;
     private JTextField p1Name;
     private JButton STARTButton;
     private JLabel imageLogo;
-
-    GameBoard p1Map = new GameBoard();
-    GameBoard p2Map = new GameBoard();
-    Player p1 = new Player(p1Map);
-    Player p2 = new Player(p2Map);
+    private static JPanel cards;
 
 
+    public JPanel getScreenMain(){
+        return ScreenMain;
+    }
+    public JPanel getCards(){
+        return cards;
+    }
 
-    public PlayerGUI() {
+
+    public PlayerGUI(Player p1, Player p2) {
+        this.p1 = p1;
+        this.p2 = p2;
+
+        /**
+         * initializing cards. This will pet us transition to different pages
+         */
+        cards = new JPanel(new CardLayout());
+        JPanel card1 =  getScreenMain();
+        JPanel card2 = new placeShip().getPanel1();
+        cards.add(card1, "home");
+        cards.add(card2, "pc");
+
 
         /**
          * DocumentLister dl reports any changes in JTextFields p1Name and p2Name
@@ -67,11 +80,12 @@ public class PlayerGUI {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                getData(p1);
-                getData2(p2);
+
+                p1.setName(getName1());
+                p2.setName(getName2());
                 System.out.println(" These are our players: " + p1.getName() + " and " + p2.getName());
-                ScreenMain.setVisible(false);
-                //put next panel to true to view next panel
+                CardLayout cl = (CardLayout)(getCards().getLayout());
+                cl.show(getCards(), "pc");
 
             }
         });
@@ -85,25 +99,18 @@ public class PlayerGUI {
         imageLogo = new JLabel(new ImageIcon("src/edu/colorado/applepear/classes/GUI/boat (2).png"));
     }
 
+    public String getName1() {
+        return p1Name.getText();
+    }
+    public String getName2() {
+        return p2Name.getText();
+    }
+
     public static void main(String[] args) {
-        JFrame mainframe = new JFrame("PlayerGUI");
-        mainframe.setContentPane(new PlayerGUI().ScreenMain);
-        mainframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        mainframe.setSize(800, 500);
-        mainframe.setTitle("Battleship Home Screen");
-        mainframe.setVisible(true);
+
         }
 
-    /**
-     *
-     * @param data is the player passed in. getData will set the player names to the text in the textField
-     */
-    public void getData(Player data) {
-        data.setName(p1Name.getText());
-    }
-    public void getData2(Player data) {
-        data.setName(p2Name.getText());
-    }
+
 
 
 
