@@ -4,14 +4,9 @@ import javax.swing.*;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import javax.swing.JPanel;
 
 
 public class PlayerGUI {
-    private Player p1;
-    private Player p2;
     private JPanel ScreenMain;
     private JTextField p2Name;
     private JTextField p1Name;
@@ -29,11 +24,9 @@ public class PlayerGUI {
 
 
     public PlayerGUI(Player p1, Player p2) {
-        this.p1 = p1;
-        this.p2 = p2;
 
-        /**
-         * initializing cards. This will pet us transition to different pages
+        /*
+          initializing cards. This will pet us transition to different pages
          */
         cards = new JPanel(new CardLayout());
         JPanel card1 =  getScreenMain();
@@ -42,9 +35,9 @@ public class PlayerGUI {
         cards.add(card2, "pc");
 
 
-        /**
-         * DocumentLister dl reports any changes in JTextFields p1Name and p2Name
-         * checkForText() makes sure that the player names are different and that they are not empty
+        /*
+          DocumentLister dl reports any changes in JTextFields p1Name and p2Name
+          checkForText() makes sure that the player names are different and that they are not empty
          */
         DocumentListener dl = new DocumentListener() {
             @Override
@@ -72,22 +65,18 @@ public class PlayerGUI {
         p1Name.getDocument().addDocumentListener(dl);
         p2Name.getDocument().addDocumentListener(dl);
 
-        /**
-         * this action listener tell the program what to do if START is clicked
-         * if clicked: it will update the names for players and hide the home screen
+        /*
+          this action listener tell the program what to do if START is clicked
+          if clicked: it will update the names for players and hide the home screen
          */
-        STARTButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
+        STARTButton.addActionListener(e -> {
 
+            p1.setName(getName1());
+            p2.setName(getName2());
+            System.out.println(" These are our players: " + p1.getName() + " and " + p2.getName());
+            CardLayout cl = (CardLayout)(getCards().getLayout());
+            cl.show(getCards(), "pc");
 
-                p1.setName(getName1());
-                p2.setName(getName2());
-                System.out.println(" These are our players: " + p1.getName() + " and " + p2.getName());
-                CardLayout cl = (CardLayout)(getCards().getLayout());
-                cl.show(getCards(), "pc");
-
-            }
         });
 
     }
@@ -105,12 +94,6 @@ public class PlayerGUI {
     public String getName2() {
         return p2Name.getText();
     }
-
-    public static void main(String[] args) {
-
-        }
-
-
 
 
 

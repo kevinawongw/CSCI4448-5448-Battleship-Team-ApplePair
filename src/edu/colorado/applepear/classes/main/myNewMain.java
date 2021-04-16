@@ -1,17 +1,11 @@
 package edu.colorado.applepear.classes.main;
-//package edu.colorado.applepear.classes;
-//import edu.colorado.applepear.classes.GUI.placeShip;
 import edu.colorado.applepear.classes.GUI.PlayerGUI;
 import edu.colorado.applepear.classes.Game;
 import edu.colorado.applepear.classes.GameBoard;
 import edu.colorado.applepear.classes.Player;
 import edu.colorado.applepear.classes.Point;
 import edu.colorado.applepear.classes.commandClasses.*;
-
 import javax.swing.*;
-import java.awt.*;
-import java.util.List;
-import java.util.Scanner;
 
 class Main2{
     public static void main(String[] args) {
