@@ -10,7 +10,7 @@ import javax.swing.event.DocumentListener;
 public class placeShip {
 
 
-    private final JPanel panel1;
+    private JPanel panel1;
     private JPanel grid;
     JTextField x1 = new JTextField();
     JTextField y1 = new JTextField();
@@ -41,7 +41,7 @@ public class placeShip {
         panel1.add(sideBar, BorderLayout.EAST);
         sideBar.setBackground(new Color(226, 233, 238));
 
-        JPanel controls = new JPanel(new GridLayout(0, 2, 0, 0));
+        JPanel controls = new JPanel(new GridLayout(0, 3));
         sideBar.add(controls, BorderLayout.PAGE_START);
         controls.setBackground(Color.white);
         controls.setBorder(new EmptyBorder(10, 10, 10, 10));
@@ -59,46 +59,80 @@ public class placeShip {
         controls.add(myLabel,BorderLayout.CENTER);
         controls.add(new JLabel(" "),"span, grow");
 
-
+        String B = "Battleship: ";
+        String blank = " ";
+        JLabel l1 = new JLabel(B);
+        JLabel b = new JLabel(blank);
+        l1.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 12));
+        l1.setForeground(new Color(68, 88, 115));
+        l1.setVisible(true);
         x1.setVisible(true);
         y1.setVisible(true);
+        controls.add(b, BorderLayout.PAGE_START); //This blank is to add in myLable column so shipname can be in same line of textfield. If you guys find better way to solve this, feel free to change.
+        controls.add(l1,  BorderLayout.PAGE_START);
         controls.add(x1,  BorderLayout.PAGE_START);
         controls.add(y1,  BorderLayout.PAGE_START);
         controls.add(new JLabel(" "),"span, grow");
         controls.add(new JLabel(" "),"span, grow");
+        controls.add(new JLabel(" "),"span, grow");
 
 
+        String D = "Destroyer: ";
+        JLabel l2 = new JLabel(D);
+        l2.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 12));
+        l2.setForeground(new Color(68, 88, 115));
+        l2.setVisible(false);
         x2.setVisible(false);
         y2.setVisible(false);
+        controls.add(l2,BorderLayout.PAGE_START);
         controls.add(x2,  BorderLayout.PAGE_START);
         controls.add(y2,  BorderLayout.PAGE_START);
         controls.add(new JLabel(" "),"span, grow");
         controls.add(new JLabel(" "),"span, grow");
+        controls.add(new JLabel(" "),"span, grow");
 
+        String L = "LShip: ";
+        JLabel l3 = new JLabel(L);
+        l3.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 12));
+        l3.setForeground(new Color(68, 88, 115));
+        l3.setVisible(false);
         x3.setVisible(false);
         y3.setVisible(false);
+        controls.add(l3,BorderLayout.PAGE_START);
         controls.add(x3,  BorderLayout.PAGE_START);
         controls.add(y3,  BorderLayout.PAGE_START);
-
         controls.add(new JLabel(" "),"span, grow");
         controls.add(new JLabel(" "),"span, grow");
+        controls.add(new JLabel(" "),"span, grow");
 
+        String M = "Minesweeper: ";
+        JLabel l4 = new JLabel(M);
+        l4.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 12));
+        l4.setForeground(new Color(68, 88, 115));
+        l4.setVisible(false);
         x4.setVisible(false);
         y4.setVisible(false);
+        controls.add(l4,BorderLayout.PAGE_START);
         controls.add(x4,  BorderLayout.PAGE_START);
         controls.add(y4,  BorderLayout.PAGE_START);
-
         controls.add(new JLabel(" "),"span, grow");
         controls.add(new JLabel(" "),"span, grow");
+        controls.add(new JLabel(" "),"span, grow");
 
+        String S = "Submarine: ";
+        JLabel l5 = new JLabel(S);
+        l5.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 12));
+        l5.setForeground(new Color(68, 88, 115));
+        l5.setVisible(false);
         x5.setVisible(false);
         y5.setVisible(false);
+        controls.add(l5,BorderLayout.PAGE_START);
         controls.add(x5,  BorderLayout.PAGE_START);
         controls.add(y5,  BorderLayout.PAGE_START);
-
-
         controls.add(new JLabel(" "),"span, grow");
         controls.add(new JLabel(" "),"span, grow");
+        controls.add(new JLabel(" "),"span, grow");
+
         Place1 = new JButton("Place");
         Place1.setBackground(	new Color(68, 88, 115));
         Place1.setForeground(new Color(		226, 233, 238));
@@ -129,28 +163,38 @@ public class placeShip {
                 boolean point1 = allowNext(point1X,point1Y);
                 x2.setVisible(point1);
                 y2.setVisible(point1);
+                if(point1)
+                    l2.setVisible(true);
 
                 String point2X = x2.getText();
                 String point2Y = y2.getText();
                 boolean point2 = allowNext(point2X,point2Y);
                 x3.setVisible(point1 && point2);
                 y3.setVisible(point1 && point2);
+                if(point2)
+                    l3.setVisible(true);
 
                 String point3X = x3.getText();
                 String point3Y = y3.getText();
                 boolean point3 = allowNext(point3X,point3Y);
                 x4.setVisible(point1 && point2 && point3);
                 y4.setVisible(point1 && point2 && point3);
+                if(point3)
+                    l4.setVisible(true);
 
                 String point4X = x4.getText();
                 String point4Y = y4.getText();
                 boolean point4 = allowNext(point4X,point4Y);
                 x5.setVisible(point1 && point2 && point3 && point4);
                 y5.setVisible(point1 && point2 && point3 && point4);
+                if(point4)
+                    l5.setVisible(true);
+
                 String point5X = x5.getText();
                 String point5Y = y5.getText();
                 boolean doneButton = allowNext(point5X,point5Y);
                 Place1.setVisible(doneButton);
+
             }
         };
 
