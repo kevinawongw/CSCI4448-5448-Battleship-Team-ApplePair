@@ -1,4 +1,5 @@
 package edu.colorado.applepear.classes.GUI;
+import edu.colorado.applepear.classes.GameBoard;
 import edu.colorado.applepear.classes.Player;
 import javax.swing.*;
 import javax.swing.event.DocumentEvent;
@@ -80,7 +81,6 @@ public class PlayerGUI {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-
                 p1.setName(getName1());
                 p2.setName(getName2());
                 System.out.println(" These are our players: " + p1.getName() + " and " + p2.getName());
@@ -89,6 +89,7 @@ public class PlayerGUI {
 
             }
         });
+
 
     }
 
@@ -105,12 +106,6 @@ public class PlayerGUI {
     public String getName2() {
         return p2Name.getText();
     }
-
-    public static void main(String[] args) {
-
-    }
-
-
 
 
 
