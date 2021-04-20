@@ -1,6 +1,4 @@
 package edu.colorado.applepear.classes;
-
-import edu.colorado.applepear.classes.commandClasses.Command;
 import edu.colorado.applepear.classes.commandClasses.CommandDispatcher;
 
 import java.util.ArrayList;
@@ -19,6 +17,7 @@ public class Player{
     private final GameBoard gb;
     private Boolean hasSunkenShip;
     private final CommandDispatcher commandDispatcher;
+    private String nameString;
 
 
     /**
@@ -48,7 +47,7 @@ public class Player{
     public int getPlusMissile() { return plusMissile; }
     public GameBoard getGb() { return gb; }
     public boolean getHasSunkenShip(){return hasSunkenShip;}
-    public CommandDispatcher getCommandDispatcher(){ return commandDispatcher; };
+    public CommandDispatcher getCommandDispatcher(){ return commandDispatcher; }
 
     /**
      * Update Sunken Ship
@@ -241,16 +240,16 @@ public class Player{
             int[][] underMap = oppBoard.getUnderwaterMap();
             if (map[point.getY()][point.getX()]==1){
                 attacked.add(point);
-                System.out.println("surface ship hit!");
+                System.out.println("surface ship hit! \n");
             }
             if (underMap[point.getY()][point.getX()]==1){
                 attacked.add(point);
-                System.out.println("underwater ship hit!");
+                System.out.println("underwater ship hit! \n");
             }
             getGb().updateAttackMap(oppBoard, point);
             getGb().updateUnderwaterAttackMap(oppBoard,point);
             if (attacked.size() == 0){
-                System.out.println("no ship hit...");
+                System.out.println("no ship hit...\n");
             }
 
         }
@@ -259,5 +258,12 @@ public class Player{
 
     }
 
+    public String getNameString() {
+        return nameString;
+    }
+
+    public void setNameString(final String nameString) {
+        this.nameString = nameString;
+    }
 }
 
