@@ -44,7 +44,8 @@ public class placeShip extends JFrame{
         JPanel controls = new JPanel(new GridLayout(0, 3));
         sideBar.add(controls, BorderLayout.PAGE_START);
         controls.setBackground(Color.white);
-        controls.setBorder(new EmptyBorder(10, 10, 10, 10));
+        controls.setPreferredSize(new Dimension(250,400));
+        controls.setBorder(new EmptyBorder(10, 0, 10, 0));
 
 
         /*
@@ -193,7 +194,7 @@ public class placeShip extends JFrame{
                 String point5X = x5.getText();
                 String point5Y = y5.getText();
                 boolean doneButton = allowNext(point5X,point5Y);
-                Place1.setVisible(doneButton);
+                Place1.setVisible(point1 && point2 && point3 && point4 && doneButton );
 
             }
         };
