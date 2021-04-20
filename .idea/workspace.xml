@@ -22,8 +22,23 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ecce50e7-60f1-4088-9580-0bcf29b1574e" name="Default Changelist" comment="add ship logo- Vienna">
+    <list default="true" id="ecce50e7-60f1-4088-9580-0bcf29b1574e" name="Default Changelist" comment="add label next to textfield">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Battleship_TeamApplePear/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Battleship_TeamApplePear/2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Battleship_TeamApplePear/27-Refactoring.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Battleship_TeamApplePear/3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Battleship_TeamApplePear/4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Battleship_TeamApplePear/5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Battleship_TeamApplePear/6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Battleship_TeamApplePear/7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Battleship_TeamApplePear/8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Battleship_TeamApplePear/Battleship_ApplePearUMLClass.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Battleship_TeamApplePear/Milestone1-csci4448-5448.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Battleship_TeamApplePear/Original.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Battleship_TeamApplePear/out/production/Milestone1-csci4448-5448/CRCCards.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Battleship_TeamApplePear/out/production/Milestone1-csci4448-5448/Milestone1-csci4448-5448.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/GUI/PlayerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/GUI/PlayerGUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/GUI/placeShip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/GUI/placeShip.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -98,7 +113,7 @@
       <recent name="C:\Users\vienn\Documents\Spring2021\CSCI4448\CSCI4448-5448-Battleship-Team-ApplePair\src\edu\colorado\applepear\classes" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.placeShip">
+  <component name="RunManager" selected="Application.PlayerGUI">
     <configuration name="PlaceShip$Grid" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="edu.colorado.applepear.classes.GUI.PlaceShip$Grid" />
       <module name="Battleship_TeamApplePear" />
@@ -164,17 +179,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="edu.colorado.applepear" type="TestNG" nameIsGenerated="true">
       <module name="Milestone1-csci4448-5448" />
       <useClassPathOnly />
@@ -201,8 +205,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.placeShip" />
         <item itemvalue="Application.PlayerGUI" />
+        <item itemvalue="Application.placeShip" />
         <item itemvalue="Application.tryAgain" />
         <item itemvalue="Application.PlaceShip" />
         <item itemvalue="Application.PlaceShip$Grid" />
@@ -219,14 +223,9 @@
       <updated>1612370581325</updated>
       <workItem from="1615531086052" duration="8620000" />
       <workItem from="1618581485757" duration="644000" />
-      <workItem from="1618659977430" duration="3489000" />
-    </task>
-    <task id="LOCAL-00001" summary="rename to team name">
-      <created>1612371506505</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1612371506505</updated>
+      <workItem from="1618659977430" duration="4053000" />
+      <workItem from="1618811744770" duration="683000" />
+      <workItem from="1618836896311" duration="1706000" />
     </task>
     <task id="LOCAL-00002" summary="Team ApplePair pair 1: Kevina push - GameBoard and Main">
       <created>1613505576665</created>
@@ -564,7 +563,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618451332961</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="add label next to textfield">
+      <created>1618737323901</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1618737323907</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -583,7 +589,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="view ship update" />
     <MESSAGE value="Got started on interface implementation" />
     <MESSAGE value="Big changes on ship interface and moving a lot of functions around" />
     <MESSAGE value="Minesweeper test" />
@@ -608,7 +613,8 @@
     <MESSAGE value="&#10;file org" />
     <MESSAGE value="enable/disable start button- Vienna" />
     <MESSAGE value="add ship logo- Vienna" />
-    <option name="LAST_COMMIT_MESSAGE" value="add ship logo- Vienna" />
+    <MESSAGE value="add label next to textfield" />
+    <option name="LAST_COMMIT_MESSAGE" value="add label next to textfield" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

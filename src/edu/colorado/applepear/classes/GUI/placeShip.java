@@ -7,7 +7,7 @@ import javax.swing.event.DocumentListener;
 
 
 
-public class placeShip {
+public class placeShip extends JFrame{
 
 
     private JPanel panel1;

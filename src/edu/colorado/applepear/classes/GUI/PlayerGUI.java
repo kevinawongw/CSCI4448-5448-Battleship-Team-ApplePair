@@ -6,7 +6,7 @@ import javax.swing.event.DocumentListener;
 import java.awt.*;
 
 
-public class PlayerGUI {
+public class PlayerGUI extends JFrame{
     private JPanel ScreenMain;
     private JTextField p2Name;
     private JTextField p1Name;
@@ -77,6 +77,8 @@ public class PlayerGUI {
             CardLayout cl = (CardLayout)(getCards().getLayout());
             cl.show(getCards(), "pc");
 
+            placeShip ps = new placeShip();
+            ps.setVisible(true);
         });
 
     }
@@ -94,6 +96,8 @@ public class PlayerGUI {
     public String getName2() {
         return p2Name.getText();
     }
+
+
 
 
 
