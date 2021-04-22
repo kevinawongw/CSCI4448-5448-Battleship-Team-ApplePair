@@ -1,7 +1,8 @@
 package edu.colorado.applepear.classes;
 
-
-// Kevina Added Hit or Miss
+/**
+ * Game Class
+ */
 public class Game {
 
     /**

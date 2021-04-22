@@ -1,8 +1,10 @@
 package edu.colorado.applepear.classes;
-
 import java.util.List;
 
-// Kevina - Rearranged ship class and relationships, made ship interface
+/**
+ * Interface Ship
+ */
+
 public interface Ship {
 
     String getShipName();
@@ -19,4 +21,5 @@ public interface Ship {
     Boolean isShipSunken();
     void updateHealth(Point location);
     List<Point> input(int[][] shipMap);
+    List<Point> inputAsList(Point p);
 }

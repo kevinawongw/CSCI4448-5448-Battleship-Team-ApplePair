@@ -7,6 +7,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * Helper functions for text-based BattleShip
+ */
 public class MainHelpers {
 
     /**

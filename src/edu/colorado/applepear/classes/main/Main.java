@@ -8,8 +8,9 @@ import edu.colorado.applepear.classes.commandClasses.*;
 import java.util.List;
 import java.util.Scanner;
 
-// Kevina was here doing menu things
-
+/**
+ * Main
+ */
 public class Main {
 
     private static boolean run = true;

@@ -1,7 +1,7 @@
 package edu.colorado.applepear.classes;
 
 /**
- * Point Class used to hold coordinate style objects
+ * Point Class
  */
 
 public class Point {
