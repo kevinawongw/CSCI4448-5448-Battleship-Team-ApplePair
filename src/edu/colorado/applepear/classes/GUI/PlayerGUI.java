@@ -3,7 +3,7 @@ import edu.colorado.applepear.classes.Game;
 import edu.colorado.applepear.classes.GameBoard;
 import edu.colorado.applepear.classes.Player;
 import edu.colorado.applepear.classes.main.myNewMain;
-import org.junit.Test;
+//import org.junit.Test;
 
 import javax.swing.*;
 import javax.swing.event.DocumentEvent;
