@@ -26,21 +26,9 @@ public class PlayerGUI {
         return cards;
     }
 
-//    public static Player getP2() {
-//        return p2;
-//    }
-//
-//    public static Player getP1() {
-//        return p1;
-//    }
 
     public PlayerGUI() {
-//        this.p1 = p1;
-//        this.p2 = p2;
 
-        /*
-          initializing cards. This will pet us transition to different pages
-         */
         cards = new JPanel(new CardLayout());
         JPanel card1 =  getScreenMain();
 
@@ -83,11 +71,10 @@ public class PlayerGUI {
           if clicked: it will update the names for players and hide the home screen
          */
         STARTButton.addActionListener(e -> {
-//                GameBoard p1Map = new GameBoard();
-//                GameBoard p2Map = new GameBoard();
+
             Player p1 = myNewMain.getPlayer1();
             Player p2 = myNewMain.getPlayer2();
-//                Game myGame = new Game(p1,p2);
+
 
             p1.setName(getName1());
             p2.setName(getName2());

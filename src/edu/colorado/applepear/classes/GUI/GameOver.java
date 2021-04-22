@@ -14,29 +14,29 @@ public class GameOver extends JFrame {
     Color navy = new Color(68, 88, 115);
     Color lightBlue = new Color(226, 233, 238);
 
-    public GameOver(Player player1, Player player2, boolean next){
-        overScreen = new JPanel(new BorderLayout(0,0));
+    public GameOver(Player player1, Player player2, boolean next) {
+        overScreen = new JPanel(new BorderLayout(0, 0));
         overScreen.setBackground(Color.white);
         JLabel titleLabel = new JLabel();
-        String title =  "Winner is " +player1.getName() +". Congratulations!";
+        String title = "Winner is " + player1.getName() + ". Congratulations!";
         titleLabel.setText(title);
         titleLabel.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 40));
         titleLabel.setForeground(Color.BLACK);
         titleLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
         titleLabel.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 50));
         titleLabel.setForeground(navy);
-        titleLabel.setBorder(new EmptyBorder(20,0,0,0));
+        titleLabel.setBorder(new EmptyBorder(20, 0, 0, 0));
 
         JPanel bottomPanel = new JPanel();
-        bottomPanel.setLayout(new BorderLayout(10,10));
+        bottomPanel.setLayout(new BorderLayout(10, 10));
         bottomPanel.setBackground(Color.white);
 
         playAgain = new JButton("Play Again");
         playAgain.setBackground(navy);
         playAgain.setForeground(lightBlue);
         playAgain.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 18));
-        playAgain.setPreferredSize(new Dimension(3,1));
-        playAgain.setBorder(new EmptyBorder(20,30,30,30));
+        playAgain.setPreferredSize(new Dimension(3, 1));
+        playAgain.setBorder(new EmptyBorder(20, 30, 30, 30));
         playAgain.setVisible(true);
         bottomPanel.add(playAgain, BorderLayout.PAGE_START);
 
@@ -44,22 +44,18 @@ public class GameOver extends JFrame {
             JPanel card9 = new PlayerGUI().getScreenMain();
             PlayerGUI.cards.add(card9, "playAgain");
             CardLayout cl = (CardLayout) (PlayerGUI.cards.getLayout());
-            if (!next){
+            if (!next) {
                 cl.show(PlayerGUI.cards, "playAgain");
-            }
-
-            else{
+            } else {
                 cl.show(PlayerGUI.cards, "home");
             }
         });
 
     }
 
-    public JPanel getGameOver(){
+    public JPanel getGameOver() {
         return overScreen;
     }
-
-//    private void createUIComponents() {
-//        imageLogo = new JLabel(new ImageIcon("src/edu/colorado/applepear/classes/GUI/boat (2).png"));
-//    }
 }
+
+
