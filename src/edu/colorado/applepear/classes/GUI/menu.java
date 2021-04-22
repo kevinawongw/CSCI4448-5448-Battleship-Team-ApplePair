@@ -11,7 +11,6 @@ import java.awt.*;
 public class menu extends JFrame{
     private JPanel menuScreen;
     private JPanel grid;
-    private JPanel p1;
     JButton b1;
     JButton b2;
     JButton b3;
@@ -31,7 +30,7 @@ public class menu extends JFrame{
         sideBar.setBackground(lightBlue);
 
         JLabel titleLabel = new JLabel();
-        String title = currPlayer.getName() + " Turn";
+        String title = currPlayer.getName() + "'s Turn";
         titleLabel.setText(title);
         titleLabel.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 14));
         titleLabel.setForeground(Color.BLACK);
@@ -57,13 +56,16 @@ public class menu extends JFrame{
         menuPanel.add(b1, BorderLayout.CENTER);
 
         b1.addActionListener(e -> {
-            JPanel card5 = new menu(oppPlayer,currPlayer,true).getMenuScreen();
-            PlayerGUI.cards.add(card5, "oppPCMenu");
+            JPanel card5 = new attack(currPlayer,oppPlayer,true).getAttackScreen();
+            PlayerGUI.cards.add(card5, "currAttack");
             CardLayout cl = (CardLayout) (PlayerGUI.cards.getLayout());
-            if(!next)
-                cl.show(PlayerGUI.cards, "oppPCMenu");
-            else
-                cl.show(PlayerGUI.cards, "home");
+            if (!next){
+                cl.show(PlayerGUI.cards, "currAttack");
+            }
+
+            else{
+                cl.show(PlayerGUI.cards, "menu");
+            }
         });
 
         b2 = new JButton("View Your Ship");
@@ -75,13 +77,13 @@ public class menu extends JFrame{
         menuPanel.add(b2, BorderLayout.CENTER);
 
         b2.addActionListener(e -> {
-            JPanel card6 = new menu(oppPlayer,currPlayer,true).getMenuScreen();
-            PlayerGUI.cards.add(card6, "oppPCMenu");
+            JPanel card6 = new viewShip(currPlayer,oppPlayer,true).getViewScreen();
+            PlayerGUI.cards.add(card6, "currView");
             CardLayout cl = (CardLayout) (PlayerGUI.cards.getLayout());
             if(!next)
-                cl.show(PlayerGUI.cards, "oppPCMenu");
+                cl.show(PlayerGUI.cards, "currView");
             else
-                cl.show(PlayerGUI.cards, "home");
+                cl.show(PlayerGUI.cards, "menu");
         });
         b3 = new JButton("Quit");
         b3.setBackground(navy);
@@ -92,7 +94,7 @@ public class menu extends JFrame{
         menuPanel.add(b3, BorderLayout.CENTER);
 
         b3.addActionListener(e -> {
-            JPanel card6 = new menu(oppPlayer,currPlayer,true).getMenuScreen();
+            JPanel card6 = new GameOver(currPlayer,oppPlayer,true).getGameOver();
             PlayerGUI.cards.add(card6, "oppPCMenu");
             CardLayout cl = (CardLayout) (PlayerGUI.cards.getLayout());
             if(!next)

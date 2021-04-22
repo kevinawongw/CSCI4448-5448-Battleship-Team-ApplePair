@@ -94,10 +94,7 @@ public class PlayerGUI {
             System.out.println(" These are our players: " + p1.getName() + " and " + p2.getName());
 
             JPanel card2 = new placeShip(p1,p2, false).getPlaceShipScreen();
-            JPanel card3 = new placeShip(p2,p1, false).getPlaceShipScreen();
-
             cards.add(card2, "pc");
-//            cards.add(card3,"pc");
 
             CardLayout cl = (CardLayout)(getCards().getLayout());
             cl.show(getCards(), "pc");

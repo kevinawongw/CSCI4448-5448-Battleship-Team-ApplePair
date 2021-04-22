@@ -48,7 +48,7 @@ public class placeShip extends JFrame{
         /* first component on box layout it the title panel */
 
         JLabel titleLabel = new JLabel();
-        String title2 =  currPlayer.getName() + " Place Ships";
+        String title2 =  currPlayer.getName() + "'s Turn to Place Ships";
         titleLabel.setText(title2);
         titleLabel.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 14));
         titleLabel.setForeground(Color.black);
