@@ -1,16 +1,17 @@
 package edu.colorado.applepear.classes.GUI;
+import edu.colorado.applepear.classes.Player;
 import javax.swing.*;
-import java.awt.*;
 import javax.swing.border.EmptyBorder;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
-
+import java.awt.*;
 
 
 public class placeShip extends JFrame{
 
-
-    private JPanel panel1;
+    /* Initializing GUI components*/
+    
+    private JPanel placeShipScreen;
     private JPanel grid;
     JTextField x1 = new JTextField();
     JTextField y1 = new JTextField();
@@ -22,54 +23,70 @@ public class placeShip extends JFrame{
     JTextField y4 = new JTextField();
     JTextField x5 = new JTextField();
     JTextField y5 = new JTextField();
-    JButton Place1;
+    Color navy = new Color(68, 88, 115);
+    Color lightBlue = new Color(226, 233, 238);
+
+    JButton doneButton;
 
 
-    public  placeShip(){
 
-
-        panel1 = new JPanel(new BorderLayout(0, 0));
-        panel1.setBackground(Color.white);
+    public  placeShip(Player currPlayer, Player oppPlayer, boolean next){
+        
+        placeShipScreen = new JPanel(new BorderLayout(0, 0));
+        placeShipScreen.setBackground(Color.white);
         createMap(10,10);
-        panel1.add(grid);
+        placeShipScreen.add(grid);
 
         /*
-          adding side bar on the right side of the screen
+          adding side bar on the right side of the screen w/ a box layout
          */
-
         JPanel sideBar = new JPanel();
-        panel1.add(sideBar, BorderLayout.EAST);
-        sideBar.setBackground(new Color(226, 233, 238));
+        sideBar.setLayout(new BoxLayout(sideBar,BoxLayout.Y_AXIS));
+        placeShipScreen.add(sideBar, BorderLayout.EAST);
+        sideBar.setBackground(lightBlue);
+
+        /* first component on box layout it the title panel */
+
+        JLabel titleLabel = new JLabel();
+        String title2 =  currPlayer.getName() + " Place Ships";
+        titleLabel.setText(title2);
+        titleLabel.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 14));
+        titleLabel.setForeground(Color.black);
+        titleLabel.setAlignmentX(Component.LEFT_ALIGNMENT);
+        titleLabel.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 16));
+        titleLabel.setForeground(navy);
+        titleLabel.setBorder(new EmptyBorder(20,0,0,0));
+        sideBar.add(titleLabel,BorderLayout.WEST);
+
+        /* second component on box layout is the controls panel */
 
         JPanel controls = new JPanel(new GridLayout(0, 3));
-        sideBar.add(controls, BorderLayout.PAGE_START);
-        controls.setBackground(Color.white);
+        sideBar.add(controls, BorderLayout.PAGE_END);
+        controls.setBackground(lightBlue);
         controls.setPreferredSize(new Dimension(250,400));
-        controls.setBorder(new EmptyBorder(10, 0, 10, 0));
+        controls.setBorder(new EmptyBorder(10, 10, 10, 10));
 
 
         /*
           input text fields below -- change to a better coordinate input system
          */
-        String title = "Place Ship (x,y) Coords";
-        JLabel myLabel = new JLabel();
 
-        myLabel.setText(title);
-        myLabel.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 14));
-        myLabel.setForeground(new Color(68, 88, 115));
-        controls.add(myLabel,BorderLayout.CENTER);
         controls.add(new JLabel(" "),"span, grow");
+        controls.add(new JLabel(" "),"span, grow");
+
+        /* battleship field */
 
         String B = "Battleship: ";
         String blank = " ";
         JLabel l1 = new JLabel(B);
         JLabel b = new JLabel(blank);
-        l1.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 12));
-        l1.setForeground(new Color(68, 88, 115));
+        l1.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 14));
+        l1.setForeground(navy);
         l1.setVisible(true);
         x1.setVisible(true);
         y1.setVisible(true);
-        controls.add(b, BorderLayout.PAGE_START); //This blank is to add in myLable column so shipname can be in same line of textfield. If you guys find better way to solve this, feel free to change.
+
+        controls.add(b, BorderLayout.PAGE_START);
         controls.add(l1,  BorderLayout.PAGE_START);
         controls.add(x1,  BorderLayout.PAGE_START);
         controls.add(y1,  BorderLayout.PAGE_START);
@@ -78,10 +95,12 @@ public class placeShip extends JFrame{
         controls.add(new JLabel(" "),"span, grow");
 
 
+        /* destroyer field */
+
         String D = "Destroyer: ";
         JLabel l2 = new JLabel(D);
-        l2.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 12));
-        l2.setForeground(new Color(68, 88, 115));
+        l2.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 14));
+        l2.setForeground(navy);
         l2.setVisible(false);
         x2.setVisible(false);
         y2.setVisible(false);
@@ -92,10 +111,13 @@ public class placeShip extends JFrame{
         controls.add(new JLabel(" "),"span, grow");
         controls.add(new JLabel(" "),"span, grow");
 
+
+        /* L-ship field */
+
         String L = "LShip: ";
         JLabel l3 = new JLabel(L);
-        l3.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 12));
-        l3.setForeground(new Color(68, 88, 115));
+        l3.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 14));
+        l3.setForeground(navy);
         l3.setVisible(false);
         x3.setVisible(false);
         y3.setVisible(false);
@@ -106,10 +128,12 @@ public class placeShip extends JFrame{
         controls.add(new JLabel(" "),"span, grow");
         controls.add(new JLabel(" "),"span, grow");
 
+        /* minesweeper field */
+
         String M = "Minesweeper: ";
         JLabel l4 = new JLabel(M);
-        l4.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 12));
-        l4.setForeground(new Color(68, 88, 115));
+        l4.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 14));
+        l4.setForeground(navy);
         l4.setVisible(false);
         x4.setVisible(false);
         y4.setVisible(false);
@@ -120,10 +144,12 @@ public class placeShip extends JFrame{
         controls.add(new JLabel(" "),"span, grow");
         controls.add(new JLabel(" "),"span, grow");
 
-        String S = "Submarine: ";
+        /* tower field */
+
+        String S = "Tower";
         JLabel l5 = new JLabel(S);
-        l5.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 12));
-        l5.setForeground(new Color(68, 88, 115));
+        l5.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 14));
+        l5.setForeground(navy);
         l5.setVisible(false);
         x5.setVisible(false);
         y5.setVisible(false);
@@ -134,14 +160,41 @@ public class placeShip extends JFrame{
         controls.add(new JLabel(" "),"span, grow");
         controls.add(new JLabel(" "),"span, grow");
 
-        Place1 = new JButton("Place");
-        Place1.setBackground(	new Color(68, 88, 115));
-        Place1.setForeground(new Color(		226, 233, 238));
-        Place1.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 14));
-        Place1.setVisible(false);
-        controls.add(Place1 ,  BorderLayout.CENTER);
+        doneButton = new JButton("Place");
+        doneButton.setBackground(	navy);
+        doneButton.setForeground(lightBlue);
+        doneButton.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 14));
+        doneButton.setVisible(false);
+        controls.add(doneButton ,  BorderLayout.CENTER);
+
+        doneButton.addActionListener(e -> {
+
+            /* how i think we can add ships to ship map -- will comment out temporarily
+
+            Integer x1coordinate = Integer.parseInt(x1.getText());
+            Integer y1coordinate = Integer.parseInt(y1.getText());
+
+            */
+
+            /*adding cards*/
+            JPanel card3 = new placeShip(oppPlayer,currPlayer, true).getPlaceShipScreen();
+            PlayerGUI.cards.add(card3,"oppPC");
+            //add main menu screen to cards.
+            CardLayout cl = (CardLayout)(PlayerGUI.cards.getLayout());
+
+            if (!next){
+                cl.show(PlayerGUI.cards, "oppPC");
+            }
+            //This should actually take us to the menu options screen -- not home. Change when menu option screen is done
+            else{
+                cl.show(PlayerGUI.cards, "home");
+            }
 
 
+
+        });
+
+        /*  Document listener will see when there are changes to the text fields */
         DocumentListener dl = new DocumentListener() {
             @Override
             public void insertUpdate(DocumentEvent e) {
@@ -157,6 +210,11 @@ public class placeShip extends JFrame{
             public void changedUpdate(DocumentEvent e) {
                 checkForText();
             }
+
+            /**
+             * checkForText lets each subsequent text field to visible once players have inputted
+             * an numerical coordinate within the bounds of the map for the previous text field.
+             */
             private void checkForText(){
 
                 String point1X = x1.getText();
@@ -193,11 +251,13 @@ public class placeShip extends JFrame{
 
                 String point5X = x5.getText();
                 String point5Y = y5.getText();
-                boolean doneButton = allowNext(point5X,point5Y);
-                Place1.setVisible(point1 && point2 && point3 && point4 && doneButton );
+                boolean isDone = allowNext(point5X,point5Y);
+                doneButton.setVisible(point1 && point2 && point3 && point4 && isDone );
 
             }
         };
+
+        /* adding document listeners to all of the text fields */
 
         x1.getDocument().addDocumentListener(dl);
         y1.getDocument().addDocumentListener(dl);
@@ -210,9 +270,11 @@ public class placeShip extends JFrame{
         x5.getDocument().addDocumentListener(dl);
         y5.getDocument().addDocumentListener(dl);
 
+
+
     }
-    public JPanel getPanel1(){
-        return panel1;
+    public JPanel getPlaceShipScreen(){
+        return placeShipScreen;
     }
 
 
@@ -238,15 +300,17 @@ public class placeShip extends JFrame{
                 String coordinate = i + "," + j;
                 grid.add(coordinate, panel);
 
-
-
                 }
             }
 
 
         }
 
-
+    /**
+     *
+     * @param str checks if inputted string str is an integer
+     * @return true or false
+     */
     public static boolean isInteger(String str) {
         try {
             Integer.parseInt(str);
@@ -255,6 +319,13 @@ public class placeShip extends JFrame{
             return true;
         }
     }
+
+    /**
+     *
+     * @param str the x coordinate that the user inputted
+     * @param str2 the y coordinate that the user inputted
+     * @return helper function to determine if the x and y inputs were appropriate
+     */
     public static boolean allowNext(String str, String str2){
         if (str.isEmpty()) return false;
         if (str2.isEmpty()) return false;
@@ -265,14 +336,7 @@ public class placeShip extends JFrame{
         return num1 >= 1 && num1 <= 10 && num2 >= 1 && num2 <= 10;
     }
 
-    public static void main(String[] args) {
 
-        JFrame frame = new JFrame("Place Ships");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.getContentPane().add(new placeShip().panel1);
-        frame.setVisible(true);  // should be last.
-        frame.setSize(800,500);
-    }
 
 
 }
