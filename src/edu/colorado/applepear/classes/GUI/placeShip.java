@@ -52,18 +52,18 @@ public class placeShip extends JFrame{
         titleLabel.setText(title2);
         titleLabel.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 14));
         titleLabel.setForeground(Color.black);
-        titleLabel.setAlignmentX(Component.LEFT_ALIGNMENT);
+        titleLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
         titleLabel.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 16));
         titleLabel.setForeground(navy);
         titleLabel.setBorder(new EmptyBorder(20,0,0,0));
-        sideBar.add(titleLabel,BorderLayout.WEST);
+        sideBar.add(titleLabel,BorderLayout.CENTER);
 
         /* second component on box layout is the controls panel */
 
         JPanel controls = new JPanel(new GridLayout(0, 3));
         sideBar.add(controls, BorderLayout.PAGE_END);
         controls.setBackground(lightBlue);
-        controls.setPreferredSize(new Dimension(250,400));
+        controls.setPreferredSize(new Dimension(350,400));
         controls.setBorder(new EmptyBorder(10, 10, 10, 10));
 
 

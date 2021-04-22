@@ -25,20 +25,20 @@ public class viewShip {
         sideBar.setBackground(lightBlue);
 
         JLabel titleLabel = new JLabel();
-        String title = currPlayer.getName() + "'s Turn to Attack";
+        String title = currPlayer.getName() + "'s Ship";
         titleLabel.setText(title);
         titleLabel.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 14));
         titleLabel.setForeground(Color.BLACK);
-        titleLabel.setAlignmentX(Component.LEFT_ALIGNMENT);
+        titleLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
         titleLabel.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 16));
         titleLabel.setForeground(navy);
         titleLabel.setBorder(new EmptyBorder(20,0,0,0));
-        sideBar.add(titleLabel,BorderLayout.WEST);
+        sideBar.add(titleLabel,BorderLayout.CENTER);
 
         JPanel menuPanel = new JPanel(new GridLayout(0,1));
         sideBar.add(menuPanel, BorderLayout.PAGE_END);
         menuPanel.setBackground(lightBlue);
-        menuPanel.setPreferredSize(new Dimension(250, 400));
+        menuPanel.setPreferredSize(new Dimension(350, 400));
         menuPanel.setBorder(new EmptyBorder(10,10,10,10));
 
         returnButton = new JButton("Return to Menu");
