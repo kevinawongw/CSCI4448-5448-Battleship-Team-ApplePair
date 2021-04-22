@@ -6,6 +6,7 @@ import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
 
+//wrote some code in Gameover but it doesnt show. You can edit whatever you want. It doesn't give error.
 public class GameOver extends JFrame {
     private JPanel overScreen;
     JButton playAgain;
@@ -39,6 +40,18 @@ public class GameOver extends JFrame {
         playAgain.setVisible(true);
         bottomPanel.add(playAgain, BorderLayout.PAGE_START);
 
+        playAgain.addActionListener(e -> {
+            JPanel card9 = new PlayerGUI().getScreenMain();
+            PlayerGUI.cards.add(card9, "playAgain");
+            CardLayout cl = (CardLayout) (PlayerGUI.cards.getLayout());
+            if (!next){
+                cl.show(PlayerGUI.cards, "playAgain");
+            }
+
+            else{
+                cl.show(PlayerGUI.cards, "home");
+            }
+        });
 
     }
 
@@ -46,7 +59,7 @@ public class GameOver extends JFrame {
         return overScreen;
     }
 
-    private void createUIComponents() {
-        imageLogo = new JLabel(new ImageIcon("src/edu/colorado/applepear/classes/GUI/boat (2).png"));
-    }
+//    private void createUIComponents() {
+//        imageLogo = new JLabel(new ImageIcon("src/edu/colorado/applepear/classes/GUI/boat (2).png"));
+//    }
 }
