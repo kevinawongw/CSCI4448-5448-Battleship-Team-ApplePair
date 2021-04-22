@@ -140,4 +140,12 @@ public class LShip implements Ship {
         }
         return null;
     }
+
+    public List<Point> inputAsList(Point coord) {
+        Point p1 = coord;
+        Point p2 = new Point(coord.getX(), coord.getY() + 1);
+        Point p3 = new Point(coord.getX() + 1, coord.getY() + 1);
+
+        return Arrays.asList(p1, p2, p3);
+    }
 }
