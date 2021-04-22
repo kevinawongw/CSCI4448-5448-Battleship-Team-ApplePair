@@ -72,22 +72,24 @@
           <text value="Player 1 Name:"/>
         </properties>
       </component>
+      <component id="c2edd" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="3" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="2" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="201" height="17"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Tw Cen MT Condensed Extra Bold" size="14" style="0"/>
+          <foreground color="-12298125"/>
+          <text value="Player 2 Name:"/>
+        </properties>
+      </component>
       <component id="84078" class="javax.swing.JLabel" binding="imageLogo" custom-create="true">
         <constraints>
           <grid row="5" column="4" row-span="1" col-span="1" vsize-policy="1" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <text value=""/>
-        </properties>
-      </component>
-      <component id="c2edd" class="javax.swing.JLabel">
-        <constraints>
-          <grid row="3" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="2" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <font name="Tw Cen MT Condensed Extra Bold" size="14" style="0"/>
-          <foreground color="-12298125"/>
-          <text value="Player 2 Name:"/>
         </properties>
       </component>
     </children>
