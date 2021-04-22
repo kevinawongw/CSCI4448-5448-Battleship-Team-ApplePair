@@ -30,7 +30,7 @@ public class myNewMain {
         JFrame mainframe = new JFrame("Battleship");
         mainframe.setContentPane(myUI.getCards());
         mainframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        mainframe.setSize(800, 500);
+        mainframe.setSize(850, 500);
         mainframe.setVisible(true);
 
 
