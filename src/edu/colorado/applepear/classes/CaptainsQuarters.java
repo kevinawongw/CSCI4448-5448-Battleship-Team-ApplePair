@@ -1,5 +1,9 @@
 package edu.colorado.applepear.classes;
 
+/**
+ * Captain's Quarter's Class
+ */
+
 public class CaptainsQuarters {
     private int health;
     private Point location;

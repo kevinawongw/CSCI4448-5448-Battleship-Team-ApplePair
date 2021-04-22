@@ -3,7 +3,10 @@ import edu.colorado.applepear.classes.concreteShips.*;
 
 import java.util.*;
 
-// Kevina's Section
+/**
+ * GameBoard Class
+ */
+
 public class GameBoard {
 
     /**
