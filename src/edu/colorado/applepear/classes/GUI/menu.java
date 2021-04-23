@@ -88,10 +88,8 @@ public class menu extends JFrame{
             JPanel card6 = new viewShip(currPlayer,oppPlayer,true).getViewScreen();
             PlayerGUI.cards.add(card6, "currView");
             CardLayout cl = (CardLayout) (PlayerGUI.cards.getLayout());
-            if(!next)
-                cl.show(PlayerGUI.cards, "currView");
-            else
-                cl.show(PlayerGUI.cards, "menu");
+            cl.show(PlayerGUI.cards, "currView");
+
         });
         b3 = new JButton("Quit");
         b3.setBackground(navy);

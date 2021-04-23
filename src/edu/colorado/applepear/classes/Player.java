@@ -18,6 +18,7 @@ public class Player{
     private Boolean hasSunkenShip;
     private final CommandDispatcher commandDispatcher;
     private String nameString;
+//    private List<Point> myPoints;
 
 
     /**

@@ -37,6 +37,7 @@ public class placeShip extends JFrame{
 
 
 
+
     public  placeShip(Player currPlayer, Player oppPlayer, boolean next){
         
         placeShipScreen = new JPanel(new BorderLayout(0, 0));
@@ -197,7 +198,7 @@ public class placeShip extends JFrame{
             Integer x3coordinate = Integer.parseInt(x3.getText());
             Integer y3coordinate = Integer.parseInt(y3.getText());
             Point lPoint = new Point(x3coordinate,y3coordinate);
-            List<Point> myLShip= Destroyer.inputAsList(lPoint);
+            List<Point> myLShip= LShip.inputAsList(lPoint);
             currPlayer.getGb().placeShip(myLShip);
 
             /* add Minesweeper */
@@ -215,6 +216,9 @@ public class placeShip extends JFrame{
             Point tPoint = new Point(x5coordinate,y5coordinate);
             List<Point> myTower= Tower.inputAsList(tPoint);
             currPlayer.getGb().placeShip(myTower);
+
+
+
 
             /*adding cards*/
             JPanel card3 = new placeShip(oppPlayer,currPlayer, true).getPlaceShipScreen();
@@ -337,6 +341,11 @@ public class placeShip extends JFrame{
 //                if (i==1 && j==1){
 //                    panel.setBackground(Color.PINK);
 //                }
+                JLabel newLabel = new JLabel(i+","+j);
+                newLabel.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 12));
+                newLabel.setForeground(navy);
+//                newLabel.setVerticalAlignment(SwingConstants.CENTER);
+                panel.add(newLabel);
                 String coordinate = i + "," + j;
                 grid.add(coordinate, panel);
 
@@ -373,7 +382,7 @@ public class placeShip extends JFrame{
         if (isInteger(str2)) return false;
         int num1 =  Integer.parseInt(str);
         int num2 =  Integer.parseInt(str2);
-        return num1 >= 1 && num1 <= 10 && num2 >= 1 && num2 <= 10;
+        return num1 >= 0 && num1 <= 9 && num2 >= 0 && num2 <= 9;
     }
 
 

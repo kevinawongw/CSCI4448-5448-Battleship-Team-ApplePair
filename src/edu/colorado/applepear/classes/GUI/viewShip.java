@@ -1,10 +1,16 @@
 package edu.colorado.applepear.classes.GUI;
 
 import edu.colorado.applepear.classes.Player;
+import edu.colorado.applepear.classes.Point;
+import edu.colorado.applepear.classes.Ship;
+import org.jetbrains.annotations.NotNull;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.ListResourceBundle;
 
 public class viewShip {
     private JPanel viewScreen;
@@ -12,11 +18,13 @@ public class viewShip {
     JButton returnButton;
     Color navy = new Color(68, 88, 115);
     Color lightBlue = new Color(226, 233, 238);
+    Color yellow = new Color(255,205,105);
 
     public viewShip(Player currPlayer, Player oppPlayer, boolean next){
         viewScreen = new JPanel(new BorderLayout(0,0));
         viewScreen.setBackground(Color.white);
-        createViewMap(10,10);
+//        List<Ship> allShips = currPlayer.getGb().getShips();
+        createViewMap(10,10, currPlayer);
         viewScreen.add(grid);
 
         JPanel sideBar = new JPanel();
@@ -66,14 +74,31 @@ public class viewShip {
     public JPanel getViewScreen(){ return viewScreen;}
 
 
-    public void createViewMap(int maxX, int maxY){
+    public void createViewMap(int maxX, int maxY, @NotNull Player currPlayer){
         grid = new JPanel(new GridLayout(maxX,maxY,1,1));
         grid.setBorder(new EmptyBorder(30,40,40,40));
         grid.setBackground(Color.white);
+        List<Point> bigList = new ArrayList<>();
+
+        System.out.println(currPlayer.getGb().getShips() + "are my ships");
+
+        for (Ship eachShip: currPlayer.getGb().getShips()){
+            List<Point> eachShipPoint = eachShip.getLocation();
+            for (Point eachPoint: eachShipPoint){
+                System.out.println(eachPoint);
+                bigList.add(eachPoint);
+            }
+        }
 
         for(int i=0; i< maxX; i++){
             for(int j=0; j< maxY; j++){
                 JPanel newP = new JPanel();
+                    for (Point each: bigList){
+                        if (each.getX() == i && each.getY()==j){
+                            newP.setBackground(yellow);
+                        }
+                    }
+
                 String coord = i + ","+j;
                 grid.add(coord, newP);
             }
