@@ -146,7 +146,7 @@ public class placeShip extends JFrame{
 
         /* tower field */
 
-        String S = "Tower";
+        String S = "Tower:";
         JLabel l5 = new JLabel(S);
         l5.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 14));
         l5.setForeground(navy);
@@ -271,8 +271,6 @@ public class placeShip extends JFrame{
         y4.getDocument().addDocumentListener(dl);
         x5.getDocument().addDocumentListener(dl);
         y5.getDocument().addDocumentListener(dl);
-
-
 
     }
     public JPanel getPlaceShipScreen(){

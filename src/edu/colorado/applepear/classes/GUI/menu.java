@@ -48,31 +48,31 @@ public class menu extends JFrame{
         sideBar.add(menuPanel, BorderLayout.PAGE_END);
         menuPanel.setBackground(lightBlue);
         menuPanel.setPreferredSize(new Dimension(250, 300));
-        menuPanel.setBorder(new EmptyBorder(70,50,0,50));
+        menuPanel.setBorder(new EmptyBorder(70,50,30,50));
 
-        /* Bottom Panel for row*/
-        JPanel bottomPanel = new JPanel(new GridLayout(2,0));
-        bottomPanel.setLayout(new BoxLayout(bottomPanel,BoxLayout.X_AXIS));
-        sideBar.add(bottomPanel, BorderLayout.PAGE_END);
-        bottomPanel.setBackground(lightBlue);
-        bottomPanel.setPreferredSize(new Dimension(350, 200));
-        bottomPanel.setBorder(new EmptyBorder(20,15,10,15));
-
-        /* Inventory Panel for column*/
-        JPanel inventPanel = new JPanel(new GridLayout(0,3));
-        bottomPanel.add(inventPanel, BorderLayout.CENTER);
-        inventPanel.setLayout(new BoxLayout(inventPanel,BoxLayout.Y_AXIS));
-        inventPanel.setBackground(lightBlue);
-        inventPanel.setPreferredSize(new Dimension(175, 200));
-        inventPanel.setBorder(new EmptyBorder(10,10,10,10));
-
-        /* Status Panel for column*/
-        JPanel statPanel = new JPanel(new GridLayout(0,3));
-        bottomPanel.add(statPanel, BorderLayout.CENTER);
-        statPanel.setLayout(new BoxLayout(statPanel,BoxLayout.Y_AXIS));
-        statPanel.setBackground(lightBlue);
-        statPanel.setPreferredSize(new Dimension(175, 200));
-        statPanel.setBorder(new EmptyBorder(10,10,10,10));
+//        /* Bottom Panel for row*/
+//        JPanel bottomPanel = new JPanel(new GridLayout(2,0));
+//        bottomPanel.setLayout(new BoxLayout(bottomPanel,BoxLayout.X_AXIS));
+//        sideBar.add(bottomPanel, BorderLayout.PAGE_END);
+//        bottomPanel.setBackground(lightBlue);
+//        bottomPanel.setPreferredSize(new Dimension(350, 200));
+//        bottomPanel.setBorder(new EmptyBorder(20,15,10,15));
+//
+//        /* Inventory Panel for column*/
+//        JPanel inventPanel = new JPanel(new GridLayout(0,3));
+//        bottomPanel.add(inventPanel, BorderLayout.CENTER);
+//        inventPanel.setLayout(new BoxLayout(inventPanel,BoxLayout.Y_AXIS));
+//        inventPanel.setBackground(lightBlue);
+//        inventPanel.setPreferredSize(new Dimension(175, 200));
+//        inventPanel.setBorder(new EmptyBorder(10,10,10,10));
+//
+//        /* Status Panel for column*/
+//        JPanel statPanel = new JPanel(new GridLayout(0,3));
+//        bottomPanel.add(statPanel, BorderLayout.CENTER);
+//        statPanel.setLayout(new BoxLayout(statPanel,BoxLayout.Y_AXIS));
+//        statPanel.setBackground(lightBlue);
+//        statPanel.setPreferredSize(new Dimension(175, 200));
+//        statPanel.setBorder(new EmptyBorder(10,10,10,10));
 
         /* Menu Button field */
         b1 = new JButton("Attack");
@@ -133,107 +133,57 @@ public class menu extends JFrame{
             cl.show(PlayerGUI.cards, "home");
         });
 
-        /* Inventory field */
-        JPanel IrowPanel = new JPanel();
-        IrowPanel.setLayout(new BoxLayout(IrowPanel, BoxLayout.X_AXIS));
-        IrowPanel.setBackground(lightBlue);
-        IrowPanel.setBorder(new EmptyBorder(5,0,0,0));
+
+        JPanel statsPanel = new JPanel();
+        statsPanel.setLayout(new GridLayout(3,2));
+        statsPanel.setBackground(lightBlue);
+        statsPanel.setBorder(new EmptyBorder(5,40,20,0));
 
         String inv = "Inventory ";
         JLabel invTitle = new JLabel(inv);
         invTitle.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 16));
         invTitle.setForeground(navy);
         invTitle.setVisible(true);
-        inventPanel.add(invTitle, BorderLayout.WEST);
-
-        String pm = "Plus Missiles: ";
-        JLabel pmTitle = new JLabel(pm);
-        pmTitle.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 14));
-        pmTitle.setForeground(navy);
-        pmTitle.setVisible(true);
-        IrowPanel.add(pmTitle, BorderLayout.WEST);
-
-        String numPM = "3";
-        plusMissile = new JLabel(numPM);
-        plusMissile.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 14));
-        plusMissile.setForeground(navy);
-        plusMissile.setVisible(true);
-        IrowPanel.add(plusMissile, BorderLayout.WEST);
-
-
-        inventPanel.add(IrowPanel);
-
-        JPanel IrowPanel2 = new JPanel();
-        IrowPanel2.setLayout(new BoxLayout(IrowPanel2, BoxLayout.X_AXIS));
-        IrowPanel2.setBackground(lightBlue);
-
-        String sp = "Sonar Pulses: ";
-        JLabel spTitle = new JLabel(sp);
-        spTitle.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 14));
-        spTitle.setForeground(navy);
-        spTitle.setVisible(true);
-        IrowPanel2.add(spTitle, BorderLayout.WEST);
-
-        String numSP = "2";
-        sonarPulse = new JLabel(numSP);
-        sonarPulse.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 14));
-        sonarPulse.setForeground(navy);
-        sonarPulse.setVisible(true);
-        IrowPanel2.add(sonarPulse, BorderLayout.WEST);
-
-        inventPanel.add(IrowPanel2);
-
-        /* Status field */
-        JPanel CSrowPanel = new JPanel();
-        CSrowPanel.setLayout(new BoxLayout(CSrowPanel, BoxLayout.X_AXIS));
-        CSrowPanel.setBackground(lightBlue);
-        CSrowPanel.setBorder(new EmptyBorder(5,0,0,0));
+        statsPanel.add(invTitle);
 
         String stat = "Current Status";
         JLabel statTitle = new JLabel(stat);
         statTitle.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 16));
         statTitle.setForeground(navy);
         statTitle.setVisible(true);
-        statPanel.add(statTitle, BorderLayout.WEST);
+        statsPanel.add(statTitle);
 
-        String nShip = "Ships Remaining: ";
+        String pm = "Plus Missiles: " + String.valueOf(currPlayer.getPlusMissile());
+        JLabel pmTitle = new JLabel(pm);
+        pmTitle.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 14));
+        pmTitle.setForeground(navy);
+        pmTitle.setVisible(true);
+        statsPanel.add(pmTitle);
+
+        String nShip = "Ships Remaining: " + String.valueOf(currPlayer.getGb().getShips().size());
         JLabel nsTitle = new JLabel(nShip);
         nsTitle.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 14));
         nsTitle.setForeground(navy);
         nsTitle.setVisible(true);
-        CSrowPanel.add(nsTitle, BorderLayout.WEST);
+        statsPanel.add(nsTitle);
 
-        String numSR = "6";
-        currShip = new JLabel(numSR);
-        currShip.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 14));
-        currShip.setForeground(navy);
-        currShip.setVisible(true);
-        CSrowPanel.add(currShip, BorderLayout.WEST);
+        String sp = "Sonar Pulses: " + String.valueOf(currPlayer.getSonarPulse());
+        JLabel spTitle = new JLabel(sp);
+        spTitle.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 14));
+        spTitle.setForeground(navy);
+        spTitle.setVisible(true);
+        statsPanel.add(spTitle);
 
-        statPanel.add(CSrowPanel);
-
-        JPanel CSrowPanel2 = new JPanel();
-        CSrowPanel2.setLayout(new BoxLayout(CSrowPanel2, BoxLayout.X_AXIS));
-        CSrowPanel2.setBackground(lightBlue);
-        CSrowPanel2.setBorder(new EmptyBorder(5,0,0,0));
-
-        String sShip = "Sunken Ship: ";
+        String sShip = "Sunken Ship: " + String.valueOf(currPlayer.getHasSunkenShip());
         JLabel ssTitle = new JLabel(sShip);
         ssTitle.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 14));
         ssTitle.setForeground(navy);
         ssTitle.setVisible(true);
-        CSrowPanel2.add(ssTitle, BorderLayout.WEST);
+        statsPanel.add(ssTitle);
 
-        String numSS = "0";
-        sunkShip = new JLabel(numSS);
-        sunkShip.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 14));
-        sunkShip.setForeground(navy);
-        sunkShip.setVisible(true);
-        CSrowPanel2.add(sunkShip, BorderLayout.WEST);
+        sideBar.add(statsPanel, BorderLayout.CENTER);
 
-        statPanel.add(CSrowPanel2);
     }
-
 
 
     public JPanel getMenuScreen(){
