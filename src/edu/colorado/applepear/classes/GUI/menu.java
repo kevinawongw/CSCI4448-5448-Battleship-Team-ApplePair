@@ -50,30 +50,6 @@ public class menu extends JFrame{
         menuPanel.setPreferredSize(new Dimension(250, 300));
         menuPanel.setBorder(new EmptyBorder(70,50,30,50));
 
-//        /* Bottom Panel for row*/
-//        JPanel bottomPanel = new JPanel(new GridLayout(2,0));
-//        bottomPanel.setLayout(new BoxLayout(bottomPanel,BoxLayout.X_AXIS));
-//        sideBar.add(bottomPanel, BorderLayout.PAGE_END);
-//        bottomPanel.setBackground(lightBlue);
-//        bottomPanel.setPreferredSize(new Dimension(350, 200));
-//        bottomPanel.setBorder(new EmptyBorder(20,15,10,15));
-//
-//        /* Inventory Panel for column*/
-//        JPanel inventPanel = new JPanel(new GridLayout(0,3));
-//        bottomPanel.add(inventPanel, BorderLayout.CENTER);
-//        inventPanel.setLayout(new BoxLayout(inventPanel,BoxLayout.Y_AXIS));
-//        inventPanel.setBackground(lightBlue);
-//        inventPanel.setPreferredSize(new Dimension(175, 200));
-//        inventPanel.setBorder(new EmptyBorder(10,10,10,10));
-//
-//        /* Status Panel for column*/
-//        JPanel statPanel = new JPanel(new GridLayout(0,3));
-//        bottomPanel.add(statPanel, BorderLayout.CENTER);
-//        statPanel.setLayout(new BoxLayout(statPanel,BoxLayout.Y_AXIS));
-//        statPanel.setBackground(lightBlue);
-//        statPanel.setPreferredSize(new Dimension(175, 200));
-//        statPanel.setBorder(new EmptyBorder(10,10,10,10));
-
         /* Menu Button field */
         b1 = new JButton("Attack");
         b1.setBackground(navy);
