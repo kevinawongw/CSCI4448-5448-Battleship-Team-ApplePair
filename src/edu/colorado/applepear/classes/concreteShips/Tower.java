@@ -124,7 +124,7 @@ public class Tower implements Ship {
         return null;
     }
 
-    public List<Point> inputAsList(Point coord) {
+    public static List<Point> inputAsList(Point coord) {
         Point p1 = coord;
         Point p2 = coord;
         Point p3 = coord;

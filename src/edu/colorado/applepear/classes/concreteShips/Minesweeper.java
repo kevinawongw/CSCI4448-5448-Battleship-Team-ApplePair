@@ -147,7 +147,7 @@ public class Minesweeper implements Ship {
         return null;
     }
 
-    public List<Point> inputAsList(Point coord) {
+    public static List<Point> inputAsList(Point coord) {
         Point p1 = coord;
         Point p2 = new Point(coord.getX() + 1, coord.getY());
         return Arrays.asList(p1, p2);

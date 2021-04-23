@@ -1,10 +1,17 @@
 package edu.colorado.applepear.classes.GUI;
 import edu.colorado.applepear.classes.Player;
+import edu.colorado.applepear.classes.concreteShips.Battleship;
+import edu.colorado.applepear.classes.concreteShips.Destroyer;
+import edu.colorado.applepear.classes.concreteShips.LShip;
+import edu.colorado.applepear.classes.concreteShips.Minesweeper;
+import edu.colorado.applepear.classes.concreteShips.Tower;
+import edu.colorado.applepear.classes.Point;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import java.awt.*;
+import java.util.List;
 
 
 public class placeShip extends JFrame{
@@ -169,12 +176,45 @@ public class placeShip extends JFrame{
 
         doneButton.addActionListener(e -> {
 
-            /* how i think we can add ships to ship map -- will comment out temporarily
+            //how i think we can add ships to ship map -- will comment out temporarily
 
+            /* add battleship */
             Integer x1coordinate = Integer.parseInt(x1.getText());
             Integer y1coordinate = Integer.parseInt(y1.getText());
+            Point bPoint = new Point(x1coordinate,y1coordinate);
+            List<Point> myBattleship= Battleship.inputAsList(bPoint);
+            currPlayer.getGb().placeShip(myBattleship);
 
-            */
+            /* add destroyer */
+            Integer x2coordinate = Integer.parseInt(x2.getText());
+            Integer y2coordinate = Integer.parseInt(y2.getText());
+            Point dPoint = new Point(x2coordinate,y2coordinate);
+            List<Point> myDestroyer= Destroyer.inputAsList(dPoint);
+            currPlayer.getGb().placeShip(myDestroyer);
+
+            /* add LShip */
+
+            Integer x3coordinate = Integer.parseInt(x3.getText());
+            Integer y3coordinate = Integer.parseInt(y3.getText());
+            Point lPoint = new Point(x3coordinate,y3coordinate);
+            List<Point> myLShip= Destroyer.inputAsList(lPoint);
+            currPlayer.getGb().placeShip(myLShip);
+
+            /* add Minesweeper */
+
+            Integer x4coordinate = Integer.parseInt(x4.getText());
+            Integer y4coordinate = Integer.parseInt(y4.getText());
+            Point mPoint = new Point(x4coordinate,y4coordinate);
+            List<Point> myMineSweeper= Minesweeper.inputAsList(mPoint);
+            currPlayer.getGb().placeShip(myMineSweeper);
+
+            /* add Tower */
+
+            Integer x5coordinate = Integer.parseInt(x5.getText());
+            Integer y5coordinate = Integer.parseInt(y5.getText());
+            Point tPoint = new Point(x5coordinate,y5coordinate);
+            List<Point> myTower= Tower.inputAsList(tPoint);
+            currPlayer.getGb().placeShip(myTower);
 
             /*adding cards*/
             JPanel card3 = new placeShip(oppPlayer,currPlayer, true).getPlaceShipScreen();

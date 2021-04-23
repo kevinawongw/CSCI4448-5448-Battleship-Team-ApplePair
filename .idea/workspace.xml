@@ -53,10 +53,15 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ecce50e7-60f1-4088-9580-0bcf29b1574e" name="Default Changelist" comment="Fixed quit screen and menu buttons -- Vienna">
+    <list default="true" id="ecce50e7-60f1-4088-9580-0bcf29b1574e" name="Default Changelist" comment="re format stats in menu -- vienna">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/GUI/menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/GUI/menu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/GUI/placeShip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/GUI/placeShip.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/Ship.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/Ship.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/concreteShips/Battleship.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/concreteShips/Battleship.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/concreteShips/Destroyer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/concreteShips/Destroyer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/concreteShips/LShip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/concreteShips/LShip.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/concreteShips/Minesweeper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/concreteShips/Minesweeper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/concreteShips/Tower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/concreteShips/Tower.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -559,7 +564,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619116799424</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="re format stats in menu -- vienna">
+      <created>1619214174100</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1619214174100</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -592,7 +604,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="player map update" />
     <MESSAGE value="view ship update" />
     <MESSAGE value="Got started on interface implementation" />
     <MESSAGE value="Big changes on ship interface and moving a lot of functions around" />
@@ -617,7 +628,8 @@
     <MESSAGE value="updated GUI" />
     <MESSAGE value="Fixed--playerGUI From" />
     <MESSAGE value="Fixed quit screen and menu buttons -- Vienna" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed quit screen and menu buttons -- Vienna" />
+    <MESSAGE value="re format stats in menu -- vienna" />
+    <option name="LAST_COMMIT_MESSAGE" value="re format stats in menu -- vienna" />
   </component>
   <component name="WindowStateProjectService">
     <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1619068019690">
@@ -636,25 +648,25 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1618417723940" />
-    <state width="1237" height="81" key="GridCell.Tab.0.bottom" timestamp="1619213879836">
+    <state width="1237" height="81" key="GridCell.Tab.0.bottom" timestamp="1619216747823">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="81" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1619213879836" />
+    <state width="1237" height="81" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1619216747823" />
     <state width="1877" height="81" key="GridCell.Tab.0.bottom/1920.150.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1619117200801" />
-    <state width="1237" height="81" key="GridCell.Tab.0.center" timestamp="1619213879836">
+    <state width="1237" height="81" key="GridCell.Tab.0.center" timestamp="1619216747823">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="81" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1619213879836" />
+    <state width="1237" height="81" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1619216747823" />
     <state width="1877" height="81" key="GridCell.Tab.0.center/1920.150.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1619117200801" />
-    <state width="1237" height="81" key="GridCell.Tab.0.left" timestamp="1619213879836">
+    <state width="1237" height="81" key="GridCell.Tab.0.left" timestamp="1619216747823">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="81" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1619213879836" />
+    <state width="1237" height="81" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1619216747823" />
     <state width="1877" height="81" key="GridCell.Tab.0.left/1920.150.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1619117200801" />
-    <state width="1237" height="81" key="GridCell.Tab.0.right" timestamp="1619213879836">
+    <state width="1237" height="81" key="GridCell.Tab.0.right" timestamp="1619216747823">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="81" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1619213879836" />
+    <state width="1237" height="81" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1619216747823" />
     <state width="1877" height="81" key="GridCell.Tab.0.right/1920.150.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1619117200801" />
     <state width="1877" height="277" key="GridCell.Tab.1.bottom" timestamp="1619114533094">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -684,10 +696,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="598" y="281" key="MultipleFileMergeDialog/1920.150.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1619116827288" />
-    <state x="350" y="112" key="Vcs.Push.Dialog.v2" timestamp="1619116805696">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1619214178379">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1618939371971" />
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1619214178379" />
     <state x="350" y="112" key="Vcs.Push.Dialog.v2/1920.150.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1619116805696" />
     <state x="540" y="253" key="VcsDiffUtil.ChangesDialog" timestamp="1619116906728">
       <screen x="0" y="0" width="1920" height="1040" />

@@ -21,5 +21,8 @@ public interface Ship {
     Boolean isShipSunken();
     void updateHealth(Point location);
     List<Point> input(int[][] shipMap);
-    List<Point> inputAsList(Point p);
+
+//    static List<Point> inputAsList(Point p) {
+//        return null;
+//    }
 }
