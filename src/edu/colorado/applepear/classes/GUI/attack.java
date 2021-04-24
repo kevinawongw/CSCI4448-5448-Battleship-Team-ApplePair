@@ -160,7 +160,7 @@ public class attack extends JFrame {
         menuPanel.add(new JLabel(" "),"span, grow");
 
         plusButton.addActionListener(e -> {
-            /*missile attack part*/
+            /*plus missile part*/
             Integer xCoord = Integer.parseInt(x.getText());
             Integer yCoord = Integer.parseInt(y.getText());
             edu.colorado.applepear.classes.Point missilePoint = new edu.colorado.applepear.classes.Point(xCoord, yCoord);
@@ -238,7 +238,7 @@ public class attack extends JFrame {
             if (currPlayer.getHasSunkenShip() == false){
                 JFrame fail = new JFrame("Not Available");
                 JDialog d = new JDialog(fail, "dialog Box");
-                JLabel l = new JLabel("Sonar Pulse is not unlocked yet", SwingConstants.CENTER);
+                JLabel l = new JLabel("Sonar Pulse is unlocked", SwingConstants.CENTER);
                 l.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 16));
                 d.setBackground(Color.white);
                 d.add(l, BorderLayout.CENTER);
@@ -247,9 +247,51 @@ public class attack extends JFrame {
                 d.setSize(new Dimension(230,100));
             }
             //else choose coords
-//            else{
-//
-//            }
+            else{
+                /*sonar pulse part*/
+                Integer xCoord = Integer.parseInt(x.getText());
+                Integer yCoord = Integer.parseInt(y.getText());
+                edu.colorado.applepear.classes.Point missilePoint = new edu.colorado.applepear.classes.Point(xCoord, yCoord);
+                JFrame missileF= new JFrame("Plus Missile Frame");
+                JDialog missileD = new JDialog(missileF, "Plus Missile Dialog");
+                JPanel missileP = new JPanel();
+
+                missileP.setLayout(new BoxLayout(missileP,BoxLayout.Y_AXIS));
+                missileF.add(missileP, BorderLayout.EAST);
+                missileP.setBackground(lightBlue);
+                missileP.setBackground(navy);
+                missileP.setForeground(lightBlue);
+                missileD.setBackground(navy);
+                missileD.setForeground(lightBlue);
+                JButton closeB = new JButton("Back to Game");
+                closeB.setBackground(navy);
+                closeB.setForeground(lightBlue);
+                closeB.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 14));
+                closeB.setPreferredSize(new Dimension(3,1));
+                closeB.setVisible(true);
+                missileP.add(closeB, BorderLayout.CENTER);
+
+                missileP.setBackground(Color.white);
+                missileD.setVisible(true);
+                missileD.setSize(new Dimension(400,400));
+
+                Boolean sonarPulseAttack = currPlayer.useSonarPulse(oppPlayer.getGb(),missilePoint);
+
+                if(sonarPulseAttack){
+                    JLabel hit = new JLabel("Few spot(s) detected something... \n", SwingConstants.CENTER);
+                    hit.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 16));
+                    missileD.add(hit, BorderLayout.CENTER);
+                    hit.setForeground(navy);
+                    currPlayer.updateSunkShip(true);
+                }
+                else{
+                    JLabel miss = new JLabel("No ship was found in this range \n", SwingConstants.CENTER);
+                    miss.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 16));
+                    missileD.add(miss, BorderLayout.CENTER);
+                    miss.setForeground(navy);
+                }
+
+            }
 //            JPanel card6 = new viewShip(currPlayer,oppPlayer,true).getViewScreen();
 //            PlayerGUI.cards.add(card6, "currView");
 //            CardLayout cl = (CardLayout) (PlayerGUI.cards.getLayout());
