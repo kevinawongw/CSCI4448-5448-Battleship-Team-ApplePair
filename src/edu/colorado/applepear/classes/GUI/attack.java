@@ -1,5 +1,6 @@
 package edu.colorado.applepear.classes.GUI;
 
+import edu.colorado.applepear.classes.Game;
 import edu.colorado.applepear.classes.GameBoard;
 import edu.colorado.applepear.classes.Player;
 import edu.colorado.applepear.classes.main.myNewMain;
@@ -7,10 +8,13 @@ import edu.colorado.applepear.classes.main.myNewMain;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
+import java.util.List;
 
 public class attack extends JFrame {
     private JPanel attackScreen;
     private JPanel grid;
+    JTextField x = new JTextField();
+    JTextField y = new JTextField();
     JButton returnButton;
     Color navy = new Color(68, 88, 115);
     Color lightBlue = new Color(226, 233, 238);
@@ -36,13 +40,33 @@ public class attack extends JFrame {
         titleLabel.setBorder(new EmptyBorder(20,0,0,0));
         sideBar.add(titleLabel,BorderLayout.WEST);
 
+        JPanel coordPanel = new JPanel(new GridLayout(2,0));
+        sideBar.add(coordPanel, BorderLayout.PAGE_START);
+        coordPanel.setBackground(lightBlue);
+        coordPanel.setPreferredSize(new Dimension(250, 300));
+        coordPanel.setBorder(new EmptyBorder(30,20,20,20));
+
         JPanel menuPanel = new JPanel(new GridLayout(0,1));
-        sideBar.add(menuPanel, BorderLayout.PAGE_END);
+        sideBar.add(menuPanel, BorderLayout.PAGE_START);
         menuPanel.setBackground(lightBlue);
         menuPanel.setPreferredSize(new Dimension(250, 300));
-        menuPanel.setBorder(new EmptyBorder(70,50,70,50));
+        menuPanel.setBorder(new EmptyBorder(20,50,70,50));
 
-        /* Menu Button field */
+        /*Coordinate field */
+        String coord = "Enter the x and y coordinates for attack!";
+        JLabel c = new JLabel(coord);
+        c.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 16));
+        c.setForeground(navy);
+        c.setVisible(true);
+        coordPanel.add(c,BorderLayout.PAGE_START);
+        coordPanel.add(new JLabel(" "),"span, grow");
+
+        x.setVisible(true);
+        y.setVisible(true);
+        coordPanel.add(x, BorderLayout.PAGE_START);
+        coordPanel.add(y, BorderLayout.PAGE_START);
+
+        /* Missile Button field */
         JButton missileButton = new JButton("Missile Attack");
         missileButton.setBackground(navy);
         missileButton.setForeground(lightBlue);
@@ -54,11 +78,72 @@ public class attack extends JFrame {
 
 
         missileButton.addActionListener(e -> {
-//            JPanel card5 = new attack(currPlayer,oppPlayer,true).getAttackScreen();
-//            PlayerGUI.cards.add(card5, "currAttack");
+
+            Integer xCoord = Integer.parseInt(x.getText());
+            Integer yCoord = Integer.parseInt(y.getText());
+            Game game = new Game(currPlayer,oppPlayer);
+            edu.colorado.applepear.classes.Point missilePoint = new edu.colorado.applepear.classes.Point(xCoord, yCoord);
+            System.out.println("Test: " + missilePoint);
+            Boolean missile = game.hitOrMiss(missilePoint,currPlayer,oppPlayer);
+            currPlayer.getGb().updateAttackMap(oppPlayer.getGb(),missilePoint);
+            JFrame missileF= new JFrame("Missile Attack Frame");
+            JDialog missileD = new JDialog(missileF, "Missile Attack Dialog");
+            JPanel missileP = new JPanel();
+            missileP.setLayout(new BoxLayout(missileP,BoxLayout.Y_AXIS));
+            missileF.add(missileP, BorderLayout.EAST);
+            missileP.setBackground(lightBlue);
+
+            missileP.setBackground(navy);
+            missileP.setForeground(lightBlue);
+            missileD.setBackground(navy);
+            missileD.setForeground(lightBlue);
+            JButton closeB = new JButton("Back to Game");
+            closeB.setBackground(navy);
+            closeB.setForeground(lightBlue);
+            closeB.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 14));
+            closeB.setPreferredSize(new Dimension(3,1));
+            closeB.setVisible(true);
+            missileP.add(closeB, BorderLayout.CENTER);
+//            missileD.add(new JLabel(" "),"span, grow");
+
+            missileP.setBackground(Color.white);
+            missileD.setVisible(true);
+            missileD.setSize(new Dimension(400,400));
+
+            if(missile){
+                int attackIndex = oppPlayer.getGb().identifyShip(missilePoint);
+                oppPlayer.getGb().getShips().get(attackIndex).updateHealth(missilePoint);
+                boolean sunken = oppPlayer.getGb().getShips().get(attackIndex).isShipSunken();
+                JLabel hit = new JLabel("You Hit an Opponent's Ship! Nice Shot!", SwingConstants.CENTER);
+//                System.out.println("You Hit an Opponent's Ship! Nice Shot!");
+                hit.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 16));
+                missileD.add(hit, BorderLayout.CENTER);
+                hit.setForeground(navy);
+                if(sunken){
+                    JLabel sunk = new JLabel("Nice! You sunk the opponent's " + oppPlayer.getGb().getShips().get(attackIndex).getShipName(), SwingConstants.CENTER);
+                    sunk.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 16));
+                    missileD.add(sunk, BorderLayout.CENTER);
+                    sunk.setForeground(navy);
+//                    System.out.println("Nice! You sunk the opponent's " + oppPlayer.getGb().getShips().get(attackIndex).getShipName());
+                    currPlayer.updateSunkShip(true);
+                    currPlayer.getGb().updateSunkenShip(attackIndex);
+                }
+            }
+            else{
+                JLabel miss = new JLabel("You missed...", SwingConstants.CENTER);
+                miss.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 16));
+                missileD.add(miss, BorderLayout.CENTER);
+                miss.setForeground(navy);
+//                System.out.println("You Missed...");
+            }
+//            if(missileD.setVisible(false)){
+//
+//            }
+//            JPanel card5 = new menu(oppPlayer,currPlayer,true).getMenuScreen();
+//            PlayerGUI.cards.add(card5, "oppMenu");
 //            CardLayout cl = (CardLayout) (PlayerGUI.cards.getLayout());
 //            if (!next){
-//                cl.show(PlayerGUI.cards, "currAttack");
+//                cl.show(PlayerGUI.cards, "oppMenu");
 //            }
 //
 //            else{
