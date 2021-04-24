@@ -216,6 +216,8 @@ public class attack extends JFrame {
             PlayerGUI.cards.add(card6, "oppPCMenu");
             CardLayout cl = (CardLayout) (PlayerGUI.cards.getLayout());
             cl.show(PlayerGUI.cards, "oppPCMenu");
+
+
         });
 
 
@@ -241,6 +243,11 @@ public class attack extends JFrame {
                 l.setForeground(navy);
                 d.setVisible(true);
                 d.setSize(new Dimension(230,100));
+
+                JPanel card6 = new attack(currPlayer,oppPlayer,true).getAttackScreen();
+                PlayerGUI.cards.add(card6, "currAttack");
+                CardLayout cl = (CardLayout) (PlayerGUI.cards.getLayout());
+                cl.show(PlayerGUI.cards, "currAttack");
             }
             //else choose coords
             else{
@@ -287,12 +294,14 @@ public class attack extends JFrame {
                     miss.setForeground(navy);
                 }
 
+                /* Go back to Opponent's Menu */
+                JPanel card6 = new menu(oppPlayer,currPlayer,false).getMenuScreen();
+                PlayerGUI.cards.add(card6, "oppPCMenu");
+                CardLayout cl = (CardLayout) (PlayerGUI.cards.getLayout());
+                cl.show(PlayerGUI.cards, "oppPCMenu");
+
             }
-            /* Go back to Opponent's Menu */
-            JPanel card6 = new menu(oppPlayer,currPlayer,false).getMenuScreen();
-            PlayerGUI.cards.add(card6, "oppPCMenu");
-            CardLayout cl = (CardLayout) (PlayerGUI.cards.getLayout());
-            cl.show(PlayerGUI.cards, "oppPCMenu");
+
 
         });
 
