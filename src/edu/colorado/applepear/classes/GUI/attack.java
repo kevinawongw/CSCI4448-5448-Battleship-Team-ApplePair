@@ -182,40 +182,48 @@ public class attack extends JFrame {
             missileD.setVisible(true);
             missileD.setSize(new Dimension(400,400));
 
-            /*print out if there's no remaining plus missiles (haven't finish it yet)*/
-//            if(currPlayer.getPlusMissile()==0){
-//                String enterAgain = String.valueOf(currPlayer.getName()) + " has no more plus missiles remaining.";
-//                JLabel noMissile = new JLabel(enterAgain);
-//                noMissile.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 14));
-//                noMissile.setForeground(navy);
-//                noMissile.setVisible(true);
-//                missileP.add(noMissile);
-//            }
-            for(Point loc : plusAttack){
-                int i = oppPlayer.getGb().identifyShip(loc);
-                oppPlayer.getGb().getShips().get(i).updateHealth(loc);
-                Boolean sunken = oppPlayer.getGb().getShips().get(i).isShipSunken();
-                System.out.println("Test : "+sunken);
-                if(!sunken){ //not sure why the !sunken works here but opposite in Main class but ya
-                    JLabel sunk = new JLabel("Plus Missile landed " + plusAttack.size() + " hit(s)!", SwingConstants.CENTER);
-                    sunk.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 16));
-                    missileD.add(sunk, BorderLayout.CENTER);
-                    sunk.setForeground(navy);
-                    currPlayer.updateSunkShip(true);
+            if(currPlayer.getPlusMissile() > 0) {
+                for (Point loc : plusAttack) {
+                    int i = oppPlayer.getGb().identifyShip(loc);
+                    oppPlayer.getGb().getShips().get(i).updateHealth(loc);
+                    Boolean sunken = oppPlayer.getGb().getShips().get(i).isShipSunken();
+                    System.out.println("Test : " + sunken);
+                    if (!sunken) { //not sure why the !sunken works here but opposite in Main class but ya
+                        JLabel sunk = new JLabel("Plus Missile landed " + plusAttack.size() + " hit(s)!", SwingConstants.CENTER);
+                        sunk.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 16));
+                        missileD.add(sunk, BorderLayout.CENTER);
+                        sunk.setForeground(navy);
+                        currPlayer.updateSunkShip(true);
+                    } else { //doesn't show the message hmm..
+                        JLabel miss = new JLabel("No attacks were made since there are no ships around.", SwingConstants.CENTER);
+                        miss.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 16));
+                        missileD.add(miss, BorderLayout.CENTER);
+                        miss.setForeground(navy);
+                    }
                 }
-                else{ //doesn't show the message hmm..
-                    JLabel miss = new JLabel("No attacks were made since there are no ships around.", SwingConstants.CENTER);
-                    miss.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 16));
-                    missileD.add(miss, BorderLayout.CENTER);
-                    miss.setForeground(navy);
-                }
+                /* Go back to Opponent's Menu */
+                JPanel card6 = new menu(oppPlayer,currPlayer,false).getMenuScreen();
+                PlayerGUI.cards.add(card6, "oppPCMenu");
+                CardLayout cl = (CardLayout) (PlayerGUI.cards.getLayout());
+                cl.show(PlayerGUI.cards, "oppPCMenu");
+            }
+            /* No Remaining Plus Missile*/
+            else{
+                JLabel l = new JLabel("You don't have anymore Plus Missile. Enter Again.", SwingConstants.CENTER);
+                l.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 16));
+                missileD.setBackground(Color.white);
+                missileD.add(l, BorderLayout.CENTER);
+                l.setForeground(navy);
+                missileD.setVisible(true);
+                missileD.setSize(new Dimension(400,400));
+
+                JPanel card6 = new attack(currPlayer,oppPlayer,true).getAttackScreen();
+                PlayerGUI.cards.add(card6, "currAttack");
+                CardLayout cl = (CardLayout) (PlayerGUI.cards.getLayout());
+                cl.show(PlayerGUI.cards, "currAttack");
             }
 
-            /* Go back to Opponent's Menu */
-            JPanel card6 = new menu(oppPlayer,currPlayer,false).getMenuScreen();
-            PlayerGUI.cards.add(card6, "oppPCMenu");
-            CardLayout cl = (CardLayout) (PlayerGUI.cards.getLayout());
-            cl.show(PlayerGUI.cards, "oppPCMenu");
+
 
 
         });
@@ -242,14 +250,14 @@ public class attack extends JFrame {
                 d.add(l, BorderLayout.CENTER);
                 l.setForeground(navy);
                 d.setVisible(true);
-                d.setSize(new Dimension(230,100));
+                d.setSize(new Dimension(400,400));
 
                 JPanel card6 = new attack(currPlayer,oppPlayer,true).getAttackScreen();
                 PlayerGUI.cards.add(card6, "currAttack");
                 CardLayout cl = (CardLayout) (PlayerGUI.cards.getLayout());
                 cl.show(PlayerGUI.cards, "currAttack");
             }
-            //else choose coords
+
             else{
                 /*sonar pulse part*/
                 Integer xCoord = Integer.parseInt(x.getText());
@@ -280,25 +288,49 @@ public class attack extends JFrame {
 
                 Boolean sonarPulseAttack = currPlayer.useSonarPulse(oppPlayer.getGb(),missilePoint);
 
-                if(sonarPulseAttack){
-                    JLabel hit = new JLabel("Few spot(s) detected something... \n", SwingConstants.CENTER);
-                    hit.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 16));
-                    missileD.add(hit, BorderLayout.CENTER);
-                    hit.setForeground(navy);
-                    currPlayer.updateSunkShip(true);
-                }
-                else{
-                    JLabel miss = new JLabel("No ship was found in this range \n", SwingConstants.CENTER);
-                    miss.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 16));
-                    missileD.add(miss, BorderLayout.CENTER);
-                    miss.setForeground(navy);
+
+                /*when last sonar pulse is used, else statement just give dialog that no remaining sonar pulse.
+                 Haven't figure out how to print out one of hit or miss output and then show the else statement diaglog.
+                 */
+                if(currPlayer.getSonarPulse() > 0){
+
+                    if(sonarPulseAttack){
+                        JLabel hit = new JLabel("Few spot(s) detected something... \n", SwingConstants.CENTER);
+                        hit.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 16));
+                        missileD.add(hit, BorderLayout.CENTER);
+                        hit.setForeground(navy);
+                        currPlayer.updateSunkShip(true);
+                    }
+                    else{
+                        JLabel miss = new JLabel("No ship was found in this range \n", SwingConstants.CENTER);
+                        miss.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 16));
+                        missileD.add(miss, BorderLayout.CENTER);
+                        miss.setForeground(navy);
+                    }
+
+                    /* Go back to Opponent's Menu */
+                    JPanel card6 = new menu(oppPlayer,currPlayer,false).getMenuScreen();
+                    PlayerGUI.cards.add(card6, "oppPCMenu");
+                    CardLayout cl = (CardLayout) (PlayerGUI.cards.getLayout());
+                    cl.show(PlayerGUI.cards, "oppPCMenu");
                 }
 
-                /* Go back to Opponent's Menu */
-                JPanel card6 = new menu(oppPlayer,currPlayer,false).getMenuScreen();
-                PlayerGUI.cards.add(card6, "oppPCMenu");
-                CardLayout cl = (CardLayout) (PlayerGUI.cards.getLayout());
-                cl.show(PlayerGUI.cards, "oppPCMenu");
+                /* No Remaining Sonar Pulse*/
+                else{
+                    JLabel l = new JLabel("You don't have anymore Sonar Pulse. Enter Again.", SwingConstants.CENTER);
+                    l.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 16));
+                    missileD.setBackground(Color.white);
+                    missileD.add(l, BorderLayout.CENTER);
+                    l.setForeground(navy);
+                    missileD.setVisible(true);
+                    missileD.setSize(new Dimension(400,400));
+
+                    JPanel card6 = new attack(currPlayer,oppPlayer,true).getAttackScreen();
+                    PlayerGUI.cards.add(card6, "currAttack");
+                    CardLayout cl = (CardLayout) (PlayerGUI.cards.getLayout());
+                    cl.show(PlayerGUI.cards, "currAttack");
+                }
+
 
             }
 

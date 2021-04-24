@@ -53,7 +53,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ecce50e7-60f1-4088-9580-0bcf29b1574e" name="Default Changelist" comment="add x y on attack grid">
+    <list default="true" id="ecce50e7-60f1-4088-9580-0bcf29b1574e" name="Default Changelist" comment="Fixed the issue when sonar pulse is unlocked, show dialog and come back to attack screen">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/GUI/attack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/GUI/attack.java" afterDir="false" />
     </list>
@@ -248,14 +248,7 @@
       <option name="presentableId" value="Default" />
       <updated>1612370581325</updated>
       <workItem from="1615531086052" duration="8620000" />
-      <workItem from="1619263410075" duration="15319000" />
-    </task>
-    <task id="LOCAL-00010" summary="Team ApplePair pair 1: Kevina - updates to gameboard, update to ship, test updates">
-      <created>1614816391204</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1614816391204</updated>
+      <workItem from="1619263410075" duration="20134000" />
     </task>
     <task id="LOCAL-00011" summary="Player takes in gameboard, instead of GameBoard takes in Player">
       <created>1614817699302</created>
@@ -593,7 +586,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619285965227</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="Fixed the issue when sonar pulse is unlocked, show dialog and come back to attack screen">
+      <created>1619292900610</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1619292900610</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -626,7 +626,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fixed Main" />
     <MESSAGE value="Main Clean" />
     <MESSAGE value="comments" />
     <MESSAGE value="Update Main, Added function to remove ships when sunken" />
@@ -651,7 +650,8 @@
     <MESSAGE value="Attack sonar pulse works. I just passed printing out the count of spot that got detected for now." />
     <MESSAGE value="cleansing code" />
     <MESSAGE value="add x y on attack grid" />
-    <option name="LAST_COMMIT_MESSAGE" value="add x y on attack grid" />
+    <MESSAGE value="Fixed the issue when sonar pulse is unlocked, show dialog and come back to attack screen" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed the issue when sonar pulse is unlocked, show dialog and come back to attack screen" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
