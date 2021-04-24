@@ -53,7 +53,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ecce50e7-60f1-4088-9580-0bcf29b1574e" name="Default Changelist" comment="View Ship option now fully works -- Vienna">
+    <list default="true" id="ecce50e7-60f1-4088-9580-0bcf29b1574e" name="Default Changelist" comment="attack menu buttons -- Vienna">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Battleship_TeamApplePear/1.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Battleship_TeamApplePear/2.png" beforeDir="false" />
@@ -70,10 +70,6 @@
       <change beforePath="$PROJECT_DIR$/out/production/Battleship_TeamApplePear/out/production/Milestone1-csci4448-5448/CRCCards.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Battleship_TeamApplePear/out/production/Milestone1-csci4448-5448/Milestone1-csci4448-5448.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/GUI/attack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/GUI/attack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/GUI/menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/GUI/menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/GUI/placeShip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/GUI/placeShip.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/GUI/viewShip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/GUI/viewShip.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/main/myNewMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/main/myNewMain.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -245,13 +241,6 @@
       <option name="presentableId" value="Default" />
       <updated>1612370581325</updated>
       <workItem from="1615531086052" duration="8620000" />
-    </task>
-    <task id="LOCAL-00003" summary="Team ApplePair pair 1: Kevina push - GameBoard and Main">
-      <created>1613505627949</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1613505627949</updated>
     </task>
     <task id="LOCAL-00004" summary="Team ApplePair pair 1: Kevina push - GameBoard and Main">
       <created>1613506021115</created>
@@ -589,7 +578,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619222023483</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="attack menu buttons -- Vienna">
+      <created>1619236572519</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1619236572519</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -622,7 +618,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Minesweeper test" />
     <MESSAGE value="Minesweeper, Battleship, Destroyer test" />
     <MESSAGE value="Tower and Lship tests and code" />
     <MESSAGE value="Test and code updates" />
@@ -647,7 +642,8 @@
     <MESSAGE value="adding ships to player Gameboards - vienna" />
     <MESSAGE value="cleaning up code- Vienna" />
     <MESSAGE value="View Ship option now fully works -- Vienna" />
-    <option name="LAST_COMMIT_MESSAGE" value="View Ship option now fully works -- Vienna" />
+    <MESSAGE value="attack menu buttons -- Vienna" />
+    <option name="LAST_COMMIT_MESSAGE" value="attack menu buttons -- Vienna" />
   </component>
   <component name="WindowStateProjectService">
     <state x="371" y="95" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1619217369801">
@@ -670,25 +666,25 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1618417723940" />
-    <state width="1237" height="96" key="GridCell.Tab.0.bottom" timestamp="1619235370878">
+    <state width="1237" height="96" key="GridCell.Tab.0.bottom" timestamp="1619237470845">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="96" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1619235370878" />
+    <state width="1237" height="96" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1619237470845" />
     <state width="1877" height="81" key="GridCell.Tab.0.bottom/1920.150.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1619117200801" />
-    <state width="1237" height="96" key="GridCell.Tab.0.center" timestamp="1619235370878">
+    <state width="1237" height="96" key="GridCell.Tab.0.center" timestamp="1619237470845">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="96" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1619235370878" />
+    <state width="1237" height="96" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1619237470845" />
     <state width="1877" height="81" key="GridCell.Tab.0.center/1920.150.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1619117200801" />
-    <state width="1237" height="96" key="GridCell.Tab.0.left" timestamp="1619235370878">
+    <state width="1237" height="96" key="GridCell.Tab.0.left" timestamp="1619237470844">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="96" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1619235370878" />
+    <state width="1237" height="96" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1619237470844" />
     <state width="1877" height="81" key="GridCell.Tab.0.left/1920.150.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1619117200801" />
-    <state width="1237" height="96" key="GridCell.Tab.0.right" timestamp="1619235370878">
+    <state width="1237" height="96" key="GridCell.Tab.0.right" timestamp="1619237470845">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="96" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1619235370878" />
+    <state width="1237" height="96" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1619237470845" />
     <state width="1877" height="81" key="GridCell.Tab.0.right/1920.150.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1619117200801" />
     <state width="1877" height="277" key="GridCell.Tab.1.bottom" timestamp="1619114533094">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -718,10 +714,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="598" y="281" key="MultipleFileMergeDialog/1920.150.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1619116827288" />
-    <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1619222028450">
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1619236576064">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1619222028450" />
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1619236576064" />
     <state x="350" y="112" key="Vcs.Push.Dialog.v2/1920.150.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1619116805696" />
     <state x="540" y="253" key="VcsDiffUtil.ChangesDialog" timestamp="1619116906728">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -748,6 +744,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="297" y="151" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1619235504064" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1619237279702">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1619237279702" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

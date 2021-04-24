@@ -76,6 +76,8 @@ public class attack extends JFrame {
         menuPanel.add(new JLabel(" "),"span, grow");
 
         plusButton.addActionListener(e -> {
+            //take away
+//            currPlayer.setPlusMissile(currPlayer.getPlusMissile()-1);
 
 //            GameBoard p1Map = new GameBoard();
 //            GameBoard p2Map = new GameBoard();
@@ -100,6 +102,20 @@ public class attack extends JFrame {
 
 
         sonarButton.addActionListener(e -> {
+            /* dialogue pop up -- sonar pulse not available */
+            if (currPlayer.getHasSunkenShip() == false){
+                JFrame fail = new JFrame("Not Available");
+                JDialog d = new JDialog(fail, "dialog Box");
+                JLabel l = new JLabel("Sonar Pulse is not unlocked yet", SwingConstants.CENTER);
+                l.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 16));
+                d.setBackground(Color.white);
+                d.add(l, BorderLayout.CENTER);
+                l.setForeground(navy);
+                d.setVisible(true);
+                d.setSize(new Dimension(230,100));
+            }
+            //else choose coords
+
 //            JPanel card6 = new viewShip(currPlayer,oppPlayer,true).getViewScreen();
 //            PlayerGUI.cards.add(card6, "currView");
 //            CardLayout cl = (CardLayout) (PlayerGUI.cards.getLayout());
