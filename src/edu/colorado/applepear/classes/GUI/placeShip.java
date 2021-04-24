@@ -58,9 +58,9 @@ public class placeShip extends JFrame{
         JLabel titleLabel = new JLabel();
         String title2 =  currPlayer.getName() + "'s Turn to Place Ships";
         titleLabel.setText(title2);
-        titleLabel.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 14));
-        titleLabel.setForeground(Color.black);
-        titleLabel.setAlignmentX(Component.LEFT_ALIGNMENT);
+//        titleLabel.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 14));
+//        titleLabel.setForeground(Color.black);
+//        titleLabel.setAlignmentX(Component.LEFT_ALIGNMENT);
         titleLabel.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 16));
         titleLabel.setForeground(navy);
         titleLabel.setBorder(new EmptyBorder(20,0,0,10));
@@ -338,13 +338,9 @@ public class placeShip extends JFrame{
         for (int i = 0; i < maxX; i++) {
             for (int j = 0; j < maxY; j++) {
                 JPanel panel = new JPanel();
-//                if (i==1 && j==1){
-//                    panel.setBackground(Color.PINK);
-//                }
                 JLabel newLabel = new JLabel(i+","+j);
                 newLabel.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 12));
                 newLabel.setForeground(navy);
-//                newLabel.setVerticalAlignment(SwingConstants.CENTER);
                 panel.add(newLabel);
                 String coordinate = i + "," + j;
                 grid.add(coordinate, panel);

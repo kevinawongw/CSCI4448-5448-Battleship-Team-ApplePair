@@ -1,7 +1,9 @@
 package edu.colorado.applepear.classes.GUI;
 
+import edu.colorado.applepear.classes.Game;
+import edu.colorado.applepear.classes.GameBoard;
 import edu.colorado.applepear.classes.Player;
-
+import edu.colorado.applepear.classes.main.myNewMain;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import javax.swing.event.DocumentEvent;
@@ -37,7 +39,6 @@ public class menu extends JFrame{
         JLabel titleLabel = new JLabel();
         String title = currPlayer.getName() + "'s Turn. Select an Option";
         titleLabel.setText(title);
-        titleLabel.setForeground(Color.BLACK);
         titleLabel.setAlignmentX(Component.LEFT_ALIGNMENT);
         titleLabel.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 16));
         titleLabel.setForeground(navy);
@@ -101,6 +102,12 @@ public class menu extends JFrame{
 //        menuPanel.add(new JLabel(" "),"span, grow");
 
         b3.addActionListener(e -> {
+
+            GameBoard p1Map = new GameBoard();
+            GameBoard p2Map = new GameBoard();
+
+            myNewMain.resetPlayer(currPlayer,oppPlayer,p1Map,p2Map);
+
             JPanel card6 = new GameOver(currPlayer,oppPlayer,true).getGameOver();
             PlayerGUI.cards.add(card6, "oppPCMenu");
             CardLayout cl = (CardLayout) (PlayerGUI.cards.getLayout());

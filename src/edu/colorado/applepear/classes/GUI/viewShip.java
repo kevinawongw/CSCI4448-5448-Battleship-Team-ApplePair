@@ -61,13 +61,8 @@ public class viewShip {
             JPanel card8 = new menu(currPlayer,oppPlayer,true).getMenuScreen();
             PlayerGUI.cards.add(card8, "currPView");
             CardLayout cl = (CardLayout) (PlayerGUI.cards.getLayout());
-            if (!next){
-                cl.show(PlayerGUI.cards, "currPView");
-            }
+            cl.show(PlayerGUI.cards, "currPView");
 
-            else{
-                cl.show(PlayerGUI.cards, "menu");
-            }
         });
     }
 
@@ -98,7 +93,6 @@ public class viewShip {
                             newP.setBackground(yellow);
                         }
                     }
-
                 String coord = i + ","+j;
                 grid.add(coord, newP);
             }
