@@ -53,22 +53,8 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ecce50e7-60f1-4088-9580-0bcf29b1574e" name="Default Changelist" comment="Attack plus missile works but there are some small issues.">
+    <list default="true" id="ecce50e7-60f1-4088-9580-0bcf29b1574e" name="Default Changelist" comment="Attack sonar pulse works. I just passed printing out the count of spot that got detected for now.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Battleship_TeamApplePear/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Battleship_TeamApplePear/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Battleship_TeamApplePear/27-Refactoring.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Battleship_TeamApplePear/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Battleship_TeamApplePear/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Battleship_TeamApplePear/5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Battleship_TeamApplePear/6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Battleship_TeamApplePear/7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Battleship_TeamApplePear/8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Battleship_TeamApplePear/Battleship_ApplePearUMLClass.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Battleship_TeamApplePear/Milestone1-csci4448-5448.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Battleship_TeamApplePear/Original.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Battleship_TeamApplePear/out/production/Milestone1-csci4448-5448/CRCCards.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Battleship_TeamApplePear/out/production/Milestone1-csci4448-5448/Milestone1-csci4448-5448.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/GUI/attack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/GUI/attack.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -246,9 +232,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.myNewMain" />
+        <item itemvalue="Application.viewShip" />
         <item itemvalue="Application.attack" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.viewShip" />
         <item itemvalue="Application.menu" />
       </list>
     </recent_temporary>
@@ -262,14 +248,7 @@
       <option name="presentableId" value="Default" />
       <updated>1612370581325</updated>
       <workItem from="1615531086052" duration="8620000" />
-      <workItem from="1619263410075" duration="3492000" />
-    </task>
-    <task id="LOCAL-00008" summary="Team ApplePair pair 1: Kevina - GameBoard getters">
-      <created>1613888819610</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1613888819610</updated>
+      <workItem from="1619263410075" duration="13179000" />
     </task>
     <task id="LOCAL-00009" summary="Team ApplePair pair 1: Vienna push - Modified Main">
       <created>1613890721723</created>
@@ -607,7 +586,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619265672051</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="Attack sonar pulse works. I just passed printing out the count of spot that got detected for now.">
+      <created>1619267151725</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1619267151726</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -640,7 +626,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Captain's Quarters" />
     <MESSAGE value="comment" />
     <MESSAGE value="Fixed Main" />
     <MESSAGE value="Main Clean" />
@@ -665,7 +650,8 @@
     <MESSAGE value="cleansing code" />
     <MESSAGE value="Attack regular missile works" />
     <MESSAGE value="Attack plus missile works but there are some small issues." />
-    <option name="LAST_COMMIT_MESSAGE" value="Attack plus missile works but there are some small issues." />
+    <MESSAGE value="Attack sonar pulse works. I just passed printing out the count of spot that got detected for now." />
+    <option name="LAST_COMMIT_MESSAGE" value="Attack sonar pulse works. I just passed printing out the count of spot that got detected for now." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

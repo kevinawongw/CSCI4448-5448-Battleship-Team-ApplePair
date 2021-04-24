@@ -135,19 +135,12 @@ public class attack extends JFrame {
                 miss.setForeground(navy);
 
             }
-//            if(missileP.getV){
-//
-//            }
-//            JPanel card5 = new menu(oppPlayer,currPlayer,true).getMenuScreen();
-//            PlayerGUI.cards.add(card5, "oppMenu");
-//            CardLayout cl = (CardLayout) (PlayerGUI.cards.getLayout());
-//            if (!next){
-//                cl.show(PlayerGUI.cards, "oppMenu");
-//            }
-//
-//            else{
-//                cl.show(PlayerGUI.cards, "menu");
-//            }
+
+            JPanel card6 = new menu(oppPlayer,currPlayer,false).getMenuScreen();
+            PlayerGUI.cards.add(card6, "oppPCMenu");
+            CardLayout cl = (CardLayout) (PlayerGUI.cards.getLayout());
+            cl.show(PlayerGUI.cards, "oppPCMenu");
+
         });
 
         JButton plusButton = new JButton("Plus Missile");
@@ -188,6 +181,16 @@ public class attack extends JFrame {
             missileP.setBackground(Color.white);
             missileD.setVisible(true);
             missileD.setSize(new Dimension(400,400));
+
+            /*print out if there's no remaining plus missiles (haven't finish it yet)*/
+//            if(currPlayer.getPlusMissile()==0){
+//                String enterAgain = String.valueOf(currPlayer.getName()) + " has no more plus missiles remaining.";
+//                JLabel noMissile = new JLabel(enterAgain);
+//                noMissile.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 14));
+//                noMissile.setForeground(navy);
+//                noMissile.setVisible(true);
+//                missileP.add(noMissile);
+//            }
             for(Point loc : plusAttack){
                 int i = oppPlayer.getGb().identifyShip(loc);
                 oppPlayer.getGb().getShips().get(i).updateHealth(loc);
@@ -200,7 +203,7 @@ public class attack extends JFrame {
                     sunk.setForeground(navy);
                     currPlayer.updateSunkShip(true);
                 }
-                else{
+                else{ //doesn't show the message hmm..
                     JLabel miss = new JLabel("No attacks were made since there are no ships around.", SwingConstants.CENTER);
                     miss.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 16));
                     missileD.add(miss, BorderLayout.CENTER);
@@ -208,18 +211,11 @@ public class attack extends JFrame {
                 }
             }
 
-            //take away
-//            currPlayer.setPlusMissile(currPlayer.getPlusMissile()-1);
-
-//            GameBoard p1Map = new GameBoard();
-//            GameBoard p2Map = new GameBoard();
-//
-//            myNewMain.resetPlayer(currPlayer,oppPlayer,p1Map,p2Map);
-//
-//            JPanel card6 = new GameOver(currPlayer,oppPlayer,true).getGameOver();
-//            PlayerGUI.cards.add(card6, "oppPCMenu");
-//            CardLayout cl = (CardLayout) (PlayerGUI.cards.getLayout());
-//            cl.show(PlayerGUI.cards, "home");
+            /* Go back to Opponent's Menu */
+            JPanel card6 = new menu(oppPlayer,currPlayer,false).getMenuScreen();
+            PlayerGUI.cards.add(card6, "oppPCMenu");
+            CardLayout cl = (CardLayout) (PlayerGUI.cards.getLayout());
+            cl.show(PlayerGUI.cards, "oppPCMenu");
         });
 
 
@@ -292,10 +288,11 @@ public class attack extends JFrame {
                 }
 
             }
-//            JPanel card6 = new viewShip(currPlayer,oppPlayer,true).getViewScreen();
-//            PlayerGUI.cards.add(card6, "currView");
-//            CardLayout cl = (CardLayout) (PlayerGUI.cards.getLayout());
-//            cl.show(PlayerGUI.cards, "currView");
+            /* Go back to Opponent's Menu */
+            JPanel card6 = new menu(oppPlayer,currPlayer,false).getMenuScreen();
+            PlayerGUI.cards.add(card6, "oppPCMenu");
+            CardLayout cl = (CardLayout) (PlayerGUI.cards.getLayout());
+            cl.show(PlayerGUI.cards, "oppPCMenu");
 
         });
 
@@ -331,11 +328,16 @@ public class attack extends JFrame {
         grid.setBorder(new EmptyBorder(30,40,40,40));
         grid.setBackground(Color.white);
 
-        for(int i=0; i< maxX; i++){
-            for(int j=0; j< maxY; j++){
-                JPanel newP = new JPanel();
-                String coord = i + ","+j;
-                grid.add(coord, newP);
+        for (int i = 0; i < maxX; i++) {
+            for (int j = 0; j < maxY; j++) {
+                JPanel panel = new JPanel();
+                JLabel newLabel = new JLabel(i+","+j);
+                newLabel.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 12));
+                newLabel.setForeground(navy);
+                panel.add(newLabel);
+                String coordinate = i + "," + j;
+                grid.add(coordinate, panel);
+
             }
         }
     }
