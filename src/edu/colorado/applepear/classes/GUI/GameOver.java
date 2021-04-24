@@ -9,6 +9,7 @@ import java.awt.*;
 //wrote some code in Gameover but it doesnt show. You can edit whatever you want. It doesn't give error.
 public class GameOver extends JFrame {
     private JPanel overScreen;
+    private JButton playAgainButton;
     JButton playAgain;
     private JLabel imageLogo;
     Color navy = new Color(68, 88, 115);
@@ -55,6 +56,10 @@ public class GameOver extends JFrame {
 
     public JPanel getGameOver() {
         return overScreen;
+    }
+
+    private void createUIComponents() {
+        imageLogo = new JLabel(new ImageIcon("src/edu/colorado/applepear/classes/GUI/boat (2).png"));
     }
 }
 
