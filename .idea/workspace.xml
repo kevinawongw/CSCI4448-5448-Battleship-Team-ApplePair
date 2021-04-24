@@ -53,9 +53,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ecce50e7-60f1-4088-9580-0bcf29b1574e" name="Default Changelist" comment="attack menu buttons -- Vienna">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Battleship_TeamApplePear.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Battleship_TeamApplePear.iml" afterDir="false" />
+    <list default="true" id="ecce50e7-60f1-4088-9580-0bcf29b1574e" name="Default Changelist" comment="Add buttons in viewShip">
       <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/GUI/viewShip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/GUI/viewShip.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -239,13 +237,6 @@
       <option name="presentableId" value="Default" />
       <updated>1612370581325</updated>
       <workItem from="1615531086052" duration="8620000" />
-    </task>
-    <task id="LOCAL-00004" summary="Team ApplePair pair 1: Kevina push - GameBoard and Main">
-      <created>1613506021115</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1613506021115</updated>
     </task>
     <task id="LOCAL-00005" summary="Team ApplePair pair 1: Vienna push - Player losing state">
       <created>1613675065015</created>
@@ -583,7 +574,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619236572519</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="Add buttons in viewShip">
+      <created>1619254655491</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1619254655492</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -616,7 +614,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Minesweeper, Battleship, Destroyer test" />
     <MESSAGE value="Tower and Lship tests and code" />
     <MESSAGE value="Test and code updates" />
     <MESSAGE value="Underwater map added, submarines added, tests 100% Coverage" />
@@ -641,7 +638,8 @@
     <MESSAGE value="cleaning up code- Vienna" />
     <MESSAGE value="View Ship option now fully works -- Vienna" />
     <MESSAGE value="attack menu buttons -- Vienna" />
-    <option name="LAST_COMMIT_MESSAGE" value="attack menu buttons -- Vienna" />
+    <MESSAGE value="Add buttons in viewShip" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add buttons in viewShip" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

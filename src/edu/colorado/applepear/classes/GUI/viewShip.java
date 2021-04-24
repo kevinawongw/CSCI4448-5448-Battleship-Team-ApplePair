@@ -27,7 +27,7 @@ public class viewShip {
         viewScreen = new JPanel(new BorderLayout(0,0));
         viewScreen.setBackground(Color.white);
 //        List<Ship> allShips = currPlayer.getGb().getShips();
-        createViewMap(10,10, currPlayer, oppPlayer);
+        createViewMap(10,10, currPlayer);
         viewScreen.add(grid);
 
         JPanel sideBar = new JPanel();
@@ -117,7 +117,7 @@ public class viewShip {
     public JPanel getViewScreen(){ return viewScreen;}
 
 
-    public void createViewMap(int maxX, int maxY, @NotNull Player currPlayer, Player oppPlayer){
+    public void createViewMap(int maxX, int maxY, @NotNull Player currPlayer){
         grid = new JPanel(new GridLayout(maxX,maxY,1,1));
         grid.setBorder(new EmptyBorder(30,40,40,40));
         grid.setBackground(Color.white);
@@ -128,9 +128,9 @@ public class viewShip {
         for (Ship eachShip: currPlayer.getGb().getShips()){
             List<Point> eachShipPoint = eachShip.getLocation();
 
-//            JPanel newColor = new JPanel();
-
             for (Point eachPoint: eachShipPoint){
+/* I thought adding each ship buttons and when we click each button, the ship shows up with diff color, but I think this is not priority to do for now so I'm just going to commented out */
+//            JPanel newColor = new JPanel();
 //
 //                if(eachShipPoint.size()==4) {
 //                    newColor.setBackground(red);
@@ -145,9 +145,10 @@ public class viewShip {
 //
 //                }
 //
+//                grid.add(newColor);
                 System.out.println(eachPoint);
                 bigList.add(eachPoint);
-//                grid.add(newColor);
+
             }
         }
 
