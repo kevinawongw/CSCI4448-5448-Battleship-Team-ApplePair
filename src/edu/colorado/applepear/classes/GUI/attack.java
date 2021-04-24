@@ -3,11 +3,13 @@ package edu.colorado.applepear.classes.GUI;
 import edu.colorado.applepear.classes.Game;
 import edu.colorado.applepear.classes.GameBoard;
 import edu.colorado.applepear.classes.Player;
+import edu.colorado.applepear.classes.Point;
 import edu.colorado.applepear.classes.main.myNewMain;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
+import java.util.ArrayList;
 import java.util.List;
 
 public class attack extends JFrame {
@@ -78,12 +80,12 @@ public class attack extends JFrame {
 
 
         missileButton.addActionListener(e -> {
-
+            /*missile attack part*/
             Integer xCoord = Integer.parseInt(x.getText());
             Integer yCoord = Integer.parseInt(y.getText());
             Game game = new Game(currPlayer,oppPlayer);
             edu.colorado.applepear.classes.Point missilePoint = new edu.colorado.applepear.classes.Point(xCoord, yCoord);
-            System.out.println("Test: " + missilePoint);
+
             Boolean missile = game.hitOrMiss(missilePoint,currPlayer,oppPlayer);
             currPlayer.getGb().updateAttackMap(oppPlayer.getGb(),missilePoint);
             JFrame missileF= new JFrame("Missile Attack Frame");
@@ -104,7 +106,6 @@ public class attack extends JFrame {
             closeB.setPreferredSize(new Dimension(3,1));
             closeB.setVisible(true);
             missileP.add(closeB, BorderLayout.CENTER);
-//            missileD.add(new JLabel(" "),"span, grow");
 
             missileP.setBackground(Color.white);
             missileD.setVisible(true);
@@ -115,7 +116,6 @@ public class attack extends JFrame {
                 oppPlayer.getGb().getShips().get(attackIndex).updateHealth(missilePoint);
                 boolean sunken = oppPlayer.getGb().getShips().get(attackIndex).isShipSunken();
                 JLabel hit = new JLabel("You Hit an Opponent's Ship! Nice Shot!", SwingConstants.CENTER);
-//                System.out.println("You Hit an Opponent's Ship! Nice Shot!");
                 hit.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 16));
                 missileD.add(hit, BorderLayout.CENTER);
                 hit.setForeground(navy);
@@ -124,7 +124,6 @@ public class attack extends JFrame {
                     sunk.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 16));
                     missileD.add(sunk, BorderLayout.CENTER);
                     sunk.setForeground(navy);
-//                    System.out.println("Nice! You sunk the opponent's " + oppPlayer.getGb().getShips().get(attackIndex).getShipName());
                     currPlayer.updateSunkShip(true);
                     currPlayer.getGb().updateSunkenShip(attackIndex);
                 }
@@ -134,9 +133,9 @@ public class attack extends JFrame {
                 miss.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 16));
                 missileD.add(miss, BorderLayout.CENTER);
                 miss.setForeground(navy);
-//                System.out.println("You Missed...");
+
             }
-//            if(missileD.setVisible(false)){
+//            if(missileP.getV){
 //
 //            }
 //            JPanel card5 = new menu(oppPlayer,currPlayer,true).getMenuScreen();
@@ -161,6 +160,54 @@ public class attack extends JFrame {
         menuPanel.add(new JLabel(" "),"span, grow");
 
         plusButton.addActionListener(e -> {
+            /*missile attack part*/
+            Integer xCoord = Integer.parseInt(x.getText());
+            Integer yCoord = Integer.parseInt(y.getText());
+            edu.colorado.applepear.classes.Point missilePoint = new edu.colorado.applepear.classes.Point(xCoord, yCoord);
+
+            ArrayList<Point> plusAttack = currPlayer.usePlusMissile(oppPlayer.getGb(),missilePoint);
+            JFrame missileF= new JFrame("Plus Missile Frame");
+            JDialog missileD = new JDialog(missileF, "Plus Missile Dialog");
+            JPanel missileP = new JPanel();
+            missileP.setLayout(new BoxLayout(missileP,BoxLayout.Y_AXIS));
+            missileF.add(missileP, BorderLayout.EAST);
+            missileP.setBackground(lightBlue);
+
+            missileP.setBackground(navy);
+            missileP.setForeground(lightBlue);
+            missileD.setBackground(navy);
+            missileD.setForeground(lightBlue);
+            JButton closeB = new JButton("Back to Game");
+            closeB.setBackground(navy);
+            closeB.setForeground(lightBlue);
+            closeB.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 14));
+            closeB.setPreferredSize(new Dimension(3,1));
+            closeB.setVisible(true);
+            missileP.add(closeB, BorderLayout.CENTER);
+
+            missileP.setBackground(Color.white);
+            missileD.setVisible(true);
+            missileD.setSize(new Dimension(400,400));
+            for(Point loc : plusAttack){
+                int i = oppPlayer.getGb().identifyShip(loc);
+                oppPlayer.getGb().getShips().get(i).updateHealth(loc);
+                Boolean sunken = oppPlayer.getGb().getShips().get(i).isShipSunken();
+                System.out.println("Test : "+sunken);
+                if(!sunken){ //not sure why the !sunken works here but opposite in Main class but ya
+                    JLabel sunk = new JLabel("Plus Missile landed " + plusAttack.size() + " hit(s)!", SwingConstants.CENTER);
+                    sunk.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 16));
+                    missileD.add(sunk, BorderLayout.CENTER);
+                    sunk.setForeground(navy);
+                    currPlayer.updateSunkShip(true);
+                }
+                else{
+                    JLabel miss = new JLabel("No attacks were made since there are no ships around.", SwingConstants.CENTER);
+                    miss.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 16));
+                    missileD.add(miss, BorderLayout.CENTER);
+                    miss.setForeground(navy);
+                }
+            }
+
             //take away
 //            currPlayer.setPlusMissile(currPlayer.getPlusMissile()-1);
 
@@ -200,7 +247,9 @@ public class attack extends JFrame {
                 d.setSize(new Dimension(230,100));
             }
             //else choose coords
-
+//            else{
+//
+//            }
 //            JPanel card6 = new viewShip(currPlayer,oppPlayer,true).getViewScreen();
 //            PlayerGUI.cards.add(card6, "currView");
 //            CardLayout cl = (CardLayout) (PlayerGUI.cards.getLayout());

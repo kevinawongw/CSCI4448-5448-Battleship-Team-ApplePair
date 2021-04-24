@@ -90,8 +90,8 @@ public class PlayerGUI {
         STARTButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-//                GameBoard p1Map = new GameBoard();
-//                GameBoard p2Map = new GameBoard();
+//                GameBoard p1Map = myNewMain.getP1Map();
+//                GameBoard p2Map = myNewMain.getP2Map();
                 Player p1 = myNewMain.getPlayer1();
                 Player p2 = myNewMain.getPlayer2();
 //                Game myGame = new Game(p1,p2);
