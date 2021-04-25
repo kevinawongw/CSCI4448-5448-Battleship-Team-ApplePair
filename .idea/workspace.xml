@@ -53,10 +53,9 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ecce50e7-60f1-4088-9580-0bcf29b1574e" name="Default Changelist" comment="No remaining missiles edge cases">
+    <list default="true" id="ecce50e7-60f1-4088-9580-0bcf29b1574e" name="Default Changelist" comment="Edit GameOver">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/GUI/GameOver.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/GUI/GameOver.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/GUI/GameOver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/GUI/GameOver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/GUI/attack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/GUI/attack.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +129,7 @@
       <recent name="edu.colorado.applepear.tests.concreteShipTests" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.GameOver">
+  <component name="RunManager" selected="Application.myNewMain">
     <configuration name="GameOver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="edu.colorado.applepear.classes.GUI.GameOver" />
       <module name="Battleship_TeamApplePear" />
@@ -233,8 +232,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.GameOver" />
         <item itemvalue="Application.myNewMain" />
+        <item itemvalue="Application.GameOver" />
         <item itemvalue="Application.viewShip" />
         <item itemvalue="Application.attack" />
         <item itemvalue="Application.Main" />
@@ -251,13 +250,6 @@
       <updated>1612370581325</updated>
       <workItem from="1615531086052" duration="8620000" />
       <workItem from="1619263410075" duration="21485000" />
-    </task>
-    <task id="LOCAL-00012" summary="Player takes in gameboard, instead of GameBoard takes in Player">
-      <created>1614823821477</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1614823821477</updated>
     </task>
     <task id="LOCAL-00013" summary="Player takes in gameboard, instead of GameBoard takes in Player">
       <created>1614826170099</created>
@@ -595,7 +587,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619297965200</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="Edit GameOver">
+      <created>1619352222427</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1619352222428</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -628,7 +627,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="comments" />
     <MESSAGE value="Update Main, Added function to remove ships when sunken" />
     <MESSAGE value="move fleet" />
     <MESSAGE value="test" />
@@ -653,7 +651,8 @@
     <MESSAGE value="add x y on attack grid" />
     <MESSAGE value="Fixed the issue when sonar pulse is unlocked, show dialog and come back to attack screen" />
     <MESSAGE value="No remaining missiles edge cases" />
-    <option name="LAST_COMMIT_MESSAGE" value="No remaining missiles edge cases" />
+    <MESSAGE value="Edit GameOver" />
+    <option name="LAST_COMMIT_MESSAGE" value="Edit GameOver" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
