@@ -18,6 +18,7 @@ public class Player{
     private Boolean hasSunkenShip;
     private final CommandDispatcher commandDispatcher;
     private String nameString;
+    private List<Point> attacked;
 //    private List<Point> myPoints;
 
 
@@ -259,12 +260,19 @@ public class Player{
 
     }
 
-    public String getNameString() {
-        return nameString;
-    }
+//    public String getNameString() {
+//        return nameString;
+//    }
+//
+//    public void setNameString(final String nameString) {
+//        this.nameString = nameString;
+//    }
 
-    public void setNameString(final String nameString) {
-        this.nameString = nameString;
+    public void addAttackPoint(Point AP){
+        attacked.add(AP);
+    }
+    public List<Point> getAttacked(){
+        return attacked;
     }
 }
 

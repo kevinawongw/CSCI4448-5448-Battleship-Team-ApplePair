@@ -26,7 +26,7 @@ public class attack extends JFrame {
 
         attackScreen = new JPanel(new BorderLayout(0,0));
         attackScreen.setBackground(Color.white);
-        createMap(10,10);
+        createMap(10,10, currPlayer.getAttacked());
         attackScreen.add(grid);
 
         Game myGame = new Game(currPlayer,oppPlayer);
@@ -85,7 +85,8 @@ public class attack extends JFrame {
             /*missile attack part*/
             Integer xCoord = Integer.parseInt(x.getText());
             Integer yCoord = Integer.parseInt(y.getText());
-            edu.colorado.applepear.classes.Point missilePoint = new edu.colorado.applepear.classes.Point(xCoord, yCoord);
+            Point missilePoint = new Point(xCoord, yCoord);
+            currPlayer.addAttackPoint(missilePoint);
 
             Boolean missile = myGame.hitOrMiss(missilePoint,currPlayer,oppPlayer);
             currPlayer.getGb().updateAttackMap(oppPlayer.getGb(),missilePoint);
@@ -380,7 +381,7 @@ public class attack extends JFrame {
         return attackScreen;
     }
 
-    public void createMap(int maxX, int maxY){
+    public void createMap(int maxX, int maxY, List<Point>currPlayerAttacked){
         grid = new JPanel(new GridLayout(maxX,maxY,1,1));
         grid.setBorder(new EmptyBorder(30,40,40,40));
         grid.setBackground(Color.white);
