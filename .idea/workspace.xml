@@ -56,9 +56,9 @@
     <list default="true" id="ecce50e7-60f1-4088-9580-0bcf29b1574e" name="Default Changelist" comment="attack menu buttons -- Vienna">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/GUI/attack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/GUI/attack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/GUI/menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/GUI/menu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/GUI/viewShip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/GUI/viewShip.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/main/myNewMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/main/myNewMain.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -230,13 +230,6 @@
       <option name="presentableId" value="Default" />
       <updated>1612370581325</updated>
       <workItem from="1615531086052" duration="8620000" />
-    </task>
-    <task id="LOCAL-00004" summary="Team ApplePair pair 1: Kevina push - GameBoard and Main">
-      <created>1613506021115</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1613506021115</updated>
     </task>
     <task id="LOCAL-00005" summary="Team ApplePair pair 1: Vienna push - Player losing state">
       <created>1613675065015</created>
@@ -574,7 +567,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619236572519</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="attack menu buttons -- Vienna">
+      <created>1619372875723</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1619372875724</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -655,25 +655,25 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1618417723940" />
-    <state width="1237" height="96" key="GridCell.Tab.0.bottom" timestamp="1619237470845">
+    <state width="1237" height="96" key="GridCell.Tab.0.bottom" timestamp="1619383122732">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="96" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1619237470845" />
+    <state width="1237" height="96" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1619383122732" />
     <state width="1877" height="81" key="GridCell.Tab.0.bottom/1920.150.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1619117200801" />
-    <state width="1237" height="96" key="GridCell.Tab.0.center" timestamp="1619237470845">
+    <state width="1237" height="96" key="GridCell.Tab.0.center" timestamp="1619383122731">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="96" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1619237470845" />
+    <state width="1237" height="96" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1619383122731" />
     <state width="1877" height="81" key="GridCell.Tab.0.center/1920.150.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1619117200801" />
-    <state width="1237" height="96" key="GridCell.Tab.0.left" timestamp="1619237470844">
+    <state width="1237" height="96" key="GridCell.Tab.0.left" timestamp="1619383122731">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="96" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1619237470844" />
+    <state width="1237" height="96" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1619383122731" />
     <state width="1877" height="81" key="GridCell.Tab.0.left/1920.150.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1619117200801" />
-    <state width="1237" height="96" key="GridCell.Tab.0.right" timestamp="1619237470845">
+    <state width="1237" height="96" key="GridCell.Tab.0.right" timestamp="1619383122731">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="96" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1619237470845" />
+    <state width="1237" height="96" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1619383122731" />
     <state width="1877" height="81" key="GridCell.Tab.0.right/1920.150.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1619117200801" />
     <state width="1877" height="277" key="GridCell.Tab.1.bottom" timestamp="1619114533094">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -703,28 +703,28 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="598" y="281" key="MultipleFileMergeDialog/1920.150.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1619116827288" />
-    <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1619236576064">
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1619372878857">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1619236576064" />
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1619372878857" />
     <state x="350" y="112" key="Vcs.Push.Dialog.v2/1920.150.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1619116805696" />
     <state x="540" y="253" key="VcsDiffUtil.ChangesDialog" timestamp="1619116906728">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="540" y="253" key="VcsDiffUtil.ChangesDialog/1920.150.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1619116906728" />
-    <state x="158" y="77" width="1095" height="495" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1619234109056">
+    <state x="158" y="77" width="1095" height="495" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1619382241314">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="158" y="77" width="1095" height="495" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1280.680@0.0.1280.680" timestamp="1619234109056" />
+    <state x="158" y="77" width="1095" height="495" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1280.680@0.0.1280.680" timestamp="1619382241314" />
     <state x="149" y="292" width="1643" height="758" key="com.intellij.history.integration.ui.views.FileHistoryDialog/1920.150.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1619117319882" />
     <state x="376" y="232" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1619220200310">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="376" y="232" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1280.680@0.0.1280.680" timestamp="1619220200310" />
-    <state x="189" y="51" width="902" height="629" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1619220144645">
+    <state x="189" y="51" width="902" height="629" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1619381128206">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="189" y="51" width="902" height="629" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1280.680@0.0.1280.680" timestamp="1619220144645" />
+    <state x="189" y="51" width="902" height="629" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1280.680@0.0.1280.680" timestamp="1619381128206" />
     <state x="436" y="88" key="refactoring.ChangeSignatureDialog" timestamp="1619217750830">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

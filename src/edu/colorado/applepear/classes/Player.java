@@ -1,5 +1,6 @@
 package edu.colorado.applepear.classes;
 import edu.colorado.applepear.classes.commandClasses.CommandDispatcher;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,7 +19,7 @@ public class Player{
     private Boolean hasSunkenShip;
     private final CommandDispatcher commandDispatcher;
     private String nameString;
-    private List<Point> attacked;
+    private List<Point> attacked= new ArrayList<>();
 //    private List<Point> myPoints;
 
 
@@ -268,7 +269,7 @@ public class Player{
 //        this.nameString = nameString;
 //    }
 
-    public void addAttackPoint(Point AP){
+    public void addAttackPoint(@NotNull Point AP){
         attacked.add(AP);
     }
     public List<Point> getAttacked(){

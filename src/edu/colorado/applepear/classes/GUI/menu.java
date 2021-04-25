@@ -3,12 +3,17 @@ package edu.colorado.applepear.classes.GUI;
 import edu.colorado.applepear.classes.Game;
 import edu.colorado.applepear.classes.GameBoard;
 import edu.colorado.applepear.classes.Player;
+import edu.colorado.applepear.classes.Point;
 import edu.colorado.applepear.classes.main.myNewMain;
+import org.jetbrains.annotations.NotNull;
+
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import java.awt.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class menu extends JFrame{
     private JPanel menuScreen;
@@ -28,7 +33,7 @@ public class menu extends JFrame{
 
         menuScreen = new JPanel(new BorderLayout(0,0));
         menuScreen.setBackground(Color.white);
-        createMap(10,10);
+        createMap(10,10, currPlayer);
         menuScreen.add(grid);
 
         JPanel sideBar = new JPanel();
@@ -171,19 +176,62 @@ public class menu extends JFrame{
         return menuScreen;
     }
 
-    public void createMap(int maxX, int maxY){
+    public void createMap(int maxX, int maxY, @NotNull Player currentPlayer){
         grid = new JPanel(new GridLayout(maxX,maxY,1,1));
         grid.setBorder(new EmptyBorder(30,40,40,40));
         grid.setBackground(Color.white);
 
-        for(int i=0; i< maxX; i++){
-            for(int j=0; j< maxY; j++){
-                JPanel newP = new JPanel();
-                String coord = i + ","+j;
-                grid.add(coord, newP);
+        int[][] attackMap = currentPlayer.getGb().getAttackMap();
+        java.util.List<edu.colorado.applepear.classes.Point> hitList = new ArrayList<>();
+        List<edu.colorado.applepear.classes.Point> missList = new ArrayList<>();
+
+        for (int row = 0; row < attackMap.length; row++) {
+            for (int col = 0; col < attackMap[row].length; col++) {
+                edu.colorado.applepear.classes.Point thisPoint = new edu.colorado.applepear.classes.Point(row,col);
+                //miss
+                if (attackMap[row][col] == 0){
+                    continue;
+                }
+                //hit
+                if (attackMap[row][col] == 1){
+                    missList.add(thisPoint);
+                }
+                if (attackMap[row][col] == 2){
+                    hitList.add(thisPoint);
+                }
+            }
+        }
+
+        for (int i = 0; i < maxX; i++) {
+            for (int j = 0; j < maxY; j++) {
+                JPanel panel = new JPanel();
+
+                JLabel newLabel = new JLabel(i+","+j);
+                newLabel.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 12));
+                newLabel.setForeground(navy);
+                panel.add(newLabel);
+
+                for (edu.colorado.applepear.classes.Point each: hitList) {
+//                        System.out.println("Test: "+each);
+                    if (each.getX() == i && each.getY() == j) {
+                        panel.setBackground(Color.green);
+                        newLabel.setText("H");
+                    }
+                }
+                for (Point each2: missList){
+                    if (each2.getX() == i && each2.getY()==j){
+                        panel.setBackground(Color.pink);
+                        newLabel.setText("M");
+                    }
+                }
+
+                String coordinate = i + "," + j;
+                grid.add(coordinate, panel);
+
             }
         }
     }
+
 
 }
 

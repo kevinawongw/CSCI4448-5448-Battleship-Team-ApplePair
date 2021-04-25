@@ -129,26 +129,8 @@ public class viewShip {
             List<Point> eachShipPoint = eachShip.getLocation();
 
             for (Point eachPoint: eachShipPoint){
-/* I thought adding each ship buttons and when we click each button, the ship shows up with diff color, but I think this is not priority to do for now so I'm just going to commented out */
-//            JPanel newColor = new JPanel();
-//
-//                if(eachShipPoint.size()==4) {
-//                    newColor.setBackground(red);
-//
-//                }
-//                else if(eachShipPoint.size()==3){
-//                    newColor.setBackground(Color.CYAN);
-//
-//                }
-//                else if(eachShipPoint.size()==2){
-//                    newColor.setBackground(navy);
-//
-//                }
-//
-//                grid.add(newColor);
                 System.out.println(eachPoint);
                 bigList.add(eachPoint);
-
             }
         }
 
@@ -156,7 +138,7 @@ public class viewShip {
             for(int j=0; j< maxY; j++){
                 JPanel newP = new JPanel();
                     for (Point each: bigList){
-                        System.out.println("Test: "+each);
+//                        System.out.println("Test: "+each);
                         if (each.getX() == i && each.getY()==j){
                             newP.setBackground(yellow);
                         }
