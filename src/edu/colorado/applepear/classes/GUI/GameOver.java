@@ -1,5 +1,6 @@
 package edu.colorado.applepear.classes.GUI;
 
+import edu.colorado.applepear.classes.GameBoard;
 import edu.colorado.applepear.classes.Player;
 
 import javax.swing.*;
@@ -9,8 +10,7 @@ import java.awt.*;
 //wrote some code in Gameover but it doesnt show. You can edit whatever you want. It doesn't give error.
 public class GameOver extends JFrame {
     private JPanel overScreen;
-    private JButton playAgainButton;
-    JButton playAgain;
+    private JButton playAgain;
     private JLabel imageLogo;
     Color navy = new Color(68, 88, 115);
     Color lightBlue = new Color(226, 233, 238);
@@ -59,7 +59,35 @@ public class GameOver extends JFrame {
     }
 
     private void createUIComponents() {
-        imageLogo = new JLabel(new ImageIcon("src/edu/colorado/applepear/classes/GUI/boat (2).png"));
+        imageLogo = new JLabel(new ImageIcon("src/edu/colorado/applepear/classes/GUI/shipwreck.png"));
+    }
+
+    // for testing this screen, use this main function. Note that buttons will not work.
+    private static void createAndShowGui() {
+        JFrame frame = new JFrame();
+
+        GameBoard p1Map = new GameBoard();
+        GameBoard p2Map = new GameBoard();
+        Player p1 = new Player(p1Map);
+        Player p2 = new Player(p2Map);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.getContentPane().add(new GameOver(p1,p2,true).getUi());
+        frame.setLocationByPlatform(true);
+        frame.pack();
+        frame.setVisible(true);  // should be last.
+        frame.setSize(800,500);
+    }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(new Runnable() {
+            public void run() {
+                createAndShowGui();
+            }
+        });
+    }
+
+    public JPanel getUi() {
+        return overScreen;
     }
 }
 
