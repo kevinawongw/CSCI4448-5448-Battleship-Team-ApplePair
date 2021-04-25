@@ -53,9 +53,10 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ecce50e7-60f1-4088-9580-0bcf29b1574e" name="Default Changelist" comment="Edit GameOver">
+    <list default="true" id="ecce50e7-60f1-4088-9580-0bcf29b1574e" name="Default Changelist" comment="Let dialog pop up when there are no remaining missile and let player attack again">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/GUI/attack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/GUI/attack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/main/myNewMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/main/myNewMain.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -250,13 +251,6 @@
       <updated>1612370581325</updated>
       <workItem from="1615531086052" duration="8620000" />
       <workItem from="1619263410075" duration="21485000" />
-    </task>
-    <task id="LOCAL-00013" summary="Player takes in gameboard, instead of GameBoard takes in Player">
-      <created>1614826170099</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1614826170099</updated>
     </task>
     <task id="LOCAL-00014" summary="Player takes in gameboard, instead of GameBoard takes in Player">
       <created>1614826953753</created>
@@ -594,7 +588,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619352222428</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="Let dialog pop up when there are no remaining missile and let player attack again">
+      <created>1619361075854</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1619361075854</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -627,7 +628,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Update Main, Added function to remove ships when sunken" />
     <MESSAGE value="move fleet" />
     <MESSAGE value="test" />
     <MESSAGE value="moving fleets completed in main" />
@@ -652,7 +652,8 @@
     <MESSAGE value="Fixed the issue when sonar pulse is unlocked, show dialog and come back to attack screen" />
     <MESSAGE value="No remaining missiles edge cases" />
     <MESSAGE value="Edit GameOver" />
-    <option name="LAST_COMMIT_MESSAGE" value="Edit GameOver" />
+    <MESSAGE value="Let dialog pop up when there are no remaining missile and let player attack again" />
+    <option name="LAST_COMMIT_MESSAGE" value="Let dialog pop up when there are no remaining missile and let player attack again" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

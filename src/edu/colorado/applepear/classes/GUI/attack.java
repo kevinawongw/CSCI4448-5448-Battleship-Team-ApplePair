@@ -15,6 +15,7 @@ import java.util.List;
 public class attack extends JFrame {
     private JPanel attackScreen;
     private JPanel grid;
+
     JTextField x = new JTextField();
     JTextField y = new JTextField();
     JButton returnButton;
@@ -28,6 +29,7 @@ public class attack extends JFrame {
         createMap(10,10);
         attackScreen.add(grid);
 
+        Game myGame = new Game(currPlayer,oppPlayer);
         JPanel sideBar = new JPanel();
         sideBar.setLayout(new BoxLayout(sideBar,BoxLayout.Y_AXIS));
         attackScreen.add(sideBar, BorderLayout.EAST);
@@ -83,10 +85,9 @@ public class attack extends JFrame {
             /*missile attack part*/
             Integer xCoord = Integer.parseInt(x.getText());
             Integer yCoord = Integer.parseInt(y.getText());
-            Game game = new Game(currPlayer,oppPlayer);
             edu.colorado.applepear.classes.Point missilePoint = new edu.colorado.applepear.classes.Point(xCoord, yCoord);
 
-            Boolean missile = game.hitOrMiss(missilePoint,currPlayer,oppPlayer);
+            Boolean missile = myGame.hitOrMiss(missilePoint,currPlayer,oppPlayer);
             currPlayer.getGb().updateAttackMap(oppPlayer.getGb(),missilePoint);
             JFrame missileF= new JFrame("Missile Attack Frame");
             JDialog missileD = new JDialog(missileF, "Missile Attack Dialog");
@@ -156,9 +157,8 @@ public class attack extends JFrame {
             /*plus missile part*/
             Integer xCoord = Integer.parseInt(x.getText());
             Integer yCoord = Integer.parseInt(y.getText());
-            Game game = new Game(currPlayer,oppPlayer);
             edu.colorado.applepear.classes.Point missilePoint = new edu.colorado.applepear.classes.Point(xCoord, yCoord);
-            Boolean missile = game.hitOrMiss(missilePoint,currPlayer,oppPlayer);
+            Boolean missile = myGame.hitOrMiss(missilePoint,currPlayer,oppPlayer);
             ArrayList<Point> plusAttack = currPlayer.usePlusMissile(oppPlayer.getGb(),missilePoint);
             JFrame missileF= new JFrame("Plus Missile Frame");
             JDialog missileD = new JDialog(missileF, "Plus Missile Dialog");
@@ -362,6 +362,16 @@ public class attack extends JFrame {
         });
 
 
+        /* GAME OVER */
+        boolean gameover = myGame.isGameOver();
+        if(gameover){
+            JPanel card9 = new GameOver(currPlayer,oppPlayer,true).getGameOver();
+            PlayerGUI.cards.add(card9, "GameOver");
+            CardLayout cl = (CardLayout) (PlayerGUI.cards.getLayout());
+            cl.show(PlayerGUI.cards, "GameOver");
+        }
+
+
 
     }
 
@@ -388,6 +398,7 @@ public class attack extends JFrame {
             }
         }
     }
+
 
 
 

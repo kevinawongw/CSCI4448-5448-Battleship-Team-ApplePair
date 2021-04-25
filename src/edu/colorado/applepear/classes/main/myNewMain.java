@@ -15,7 +15,7 @@ public class myNewMain {
         static GameBoard p2Map = new GameBoard();
         static Player p1 = new Player(p1Map);
         static Player p2 = new Player(p2Map);
-        Game myGame = new Game(p1,p2);
+
 
     /**
      * Getters
