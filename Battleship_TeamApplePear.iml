@@ -42,7 +42,6 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" name="org.jetbrains:annotations:20.1.0" level="project" />
     <orderEntry type="module-library">
       <library>
         <CLASSES>
@@ -78,5 +77,10 @@
         </SOURCES>
       </library>
     </orderEntry>
+    <orderEntry type="library" name="lib" level="project" />
+    <orderEntry type="library" name="org.jetbrains:annotations:20.1.0" level="project" />
+    <orderEntry type="library" name="fest-util-1.1.6-javadoc" level="project" />
+    <orderEntry type="library" name="org.easytesting:fest-test:2.1.0" level="project" />
+    <orderEntry type="library" name="org.easytesting:fest-swing-junit:1.2.1" level="project" />
   </component>
 </module>
