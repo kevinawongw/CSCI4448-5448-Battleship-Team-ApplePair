@@ -214,14 +214,14 @@ public class menu extends JFrame{
                 for (edu.colorado.applepear.classes.Point each: hitList) {
 //                        System.out.println("Test: "+each);
                     if (each.getX() == i && each.getY() == j) {
-                        panel.setBackground(Color.green);
-                        newLabel.setText("H");
+                        panel.setBackground(new Color(204, 252, 187));
+                        newLabel.setText(":)");
                     }
                 }
                 for (Point each2: missList){
                     if (each2.getX() == i && each2.getY()==j){
-                        panel.setBackground(Color.pink);
-                        newLabel.setText("M");
+                        panel.setBackground(new Color(252, 187, 187));
+                        newLabel.setText(":(");
                     }
                 }
 

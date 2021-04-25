@@ -9,6 +9,8 @@ import org.jetbrains.annotations.NotNull;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -67,10 +69,12 @@ public class attack extends JFrame {
         coordPanel.add(c,BorderLayout.PAGE_START);
         coordPanel.add(new JLabel(" "),"span, grow");
 
-        x.setVisible(true);
-        y.setVisible(true);
+//        x.setEnabled(false);
+//        y.setEnabled(false);
         coordPanel.add(x, BorderLayout.PAGE_START);
         coordPanel.add(y, BorderLayout.PAGE_START);
+
+
 
         /* Missile Button field */
         JButton missileButton = new JButton("Missile Attack");
@@ -78,6 +82,7 @@ public class attack extends JFrame {
         missileButton.setForeground(lightBlue);
         missileButton.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 18));
         missileButton.setVisible(true);
+        missileButton.setEnabled(false);
 
         menuPanel.add(missileButton, BorderLayout.CENTER);
         menuPanel.add(new JLabel(" "),"span, grow");
@@ -89,6 +94,7 @@ public class attack extends JFrame {
             Integer yCoord = Integer.parseInt(y.getText());
             Point missilePoint = new Point(xCoord, yCoord);
             currPlayer.addAttackPoint(missilePoint);
+
 
             Boolean missile = myGame.hitOrMiss(missilePoint,currPlayer,oppPlayer);
             currPlayer.getGb().updateAttackMap(oppPlayer.getGb(),missilePoint);
@@ -153,6 +159,7 @@ public class attack extends JFrame {
         plusButton.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 18));
         plusButton.setPreferredSize(new Dimension(3,1));
         plusButton.setVisible(true);
+        plusButton.setEnabled(false);
         menuPanel.add(plusButton, BorderLayout.CENTER);
         menuPanel.add(new JLabel(" "),"span, grow");
 
@@ -243,6 +250,7 @@ public class attack extends JFrame {
         sonarButton.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 18));
         sonarButton.setPreferredSize(new Dimension(3,1));
         sonarButton.setVisible(true);
+        sonarButton.setEnabled(false);
         menuPanel.add(sonarButton, BorderLayout.CENTER);
         menuPanel.add(new JLabel(" "),"span, grow");
 
@@ -252,7 +260,7 @@ public class attack extends JFrame {
             if (currPlayer.getHasSunkenShip() == false){
                 JFrame fail = new JFrame("Not Available");
                 JDialog d = new JDialog(fail, "dialog Box");
-                JLabel l = new JLabel("Sonar Pulse is unlocked", SwingConstants.CENTER);
+                JLabel l = new JLabel("Sonar Pulse is locked", SwingConstants.CENTER);
                 l.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 16));
                 d.setBackground(Color.white);
                 d.add(l, BorderLayout.CENTER);
@@ -374,6 +382,42 @@ public class attack extends JFrame {
             cl.show(PlayerGUI.cards, "GameOver");
         }
 
+        DocumentListener dl = new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                checkForText();
+            }
+
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                checkForText();
+            }
+
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                checkForText();
+            }
+
+            /**
+             * checkForText lets each subsequent text field to visible once players have inputted
+             * an numerical coordinate within the bounds of the map for the previous text field.
+             */
+            private void checkForText(){
+
+                String X = x.getText();
+                String Y = y.getText();
+                boolean point1 = placeShip.allowNext(X,Y);
+                missileButton.setEnabled(point1);
+                plusButton.setEnabled(point1);
+                sonarButton.setEnabled(point1);
+
+            }
+        };
+
+        /* adding document listeners to all of the text fields */
+
+        x.getDocument().addDocumentListener(dl);
+        y.getDocument().addDocumentListener(dl);
 
 
     }
@@ -421,14 +465,14 @@ public class attack extends JFrame {
                 for (Point each: hitList) {
 //                        System.out.println("Test: "+each);
                     if (each.getX() == i && each.getY() == j) {
-                        panel.setBackground(Color.green);
-                        newLabel.setText("H");
+                        panel.setBackground(new Color(204, 252, 187));
+                        newLabel.setText(":)");
                     }
                 }
                 for (Point each2: missList){
                     if (each2.getX() == i && each2.getY()==j){
-                        panel.setBackground(Color.pink);
-                        newLabel.setText("M");
+                        panel.setBackground(new Color(252, 187, 187));
+                        newLabel.setText(":(");
                     }
                 }
 
