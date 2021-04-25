@@ -52,50 +52,50 @@ public class viewShip {
         menuPanel.setPreferredSize(new Dimension(250, 300));
         menuPanel.setBorder(new EmptyBorder(70,50,70,50));
 
-        /* View Ship Button Field */
-        JButton battleship = new JButton("Battleship");
-        battleship.setBackground(navy);
-        battleship.setForeground(lightBlue);
-        battleship.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 14));
-        battleship.setVisible(true);
-        menuPanel.add(battleship, BorderLayout.CENTER);
-        menuPanel.add(new JLabel(" "),"span, grow");
-
-        JButton destroyer = new JButton("Destroyer");
-        destroyer.setBackground(navy);
-        destroyer.setForeground(lightBlue);
-        destroyer.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 14));
-        destroyer.setPreferredSize(new Dimension(3,1));
-        destroyer.setVisible(true);
-        menuPanel.add(destroyer, BorderLayout.CENTER);
-        menuPanel.add(new JLabel(" "),"span, grow");
-
-        JButton Lship = new JButton("L-Ship");
-        Lship.setBackground(navy);
-        Lship.setForeground(lightBlue);
-        Lship.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 14));
-        Lship.setPreferredSize(new Dimension(3,1));
-        Lship.setVisible(true);
-        menuPanel.add(Lship, BorderLayout.CENTER);
-        menuPanel.add(new JLabel(" "),"span, grow");
-
-        JButton minesweeper = new JButton("Minesweeper");
-        minesweeper.setBackground(navy);
-        minesweeper.setForeground(lightBlue);
-        minesweeper.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 14));
-        minesweeper.setPreferredSize(new Dimension(3,1));
-        minesweeper.setVisible(true);
-        menuPanel.add(minesweeper, BorderLayout.CENTER);
-        menuPanel.add(new JLabel(" "),"span, grow");
-
-        JButton tower = new JButton("Tower");
-        tower.setBackground(navy);
-        tower.setForeground(lightBlue);
-        tower.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 14));
-        tower.setPreferredSize(new Dimension(3,1));
-        tower.setVisible(true);
-        menuPanel.add(tower, BorderLayout.CENTER);
-        menuPanel.add(new JLabel(" "),"span, grow");
+//        /* View Ship Button Field */
+//        JButton battleship = new JButton("Battleship");
+//        battleship.setBackground(navy);
+//        battleship.setForeground(lightBlue);
+//        battleship.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 14));
+//        battleship.setVisible(true);
+//        menuPanel.add(battleship, BorderLayout.CENTER);
+//        menuPanel.add(new JLabel(" "),"span, grow");
+//
+//        JButton destroyer = new JButton("Destroyer");
+//        destroyer.setBackground(navy);
+//        destroyer.setForeground(lightBlue);
+//        destroyer.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 14));
+//        destroyer.setPreferredSize(new Dimension(3,1));
+//        destroyer.setVisible(true);
+//        menuPanel.add(destroyer, BorderLayout.CENTER);
+//        menuPanel.add(new JLabel(" "),"span, grow");
+//
+//        JButton Lship = new JButton("L-Ship");
+//        Lship.setBackground(navy);
+//        Lship.setForeground(lightBlue);
+//        Lship.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 14));
+//        Lship.setPreferredSize(new Dimension(3,1));
+//        Lship.setVisible(true);
+//        menuPanel.add(Lship, BorderLayout.CENTER);
+//        menuPanel.add(new JLabel(" "),"span, grow");
+//
+//        JButton minesweeper = new JButton("Minesweeper");
+//        minesweeper.setBackground(navy);
+//        minesweeper.setForeground(lightBlue);
+//        minesweeper.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 14));
+//        minesweeper.setPreferredSize(new Dimension(3,1));
+//        minesweeper.setVisible(true);
+//        menuPanel.add(minesweeper, BorderLayout.CENTER);
+//        menuPanel.add(new JLabel(" "),"span, grow");
+//
+//        JButton tower = new JButton("Tower");
+//        tower.setBackground(navy);
+//        tower.setForeground(lightBlue);
+//        tower.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 14));
+//        tower.setPreferredSize(new Dimension(3,1));
+//        tower.setVisible(true);
+//        menuPanel.add(tower, BorderLayout.CENTER);
+//        menuPanel.add(new JLabel(" "),"span, grow");
 
         returnButton = new JButton("Return to Menu");
         returnButton.setBackground(navy);
@@ -129,26 +129,8 @@ public class viewShip {
             List<Point> eachShipPoint = eachShip.getLocation();
 
             for (Point eachPoint: eachShipPoint){
-/* I thought adding each ship buttons and when we click each button, the ship shows up with diff color, but I think this is not priority to do for now so I'm just going to commented out */
-//            JPanel newColor = new JPanel();
-//
-//                if(eachShipPoint.size()==4) {
-//                    newColor.setBackground(red);
-//
-//                }
-//                else if(eachShipPoint.size()==3){
-//                    newColor.setBackground(Color.CYAN);
-//
-//                }
-//                else if(eachShipPoint.size()==2){
-//                    newColor.setBackground(navy);
-//
-//                }
-//
-//                grid.add(newColor);
                 System.out.println(eachPoint);
                 bigList.add(eachPoint);
-
             }
         }
 
@@ -156,7 +138,7 @@ public class viewShip {
             for(int j=0; j< maxY; j++){
                 JPanel newP = new JPanel();
                     for (Point each: bigList){
-                        System.out.println("Test: "+each);
+//                        System.out.println("Test: "+each);
                         if (each.getX() == i && each.getY()==j){
                             newP.setBackground(yellow);
                         }

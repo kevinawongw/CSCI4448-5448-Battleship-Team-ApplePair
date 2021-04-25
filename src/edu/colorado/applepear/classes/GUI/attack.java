@@ -5,6 +5,7 @@ import edu.colorado.applepear.classes.GameBoard;
 import edu.colorado.applepear.classes.Player;
 import edu.colorado.applepear.classes.Point;
 import edu.colorado.applepear.classes.main.myNewMain;
+import org.jetbrains.annotations.NotNull;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
@@ -24,12 +25,13 @@ public class attack extends JFrame {
 
     public attack(Player currPlayer, Player oppPlayer, boolean next){
 
+        Game myGame = new Game(currPlayer,oppPlayer);
         attackScreen = new JPanel(new BorderLayout(0,0));
         attackScreen.setBackground(Color.white);
-        createMap(10,10);
+        createMap(10,10, currPlayer);
         attackScreen.add(grid);
 
-        Game myGame = new Game(currPlayer,oppPlayer);
+
         JPanel sideBar = new JPanel();
         sideBar.setLayout(new BoxLayout(sideBar,BoxLayout.Y_AXIS));
         attackScreen.add(sideBar, BorderLayout.EAST);
@@ -85,7 +87,8 @@ public class attack extends JFrame {
             /*missile attack part*/
             Integer xCoord = Integer.parseInt(x.getText());
             Integer yCoord = Integer.parseInt(y.getText());
-            edu.colorado.applepear.classes.Point missilePoint = new edu.colorado.applepear.classes.Point(xCoord, yCoord);
+            Point missilePoint = new Point(xCoord, yCoord);
+            currPlayer.addAttackPoint(missilePoint);
 
             Boolean missile = myGame.hitOrMiss(missilePoint,currPlayer,oppPlayer);
             currPlayer.getGb().updateAttackMap(oppPlayer.getGb(),missilePoint);
@@ -267,7 +270,7 @@ public class attack extends JFrame {
                 /*sonar pulse part*/
                 Integer xCoord = Integer.parseInt(x.getText());
                 Integer yCoord = Integer.parseInt(y.getText());
-                edu.colorado.applepear.classes.Point missilePoint = new edu.colorado.applepear.classes.Point(xCoord, yCoord);
+                Point missilePoint = new Point(xCoord, yCoord);
                 JFrame missileF= new JFrame("Plus Missile Frame");
                 JDialog missileD = new JDialog(missileF, "Plus Missile Dialog");
                 JPanel missileP = new JPanel();
@@ -380,18 +383,56 @@ public class attack extends JFrame {
         return attackScreen;
     }
 
-    public void createMap(int maxX, int maxY){
+    public void createMap(int maxX, int maxY, @NotNull Player currentPlayer){
         grid = new JPanel(new GridLayout(maxX,maxY,1,1));
         grid.setBorder(new EmptyBorder(30,40,40,40));
         grid.setBackground(Color.white);
 
+        int[][] attackMap = currentPlayer.getGb().getAttackMap();
+        List<Point> hitList = new ArrayList<>();
+        List<Point> missList = new ArrayList<>();
+
+        for (int row = 0; row < attackMap.length; row++) {
+            for (int col = 0; col < attackMap[row].length; col++) {
+                Point thisPoint = new Point(row,col);
+                //miss
+                if (attackMap[row][col] == 0){
+                    continue;
+                }
+                //hit
+                if (attackMap[row][col] == 1){
+                    missList.add(thisPoint);
+                }
+                if (attackMap[row][col] == 2){
+                    hitList.add(thisPoint);
+                }
+            }
+        }
+
         for (int i = 0; i < maxX; i++) {
             for (int j = 0; j < maxY; j++) {
                 JPanel panel = new JPanel();
+
                 JLabel newLabel = new JLabel(i+","+j);
                 newLabel.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 12));
                 newLabel.setForeground(navy);
                 panel.add(newLabel);
+
+                for (Point each: hitList) {
+//                        System.out.println("Test: "+each);
+                    if (each.getX() == i && each.getY() == j) {
+                        panel.setBackground(Color.green);
+                        newLabel.setText("H");
+                    }
+                }
+                for (Point each2: missList){
+                    if (each2.getX() == i && each2.getY()==j){
+                        panel.setBackground(Color.pink);
+                        newLabel.setText("M");
+                    }
+                }
+
+
                 String coordinate = i + "," + j;
                 grid.add(coordinate, panel);
 

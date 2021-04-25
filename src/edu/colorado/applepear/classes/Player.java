@@ -1,5 +1,6 @@
 package edu.colorado.applepear.classes;
 import edu.colorado.applepear.classes.commandClasses.CommandDispatcher;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,6 +19,7 @@ public class Player{
     private Boolean hasSunkenShip;
     private final CommandDispatcher commandDispatcher;
     private String nameString;
+    private List<Point> attacked= new ArrayList<>();
 //    private List<Point> myPoints;
 
 
@@ -259,12 +261,19 @@ public class Player{
 
     }
 
-    public String getNameString() {
-        return nameString;
-    }
+//    public String getNameString() {
+//        return nameString;
+//    }
+//
+//    public void setNameString(final String nameString) {
+//        this.nameString = nameString;
+//    }
 
-    public void setNameString(final String nameString) {
-        this.nameString = nameString;
+    public void addAttackPoint(@NotNull Point AP){
+        attacked.add(AP);
+    }
+    public List<Point> getAttacked(){
+        return attacked;
     }
 }
 

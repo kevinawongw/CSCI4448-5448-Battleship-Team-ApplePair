@@ -17,6 +17,7 @@ public class myNewMain {
         static Player p2 = new Player(p2Map);
 
 
+
     /**
      * Getters
      */
