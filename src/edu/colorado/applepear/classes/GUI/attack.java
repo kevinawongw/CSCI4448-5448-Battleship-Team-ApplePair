@@ -464,13 +464,13 @@ public class attack extends JFrame {
 
                 for (Point each: hitList) {
 //                        System.out.println("Test: "+each);
-                    if (each.getX() == i && each.getY() == j) {
+                    if (each.getX() == j && each.getY() == i) {
                         panel.setBackground(new Color(204, 252, 187));
                         newLabel.setText(":)");
                     }
                 }
                 for (Point each2: missList){
-                    if (each2.getX() == i && each2.getY()==j){
+                    if (each2.getX() == j && each2.getY()==i){
                         panel.setBackground(new Color(252, 187, 187));
                         newLabel.setText(":(");
                     }
