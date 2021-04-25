@@ -20,7 +20,6 @@ public class Player{
     private final CommandDispatcher commandDispatcher;
     private String nameString;
     private List<Point> attacked= new ArrayList<>();
-//    private List<Point> myPoints;
 
 
     /**

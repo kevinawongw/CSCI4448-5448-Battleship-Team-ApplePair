@@ -212,7 +212,6 @@ public class menu extends JFrame{
                 panel.add(newLabel);
 
                 for (edu.colorado.applepear.classes.Point each: hitList) {
-//                        System.out.println("Test: "+each);
                     if (each.getX() == j && each.getY() == i) {
                         panel.setBackground(new Color(204, 252, 187));
                         newLabel.setText(":)");
