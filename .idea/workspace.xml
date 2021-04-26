@@ -22,23 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ecce50e7-60f1-4088-9580-0bcf29b1574e" name="Default Changelist" comment="attack menu buttons -- Vienna">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Battleship_TeamApplePear.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Battleship_TeamApplePear.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/GUI/GameOver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/GUI/GameOver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/GUI/PlayerGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/GUI/PlayerGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/GUI/attack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/GUI/attack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/GUI/menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/GUI/menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/GUI/placeShip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/GUI/placeShip.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/GUI/viewShip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/GUI/viewShip.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/Ship.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/Ship.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/commandClasses/Command.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/commandClasses/CommandDispatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/commandClasses/CommandDispatcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/commandClasses/Move.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/colorado/applepear/classes/commandClasses/Move.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/tests/commandTests/CommandDispatcherTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/colorado/applepear/tests/commandTests/MoveNorthTest.java" beforeDir="false" />
-    </list>
+    <list default="true" id="ecce50e7-60f1-4088-9580-0bcf29b1574e" name="Default Changelist" comment="Comments&amp; Refactor" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -81,7 +65,7 @@
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="260" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/out/production/Milestone1-csci4448-5448/edu/colorado/applepear/classes/GUI" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Documentation/UML_Diagram" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -98,6 +82,9 @@
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="edu.colorado.applepear.classes" />
       <recent name="edu.colorado.applepear.tests.concreteShipTests" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\kevin\IdeaProjects\Milestone1-csci4448-5448\src\Documentation\UML_Diagram" />
     </key>
   </component>
   <component name="RunManager" selected="Application.myNewMain">
@@ -209,13 +196,6 @@
       <option name="presentableId" value="Default" />
       <updated>1612370581325</updated>
       <workItem from="1615531086052" duration="8620000" />
-    </task>
-    <task id="LOCAL-00007" summary="Team ApplePair pair 1: Kevina - GameBoard private -&gt; public functions">
-      <created>1613887998468</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1613887998468</updated>
     </task>
     <task id="LOCAL-00008" summary="Team ApplePair pair 1: Kevina - GameBoard getters">
       <created>1613888819610</created>
@@ -553,7 +533,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619392034890</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="Comments&amp; Refactor">
+      <created>1619409538474</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1619409538474</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -586,7 +573,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Test and code updates" />
     <MESSAGE value="Underwater map added, submarines added, tests 100% Coverage" />
     <MESSAGE value="Captain's Quarters" />
     <MESSAGE value="comment" />
@@ -611,7 +597,8 @@
     <MESSAGE value="attack menu buttons -- Vienna" />
     <MESSAGE value="Conditions to enable attack buttons (fixed issue)-- Vienna" />
     <MESSAGE value="bug fixes in attack- Vienna" />
-    <option name="LAST_COMMIT_MESSAGE" value="bug fixes in attack- Vienna" />
+    <MESSAGE value="Comments&amp; Refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="Comments&amp; Refactor" />
   </component>
   <component name="WindowStateProjectService">
     <state x="371" y="95" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1619217369801">
@@ -690,10 +677,11 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="500" y="9" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1619406931403" />
-    <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1619392037341">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="280" y="93" key="Vcs.Push.Dialog.v2" timestamp="1619409541677">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1619392037340" />
+    <state x="280" y="93" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1619409541677" />
     <state x="350" y="112" key="Vcs.Push.Dialog.v2/1920.150.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1619116805696" />
     <state x="540" y="253" key="VcsDiffUtil.ChangesDialog" timestamp="1619116906728">
       <screen x="0" y="0" width="1920" height="1040" />
