@@ -14,6 +14,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class attack extends JFrame {
+
+    /**
+     * Attributes
+     */
     private JPanel attackScreen;
     private JPanel grid;
 
@@ -23,6 +27,12 @@ public class attack extends JFrame {
     Color navy = new Color(68, 88, 115);
     Color lightBlue = new Color(226, 233, 238);
 
+    /**
+     * Attack
+     * @param currPlayer
+     * @param oppPlayer
+     * @param next
+     */
     public attack(Player currPlayer, Player oppPlayer, boolean next) {
 
         Game myGame = new Game(currPlayer, oppPlayer);
@@ -58,7 +68,6 @@ public class attack extends JFrame {
         menuPanel.setPreferredSize(new Dimension(250, 300));
         menuPanel.setBorder(new EmptyBorder(20, 50, 70, 50));
 
-        /*Coordinate field */
         String coord = "Enter the x and y!";
         JLabel c = new JLabel(coord);
         c.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 16));
@@ -71,8 +80,6 @@ public class attack extends JFrame {
         coordPanel.add(y, BorderLayout.PAGE_START);
 
 
-
-        /* Missile Button field */
         JButton missileButton = new JButton("Missile Attack");
         missileButton.setBackground(navy);
         missileButton.setForeground(lightBlue);
@@ -85,11 +92,9 @@ public class attack extends JFrame {
 
 
         missileButton.addActionListener(e -> {
-            /*missile attack part*/
             Integer xCoord = Integer.parseInt(x.getText());
             Integer yCoord = Integer.parseInt(y.getText());
             Point missilePoint = new Point(xCoord, yCoord);
-
 
             Boolean missile = myGame.hitOrMiss(missilePoint, currPlayer, oppPlayer);
             currPlayer.getGb().updateAttackMap(oppPlayer.getGb(), missilePoint);
@@ -162,7 +167,11 @@ public class attack extends JFrame {
         menuPanel.add(new JLabel(" "), "span, grow");
 
         plusButton.addActionListener(e -> {
-            /*plus missile part*/
+
+            /**
+             * Plus Missile
+             */
+
             Integer xCoord = Integer.parseInt(x.getText());
             Integer yCoord = Integer.parseInt(y.getText());
             Point missilePoint = new Point(xCoord, yCoord);
@@ -198,7 +207,6 @@ public class attack extends JFrame {
             missileD.setVisible(true);
             missileD.setSize(new Dimension(400, 400));
 
-            /* No Remaining Plus Missile*/
             if (currPlayer.getPlusMissile() == 0) {
                 plusButton.setEnabled(false);
                 JLabel l = new JLabel("You don't have anymore Plus Missile.", SwingConstants.CENTER);
@@ -214,7 +222,7 @@ public class attack extends JFrame {
                 CardLayout cl = (CardLayout) (PlayerGUI.cards.getLayout());
                 cl.show(PlayerGUI.cards, "currAttack");
             }
-            /* when there are remaining plus missile */
+
             else if (currPlayer.getPlusMissile() > 0) {
                 ArrayList<Point> plusAttack = currPlayer.usePlusMissile(oppPlayer.getGb(), missilePoint);
 
@@ -231,9 +239,6 @@ public class attack extends JFrame {
 
                 }
 
-
-
-                /* Go back to Opponent's Menu */
                 JPanel card6 = new menu(oppPlayer, currPlayer).getMenuScreen();
                 PlayerGUI.cards.add(card6, "oppPCMenu");
                 CardLayout cl = (CardLayout) (PlayerGUI.cards.getLayout());
@@ -242,7 +247,6 @@ public class attack extends JFrame {
 
 
         });
-
 
         JButton sonarButton = new JButton("Sonar Pulse");
         sonarButton.setBackground(navy);
@@ -256,7 +260,7 @@ public class attack extends JFrame {
 
 
         sonarButton.addActionListener(e -> {
-            /* dialogue pop up -- sonar pulse not available */
+
             if (currPlayer.getHasSunkenShip() == false) {
                 JFrame fail = new JFrame("Not Available");
                 JDialog d = new JDialog(fail, "dialog Box");
@@ -273,7 +277,11 @@ public class attack extends JFrame {
                 CardLayout cl = (CardLayout) (PlayerGUI.cards.getLayout());
                 cl.show(PlayerGUI.cards, "currAttack");
             } else {
-                /*sonar pulse part*/
+
+                /**
+                 * Sonar Pulse
+                 */
+
                 Integer xCoord = Integer.parseInt(x.getText());
                 Integer yCoord = Integer.parseInt(y.getText());
                 Point missilePoint = new Point(xCoord, yCoord);
@@ -309,7 +317,6 @@ public class attack extends JFrame {
                         hit.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 16));
                         missileD.add(hit, BorderLayout.CENTER);
                         hit.setForeground(navy);
-//                        currPlayer.updateSunkShip(true);
                     } else {
                         JLabel miss = new JLabel("No ship was found in this range \n", SwingConstants.CENTER);
                         miss.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 16));
@@ -318,14 +325,12 @@ public class attack extends JFrame {
                     }
 
 
-                    /* Go back to Opponent's Menu */
                     JPanel card6 = new menu(oppPlayer, currPlayer).getMenuScreen();
                     PlayerGUI.cards.add(card6, "oppPCMenu");
                     CardLayout cl = (CardLayout) (PlayerGUI.cards.getLayout());
                     cl.show(PlayerGUI.cards, "oppPCMenu");
                 }
 
-                /* No Remaining Sonar Pulse*/
                 else if (currPlayer.getSonarPulse() == 0) {
                     JLabel l = new JLabel("You don't have anymore Sonar Pulse. Enter Again.", SwingConstants.CENTER);
                     l.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 16));
@@ -364,7 +369,9 @@ public class attack extends JFrame {
         });
 
 
-        /* GAME OVER */
+        /**
+         * Game Over
+         */
         boolean gameover = myGame.isGameOver();
         if (gameover) {
             JPanel card9 = new GameOver(currPlayer, oppPlayer, true).getGameOver();
@@ -410,19 +417,26 @@ public class attack extends JFrame {
             }
         };
 
-        /* adding document listeners to all of the text fields */
-
         x.getDocument().addDocumentListener(dl);
         y.getDocument().addDocumentListener(dl);
 
 
     }
 
-
+    /**
+     * Get Attack Screen
+     * @return
+     */
     public JPanel getAttackScreen() {
         return attackScreen;
     }
 
+    /**
+     * Create Map
+     * @param maxX
+     * @param maxY
+     * @param currentPlayer
+     */
     public void createMap(int maxX, int maxY, @NotNull Player currentPlayer) {
         grid = new JPanel(new GridLayout(maxX, maxY, 1, 1));
         grid.setBorder(new EmptyBorder(30, 40, 40, 40));
@@ -435,11 +449,9 @@ public class attack extends JFrame {
         for (int row = 0; row < attackMap.length; row++) {
             for (int col = 0; col < attackMap[row].length; col++) {
                 Point thisPoint = new Point(row, col);
-                //miss
                 if (attackMap[row][col] == 0) {
                     continue;
                 }
-                //hit
                 if (attackMap[row][col] == 1) {
                     missList.add(thisPoint);
                 }
@@ -470,7 +482,6 @@ public class attack extends JFrame {
                         newLabel.setText(":(");
                     }
                 }
-
 
                 String coordinate = i + "," + j;
                 grid.add(coordinate, panel);

@@ -16,7 +16,9 @@ import java.util.List;
 
 public class placeShip extends JFrame{
 
-    /* Initializing GUI components*/
+    /**
+     * Initializing GUI Components
+     */
     
     private JPanel placeShipScreen;
     private JPanel grid;
@@ -45,28 +47,31 @@ public class placeShip extends JFrame{
         createMap(10,10);
         placeShipScreen.add(grid);
 
-        /*
-          adding side bar on the right side of the screen w/ a box layout
+
+        /**
+         * adding side bar on the right side of the screen w/ a box layout
          */
+
         JPanel sideBar = new JPanel();
         sideBar.setLayout(new BoxLayout(sideBar,BoxLayout.Y_AXIS));
         placeShipScreen.add(sideBar, BorderLayout.EAST);
         sideBar.setBackground(lightBlue);
 
-        /* first component on box layout it the title panel */
+        /**
+         *  first component on box layout it the title panel
+         */
 
         JLabel titleLabel = new JLabel();
         String title2 =  currPlayer.getName() + "'s Turn to Place Ships";
         titleLabel.setText(title2);
-//        titleLabel.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 14));
-//        titleLabel.setForeground(Color.black);
-//        titleLabel.setAlignmentX(Component.LEFT_ALIGNMENT);
         titleLabel.setFont(new Font("tw cen mt condensed extra bold", Font.PLAIN, 16));
         titleLabel.setForeground(navy);
         titleLabel.setBorder(new EmptyBorder(20,0,0,10));
         sideBar.add(titleLabel,BorderLayout.WEST);
 
-        /* second component on box layout is the controls panel */
+        /**
+         *  second component on box layout is the controls panel
+         */
 
         JPanel controls = new JPanel(new GridLayout(0, 3));
         sideBar.add(controls, BorderLayout.PAGE_END);
@@ -75,14 +80,16 @@ public class placeShip extends JFrame{
         controls.setBorder(new EmptyBorder(10, 10, 10, 10));
 
 
-        /*
-          input text fields below -- change to a better coordinate input system
+        /**
+         * input text fields below -- change to a better coordinate input system
          */
 
         controls.add(new JLabel(" "),"span, grow");
         controls.add(new JLabel(" "),"span, grow");
 
-        /* battleship field */
+        /**
+         *  battleship field
+         */
 
         String B = "Battleship: ";
         String blank = " ";
@@ -102,8 +109,9 @@ public class placeShip extends JFrame{
         controls.add(new JLabel(" "),"span, grow");
         controls.add(new JLabel(" "),"span, grow");
 
-
-        /* destroyer field */
+        /**
+         * destroyer field
+         */
 
         String D = "Destroyer: ";
         JLabel l2 = new JLabel(D);
@@ -120,7 +128,9 @@ public class placeShip extends JFrame{
         controls.add(new JLabel(" "),"span, grow");
 
 
-        /* L-ship field */
+        /**
+         * l-ship field
+         */
 
         String L = "LShip: ";
         JLabel l3 = new JLabel(L);
@@ -136,7 +146,9 @@ public class placeShip extends JFrame{
         controls.add(new JLabel(" "),"span, grow");
         controls.add(new JLabel(" "),"span, grow");
 
-        /* minesweeper field */
+        /**
+         * minesweeper field
+         */
 
         String M = "Minesweeper: ";
         JLabel l4 = new JLabel(M);
@@ -152,7 +164,9 @@ public class placeShip extends JFrame{
         controls.add(new JLabel(" "),"span, grow");
         controls.add(new JLabel(" "),"span, grow");
 
-        /* tower field */
+        /**
+         * tower field
+         */
 
         String S = "Tower:";
         JLabel l5 = new JLabel(S);
@@ -177,23 +191,29 @@ public class placeShip extends JFrame{
 
         doneButton.addActionListener(e -> {
 
-            //how i think we can add ships to ship map -- will comment out temporarily
 
-            /* add battleship */
+            /**
+             *  add battleship
+             */
+
             Integer x1coordinate = Integer.parseInt(x1.getText());
             Integer y1coordinate = Integer.parseInt(y1.getText());
             Point bPoint = new Point(x1coordinate,y1coordinate);
             List<Point> myBattleship= Battleship.inputAsList(bPoint);
             currPlayer.getGb().placeShip(myBattleship);
 
-            /* add destroyer */
+            /**
+             * add destroyer
+             */
             Integer x2coordinate = Integer.parseInt(x2.getText());
             Integer y2coordinate = Integer.parseInt(y2.getText());
             Point dPoint = new Point(x2coordinate,y2coordinate);
             List<Point> myDestroyer= Destroyer.inputAsList(dPoint);
             currPlayer.getGb().placeShip(myDestroyer);
 
-            /* add LShip */
+            /**
+             * add LShip
+             */
 
             Integer x3coordinate = Integer.parseInt(x3.getText());
             Integer y3coordinate = Integer.parseInt(y3.getText());
@@ -201,7 +221,9 @@ public class placeShip extends JFrame{
             List<Point> myLShip= LShip.inputAsList(lPoint);
             currPlayer.getGb().placeShip(myLShip);
 
-            /* add Minesweeper */
+            /**
+             *  add Minesweeper
+             */
 
             Integer x4coordinate = Integer.parseInt(x4.getText());
             Integer y4coordinate = Integer.parseInt(y4.getText());
@@ -209,7 +231,9 @@ public class placeShip extends JFrame{
             List<Point> myMineSweeper= Minesweeper.inputAsList(mPoint);
             currPlayer.getGb().placeShip(myMineSweeper);
 
-            /* add Tower */
+            /**
+             *  add Tower
+             */
 
             Integer x5coordinate = Integer.parseInt(x5.getText());
             Integer y5coordinate = Integer.parseInt(y5.getText());
@@ -219,19 +243,19 @@ public class placeShip extends JFrame{
 
 
 
+            /**
+             * adding cards
+             */
 
-            /*adding cards*/
             JPanel card3 = new placeShip(oppPlayer,currPlayer, true).getPlaceShipScreen();
             JPanel card4 = new menu(oppPlayer,currPlayer).getMenuScreen();
             PlayerGUI.cards.add(card3,"oppPC");
             PlayerGUI.cards.add(card4, "menu");
-            //add main menu screen to cards.
             CardLayout cl = (CardLayout)(PlayerGUI.cards.getLayout());
 
             if (!next){
                 cl.show(PlayerGUI.cards, "oppPC");
             }
-            //This should actually take us to the menu options screen -- not home. Change when menu option screen is done
             else{
                 cl.show(PlayerGUI.cards, "menu");
             }
@@ -240,7 +264,9 @@ public class placeShip extends JFrame{
 
         });
 
-        /*  Document listener will see when there are changes to the text fields */
+        /**
+         *  Document listener will see when there are changes to the text fields
+         */
         DocumentListener dl = new DocumentListener() {
             @Override
             public void insertUpdate(DocumentEvent e) {
@@ -261,6 +287,7 @@ public class placeShip extends JFrame{
              * checkForText lets each subsequent text field to visible once players have inputted
              * an numerical coordinate within the bounds of the map for the previous text field.
              */
+
             private void checkForText(){
 
                 String point1X = x1.getText();
@@ -302,8 +329,6 @@ public class placeShip extends JFrame{
 
             }
         };
-
-        /* adding document listeners to all of the text fields */
 
         x1.getDocument().addDocumentListener(dl);
         y1.getDocument().addDocumentListener(dl);

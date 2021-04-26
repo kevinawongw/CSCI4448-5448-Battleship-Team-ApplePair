@@ -1,9 +1,7 @@
 package edu.colorado.applepear.classes.GUI;
-import edu.colorado.applepear.classes.Game;
-import edu.colorado.applepear.classes.GameBoard;
+
 import edu.colorado.applepear.classes.Player;
 import edu.colorado.applepear.classes.main.myNewMain;
-//import org.junit.Test;
 
 import javax.swing.*;
 import javax.swing.event.DocumentEvent;
@@ -23,7 +21,10 @@ public class PlayerGUI {
     private JLabel imageLogo;
     public static JPanel cards;
 
-
+    /**
+     * Getters
+     * @return
+     */
     public JPanel getScreenMain(){
         return ScreenMain;
     }
@@ -31,17 +32,11 @@ public class PlayerGUI {
         return cards;
     }
 
-//    public static Player getP2() {
-//        return p2;
-//    }
-//
-//    public static Player getP1() {
-//        return p1;
-//    }
-
+    /**
+     * PlayerGUI
+     */
     public PlayerGUI() {
-//        this.p1 = p1;
-//        this.p2 = p2;
+
 
         /**
          * initializing cards. This will pet us transition to different pages
@@ -50,8 +45,6 @@ public class PlayerGUI {
         JPanel card1 =  getScreenMain();
 
         cards.add(card1, "home");
-
-
 
         /**
          * DocumentLister dl reports any changes in JTextFields p1Name and p2Name
@@ -90,11 +83,9 @@ public class PlayerGUI {
         STARTButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-//                GameBoard p1Map = myNewMain.getP1Map();
-//                GameBoard p2Map = myNewMain.getP2Map();
+
                 Player p1 = myNewMain.getPlayer1();
                 Player p2 = myNewMain.getPlayer2();
-//                Game myGame = new Game(p1,p2);
 
                 p1.setName(getName1());
                 p2.setName(getName2());

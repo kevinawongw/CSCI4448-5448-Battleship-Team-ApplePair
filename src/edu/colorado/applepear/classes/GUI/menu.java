@@ -49,7 +49,9 @@ public class menu extends JFrame{
         menuPanel.setPreferredSize(new Dimension(250, 300));
         menuPanel.setBorder(new EmptyBorder(70,50,30,50));
 
-        /* Menu Button field */
+        /**
+         *  Menu Button field
+         */
         b1 = new JButton("Attack");
         b1.setBackground(navy);
         b1.setForeground(lightBlue);
@@ -157,11 +159,20 @@ public class menu extends JFrame{
 
     }
 
-
+    /**
+     * Get Menu Screen
+     * @return
+     */
     public JPanel getMenuScreen(){
         return menuScreen;
     }
 
+    /**
+     * Create Map
+     * @param maxX
+     * @param maxY
+     * @param currentPlayer
+     */
     public void createMap(int maxX, int maxY, @NotNull Player currentPlayer){
         grid = new JPanel(new GridLayout(maxX,maxY,1,1));
         grid.setBorder(new EmptyBorder(30,40,40,40));
@@ -174,11 +185,11 @@ public class menu extends JFrame{
         for (int row = 0; row < attackMap.length; row++) {
             for (int col = 0; col < attackMap[row].length; col++) {
                 edu.colorado.applepear.classes.Point thisPoint = new edu.colorado.applepear.classes.Point(row,col);
-                //miss
+
                 if (attackMap[row][col] == 0){
                     continue;
                 }
-                //hit
+
                 if (attackMap[row][col] == 1){
                     missList.add(thisPoint);
                 }

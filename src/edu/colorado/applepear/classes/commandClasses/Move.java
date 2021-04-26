@@ -2,20 +2,32 @@ package edu.colorado.applepear.classes.commandClasses;
 import edu.colorado.applepear.classes.GameBoard;
 import edu.colorado.applepear.classes.Point;
 import edu.colorado.applepear.classes.Ship;
-
 import java.util.*;
 
-public class Move implements Command{
+public class Move {
+
+    /**
+     * Attributes
+     */
     GameBoard gb;
     Ship ship;
     String direction;
 
+    /**
+     * Move
+     * @param gb
+     * @param ship
+     * @param direction
+     */
     public Move(GameBoard gb, Ship ship, String direction){
         this.gb = gb;
         this.ship = ship;
         this.direction = direction;
     }
-    @Override
+
+    /**
+     * Execute
+     */
     public void execute() {
         List <Point> newLocations = new ArrayList<>();
         switch (direction) {
@@ -99,7 +111,9 @@ public class Move implements Command{
 
     }
 
-    @Override
+    /**
+     * Undo Move
+     */
     public void undo(){
         List <Point> newLocations = new ArrayList<>();
         switch (direction) {

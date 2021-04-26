@@ -1,35 +1,46 @@
 package edu.colorado.applepear.classes.commandClasses;
 
-import edu.colorado.applepear.classes.Player;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class CommandDispatcher {
-    private final List<Command> undoCMD = new ArrayList<Command>();
-    private final List<Command> redoCMD = new ArrayList<Command>();
+
+    /**
+     * Attributes
+     */
+    private final List<Move> undoCMD = new ArrayList<Move>();
+    private final List<Move> redoCMD = new ArrayList<Move>();
 
     public CommandDispatcher(){ }
-    private Command currentC = null;
+    private Move currentC = null;
 
-
-    public void setCommands(Command c){
+    /**
+     * Setter
+     * @param c
+     */
+    public void setCommands(Move c){
         currentC = c;
         c.execute();
         undoCMD.add(c);
     }
 
+    /**
+     * Undo all
+     */
     public void undoAll(){
         if(undoCMD.size() == 0){
             System.out.println("There are no moves to be undone.");
             return;
         }
-        for(Command c : undoCMD){
+        for(Move c : undoCMD){
             c.undo();
         }
         System.out.println("You have undone all your moves.");
     }
 
+    /**
+     * Undo
+     */
     public void undo(){
         if(undoCMD.size() != 0) {
             undoCMD.get(undoCMD.size() - 1).undo();
@@ -41,12 +52,14 @@ public class CommandDispatcher {
         }
     }
 
+    /**
+     * Redo
+     */
     public void redo() {
         if(undoCMD.size() == 0){
             System.out.println("You should call at least one undo to redo.");
-        } else if (redoCMD.size() != 0) { //if undo is called at least once
+        } else if (redoCMD.size() != 0) {
             redoCMD.get(redoCMD.size() - 1).execute();
-            //undoCMD.add(redoCMD.get(redoCMD.size() - 1));
             redoCMD.remove(redoCMD.size() - 1);
             System.out.println("You have redone your latest move.");
         }else{

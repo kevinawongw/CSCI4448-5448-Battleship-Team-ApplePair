@@ -298,12 +298,6 @@ public class GameBoard {
         updateShipMap();
         viewShips();
 
-//        Submarine submarine = new Submarine();
-//        List<Point> submarineCoords = submarine.input(shipMap);
-//        placeShip(submarineCoords);
-//        updateUnderwaterMap();
-//        viewUnderwater();
-
     }
 
     /**

@@ -15,6 +15,12 @@ public class GameOver extends JFrame {
     Color navy = new Color(68, 88, 115);
     Color lightBlue = new Color(226, 233, 238);
 
+    /**
+     * Game Over
+     * @param player1
+     * @param player2
+     * @param next
+     */
     public GameOver(Player player1, Player player2, boolean next) {
         overScreen = new JPanel(new BorderLayout(0, 0));
         overScreen.setBackground(Color.white);
@@ -54,41 +60,21 @@ public class GameOver extends JFrame {
 
     }
 
+    /**
+     * Get GameOver
+     * @return
+     */
     public JPanel getGameOver() {
         return overScreen;
     }
 
+    /**
+     * Create UI Components
+     */
     private void createUIComponents() {
         imageLogo = new JLabel(new ImageIcon("src/edu/colorado/applepear/classes/GUI/shipwreck.png"));
     }
 
-    // for testing this screen, use this main function. Note that buttons will not work.
-    private static void createAndShowGui() {
-        JFrame frame = new JFrame();
-
-        GameBoard p1Map = new GameBoard();
-        GameBoard p2Map = new GameBoard();
-        Player p1 = new Player(p1Map);
-        Player p2 = new Player(p2Map);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.getContentPane().add(new GameOver(p1,p2,true).getUi());
-        frame.setLocationByPlatform(true);
-        frame.pack();
-        frame.setVisible(true);
-        frame.setSize(800,500);
-    }
-
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(new Runnable() {
-            public void run() {
-                createAndShowGui();
-            }
-        });
-    }
-
-    public JPanel getUi() {
-        return overScreen;
-    }
 }
 
 

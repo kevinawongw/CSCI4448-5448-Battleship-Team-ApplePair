@@ -1,10 +1,8 @@
 package edu.colorado.applepear.classes;
 import edu.colorado.applepear.classes.commandClasses.CommandDispatcher;
-import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
-
 
 
 public class Player{
@@ -69,7 +67,6 @@ public class Player{
      *      // If no, False
      */
     public boolean useSonarPulse( GameBoard opponentBoard, Point P){
-        //checks if this player has any radar missiles left
 
         if (getSonarPulse() < 1){
             System.out.println( getName() + " has no more radar missiles remaining \n");
@@ -80,12 +77,10 @@ public class Player{
             return false;
         }
         else{
-            // number of radar missiles for this player
             setSonarPulse(getSonarPulse()-1);
             System.out.println("Using radar missile... \n");
             boolean myReturn = false;
             int count = 0;
-            //points
 
             Point above = new Point(P.getX(),P.getY()+1);
             Point below = new Point(P.getX(),P.getY()-1);
@@ -100,7 +95,6 @@ public class Player{
             Point farRight = new Point(P.getX()+2, P.getY());
             Point farLeft = new Point(P.getX()-2, P.getY());
 
-            //adding points to check into array list
             List<Point> radarRange = new ArrayList<>();
 
             radarRange.add(P);
@@ -117,7 +111,6 @@ public class Player{
             radarRange.add(farRight);
             radarRange.add(farUp);
 
-            //making are the points are in the grid
             List<Point> scannedCells = new ArrayList<>();
             for (Point thisPoint: radarRange){
                 if ( (thisPoint.getX() >= 0) && (thisPoint.getX() <= 9) && (thisPoint.getY() <= 9) && (thisPoint.getY() >= 0)){
@@ -126,10 +119,8 @@ public class Player{
                 }
             }
 
-            //saving the opponent's ship map into a new map
             int[][] map =  opponentBoard.getShipMap();
 
-            //trying to find ships by checking the points in the array list
             for ( Point i :scannedCells){
                 int thisX = i.getX();
                 int thisY = i.getY();
@@ -163,7 +154,7 @@ public class Player{
      *      // Attacks the coordinates above, below, to the left, and to the right of entered coordinates.
      */
     public ArrayList<Point> usePlusMissile(GameBoard oppBoard, Point point){
-        //checks if this player has any plus missiles left
+
         ArrayList<Point> attacked = new ArrayList<>();
         if (getPlusMissile() < 1){
             System.out.println(getName() + " has no more plus missiles remaining.");
@@ -173,16 +164,13 @@ public class Player{
         setPlusMissile(getPlusMissile() - 1);
         System.out.println("Using plus missile...");
 
-        //new arrayList to save the points
         List<Point> plusRange = new ArrayList<>();
 
-        //points
         Point above = new Point(point.getX(), point.getY()+1);
         Point below = new Point(point.getX(), point.getY()-1);
         Point right = new Point(point.getX()+1,point.getY());
         Point left = new Point(point.getX()-1, point.getY());
 
-        //checks if the point is on the grid and not out of bounds then appends if on grid
         if(above.getX() >=0 && above.getY()<=9)
             plusRange.add(above);
         if(below.getX() >=0 && below.getY()<=9)
@@ -192,7 +180,6 @@ public class Player{
         if(left.getX() >=0 && left.getY()<=9)
             plusRange.add(left);
 
-        //saves the opponent map
         int[][] map =  oppBoard.getShipMap();
 
         for (Point p : plusRange){
@@ -254,7 +241,6 @@ public class Player{
 
         }
         return attacked;
-
 
     }
 
