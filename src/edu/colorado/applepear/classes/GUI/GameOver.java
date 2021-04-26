@@ -7,7 +7,7 @@ import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
 
-//wrote some code in Gameover but it doesnt show. You can edit whatever you want. It doesn't give error.
+
 public class GameOver extends JFrame {
     private JPanel overScreen;
     private JButton playAgain;
@@ -74,7 +74,7 @@ public class GameOver extends JFrame {
         frame.getContentPane().add(new GameOver(p1,p2,true).getUi());
         frame.setLocationByPlatform(true);
         frame.pack();
-        frame.setVisible(true);  // should be last.
+        frame.setVisible(true);
         frame.setSize(800,500);
     }
 

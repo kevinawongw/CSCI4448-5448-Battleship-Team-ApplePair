@@ -1,16 +1,12 @@
 package edu.colorado.applepear.classes.GUI;
 
-import edu.colorado.applepear.classes.Game;
 import edu.colorado.applepear.classes.GameBoard;
 import edu.colorado.applepear.classes.Player;
 import edu.colorado.applepear.classes.Point;
 import edu.colorado.applepear.classes.main.myNewMain;
 import org.jetbrains.annotations.NotNull;
-
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
-import javax.swing.event.DocumentEvent;
-import javax.swing.event.DocumentListener;
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -18,10 +14,7 @@ import java.util.List;
 public class menu extends JFrame{
     private JPanel menuScreen;
     private JPanel grid;
-    JLabel plusMissile;
-    JLabel sonarPulse;
-    JLabel currShip;
-    JLabel sunkShip;
+
     JButton b1;
     JButton b2;
     JButton b3;
@@ -29,7 +22,7 @@ public class menu extends JFrame{
     Color lightBlue = new Color(226, 233, 238);
 
 
-    public menu(Player currPlayer, Player oppPlayer, boolean next) {
+    public menu(Player currPlayer, Player oppPlayer) {
 
         menuScreen = new JPanel(new BorderLayout(0,0));
         menuScreen.setBackground(Color.white);
@@ -71,13 +64,7 @@ public class menu extends JFrame{
             JPanel card5 = new attack(currPlayer,oppPlayer,true).getAttackScreen();
             PlayerGUI.cards.add(card5, "currAttack");
             CardLayout cl = (CardLayout) (PlayerGUI.cards.getLayout());
-            if (!next){
                 cl.show(PlayerGUI.cards, "currAttack");
-            }
-
-            else{
-                cl.show(PlayerGUI.cards, "menu");
-            }
         });
 
         b2 = new JButton("View Your Ship");
@@ -104,7 +91,6 @@ public class menu extends JFrame{
         b3.setPreferredSize(new Dimension(3,1));
         b3.setVisible(true);
         menuPanel.add(b3, BorderLayout.CENTER);
-//        menuPanel.add(new JLabel(" "),"span, grow");
 
         b3.addActionListener(e -> {
 

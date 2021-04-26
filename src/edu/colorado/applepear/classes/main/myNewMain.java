@@ -1,6 +1,5 @@
 package edu.colorado.applepear.classes.main;
 import edu.colorado.applepear.classes.GUI.PlayerGUI;
-import edu.colorado.applepear.classes.Game;
 import edu.colorado.applepear.classes.GameBoard;
 import edu.colorado.applepear.classes.Player;
 import javax.swing.*;
@@ -24,8 +23,6 @@ public class myNewMain {
     public static Player getPlayer1(){ return p1; }
     public static Player getPlayer2(){ return p2; }
 
-//    public static GameBoard getP1Map(){return p1Map;}
-//    public static GameBoard getP2Map(){return p2Map;}
 
     public static void resetPlayer(Player player, Player player2, GameBoard g1, GameBoard g2){
         player = new Player(g1);

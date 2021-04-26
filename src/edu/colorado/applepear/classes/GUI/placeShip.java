@@ -222,7 +222,7 @@ public class placeShip extends JFrame{
 
             /*adding cards*/
             JPanel card3 = new placeShip(oppPlayer,currPlayer, true).getPlaceShipScreen();
-            JPanel card4 = new menu(oppPlayer,currPlayer,false).getMenuScreen();
+            JPanel card4 = new menu(oppPlayer,currPlayer).getMenuScreen();
             PlayerGUI.cards.add(card3,"oppPC");
             PlayerGUI.cards.add(card4, "menu");
             //add main menu screen to cards.

@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-//Vienna part: player class
 
 public class Player{
 
@@ -228,7 +227,6 @@ public class Player{
      * @return attacked - list of attacked points
      *      // Attacks the coordinate on the surface attack map and the underwater attack map
      */
-    //Vienna: Space Laser
 
     public ArrayList<Point> useSpaceLaser(GameBoard oppBoard, Point point){
         ArrayList<Point> attacked = new ArrayList<>();
@@ -260,19 +258,6 @@ public class Player{
 
     }
 
-//    public String getNameString() {
-//        return nameString;
-//    }
-//
-//    public void setNameString(final String nameString) {
-//        this.nameString = nameString;
-//    }
 
-    public void addAttackPoint(@NotNull Point AP){
-        attacked.add(AP);
-    }
-    public List<Point> getAttacked(){
-        return attacked;
-    }
 }
 

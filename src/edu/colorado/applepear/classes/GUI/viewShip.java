@@ -106,7 +106,7 @@ public class viewShip {
         menuPanel.add(returnButton, BorderLayout.PAGE_START);
 
         returnButton.addActionListener(e -> {
-            JPanel card8 = new menu(currPlayer,oppPlayer,true).getMenuScreen();
+            JPanel card8 = new menu(currPlayer,oppPlayer).getMenuScreen();
             PlayerGUI.cards.add(card8, "currPView");
             CardLayout cl = (CardLayout) (PlayerGUI.cards.getLayout());
             cl.show(PlayerGUI.cards, "currPView");
@@ -123,13 +123,11 @@ public class viewShip {
         grid.setBackground(Color.white);
         List<Point> bigList = new ArrayList<>();
 
-        System.out.println(currPlayer.getGb().getShips() + "are my ships");
 
         for (Ship eachShip: currPlayer.getGb().getShips()){
             List<Point> eachShipPoint = eachShip.getLocation();
 
             for (Point eachPoint: eachShipPoint){
-                System.out.println(eachPoint);
                 bigList.add(eachPoint);
             }
         }
@@ -138,7 +136,6 @@ public class viewShip {
             for(int j=0; j< maxY; j++){
                 JPanel newP = new JPanel();
                     for (Point each: bigList){
-//                        System.out.println("Test: "+each);
                         if (each.getX() == i && each.getY()==j){
                             newP.setBackground(yellow);
                         }
