@@ -11,6 +11,7 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import java.awt.*;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -199,8 +200,15 @@ public class placeShip extends JFrame{
             Integer x1coordinate = Integer.parseInt(x1.getText());
             Integer y1coordinate = Integer.parseInt(y1.getText());
             Point bPoint = new Point(x1coordinate,y1coordinate);
-            List<Point> myBattleship= Battleship.inputAsList(bPoint);
-            currPlayer.getGb().placeShip(myBattleship);
+            List<Point> placeB = new ArrayList<>();
+            for (Point eachPoint: Battleship.inputAsList(bPoint)){
+                int num1 = eachPoint.getX();
+                int num2 = eachPoint.getY();
+                if (num1 >= 0 && num1 <= 9 && num2 >= 0 && num2 <= 9){
+                    placeB.add(eachPoint);
+                }
+            }
+            currPlayer.getGb().placeShip(placeB);
 
             /**
              * add destroyer
@@ -208,8 +216,16 @@ public class placeShip extends JFrame{
             Integer x2coordinate = Integer.parseInt(x2.getText());
             Integer y2coordinate = Integer.parseInt(y2.getText());
             Point dPoint = new Point(x2coordinate,y2coordinate);
-            List<Point> myDestroyer= Destroyer.inputAsList(dPoint);
-            currPlayer.getGb().placeShip(myDestroyer);
+
+            List<Point> placeD = new ArrayList<>();
+            for (Point eachPoint: Destroyer.inputAsList(dPoint)){
+                int num1 = eachPoint.getX();
+                int num2 = eachPoint.getY();
+                if (num1 >= 0 && num1 <= 9 && num2 >= 0 && num2 <= 9){
+                    placeD.add(eachPoint);
+                }
+            }
+            currPlayer.getGb().placeShip(placeD);
 
             /**
              * add LShip
@@ -218,8 +234,15 @@ public class placeShip extends JFrame{
             Integer x3coordinate = Integer.parseInt(x3.getText());
             Integer y3coordinate = Integer.parseInt(y3.getText());
             Point lPoint = new Point(x3coordinate,y3coordinate);
-            List<Point> myLShip= LShip.inputAsList(lPoint);
-            currPlayer.getGb().placeShip(myLShip);
+            List<Point> placeL = new ArrayList<>();
+            for (Point eachPoint: LShip.inputAsList(lPoint)){
+                int num1 = eachPoint.getX();
+                int num2 = eachPoint.getY();
+                if (num1 >= 0 && num1 <= 9 && num2 >= 0 && num2 <= 9){
+                    placeL.add(eachPoint);
+                }
+            }
+            currPlayer.getGb().placeShip(placeL);
 
             /**
              *  add Minesweeper
@@ -228,8 +251,15 @@ public class placeShip extends JFrame{
             Integer x4coordinate = Integer.parseInt(x4.getText());
             Integer y4coordinate = Integer.parseInt(y4.getText());
             Point mPoint = new Point(x4coordinate,y4coordinate);
-            List<Point> myMineSweeper= Minesweeper.inputAsList(mPoint);
-            currPlayer.getGb().placeShip(myMineSweeper);
+            List<Point> placeM = new ArrayList<>();
+            for (Point eachPoint: Minesweeper.inputAsList(mPoint)){
+                int num1 = eachPoint.getX();
+                int num2 = eachPoint.getY();
+                if (num1 >= 0 && num1 <= 9 && num2 >= 0 && num2 <= 9){
+                    placeM.add(eachPoint);
+                }
+            }
+            currPlayer.getGb().placeShip(placeM);
 
             /**
              *  add Tower
@@ -238,8 +268,16 @@ public class placeShip extends JFrame{
             Integer x5coordinate = Integer.parseInt(x5.getText());
             Integer y5coordinate = Integer.parseInt(y5.getText());
             Point tPoint = new Point(x5coordinate,y5coordinate);
-            List<Point> myTower= Tower.inputAsList(tPoint);
-            currPlayer.getGb().placeShip(myTower);
+
+            List<Point> placeT = new ArrayList<>();
+            for (Point eachPoint: Tower.inputAsList(tPoint)){
+                int num1 = eachPoint.getX();
+                int num2 = eachPoint.getY();
+                if (num1 >= 0 && num1 <= 9 && num2 >= 0 && num2 <= 9){
+                    placeT.add(eachPoint);
+                }
+            }
+            currPlayer.getGb().placeShip(placeT);
 
 
 
