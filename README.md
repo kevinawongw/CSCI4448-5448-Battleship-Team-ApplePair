@@ -28,7 +28,14 @@ Our project is an object-oritented implementation of the boardgame, Battleship. 
    <li>The pdf and code changes tagged with the tag "milestone1" </li>
  </ol>
  
-   
+### Screenshots
+        
+<p float="left">
+  <img src="./Screenshots/battleshipMenu.JPG" width="200" />
+  <img src="./Screenshots/placeShip.JPG" width="200" /> 
+  <img src="./Screenshots/attackScreen.JPG" width="200" />
+  <img src="./Screenshots/attackMode.JPG" width="200" />
+</p>
  
    
  ---
